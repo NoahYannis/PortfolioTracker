@@ -40,7 +40,6 @@ namespace PortfolioTracker.Services.GetStockInfoService
                 {
                     Console.WriteLine($"Failed to retrieve stock data for {stock.TickerSymbol}");
                 }
-
             }
 
             return 0;
