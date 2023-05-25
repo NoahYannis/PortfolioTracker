@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\PortfolioTracker.styles.css"
     },
     {
+      "Id": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\wwwroot\\appsettings.json",
+      "PackagePath": "staticwebassets\\appsettings.json"
+    },
+    {
       "Id": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\wwwroot\\css\\app.css",
       "PackagePath": "staticwebassets\\css\\app.css"
     },

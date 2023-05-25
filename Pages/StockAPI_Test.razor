@@ -1,11 +1,35 @@
-﻿@using PortfolioTracker.Services.GetStockInfoService;
+﻿@using PortfolioTracker.Other;
+@using PortfolioTracker.Services.GetStockInfoService;
 
-@inject IGetStockInfoService GetStockInfoService;
+@inject IGetStockInfoService GetStockInfoService
 
-<h3>StockAPI_Test</h3>
+<h3></h3>
 
-<p></p>
+
+<div>
+    <label for="stockTicker">Enter a stock ticker: </label>
+    <InputText id="stockTicker" @bind-Value="ticker" />
+</div>
+<div>
+    <button @onclick='async () => Message = await DisplayStockData(ticker)'>
+        Confirm
+    </button>
+    <p>@Message</p>
+</div>
+
 
 @code {
 
+    public string ticker { get; set; } = string.Empty;
+    string Message = "Test";
+
+    public async Task<string> DisplayStockData(string tickerSymbol)
+    {
+        var response = GetStockInfoService.GetStockData(ticker);
+        var stockData = await response;
+        ticker = stockData?.Data?.Ticker;
+
+        return ticker;
+    }
 }
+

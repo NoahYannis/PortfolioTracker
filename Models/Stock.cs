@@ -1,23 +1,26 @@
-﻿namespace PortfolioTracker.Models
+﻿using System.Text.Json.Serialization;
+
+namespace PortfolioTracker
 {
     public class Stock
     {
-        public string Name { get; set; } = string.Empty;
-        public string TickerSymbol { get; set; } = string.Empty;
-        public string Sector { get; set; } = string.Empty;
-        public string FromCountry { get; set; } = string.Empty;
-        public string _52_Week_Range {get;set;} = string.Empty;
+        [JsonPropertyName("afterHours")]
+        public decimal AfterHours { get; set; }
 
+        [JsonPropertyName("afterHours")]
+        public decimal Open { get; set; }
 
-        public decimal Price { get; set; }
-        public decimal PE_Ratio { get; set; }
-        public decimal EPS_PerShare { get; set; }
-        public decimal MarketCap { get; set; }
-        public decimal _52_Week_Low { get; set; }
-        public decimal _52_Week_High { get; set; }
+        [JsonPropertyName("close")]
+        public decimal Close { get; set; }
 
+        [JsonPropertyName("preMarket")]
+        public decimal PreMarket { get; set; }
 
-        public bool PaysDividend { get; set; }
+        [JsonPropertyName("high")]
+        public decimal High { get; set; }
 
+        [JsonPropertyName("low")]
+        public decimal Low { get; set; }
+        public string Ticker { get; set; } = String.Empty;
     }
 }
