@@ -26,8 +26,9 @@ namespace PortfolioTracker.Services.GetStockInfoService
 
         public async Task<ServiceResponse<Stock>> GetStockData(string tickerSymbol)
         {
-            AppConfig appConfig = _config.GetSection("AppSettings").Get<AppConfig>();
+            AppConfig appConfig = _config.GetSection("AppSettings").Get<AppConfig>(); // Returns the API Key from the appsettings.json file
             string apiKey = appConfig?.ApiKey;
+
             string date = DateTime.Now.AddHours(-24).ToString("yyyy-MM-dd");  // The free API version only delivers end of day data. A 24h delay is required.
 
             string url = $"https://api.polygon.io/v1/open-close/{tickerSymbol}/{date}?adjusted=true&apiKey={apiKey}";

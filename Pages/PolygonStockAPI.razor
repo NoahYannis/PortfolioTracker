@@ -39,13 +39,29 @@
 
 @code {
 
+    /// <summary>
+    /// The ticker symbol entered by the user inside the input text field.
+    /// </summary>
     public string ticker { get; set; } = string.Empty;
+
+    /// <summary>
+    /// The current stock requested by the user.
+    /// </summary>
     public Stock CurrentStock { get; set; } = new();
+
+    /// <summary>
+    /// Error message that is displayed after an unsuccessful API call.
+    /// </summary>
     public string ErrorMessage { get; set; } = string.Empty;
 
+    /// <summary>
+    /// Returns the stock entered by the user if the API call is successful, alternatively an error message is displayed.
+    /// </summary>
+    /// <param name="tickerSymbol"></param>
+    /// <returns>The stock entered by the user</returns>
     public async Task<Stock> ReturnStockFromApiCall(string tickerSymbol)
     {
-        var response = GetStockInfoService.GetStockData(ticker.ToUpper());
+        var response = GetStockInfoService.GetStockData(ticker.ToUpper()); 
         var stockData = await response;
 
         if (!stockData.Success)
