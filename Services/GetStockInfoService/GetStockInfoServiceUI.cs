@@ -45,7 +45,6 @@ namespace PortfolioTracker.Services.GetStockInfoService
                 if (serviceResponse.Data != null)
                 {
                     serviceResponse.Data.Ticker = tickerSymbol;
-
                 }              
                 
                 return serviceResponse;

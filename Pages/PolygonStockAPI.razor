@@ -1,0 +1,61 @@
+﻿@using PortfolioTracker.Other;
+@using PortfolioTracker.Services.GetStockInfoService;
+
+@inject IGetStockInfoService GetStockInfoService
+
+<h3></h3>
+
+
+<div>
+    <label for="stockTicker">Enter a stock ticker: </label>
+    <InputText id="stockTicker" @bind-Value="ticker" />
+</div>
+<div>
+    <button @onclick='async () => CurrentStock = await ReturnStockFromApiCall(ticker)'>
+        Confirm
+    </button>
+
+    @if (!string.IsNullOrEmpty(CurrentStock.Ticker))
+    {
+        <br/><br/>
+        <p>Pre Market: $@CurrentStock.PreMarket </p>
+        <p>After Hours: $@CurrentStock.AfterHours</p>
+        <p>Open: $@CurrentStock.Open</p>
+        <p>Close: $@CurrentStock.Close</p>
+        <p>Low: $@CurrentStock.Low</p>
+        <p>High: $@CurrentStock.High</p>
+    }
+    else
+    {
+        @if (!string.IsNullOrEmpty(ErrorMessage))
+        {
+            <br/><br/>
+            <p>@ErrorMessage</p>
+        }
+    }
+
+</div>
+
+
+@code {
+
+    public string ticker { get; set; } = string.Empty;
+    public Stock CurrentStock { get; set; } = new();
+    public string ErrorMessage { get; set; } = string.Empty;
+
+    public async Task<Stock> ReturnStockFromApiCall(string tickerSymbol)
+    {
+        var response = GetStockInfoService.GetStockData(ticker.ToUpper());
+        var stockData = await response;
+
+        if (!stockData.Success)
+        {
+            ErrorMessage = "Error: " + stockData.Message;
+        }
+
+        CurrentStock = stockData?.Data;
+
+        return CurrentStock ?? new Stock();
+    }
+}
+
