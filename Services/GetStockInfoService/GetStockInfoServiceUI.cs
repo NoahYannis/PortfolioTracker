@@ -24,6 +24,12 @@ namespace PortfolioTracker.Services.GetStockInfoService
             _config = config;
         }
 
+
+        /// <summary>
+        /// Sends and API request with the specified stock ticker and returns its result 
+        /// </summary>
+        /// <param name="tickerSymbol"></param>
+        /// <returns></returns>
         public async Task<ServiceResponse<Stock>> GetStockData(string tickerSymbol)
         {
             AppConfig appConfig = _config.GetSection("AppSettings").Get<AppConfig>(); // Returns the API Key from the appsettings.json file
