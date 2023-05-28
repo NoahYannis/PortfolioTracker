@@ -18,20 +18,21 @@
                     Title = new OptionsTitle
                     {
                         Display = true,
-                        Text = "ChartJs.Blazor Pie Chart"
+                        Text = "Stock Portfolio"
                     }
                 }
             };
 
-        foreach (string color in new[] { "Red", "Yellow", "Green", "Blue" })
+        foreach (string color in new[] { "AAPL", "AMZN", "MSFT", "GOOG" })
         {
             _config.Data.Labels.Add(color);
         }
 
-        PieDataset<int> dataset = new PieDataset<int>(new[] { 6, 5, 3, 7 })
+        PieDataset<int> dataset = new PieDataset<int>(new[] { 20, 10, 18, 33 })
             {
+                
                 BackgroundColor = new[]
-                {
+                            {
             ColorUtil.ColorHexString(255, 99, 132), // Slice 1 aka "Red"
             ColorUtil.ColorHexString(255, 205, 86), // Slice 2 aka "Yellow"
             ColorUtil.ColorHexString(75, 192, 192), // Slice 3 aka "Green"

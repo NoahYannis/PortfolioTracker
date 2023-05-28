@@ -26,7 +26,7 @@ namespace PortfolioTracker.Services.GetStockInfoService
 
 
         /// <summary>
-        /// Sends and API request with the specified stock ticker and returns its result 
+        /// Sends an API request with the specified stock ticker and returns its result 
         /// </summary>
         /// <param name="tickerSymbol"></param>
         /// <returns></returns>
