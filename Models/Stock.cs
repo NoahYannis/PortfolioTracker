@@ -1,4 +1,5 @@
-﻿using System.Text.Json.Serialization;
+﻿using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace PortfolioTracker
 {
@@ -20,19 +21,24 @@ namespace PortfolioTracker
 
     public class Stock
     {
+        [Required, StringLength(5, MinimumLength = 1, ErrorMessage = "Value must be between 1 and 5 characters")]
         public string Ticker { get; set; } = String.Empty;
 
+        [Required, MinLength(0, ErrorMessage = "Value must be greater than zero")]
         public decimal PositionSize = decimal.Zero;
 
+        [Required, MinLength(0, ErrorMessage = "Value must be greater than zero")]
         public decimal SharesOwned = decimal.Zero;
 
+        [Required, Range(0.1f, double.MaxValue, ErrorMessage = "Value must be greater than zero")]
         public decimal BuyInPrice = decimal.Zero;
 
-        public decimal ProcentualPerformance => ((Close - BuyInPrice) / BuyInPrice) * 100;
+        [Range(0, 200)]
+        public decimal DividendYield = decimal.Zero;
+
+        public decimal RelativePerformance => ((Close - BuyInPrice) / BuyInPrice) * 100;
 
         public decimal AbsolutePerformance => (Close - BuyInPrice) * SharesOwned;
-
-        public decimal DividendYield = decimal.Zero;
 
         public Industry Industry { get; set; }
 

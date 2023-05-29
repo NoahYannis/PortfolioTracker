@@ -4,12 +4,12 @@ using System.Net.Http.Json;
 
 namespace PortfolioTracker.Services.GetStockInfoService
 {
-    public class GetStockInfoServiceConsole
+    public class GetStockInfoServiceCole
     {
         private readonly HttpClient _httpClient;
         private readonly IConfiguration _config;
 
-        public GetStockInfoServiceConsole(HttpClient httpClient, IConfiguration config)
+        public GetStockInfoServiceCole(HttpClient httpClient, IConfiguration config)
         {
             httpClient = _httpClient;
             _config = config;

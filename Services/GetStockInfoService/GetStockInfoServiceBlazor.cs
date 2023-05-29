@@ -10,7 +10,7 @@ using PortfolioTracker.Shared;
 
 namespace PortfolioTracker.Services.GetStockInfoService
 {
-    public class GetStockInfoServiceUI : IGetStockInfoService
+    public class GetStockInfoServiceBlazor : IGetStockInfoService
     {
         private readonly HttpClient _httpClient;
         private readonly IConfiguration _config;
@@ -18,7 +18,7 @@ namespace PortfolioTracker.Services.GetStockInfoService
         public bool ApiCallSuccesful = true;
         private object httpClient;
 
-        public GetStockInfoServiceUI(HttpClient httpClient, IConfiguration config)
+        public GetStockInfoServiceBlazor(HttpClient httpClient, IConfiguration config)
         {
             httpClient = _httpClient;
             _config = config;

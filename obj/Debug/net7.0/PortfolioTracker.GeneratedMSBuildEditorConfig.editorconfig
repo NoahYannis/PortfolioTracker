@@ -20,16 +20,24 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Noah/source/repos/PortfolioTracker/Pages/Index.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+[C:/Users/Noah/source/repos/PortfolioTracker/Components/AddStockComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBZGRTdG9ja0NvbXBvbmVudC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Noah/source/repos/PortfolioTracker/Pages/PolygonStockAPI.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9seWdvblN0b2NrQVBJLnJhem9y
+[C:/Users/Noah/source/repos/PortfolioTracker/Components/PolygonStockAPI.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQb2x5Z29uU3RvY2tBUEkucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Noah/source/repos/PortfolioTracker/Pages/PortfolioPieChart.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9ydGZvbGlvUGllQ2hhcnQucmF6b3I=
+[C:/Users/Noah/source/repos/PortfolioTracker/Components/PortfolioPieChart.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQb3J0Zm9saW9QaWVDaGFydC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Noah/source/repos/PortfolioTracker/Pages/Home.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Noah/source/repos/PortfolioTracker/Pages/Portfolio.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9ydGZvbGlvLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Noah/source/repos/PortfolioTracker/Shared/SurveyPrompt.razor]

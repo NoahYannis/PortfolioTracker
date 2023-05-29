@@ -6,22 +6,52 @@
         /// All stocks inside the user's portfolio
         /// </summary>
         public List<Stock> Positions { get; set; } = new();
-
         public string Name { get; set; } = string.Empty;
         public string Description { get; set; } = string.Empty;
         public decimal Value { get; set; } = decimal.Zero;
-        public decimal ProcentualPerformance { get; set; } = GetProcentualPerformance();
-        public decimal AbsolutePerformance { get; set; } = GetAbsolutePerformance();
 
-        // Transaction history to be implemented
+        #region Portfolio Performance
+        public decimal RelativePerformance
+        {
+            get { return GetRelativePerformance(); }
+            set { }
+        }
 
-        private static decimal GetProcentualPerformance()
+        public decimal AbsolutePerformance
         {
-            throw new NotImplementedException();
+            get { return GetAbsolutePerformance(); }
+            set { }
         }
-        private static decimal GetAbsolutePerformance()
+
+        public decimal GetRelativePerformance()
         {
-            throw new NotImplementedException();
+            if (Positions.Any())
+            {
+                foreach (Stock stock in Positions)
+                {
+                    RelativePerformance += stock.RelativePerformance;
+                }
+
+                return RelativePerformance;
+            }
+
+            return decimal.Zero;
         }
+        public decimal GetAbsolutePerformance()
+        {
+            if (Positions.Any())
+            {
+                foreach (Stock stock in Positions)
+                {
+                    AbsolutePerformance += stock.AbsolutePerformance;
+                }
+
+                return AbsolutePerformance;
+            }
+
+            return decimal.Zero;
+        }
+
+        #endregion
     }
 }
