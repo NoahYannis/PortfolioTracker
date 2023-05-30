@@ -2,6 +2,9 @@
 
 namespace PortfolioTracker.Services.PortfolioService
 {
+    /// <summary>
+    /// Portfolio functionalities
+    /// </summary>
     public interface IPortfolioService
     {
         List<Stock> PortfolioStocks { get; set; }

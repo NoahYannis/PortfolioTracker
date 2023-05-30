@@ -11,6 +11,7 @@
         public decimal Value { get; set; } = decimal.Zero;
 
         #region Portfolio Performance
+
         public decimal RelativePerformance
         {
             get { return GetRelativePerformance(); }
