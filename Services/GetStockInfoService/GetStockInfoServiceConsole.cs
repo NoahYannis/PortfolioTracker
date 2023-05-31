@@ -88,7 +88,7 @@ namespace PortfolioTracker.Services.GetStockInfoService
 
         public async Task GetStockData(Stock stock)
         {
-            string apiKey = _config.GetValue<string>("AppSettings:ApiKey");
+            string apiKey = _config?.GetValue<string>("AppSettings:ApiKey");
             string date = DateTime.Now.AddHours(-24).ToString("yyyy-MM-dd");  // The free API version only delivers end of day data. A 24h delay is required.
             string ticker = GetTickerSymbolFromUser();
 
@@ -113,7 +113,7 @@ namespace PortfolioTracker.Services.GetStockInfoService
 
         public void DisplayRequestedParameters(List<decimal> requestedParams)
         {
-            for (int i = 0; i < requestedParams.Count; i++)
+            for (int i = 0; i < requestedParams?.Count; i++)
             {
                 Console.WriteLine(requestedParams[i].ToString());
             }

@@ -36,9 +36,29 @@ namespace PortfolioTracker
         [Range(0, 200)]
         public decimal DividendYield = decimal.Zero;
 
-        public decimal RelativePerformance => ((Close - BuyInPrice) / BuyInPrice) * 100;
+        public decimal RelativePerformance
+        {
+            get
+            {
+                return ((Close - BuyInPrice) / BuyInPrice) * 100;
+            }
+            set
+            {
+                BuyInPrice = value;
+            }
+        }
 
-        public decimal AbsolutePerformance => (Close - BuyInPrice) * SharesOwned;
+        public decimal AbsolutePerformance
+        {
+            get
+            {
+                return (Close - BuyInPrice) * SharesOwned;
+            }
+            set
+            {
+                SharesOwned = value;
+            }
+        }
 
         public Industry Industry { get; set; }
 
@@ -61,6 +81,7 @@ namespace PortfolioTracker
 
         [JsonPropertyName("low")]
         public decimal Low { get; set; }
+
         #endregion
     }
 }

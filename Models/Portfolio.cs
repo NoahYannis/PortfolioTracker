@@ -1,4 +1,6 @@
-﻿namespace PortfolioTracker.Models
+﻿using System.Transactions;
+
+namespace PortfolioTracker.Models
 {
     public class Portfolio
     {
@@ -6,6 +8,7 @@
         /// All stocks inside the user's portfolio
         /// </summary>
         public List<Stock> Positions { get; set; } = new();
+        public List<Order> OrderHistory { get; set; } = new();
         public string Name { get; set; } = string.Empty;
         public string Description { get; set; } = string.Empty;
         public decimal Value { get; set; } = decimal.Zero;
