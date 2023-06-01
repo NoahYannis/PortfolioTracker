@@ -64,7 +64,7 @@
         var response = GetStockInfoService.GetStockData(ticker.ToUpper()); 
         var stockData = await response;
 
-        if (!stockData.Success)
+        if (stockData != null && !stockData.Success)
         {
             ErrorMessage = "Error: " + stockData.Message;
         }

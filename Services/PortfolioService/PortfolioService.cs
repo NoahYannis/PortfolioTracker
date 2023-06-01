@@ -1,4 +1,5 @@
 ﻿using PortfolioTracker.Models;
+using PortfolioTracker.Other;
 
 namespace PortfolioTracker.Services.PortfolioService
 {
@@ -26,19 +27,10 @@ namespace PortfolioTracker.Services.PortfolioService
             return Task.CompletedTask;
         }
 
-        public Task<Stock> GetStock(string ticker)
+        public async Task<Stock> GetStock(string ticker)
         {
             Stock stock = PortfolioStocks.FirstOrDefault(s => s.Ticker == ticker);
-
-            if (stock != null)
-            {
-                return Task.FromResult(stock);
-            }
-            else
-            {
-                return Task.FromResult(new Stock() { Ticker = "-" });
-            }
-
+            return await Task.FromResult(stock ?? new Stock());
         }
 
         public async Task<List<Stock>> GetStocks()
@@ -86,7 +78,7 @@ namespace PortfolioTracker.Services.PortfolioService
             }
             else
             {
-                return new Order() { Message = $"Order {orderNumber} not found" };
+                return await Task.FromResult(new Order() { Message = $"Couldn't retrieve Order {orderNumber}" });
             }
         }
 

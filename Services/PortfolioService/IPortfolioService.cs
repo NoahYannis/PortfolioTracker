@@ -21,7 +21,7 @@ namespace PortfolioTracker.Services.PortfolioService
 
         #region Orders
 
-        public List<Order> Orders { get; set; }
+        List<Order> Orders { get; set; }
         Task<List<Order>> GetOrders();
         Task<Order> GetOrder(int orderNumber);
         Task UpdateOrder(Order order);

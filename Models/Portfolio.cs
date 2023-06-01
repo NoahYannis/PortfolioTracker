@@ -11,7 +11,7 @@ namespace PortfolioTracker.Models
         public List<Order> OrderHistory { get; set; } = new();
         public string Name { get; set; } = string.Empty;
         public string Description { get; set; } = string.Empty;
-        public decimal Value { get; set; } = decimal.Zero;
+        public decimal TotalValue { get; set; } = decimal.Zero;
 
         #region Portfolio Performance
 

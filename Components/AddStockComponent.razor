@@ -2,10 +2,35 @@
 
 @inject IPortfolioService PortfolioService
 
-<h3>AddStockComponent</h3>
+<div>
+    <label for="stockTicker">Stock Ticker: </label>
+    <InputText id="stockTicker" @bind-Value="StockToAdd.Ticker" />
+</div>
 
-<button>Add new stock</button>
+@foreach (Stock stock in PortfolioStocks)
+{
+    <p>Name: @stock.Ticker</p>
+}
+<button @onclick='async() => await AddStock(StockToAdd)'>Add new stock</button>
 
 @code {
+
+
+    public List<Stock> PortfolioStocks { get; set; } = new();
+    Stock StockToAdd { get; set; } = new();
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        PortfolioStocks = await PortfolioService.GetStocks();
+    }
+
+
+    public async Task AddStock(Stock stock)
+    {
+        Stock newStock = new() { Ticker = stock.Ticker };
+        await PortfolioService.AddStock(newStock);
+        StateHasChanged();
+    }
 
 }
