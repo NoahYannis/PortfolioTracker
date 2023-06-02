@@ -3,26 +3,11 @@ using System.Text.Json.Serialization;
 
 namespace PortfolioTracker
 {
-    public enum Industry
-    {
-        Technology,
-        Healthcare,
-        Financial,
-        Energy,
-        Materials,
-        Real_Estate,
-        Consumer_Staples,
-        Consumer_Discretionary,
-        Utilities,
-        Industrials,
-        Other,
-        NotDefinedByUser,
-    }
 
     public class Stock
     {
         [Required, StringLength(5, MinimumLength = 1, ErrorMessage = "Value must be between 1 and 5 characters")]
-        public string Ticker { get; set; } = String.Empty;
+        public string Ticker { get; set; } = string.Empty;
 
         [Required, MinLength(0, ErrorMessage = "Value must be greater than zero")]
         public decimal PositionSize = decimal.Zero;
