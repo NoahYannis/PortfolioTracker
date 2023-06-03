@@ -6,22 +6,22 @@ namespace PortfolioTracker
 
     public class Stock
     {
-        [Required, StringLength(5, MinimumLength = 1, ErrorMessage = "Value must be between 1 and 5 characters")]
+        [Required, StringLength(5, MinimumLength = 1, ErrorMessage = "Ticker Must Be Between 1 And 5 Characters")]
         public string Ticker { get; set; } = string.Empty;
 
-        [Required, MinLength(0, ErrorMessage = "Value must be greater than zero")]
-        public decimal PositionSize = decimal.Zero;
+        [Required, Range(0.01f, double.MaxValue, ErrorMessage = "Position Size Must Be Greater Than $0.")]
+        public decimal? PositionSize { get; set; } = null;
 
-        [Required, MinLength(0, ErrorMessage = "Value must be greater than zero")]
-        public decimal SharesOwned = decimal.Zero;
+        [Required, Range(0.01, double.MaxValue, ErrorMessage = "Shares Owned Must Be Greater Than Zero.")]
+        public decimal? SharesOwned { get; set; } = null;
 
-        [Required, Range(0.1f, double.MaxValue, ErrorMessage = "Value must be greater than zero")]
-        public decimal BuyInPrice = decimal.Zero;
+        [Required, Range(0.1, double.MaxValue, ErrorMessage = "Buy In Price Must Be Greater Than $0.")]
+        public decimal? BuyInPrice { get; set; } = null;
 
         [Range(0, 200)]
-        public decimal DividendYield = decimal.Zero;
+        public decimal? DividendYield { get; set; } = null;
 
-        public decimal RelativePerformance
+        public decimal? RelativePerformance
         {
             get
             {
@@ -29,11 +29,11 @@ namespace PortfolioTracker
             }
             set
             {
-                BuyInPrice = value;
+                RelativePerformance = value;
             }
         }
 
-        public decimal AbsolutePerformance
+        public decimal? AbsolutePerformance
         {
             get
             {
@@ -41,7 +41,7 @@ namespace PortfolioTracker
             }
             set
             {
-                SharesOwned = value;
+                AbsolutePerformance = value;
             }
         }
 

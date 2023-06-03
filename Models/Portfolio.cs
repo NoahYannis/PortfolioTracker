@@ -15,19 +15,19 @@ namespace PortfolioTracker.Models
 
         #region Portfolio Performance
 
-        public decimal RelativePerformance
+        public decimal? RelativePerformance
         {
             get { return GetRelativePerformance(); }
             set { }
         }
 
-        public decimal AbsolutePerformance
+        public decimal? AbsolutePerformance
         {
             get { return GetAbsolutePerformance(); }
             set { }
         }
 
-        public decimal GetRelativePerformance()
+        public decimal? GetRelativePerformance()
         {
             if (Positions.Any())
             {
@@ -41,7 +41,7 @@ namespace PortfolioTracker.Models
 
             return decimal.Zero;
         }
-        public decimal GetAbsolutePerformance()
+        public decimal? GetAbsolutePerformance()
         {
             if (Positions.Any())
             {

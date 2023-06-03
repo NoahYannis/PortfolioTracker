@@ -4,36 +4,53 @@
 @inject IPortfolioService PortfolioService
 
 <div>
-    <label for="stockTicker">Stock Ticker: </label>
-    <InputText id="stockTicker" @bind-Value="StockToAdd.Ticker" />
-    <br /><br />
-    <label for="sharesOwned">Shares Owned: </label>
-    <InputNumber id="sharesOwned" @bind-Value="StockToAdd.SharesOwned" />
-    <br /><br />
-    <label for="positionSize">Position Size ($): </label>
-    <InputNumber id="positionSize" @bind-Value="StockToAdd.PositionSize" />
-    <br /><br />
-    <label for="buyinPrice">Buy In Price ($): </label>
-    <InputNumber id="buyinPrice" @bind-Value="StockToAdd.BuyInPrice" />
-    <br /><br />
-    <label for="industry">Stock Industry: </label>
-    <InputSelect id="industry" @bind-Value="StockToAdd.Industry">
-        @foreach (Industry industry in Enum.GetValues(typeof(Industry)))
-        {
-            <option>@GetDisplayValue(industry)</option>
-        }
-    </InputSelect>
-    <br /><br />
-    <label for="dividendYield">Dividend Yield % (optional): </label>
-    <InputNumber id="dividendYield" @bind-Value="StockToAdd.DividendYield" />
-    <br /><br />
+    <EditForm Model="@StockToAdd" OnValidSubmit='async() => await AddStock(StockToAdd)'>
+        <DataAnnotationsValidator />
+
+        <label for="stockTicker">Stock Ticker: </label>
+        <InputText id="stockTicker" @bind-Value="StockToAdd.Ticker" />
+        <ValidationMessage For="() => StockToAdd.Ticker" />
+        <br /><br />
+
+        <label for="sharesOwned">Shares Owned: </label>
+        <InputNumber id="sharesOwned" @bind-Value="StockToAdd.SharesOwned" min="0"/>
+        <ValidationMessage For="() => StockToAdd.SharesOwned" />
+        <br /><br />
+
+        <label for="positionSize">Position Size ($): </label>
+        <InputNumber id="positionSize" @bind-Value="StockToAdd.PositionSize" min="0" />
+        <ValidationMessage For="() => StockToAdd.PositionSize" />
+        <br /><br />
+
+        <label for="buyinPrice">Buy In Price ($): </label>
+        <InputNumber id="buyinPrice" @bind-Value="StockToAdd.BuyInPrice" min="0" />
+        <ValidationMessage For="() => StockToAdd.BuyInPrice"/>
+        <br /><br />
+
+        <label for="industry">Stock Industry: </label>
+        <InputSelect id="industry" @bind-Value="StockToAdd.Industry">
+            @foreach (Industry industry in Enum.GetValues(typeof(Industry)))
+            {
+                <option>@GetDisplayValue(industry)</option>
+            }
+        </InputSelect>
+        <ValidationMessage For="() => StockToAdd.Industry" />
+        <br /><br />
+
+        <label for="dividendYield">Dividend Yield % (optional): </label>
+        <InputNumber id="dividendYield" @bind-Value="StockToAdd.DividendYield" min="0" />
+        <ValidationMessage For="() => StockToAdd.DividendYield" />
+        <br /><br />
+
+        <button type="submit">Add new stock</button>
+        <br /><br />
+    </EditForm>
 </div>
 
 @foreach (Stock stock in PortfolioStocks)
 {
     <p>Name: @stock.Ticker</p>
 }
-<button @onclick='async() => await AddStock(StockToAdd)'>Add new stock</button>
 
 @code {
 
@@ -50,9 +67,17 @@
 
     public async Task AddStock(Stock stock)
     {
-        Stock newStock = new() { Ticker = stock.Ticker };
+        Stock newStock = new() 
+        {
+            Ticker = stock.Ticker,
+            SharesOwned = stock.PositionSize,
+            PositionSize = stock.PositionSize,
+            BuyInPrice = stock.BuyInPrice,
+            Industry = stock.Industry,
+            DividendYield = stock.DividendYield
+        };
+  
         await PortfolioService.AddStock(newStock);
-        StateHasChanged();
     }
 
     public static string GetDisplayValue(Industry value)
