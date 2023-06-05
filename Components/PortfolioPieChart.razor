@@ -1,14 +1,22 @@
 ﻿@using ChartJs.Blazor.PieChart
+@using PortfolioTracker.Services.PortfolioService;
+@using System.Drawing;
+
+@inject IPortfolioService PortfolioService
 
 
 <Chart Config="_config" />
 
 @code {
 
-    private PieConfig _config;
+    private PieConfig _config = new();
+    private List<Stock> PortfolioStocks { get; set; } = new();
+    private List<string> BackgroundColors { get; set; } = new List<string>();
+    private PieDataset<decimal?> Dataset { get; set; } = new PieDataset<decimal?>();
 
-    protected override void OnInitialized()
+    protected override async void OnInitialized()
     {
+
 
         _config = new PieConfig
             {
@@ -18,28 +26,37 @@
                     Title = new OptionsTitle
                     {
                         Display = true,
-                        Text = "Stock Portfolio"
+                        Text = "Your Portfolio"
                     }
                 }
             };
 
-        foreach (string color in new[] { "AAPL", "AMZN", "MSFT", "GOOG" })
+
+        //PortfolioStocks = await PortfolioService.GetStocks();
+
+        // Simulating the portfolio for now
+        PortfolioStocks = new()
         {
-            _config.Data.Labels.Add(color);
+          new Stock { Ticker = "T", PositionSize = 8},
+          new Stock { Ticker = "E", PositionSize = 3},
+          new Stock { Ticker = "S", PositionSize = 6},
+          new Stock { Ticker = "T", PositionSize = 1},
+        };
+
+        Random random = new Random();
+
+        // For each stock inside the portfolio display its ticker and set the background to a random color
+        foreach (Stock stock in PortfolioStocks)
+        {
+            _config.Data.Labels.Add(stock.Ticker);
+            Dataset.Add(stock.PositionSize);
+
+            Color randomColor = Color.FromArgb(random.Next(256), random.Next(256), random.Next(256));
+            string colorHex = ColorUtil.ColorHexString(randomColor.R, randomColor.G, randomColor.B);
+            BackgroundColors.Add(colorHex);
         }
 
-        PieDataset<int> dataset = new PieDataset<int>(new[] { 20, 10, 18, 33 })
-            {
-                
-                BackgroundColor = new[]
-                            {
-            ColorUtil.ColorHexString(255, 99, 132), // Slice 1 aka "Red"
-            ColorUtil.ColorHexString(255, 205, 86), // Slice 2 aka "Yellow"
-            ColorUtil.ColorHexString(75, 192, 192), // Slice 3 aka "Green"
-            ColorUtil.ColorHexString(54, 162, 235), // Slice 4 aka "Blue"
-        }
-            };
-
-        _config.Data.Datasets.Add(dataset);
+        Dataset.BackgroundColor = BackgroundColors.ToArray();
+        _config.Data.Datasets.Add(Dataset);
     }
 }

@@ -34,7 +34,6 @@
                 <option>@GetDisplayValue(industry)</option>
             }
         </InputSelect>
-        <ValidationMessage For="() => StockToAdd.Industry" />
         <br /><br />
 
         <label for="dividendYield">Dividend Yield % (optional): </label>
@@ -49,7 +48,19 @@
 
 @foreach (Stock stock in PortfolioStocks)
 {
-    <p>Name: @stock.Ticker</p>
+    <p>Stock Ticker: @stock.Ticker</p>
+    <p>Shares Owned: @stock.SharesOwned</p>
+    <p>Position Size: $@stock.PositionSize</p>
+    <p>Buy In Price: $@stock.BuyInPrice</p>
+    <p>Industry: @stock.Industry</p>
+    @if (stock.DividendYield != null && stock.DividendYield > 0)
+    {
+    <p>Dividend Yield: @stock.DividendYield %</p>
+    }
+    else
+    {
+    <p>Dividend Yield: - </p>
+    }
 }
 
 @code {
@@ -70,14 +81,15 @@
         Stock newStock = new() 
         {
             Ticker = stock.Ticker,
-            SharesOwned = stock.PositionSize,
+            SharesOwned = stock.SharesOwned,
             PositionSize = stock.PositionSize,
             BuyInPrice = stock.BuyInPrice,
             Industry = stock.Industry,
             DividendYield = stock.DividendYield
         };
-  
+
         await PortfolioService.AddStock(newStock);
+        await ResetInputFields();
     }
 
     public static string GetDisplayValue(Industry value)
@@ -85,6 +97,19 @@
         var field = value.GetType().GetField(value.ToString());
         var attribute = (EnumDisplayText)Attribute.GetCustomAttribute(field, typeof(EnumDisplayText));
         return attribute != null ? attribute.Text : value.ToString();
+    }
+
+    public async Task ResetInputFields()
+    {
+        await Task.Run(() =>
+        {
+            StockToAdd.Ticker = string.Empty;
+            StockToAdd.SharesOwned = null;
+            StockToAdd.PositionSize = null;
+            StockToAdd.BuyInPrice = null;
+            StockToAdd.Industry = Industry.Technology;
+            StockToAdd.DividendYield = null;
+        });
     }
 
 }
