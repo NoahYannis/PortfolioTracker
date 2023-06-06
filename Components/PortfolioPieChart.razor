@@ -6,6 +6,9 @@
 
 
 <Chart Config="_config" />
+<AddStockComponent/>
+
+<button @onclick="AddStock">Add Stock</button>
 
 @code {
 
@@ -13,10 +16,11 @@
     private List<Stock> PortfolioStocks { get; set; } = new();
     private List<string> BackgroundColors { get; set; } = new List<string>();
     private PieDataset<decimal?> Dataset { get; set; } = new PieDataset<decimal?>();
+    public Random random = new Random();
 
     protected override async void OnInitialized()
     {
-
+        PortfolioStocks = await PortfolioService.GetStocks();
 
         _config = new PieConfig
             {
@@ -26,15 +30,12 @@
                     Title = new OptionsTitle
                     {
                         Display = true,
-                        Text = "Your Portfolio"
+                        Text = "Your Portfolio",
                     }
                 }
             };
 
-
-        //PortfolioStocks = await PortfolioService.GetStocks();
-
-        // Simulating the portfolio for now
+         // Simulating the portfolio for now
         PortfolioStocks = new()
         {
           new Stock { Ticker = "T", PositionSize = 8},
@@ -43,7 +44,6 @@
           new Stock { Ticker = "T", PositionSize = 1},
         };
 
-        Random random = new Random();
 
         // For each stock inside the portfolio display its ticker and set the background to a random color
         foreach (Stock stock in PortfolioStocks)
@@ -58,5 +58,19 @@
 
         Dataset.BackgroundColor = BackgroundColors.ToArray();
         _config.Data.Datasets.Add(Dataset);
+    }
+
+    public void AddStock()
+    {
+        // For testing purposes, to be refactored 
+
+        Stock stock = new() { Ticker = "MPW", PositionSize = 4 };
+        PortfolioStocks.Add(stock);
+        _config.Data.Datasets.Add(Dataset);
+        Color randomColor = Color.FromArgb(random.Next(256), random.Next(256), random.Next(256));
+        string colorHex = ColorUtil.ColorHexString(randomColor.R, randomColor.G, randomColor.B);
+        BackgroundColors.Add(colorHex);
+        Dataset.BackgroundColor = BackgroundColors.ToArray();
+        Dataset.Add(stock.PositionSize);
     }
 }

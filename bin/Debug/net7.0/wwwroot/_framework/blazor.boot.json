@@ -213,13 +213,13 @@
       "mscorlib.dll": "sha256-T52Qf1cS\/UysEoWOoE2ptEJEXfGpanQX5KNLyDiLv1E=",
       "netstandard.dll": "sha256-p32h5P3QmHJ\/FGoeE6m7f5g\/8ng2PSPGZktHyMadvIs=",
       "System.Private.CoreLib.dll": "sha256-6MwQcyKbqBsoZYOcD9fQJ4iKcn1qMmWRWVEkU2LLCb0=",
-      "PortfolioTracker.dll": "sha256-LDPCatgPa8vIITfCSLgIldlrxlA7EW5QuvxM+Sk60TI="
+      "PortfolioTracker.dll": "sha256-jb50fAdvRBaRRMaoVQ5glz4qbqsiut9\/AgCQqndIj2o="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "PortfolioTracker.pdb": "sha256-3B0oCQi\/QonU9s0mbx83alE0Zjj\/jO+nv4wNB5a1WBI="
+      "PortfolioTracker.pdb": "sha256-NAAquqWw5Kn3cLFK++UCbjLWkSwNGbJQ7moJcfgrsXs="
     },
     "runtime": {
       "dotnet.7.0.2.q77lveppya.js": "sha256-4mh03qTse0uNR+dQ6ydExm4jJXph0RE8zGNCtF0jiNA=",

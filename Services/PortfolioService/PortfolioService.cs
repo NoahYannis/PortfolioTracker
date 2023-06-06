@@ -9,6 +9,8 @@ namespace PortfolioTracker.Services.PortfolioService
         #region Stock-CRUD
         public List<Stock> PortfolioStocks { get; set; } = new List<Stock>();
 
+
+
         public Task AddStock(Stock stock)
         {
             PortfolioStocks.Add(stock);

@@ -69,12 +69,10 @@
     public List<Stock> PortfolioStocks { get; set; } = new();
     Stock StockToAdd { get; set; } = new();
 
-
     protected override async Task OnInitializedAsync()
     {
         PortfolioStocks = await PortfolioService.GetStocks();
     }
-
 
     public async Task AddStock(Stock stock)
     {
