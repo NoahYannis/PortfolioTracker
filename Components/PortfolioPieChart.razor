@@ -1,4 +1,5 @@
 ﻿@using ChartJs.Blazor.PieChart
+@using PortfolioTracker.Other;
 @using PortfolioTracker.Services.PortfolioService;
 @using System.Drawing;
 
@@ -6,9 +7,8 @@
 
 
 <Chart Config="_config" />
-<AddStockComponent/>
 
-<button @onclick="AddStock">Add Stock</button>
+<button @onclick="StateHasChanged">Add Stock </button>
 
 @code {
 
@@ -21,6 +21,7 @@
     protected override async void OnInitialized()
     {
         PortfolioStocks = await PortfolioService.GetStocks();
+        PortfolioService.PortfolioChanged += UpdatePieChart;
 
         _config = new PieConfig
             {
@@ -35,7 +36,7 @@
                 }
             };
 
-         // Simulating the portfolio for now
+        // Simulating the portfolio for now
         PortfolioStocks = new()
         {
           new Stock { Ticker = "T", PositionSize = 8},
@@ -60,17 +61,20 @@
         _config.Data.Datasets.Add(Dataset);
     }
 
-    public void AddStock()
-    {
-        // For testing purposes, to be refactored 
 
-        Stock stock = new() { Ticker = "MPW", PositionSize = 4 };
-        PortfolioStocks.Add(stock);
-        _config.Data.Datasets.Add(Dataset);
-        Color randomColor = Color.FromArgb(random.Next(256), random.Next(256), random.Next(256));
-        string colorHex = ColorUtil.ColorHexString(randomColor.R, randomColor.G, randomColor.B);
-        BackgroundColors.Add(colorHex);
+    public void UpdatePieChart(object sender, PortfolioChangedArgs p)
+    {
+        foreach (Stock stock in p.UpdatedPortfolio)
+        {
+            _config.Data.Labels.Add(stock.Ticker);
+            Dataset.Add(stock.PositionSize);
+            Color randomColor = Color.FromArgb(random.Next(256), random.Next(256), random.Next(256));
+            string colorHex = ColorUtil.ColorHexString(randomColor.R, randomColor.G, randomColor.B);
+            BackgroundColors.Add(colorHex);
+        }
+
         Dataset.BackgroundColor = BackgroundColors.ToArray();
-        Dataset.Add(stock.PositionSize);
+        _config.Data.Datasets.Add(Dataset);
+        }
     }
 }

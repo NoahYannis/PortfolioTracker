@@ -9,11 +9,17 @@ namespace PortfolioTracker.Services.PortfolioService
         #region Stock-CRUD
         public List<Stock> PortfolioStocks { get; set; } = new List<Stock>();
 
+        public event EventHandler<PortfolioChangedArgs> PortfolioChanged;
 
+        private void OnPortfolioChanged(List<Stock> portfolioStocks)
+        {
+            PortfolioChanged?.Invoke(this, new PortfolioChangedArgs(portfolioStocks));
+        }
 
         public Task AddStock(Stock stock)
         {
             PortfolioStocks.Add(stock);
+            OnPortfolioChanged(PortfolioStocks);
             return Task.CompletedTask;
         }
 
@@ -24,6 +30,7 @@ namespace PortfolioTracker.Services.PortfolioService
             if (stockToRemove != null)
             {
                 PortfolioStocks.Remove(stockToRemove);
+                OnPortfolioChanged(PortfolioStocks);
             }
 
             return Task.CompletedTask;
@@ -54,6 +61,7 @@ namespace PortfolioTracker.Services.PortfolioService
                 stock.DividendYield = stockToUpdate.DividendYield;
                 stock.Industry = stockToUpdate.Industry;
                 stock.PositionSize = stockToUpdate.PositionSize;
+                OnPortfolioChanged(PortfolioStocks);
             }
 
             return Task.CompletedTask;
@@ -64,6 +72,8 @@ namespace PortfolioTracker.Services.PortfolioService
         #region Order-CRUD
 
         public List<Order> Orders { get; set; } = new List<Order>();
+
+        // Implement OnOrdersChangedEvent;
 
         public async Task<List<Order>> GetOrders()
         {

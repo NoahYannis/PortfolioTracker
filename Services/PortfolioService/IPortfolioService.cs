@@ -8,7 +8,7 @@ namespace PortfolioTracker.Services.PortfolioService
     /// </summary>
     public interface IPortfolioService
     {
-        #region Stock 
+        #region Stocks 
 
         List<Stock> PortfolioStocks { get; set; }
         Task<List<Stock>> GetStocks();
@@ -16,6 +16,9 @@ namespace PortfolioTracker.Services.PortfolioService
         Task AddStock(Stock stock);
         Task DeleteStock(string ticker);
         Task UpdateStock(Stock stock);
+
+        event EventHandler<PortfolioChangedArgs> PortfolioChanged;
+
 
         #endregion
 
