@@ -1,0 +1,68 @@
+﻿@using PortfolioTracker.Other;
+@using PortfolioTracker.Services.PortfolioService;
+
+@inject IPortfolioService PortfolioService
+
+<div>
+    <EditForm Model="@StockToUpdate" OnValidSubmit='async() => await UpdateStock(StockToUpdate)'>
+        <DataAnnotationsValidator />
+
+        <label for="stockTicker">Stock Ticker: </label>
+        <InputText id="stockTicker" @bind-Value="StockToUpdate.Ticker" />
+        <ValidationMessage For="() => StockToUpdate.Ticker" />
+        <br /><br />
+
+        <label for="sharesOwned">Shares Owned: </label>
+        <InputNumber id="sharesOwned" @bind-Value="StockToUpdate.SharesOwned" min="0" />
+        <ValidationMessage For="() => StockToUpdate.SharesOwned" />
+        <br /><br />
+
+        <label for="positionSize">Position Size ($): </label>
+        <InputNumber id="positionSize" @bind-Value="StockToUpdate.PositionSize" min="0" />
+        <ValidationMessage For="() => StockToUpdate.PositionSize" />
+        <br /><br />
+
+        <label for="buyinPrice">Buy In Price ($): </label>
+        <InputNumber id="buyinPrice" @bind-Value="StockToUpdate.BuyInPrice" min="0" />
+        <ValidationMessage For="() => StockToUpdate.BuyInPrice" />
+        <br /><br />
+
+        <label for="industry">Stock Industry: </label>
+        <InputSelect id="industry" @bind-Value="StockToUpdate.Industry">
+            @foreach (Industry industry in Enum.GetValues(typeof(Industry)))
+            {
+                <option>@GetDisplayValue(industry)</option>
+            }
+        </InputSelect>
+        <br /><br />
+
+        <label for="dividendYield">Dividend Yield % (optional): </label>
+        <InputNumber id="dividendYield" @bind-Value="StockToUpdate.DividendYield" min="0" />
+        <ValidationMessage For="() => StockToUpdate.DividendYield" />
+        <br /><br />
+
+        <button type="submit">Update stock</button>
+        <br /><br />
+    </EditForm>
+</div>
+
+@code {
+
+    [Parameter]
+    public Stock StockToUpdate { get; set; } = new();
+
+    public async Task UpdateStock(Stock stock)
+    {
+        StateHasChanged();
+        await PortfolioService.UpdateStock(stock);
+        StateHasChanged();
+    }
+
+    public static string GetDisplayValue(Industry value)
+    {
+        var field = value.GetType().GetField(value.ToString());
+        var attribute = (EnumDisplayText)Attribute.GetCustomAttribute(field, typeof(EnumDisplayText));
+        return attribute != null ? attribute.Text : value.ToString();
+    }
+}
+

@@ -1,4 +1,6 @@
 ﻿@using ChartJs.Blazor.PieChart
+@using ChartJs.Blazor
+
 @using PortfolioTracker.Other;
 @using PortfolioTracker.Services.PortfolioService;
 @using System.Drawing;
@@ -6,9 +8,11 @@
 @inject IPortfolioService PortfolioService
 
 
-<Chart Config="_config" />
+<Chart Config="_config"/>
 
-<button @onclick="StateHasChanged">Add Stock </button>
+@* 
+<UpdateStockComponent StockToUpdate="PortfolioStocks.FirstOrDefault()">
+</UpdateStockComponent>*@
 
 @code {
 
@@ -16,11 +20,10 @@
     private List<Stock> PortfolioStocks { get; set; } = new();
     private List<string> BackgroundColors { get; set; } = new List<string>();
     private PieDataset<decimal?> Dataset { get; set; } = new PieDataset<decimal?>();
-    public Random random = new Random();
+    private Random random = new Random();
 
     protected override async void OnInitialized()
     {
-        PortfolioStocks = await PortfolioService.GetStocks();
         PortfolioService.PortfolioChanged += UpdatePieChart;
 
         _config = new PieConfig
@@ -35,6 +38,8 @@
                     }
                 }
             };
+
+        //PortfolioStocks = await PortfolioService.GetStocks();
 
         // Simulating the portfolio for now
         PortfolioStocks = new()
@@ -61,9 +66,14 @@
         _config.Data.Datasets.Add(Dataset);
     }
 
-
+    /// <summary>
+    /// The portfolio has changed, the pie chart must be rerendered.
+    /// </summary>
     public void UpdatePieChart(object sender, PortfolioChangedArgs p)
     {
+        // Tell Blazor to update the UI
+        StateHasChanged();
+
         foreach (Stock stock in p.UpdatedPortfolio)
         {
             _config.Data.Labels.Add(stock.Ticker);
@@ -75,6 +85,10 @@
 
         Dataset.BackgroundColor = BackgroundColors.ToArray();
         _config.Data.Datasets.Add(Dataset);
-        }
+    }
+
+    public void Dispose()
+    {
+        PortfolioService.PortfolioChanged -= UpdatePieChart;
     }
 }

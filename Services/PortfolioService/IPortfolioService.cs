@@ -18,6 +18,7 @@ namespace PortfolioTracker.Services.PortfolioService
         Task UpdateStock(Stock stock);
 
         event EventHandler<PortfolioChangedArgs> PortfolioChanged;
+        void OnPortfolioChanged(List<Stock> portfolioStocks);
 
 
         #endregion

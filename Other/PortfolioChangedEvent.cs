@@ -12,7 +12,7 @@ namespace PortfolioTracker.Other
 
     public class PortfolioChangedArgs : EventArgs
     {
-        public List<Stock> UpdatedPortfolio { get; }
+        public List<Stock> UpdatedPortfolio { get; set; }
         public PortfolioAction PortfolioAction { get; set; }
 
         public PortfolioChangedArgs(List<Stock> updatedPortfolio)
@@ -21,9 +21,6 @@ namespace PortfolioTracker.Other
         }
 
         public event EventHandler<PortfolioChangedArgs> PortfolioChanged;
-
-        public delegate void EventHandler<TEventArgs>(object sender, TEventArgs e) where TEventArgs : EventArgs;
-
 
     }
 }

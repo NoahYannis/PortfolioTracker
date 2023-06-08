@@ -11,7 +11,7 @@ namespace PortfolioTracker.Services.PortfolioService
 
         public event EventHandler<PortfolioChangedArgs> PortfolioChanged;
 
-        private void OnPortfolioChanged(List<Stock> portfolioStocks)
+        public void OnPortfolioChanged(List<Stock> portfolioStocks)
         {
             PortfolioChanged?.Invoke(this, new PortfolioChangedArgs(portfolioStocks));
         }
@@ -53,14 +53,14 @@ namespace PortfolioTracker.Services.PortfolioService
 
             if (stockToUpdate != null)
             {
-                stock.Ticker = stockToUpdate.Ticker;
-                stock.BuyInPrice = stockToUpdate.BuyInPrice;
-                stock.SharesOwned = stockToUpdate.SharesOwned;
-                stock.RelativePerformance = stockToUpdate.AbsolutePerformance;
-                stock.AbsolutePerformance = stockToUpdate.AbsolutePerformance;
-                stock.DividendYield = stockToUpdate.DividendYield;
-                stock.Industry = stockToUpdate.Industry;
-                stock.PositionSize = stockToUpdate.PositionSize;
+                stockToUpdate.Ticker = stock.Ticker;
+                stockToUpdate.BuyInPrice = stock.BuyInPrice;
+                stockToUpdate.SharesOwned = stock.SharesOwned;
+                stockToUpdate.AbsolutePerformance = stock.RelativePerformance;
+                stockToUpdate.AbsolutePerformance = stock.AbsolutePerformance;
+                stockToUpdate.DividendYield = stock.DividendYield;
+                stockToUpdate.Industry = stock.Industry;
+                stockToUpdate.PositionSize = stock.PositionSize;
                 OnPortfolioChanged(PortfolioStocks);
             }
 

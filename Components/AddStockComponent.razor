@@ -46,35 +46,9 @@
     </EditForm>
 </div>
 
-@foreach (Stock stock in PortfolioStocks)
-{
-    <p>Stock Ticker: @stock.Ticker</p>
-    <p>Shares Owned: @stock.SharesOwned</p>
-    <p>Position Size: $@stock.PositionSize</p>
-    <p>Buy In Price: $@stock.BuyInPrice</p>
-    <p>Industry: @stock.Industry</p>
-    @if (stock.DividendYield != null && stock.DividendYield > 0)
-    {
-        <p>Dividend Yield: @stock.DividendYield %</p>
-    }
-    else
-    {
-        <p>Dividend Yield: - </p>
-    }
-}
-
 @code {
 
-
-    public List<Stock> PortfolioStocks { get; set; } = new();
     Stock StockToAdd { get; set; } = new();
-
-
-
-    protected override async Task OnInitializedAsync()
-    {
-        PortfolioStocks = await PortfolioService.GetStocks();
-    }
 
     public async Task AddStock(Stock stock)
     {
