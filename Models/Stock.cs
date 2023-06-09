@@ -21,27 +21,32 @@ namespace PortfolioTracker
         [Range(0, 200)]
         public decimal? DividendYield { get; set; } = null;
 
+
+
+        private decimal? _relativePerformance;
         public decimal? RelativePerformance
         {
             get
             {
-                return ((Close - BuyInPrice) / BuyInPrice) * 100;
+                return _relativePerformance;
             }
             set
             {
-                RelativePerformance = value;
+                _relativePerformance = value;
             }
         }
 
+
+        private decimal? _absolutePerformance;
         public decimal? AbsolutePerformance
         {
             get
             {
-                return (Close - BuyInPrice) * SharesOwned;
+                return _absolutePerformance;
             }
             set
             {
-                AbsolutePerformance = value;
+                _absolutePerformance = value;
             }
         }
 
@@ -50,22 +55,22 @@ namespace PortfolioTracker
         #region Polygon API Properties
 
         [JsonPropertyName("afterHours")]
-        public decimal AfterHours { get; set; }
+        public decimal AfterHours { get; set; } = 0;
 
         [JsonPropertyName("afterHours")]
-        public decimal Open { get; set; }
+        public decimal Open { get; set; } = 0;
 
-        [JsonPropertyName("close")]
-        public decimal Close { get; set; }
+        [JsonPropertyName("close")] 
+        public decimal Close { get; set; } = 0;
 
         [JsonPropertyName("preMarket")]
-        public decimal PreMarket { get; set; }
+        public decimal PreMarket { get; set; } = 0;
 
         [JsonPropertyName("high")]
-        public decimal High { get; set; }
+        public decimal High { get; set; } = 0;
 
         [JsonPropertyName("low")]
-        public decimal Low { get; set; }
+        public decimal Low { get; set; } = 0;
 
         #endregion
     }

@@ -53,9 +53,7 @@
 
     public async Task UpdateStock(Stock stock)
     {
-        StateHasChanged();
         await PortfolioService.UpdateStock(stock);
-        StateHasChanged();
     }
 
     public static string GetDisplayValue(Industry value)

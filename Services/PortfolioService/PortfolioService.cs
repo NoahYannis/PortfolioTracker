@@ -7,9 +7,17 @@ namespace PortfolioTracker.Services.PortfolioService
     {
 
         #region Stock-CRUD
-        public List<Stock> PortfolioStocks { get; set; } = new List<Stock>();
 
-        public event EventHandler<PortfolioChangedArgs> PortfolioChanged;
+        // Simulating the portfolio for now
+        public List<Stock> PortfolioStocks { get; set; } = new List<Stock>() 
+        {
+          new Stock { Ticker = "T", PositionSize = 8, SharesOwned = 1, BuyInPrice = 10},
+          new Stock { Ticker = "E", PositionSize = 8, SharesOwned = 1, BuyInPrice = 10},
+          new Stock { Ticker = "S", PositionSize = 8, SharesOwned = 1, BuyInPrice = 10},
+          new Stock { Ticker = "T", PositionSize = 8, SharesOwned = 1, BuyInPrice = 10},
+        };
+
+        public event EventHandler<PortfolioChangedArgs>? PortfolioChanged;
 
         public void OnPortfolioChanged(List<Stock> portfolioStocks)
         {
@@ -49,7 +57,7 @@ namespace PortfolioTracker.Services.PortfolioService
 
         public Task UpdateStock(Stock stock)
         {
-            Stock stockToUpdate = PortfolioStocks.FirstOrDefault(s => s.Ticker == stock.Ticker);
+            Stock stockToUpdate = PortfolioStocks.FirstOrDefault();
 
             if (stockToUpdate != null)
             {

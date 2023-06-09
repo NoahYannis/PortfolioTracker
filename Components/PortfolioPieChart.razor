@@ -10,9 +10,9 @@
 
 <Chart Config="_config"/>
 
-@* 
+
 <UpdateStockComponent StockToUpdate="PortfolioStocks.FirstOrDefault()">
-</UpdateStockComponent>*@
+</UpdateStockComponent>
 
 @code {
 
@@ -39,17 +39,7 @@
                 }
             };
 
-        //PortfolioStocks = await PortfolioService.GetStocks();
-
-        // Simulating the portfolio for now
-        PortfolioStocks = new()
-        {
-          new Stock { Ticker = "T", PositionSize = 8},
-          new Stock { Ticker = "E", PositionSize = 3},
-          new Stock { Ticker = "S", PositionSize = 6},
-          new Stock { Ticker = "T", PositionSize = 1},
-        };
-
+        PortfolioStocks = await PortfolioService.GetStocks();
 
         // For each stock inside the portfolio display its ticker and set the background to a random color
         foreach (Stock stock in PortfolioStocks)
@@ -71,8 +61,7 @@
     /// </summary>
     public void UpdatePieChart(object sender, PortfolioChangedArgs p)
     {
-        // Tell Blazor to update the UI
-        StateHasChanged();
+        ClearPieChart();
 
         foreach (Stock stock in p.UpdatedPortfolio)
         {
@@ -86,6 +75,21 @@
         Dataset.BackgroundColor = BackgroundColors.ToArray();
         _config.Data.Datasets.Add(Dataset);
     }
+
+
+    /// <summary>
+    /// The portfolio has changed and the pie chart must be rerendered
+    /// </summary>
+    public void ClearPieChart()
+    {
+        _config.Data.Labels.Clear();
+        _config.Data.Datasets.Clear();
+        Dataset.Clear();
+
+        // Tell Blazor to update the UI
+        StateHasChanged();
+    }
+
 
     public void Dispose()
     {

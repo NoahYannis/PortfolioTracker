@@ -20,7 +20,5 @@ namespace PortfolioTracker.Other
             UpdatedPortfolio = updatedPortfolio;
         }
 
-        public event EventHandler<PortfolioChangedArgs> PortfolioChanged;
-
     }
 }

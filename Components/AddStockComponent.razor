@@ -52,17 +52,7 @@
 
     public async Task AddStock(Stock stock)
     {
-        Stock newStock = new()
-            {
-                Ticker = stock.Ticker,
-                SharesOwned = stock.SharesOwned,
-                PositionSize = stock.PositionSize,
-                BuyInPrice = stock.BuyInPrice,
-                Industry = stock.Industry,
-                DividendYield = stock.DividendYield
-            };
-
-        await PortfolioService.AddStock(newStock);
+        await PortfolioService.AddStock(stock);
         await ResetInputFields();
     }
 
