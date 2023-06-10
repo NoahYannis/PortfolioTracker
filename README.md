@@ -1,7 +1,5 @@
 # PortfolioTracker
 
- An app to track your stock portfolio.
-
  To be implemented:
  
 **User Management and Security:**
