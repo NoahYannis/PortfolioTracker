@@ -53,7 +53,7 @@
     public async Task AddStock(Stock stock)
     {
         await PortfolioService.AddStock(stock);
-        await ResetInputFields();
+        StockToAdd = new Stock();
     }
 
     public static string GetDisplayValue(Industry value)
@@ -61,19 +61,6 @@
         var field = value.GetType().GetField(value.ToString());
         var attribute = (EnumDisplayText)Attribute.GetCustomAttribute(field, typeof(EnumDisplayText));
         return attribute != null ? attribute.Text : value.ToString();
-    }
-
-    public async Task ResetInputFields()
-    {
-        await Task.Run(() =>
-        {
-            StockToAdd.Ticker = string.Empty;
-            StockToAdd.SharesOwned = null;
-            StockToAdd.PositionSize = null;
-            StockToAdd.BuyInPrice = null;
-            StockToAdd.Industry = Industry.Technology;
-            StockToAdd.DividendYield = null;
-        });
     }
 
 }

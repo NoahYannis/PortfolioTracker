@@ -1,35 +1,51 @@
 ﻿@using ChartJs.Blazor.PieChart
 @using ChartJs.Blazor
-
+@using ChartJs.Blazor.Common
+@using ChartJs.Blazor.Common.Axes
+@using ChartJs.Blazor.Common.Axes.Ticks
+@using ChartJs.Blazor.Common.Enums
+@using ChartJs.Blazor.Common.Handlers;
+@using ChartJs.Blazor.Common.Time
+@using ChartJs.Blazor.Util
+@using ChartJs.Blazor.Interop
+@using Microsoft.JSInterop.Implementation;
+@using Newtonsoft.Json.Linq;
+@using Newtonsoft.Json;
 @using PortfolioTracker.Other;
 @using PortfolioTracker.Services.PortfolioService;
 @using System.Drawing;
 
 @inject IPortfolioService PortfolioService
+@inject IJSRuntime JsRuntime;
 
 
-<Chart Config="_config"/>
 
+<Chart Config="_config" @ref="_chart" />
+<br />
 
-<UpdateStockComponent StockToUpdate="PortfolioStocks.FirstOrDefault()">
+<UpdateStockComponent StockToUpdate="PortfolioService.PortfolioStocks.FirstOrDefault()">
 </UpdateStockComponent>
 
 @code {
-
     private PieConfig _config = new();
+    private Chart _chart = new();
     private List<Stock> PortfolioStocks { get; set; } = new();
     private List<string> BackgroundColors { get; set; } = new List<string>();
     private PieDataset<decimal?> Dataset { get; set; } = new PieDataset<decimal?>();
     private Random random = new Random();
 
+
     protected override async void OnInitialized()
     {
+        PortfolioStocks = await PortfolioService.GetStocks();
+
         PortfolioService.PortfolioChanged += UpdatePieChart;
 
         _config = new PieConfig
             {
                 Options = new PieOptions
                 {
+                    OnClick = new DelegateHandler<ChartMouseEvent>(ChartClicked),
                     Responsive = true,
                     Title = new OptionsTitle
                     {
@@ -39,7 +55,6 @@
                 }
             };
 
-        PortfolioStocks = await PortfolioService.GetStocks();
 
         // For each stock inside the portfolio display its ticker and set the background to a random color
         foreach (Stock stock in PortfolioStocks)
@@ -56,10 +71,11 @@
         _config.Data.Datasets.Add(Dataset);
     }
 
+
     /// <summary>
-    /// The portfolio has changed, the pie chart must be rerendered.
+    /// The portfolio has changed. Clear the old chart and create new labels + segemnts.
     /// </summary>
-    public void UpdatePieChart(object sender, PortfolioChangedArgs p)
+    public async void UpdatePieChart(object sender, PortfolioChangedArgs p)
     {
         ClearPieChart();
 
@@ -78,7 +94,7 @@
 
 
     /// <summary>
-    /// The portfolio has changed and the pie chart must be rerendered
+    /// The portfolio has changed, the old chart must be cleared before rerendering it
     /// </summary>
     public void ClearPieChart()
     {
@@ -88,6 +104,27 @@
 
         // Tell Blazor to update the UI
         StateHasChanged();
+    }
+
+
+
+    /// <summary>
+    /// Get the label name of the clicked segment
+    /// </summary>
+    /// <param name="mouseEvent"></param>
+    /// <param name="activeElements"></param>
+    public void ChartClicked(JObject mouseEvent, JArray activeElements)
+    {
+        foreach (JObject elem in activeElements)
+        {
+            foreach (JProperty prop in elem.GetValue("_model"))
+            {
+                if (prop.Name.Equals("label"))
+                {
+                    Console.WriteLine(prop.Value.ToString());
+                }
+            }
+        }
     }
 
 

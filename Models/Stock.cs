@@ -7,16 +7,16 @@ namespace PortfolioTracker
     public class Stock
     {
         [Required, StringLength(5, MinimumLength = 1, ErrorMessage = "Ticker Must Be Between 1 And 5 Characters")]
-        public string Ticker { get; set; } = string.Empty;
+        public string Ticker { get; set; } = "Test";
 
         [Required, Range(0.01f, double.MaxValue, ErrorMessage = "Position Size Must Be Greater Than $0.")]
-        public decimal? PositionSize { get; set; } = null;
+        public decimal? PositionSize { get; set; } = 100;
 
         [Required, Range(0.01, double.MaxValue, ErrorMessage = "Shares Owned Must Be Greater Than Zero.")]
-        public decimal? SharesOwned { get; set; } = null;
+        public decimal? SharesOwned { get; set; } = 10;
 
         [Required, Range(0.1, double.MaxValue, ErrorMessage = "Buy In Price Must Be Greater Than $0.")]
-        public decimal? BuyInPrice { get; set; } = null;
+        public decimal? BuyInPrice { get; set; } = 10;
 
         [Range(0, 200)]
         public decimal? DividendYield { get; set; } = null;

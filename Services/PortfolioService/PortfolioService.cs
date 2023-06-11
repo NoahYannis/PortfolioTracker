@@ -9,12 +9,12 @@ namespace PortfolioTracker.Services.PortfolioService
         #region Stock-CRUD
 
         // Simulating the portfolio for now
-        public List<Stock> PortfolioStocks { get; set; } = new List<Stock>() 
+        public List<Stock> PortfolioStocks { get; set; } = new List<Stock>()
         {
-          new Stock { Ticker = "T", PositionSize = 8, SharesOwned = 1, BuyInPrice = 10},
-          new Stock { Ticker = "E", PositionSize = 8, SharesOwned = 1, BuyInPrice = 10},
-          new Stock { Ticker = "S", PositionSize = 8, SharesOwned = 1, BuyInPrice = 10},
-          new Stock { Ticker = "T", PositionSize = 8, SharesOwned = 1, BuyInPrice = 10},
+          new Stock { Ticker = "GOOGL", PositionSize = 8, SharesOwned = 1, BuyInPrice = 10},
+          new Stock { Ticker = "MSFT", PositionSize = 8, SharesOwned = 1, BuyInPrice = 10},
+          new Stock { Ticker = "ABBV", PositionSize = 8, SharesOwned = 1, BuyInPrice = 10},
+          new Stock { Ticker = "O", PositionSize = 8, SharesOwned = 1, BuyInPrice = 10},
         };
 
         public event EventHandler<PortfolioChangedArgs>? PortfolioChanged;
@@ -26,12 +26,19 @@ namespace PortfolioTracker.Services.PortfolioService
 
         public Task AddStock(Stock stock)
         {
-            PortfolioStocks.Add(stock);
-            OnPortfolioChanged(PortfolioStocks);
+            // Checking if there is already a stock with the given ticker.
+            bool IsUniqueStock = PortfolioStocks.Any(s => s.Ticker == stock.Ticker);
+
+            if (!IsUniqueStock)
+            {
+                PortfolioStocks.Add(stock);
+                OnPortfolioChanged(PortfolioStocks);
+            }
+
             return Task.CompletedTask;
         }
 
-        public Task DeleteStock(string ticker)
+        public async Task DeleteStock(string ticker)
         {
             Stock stockToRemove = PortfolioStocks.FirstOrDefault(s => s.Ticker == ticker);
 
@@ -41,7 +48,7 @@ namespace PortfolioTracker.Services.PortfolioService
                 OnPortfolioChanged(PortfolioStocks);
             }
 
-            return Task.CompletedTask;
+            await Task.CompletedTask;
         }
 
         public async Task<Stock> GetStock(string ticker)
@@ -55,24 +62,25 @@ namespace PortfolioTracker.Services.PortfolioService
             return await Task.FromResult(PortfolioStocks);
         }
 
-        public Task UpdateStock(Stock stock)
+        public async Task UpdateStock(Stock stock)
         {
-            Stock stockToUpdate = PortfolioStocks.FirstOrDefault();
+            Stock stockToUpdate = PortfolioStocks.First(s => s.Ticker == stock.Ticker);
 
-            if (stockToUpdate != null)
+            if (stockToUpdate != null && !PortfolioStocks.Any(s => s.Ticker == stock.Ticker))
             {
-                stockToUpdate.Ticker = stock.Ticker;
-                stockToUpdate.BuyInPrice = stock.BuyInPrice;
-                stockToUpdate.SharesOwned = stock.SharesOwned;
-                stockToUpdate.AbsolutePerformance = stock.RelativePerformance;
-                stockToUpdate.AbsolutePerformance = stock.AbsolutePerformance;
-                stockToUpdate.DividendYield = stock.DividendYield;
-                stockToUpdate.Industry = stock.Industry;
-                stockToUpdate.PositionSize = stock.PositionSize;
-                OnPortfolioChanged(PortfolioStocks);
+                // Bug: Stock tickers can still be set to ones already in the portfolio. 
+                    stockToUpdate.Ticker = stock.Ticker;
+                    stockToUpdate.BuyInPrice = stock.BuyInPrice;
+                    stockToUpdate.SharesOwned = stock.SharesOwned;
+                    stockToUpdate.AbsolutePerformance = stock.RelativePerformance;
+                    stockToUpdate.AbsolutePerformance = stock.AbsolutePerformance;
+                    stockToUpdate.DividendYield = stock.DividendYield;
+                    stockToUpdate.Industry = stock.Industry;
+                    stockToUpdate.PositionSize = stock.PositionSize;
             }
+            OnPortfolioChanged(PortfolioStocks);
 
-            return Task.CompletedTask;
+            await Task.CompletedTask;
         }
 
         #endregion
