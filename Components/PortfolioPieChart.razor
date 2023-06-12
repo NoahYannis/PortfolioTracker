@@ -1,13 +1,4 @@
 ﻿@using ChartJs.Blazor.PieChart
-@using ChartJs.Blazor
-@using ChartJs.Blazor.Common
-@using ChartJs.Blazor.Common.Axes
-@using ChartJs.Blazor.Common.Axes.Ticks
-@using ChartJs.Blazor.Common.Enums
-@using ChartJs.Blazor.Common.Handlers;
-@using ChartJs.Blazor.Common.Time
-@using ChartJs.Blazor.Util
-@using ChartJs.Blazor.Interop
 @using Microsoft.JSInterop.Implementation;
 @using Newtonsoft.Json.Linq;
 @using Newtonsoft.Json;
@@ -20,7 +11,7 @@
 
 
 
-<Chart Config="_config" @ref="_chart" />
+<Chart Config="_config"/>
 <br />
 
 <UpdateStockComponent StockToUpdate="PortfolioService.PortfolioStocks.FirstOrDefault()">
@@ -28,7 +19,6 @@
 
 @code {
     private PieConfig _config = new();
-    private Chart _chart = new();
     private List<Stock> PortfolioStocks { get; set; } = new();
     private List<string> BackgroundColors { get; set; } = new List<string>();
     private PieDataset<decimal?> Dataset { get; set; } = new PieDataset<decimal?>();
@@ -73,7 +63,7 @@
 
 
     /// <summary>
-    /// The portfolio has changed. Clear the old chart and create new labels + segemnts.
+    /// The portfolio has changed. Create new labels and segments.
     /// </summary>
     public async void UpdatePieChart(object sender, PortfolioChangedArgs p)
     {
@@ -94,7 +84,7 @@
 
 
     /// <summary>
-    /// The portfolio has changed, the old chart must be cleared before rerendering it
+    /// Clear the old chart before rerendering it with the new data.
     /// </summary>
     public void ClearPieChart()
     {
