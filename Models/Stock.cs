@@ -7,7 +7,7 @@ namespace PortfolioTracker
     public class Stock
     {
         [Required, StringLength(5, MinimumLength = 1, ErrorMessage = "Ticker Must Be Between 1 And 5 Characters")]
-        public string Ticker { get; set; } = "Test";
+        public string Ticker { get; set; } = "Test"; // Debug values to save time during testing
 
         [Required, Range(0.01f, double.MaxValue, ErrorMessage = "Position Size Must Be Greater Than $0.")]
         public decimal? PositionSize { get; set; } = 100;
