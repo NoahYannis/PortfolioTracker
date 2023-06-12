@@ -26,10 +26,8 @@ namespace PortfolioTracker.Services.PortfolioService
 
         public Task AddStock(Stock stock)
         {
-            // Checking if there is already a stock with the given ticker.
-            bool IsUniqueStock = PortfolioStocks.Any(s => s.Ticker == stock.Ticker);
-
-            if (!IsUniqueStock)
+            // Avoid duplicate tickers.
+            if (!PortfolioStocks.Any(s => s.Ticker == stock.Ticker)))
             {
                 PortfolioStocks.Add(stock);
                 OnPortfolioChanged(PortfolioStocks);
@@ -69,6 +67,7 @@ namespace PortfolioTracker.Services.PortfolioService
             if (stockToUpdate != null && !PortfolioStocks.Any(s => s.Ticker == stock.Ticker))
             {
                 // Bug: Stock tickers can still be set to ones already in the portfolio. 
+                
                     stockToUpdate.Ticker = stock.Ticker;
                     stockToUpdate.BuyInPrice = stock.BuyInPrice;
                     stockToUpdate.SharesOwned = stock.SharesOwned;
@@ -77,8 +76,8 @@ namespace PortfolioTracker.Services.PortfolioService
                     stockToUpdate.DividendYield = stock.DividendYield;
                     stockToUpdate.Industry = stock.Industry;
                     stockToUpdate.PositionSize = stock.PositionSize;
+                    OnPortfolioChanged(PortfolioStocks);
             }
-            OnPortfolioChanged(PortfolioStocks);
 
             await Task.CompletedTask;
         }
