@@ -5,10 +5,10 @@
 
 <div>
     <label for="stockTicker">Enter a stock ticker: </label>
-    <InputText id="stockTicker" @bind-Value="ticker" />
+    <InputText id="stockTicker" @bind-Value="Ticker" />
 </div>
 <div>
-    <button @onclick='async () => CurrentStock = await ReturnStockFromApiCall(ticker)'>
+    <button @onclick='async () => CurrentStock = await ReturnStockFromApiCall(Ticker)'>
         Confirm
     </button>
 
@@ -29,6 +29,7 @@
             <br/><br/>
             <p>@ErrorMessage</p>
         }
+        
     }
 
 </div>
@@ -39,7 +40,7 @@
     /// <summary>
     /// The ticker symbol entered by the user inside the input text field.
     /// </summary>
-    public string ticker { get; set; } = string.Empty;
+    public string Ticker { get; set; } = string.Empty;
 
     /// <summary>
     /// The current stock requested by the user.
@@ -58,7 +59,7 @@
     /// <returns>The stock entered by the user</returns>
     public async Task<Stock> ReturnStockFromApiCall(string tickerSymbol)
     {
-        var response = GetStockInfoService.GetStockData(ticker.ToUpper()); 
+        var response = GetStockInfoService.GetStockData(Ticker.ToUpper());
         var stockData = await response;
 
         if (stockData != null && !stockData.Success)

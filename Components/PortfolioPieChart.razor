@@ -14,7 +14,7 @@
 <Chart Config="_config"/>
 <br />
 
-<UpdateStockComponent StockToUpdate="PortfolioService.PortfolioStocks.FirstOrDefault()">
+<UpdateStockComponent StockToUpdate="@ClickedSegmentStock">
 </UpdateStockComponent>
 
 @code {
@@ -23,6 +23,7 @@
     private List<string> BackgroundColors { get; set; } = new List<string>();
     private PieDataset<decimal?> Dataset { get; set; } = new PieDataset<decimal?>();
     private Random random = new Random();
+    private Stock ClickedSegmentStock { get; set; } = new();
 
 
     protected override async void OnInitialized()
@@ -46,7 +47,7 @@
             };
 
 
-        // For each stock inside the portfolio display its ticker and set the background to a random color
+        // For each stock inside the portfolio display its ticker and set the background to a random color.
         foreach (Stock stock in PortfolioStocks)
         {
             _config.Data.Labels.Add(stock.Ticker);
@@ -65,9 +66,11 @@
     /// <summary>
     /// The portfolio has changed. Create new labels and segments.
     /// </summary>
-    public async void UpdatePieChart(object sender, PortfolioChangedArgs p)
+    public void UpdatePieChart(object sender, PortfolioChangedArgs p)
     {
         ClearPieChart();
+
+        // Pie Chart currently doesn't display changes on ClickedSegmentStock
 
         foreach (Stock stock in p.UpdatedPortfolio)
         {
@@ -76,6 +79,7 @@
             Color randomColor = Color.FromArgb(random.Next(256), random.Next(256), random.Next(256));
             string colorHex = ColorUtil.ColorHexString(randomColor.R, randomColor.G, randomColor.B);
             BackgroundColors.Add(colorHex);
+            Console.WriteLine(stock.PositionSize);
         }
 
         Dataset.BackgroundColor = BackgroundColors.ToArray();
@@ -111,7 +115,11 @@
             {
                 if (prop.Name.Equals("label"))
                 {
+                    // Debug
                     Console.WriteLine(prop.Value.ToString());
+
+                    ClickedSegmentStock = PortfolioStocks.FirstOrDefault(s => s.Ticker == prop.Value.ToString());
+                    StateHasChanged();
                 }
             }
         }

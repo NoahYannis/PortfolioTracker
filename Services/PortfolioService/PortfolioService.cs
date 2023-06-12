@@ -27,7 +27,7 @@ namespace PortfolioTracker.Services.PortfolioService
         public Task AddStock(Stock stock)
         {
             // Avoid duplicate tickers.
-            if (!PortfolioStocks.Any(s => s.Ticker == stock.Ticker)))
+            if (!PortfolioStocks.Any(s => s.Ticker == stock.Ticker))
             {
                 PortfolioStocks.Add(stock);
                 OnPortfolioChanged(PortfolioStocks);
