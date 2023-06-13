@@ -7,3 +7,6 @@
 .vs/PortfolioTracker/v17/.futdcache.v2
 *.pdb
 *.2
+*.dll
+*.dll
+obj/Debug/net7.0/ref/PortfolioTracker.dll

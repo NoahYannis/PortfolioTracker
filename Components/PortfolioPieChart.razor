@@ -11,11 +11,18 @@
 
 
 
-<Chart Config="_config"/>
+<Chart Config="_config" />
 <br />
 
 <UpdateStockComponent StockToUpdate="@ClickedSegmentStock">
 </UpdateStockComponent>
+
+@if (ShowResultMessage)
+{
+    <p>
+        @UpdateResultMessage
+    </p>
+}
 
 @code {
     private PieConfig _config = new();
@@ -23,8 +30,26 @@
     private List<string> BackgroundColors { get; set; } = new List<string>();
     private PieDataset<decimal?> Dataset { get; set; } = new PieDataset<decimal?>();
     private Random random = new Random();
+
     private Stock ClickedSegmentStock { get; set; } = new();
 
+    private string UpdateResultMessage { get; set; } = string.Empty;
+
+
+    private bool _showResultMessage;
+
+    public bool ShowResultMessage
+    {
+        get => _showResultMessage;
+        set
+        {
+            if (_showResultMessage != value)
+            {
+                _showResultMessage = value;
+                StateHasChanged();
+            }
+        }
+    }
 
     protected override async void OnInitialized()
     {
@@ -79,18 +104,20 @@
             Color randomColor = Color.FromArgb(random.Next(256), random.Next(256), random.Next(256));
             string colorHex = ColorUtil.ColorHexString(randomColor.R, randomColor.G, randomColor.B);
             BackgroundColors.Add(colorHex);
-            Console.WriteLine(stock.PositionSize);
         }
 
         Dataset.BackgroundColor = BackgroundColors.ToArray();
         _config.Data.Datasets.Add(Dataset);
+
+        UpdateResultMessage = "Update succesful";
+        DisplayResultMessage();
     }
 
 
     /// <summary>
     /// Clear the old chart before rerendering it with the new data.
     /// </summary>
-    public void ClearPieChart()
+    public async Task ClearPieChart()
     {
         _config.Data.Labels.Clear();
         _config.Data.Datasets.Clear();
@@ -98,12 +125,14 @@
 
         // Tell Blazor to update the UI
         StateHasChanged();
+
+        await Task.CompletedTask;
     }
 
 
 
     /// <summary>
-    /// Get the label name of the clicked segment
+    /// Get the label name of the clicked segment.
     /// </summary>
     /// <param name="mouseEvent"></param>
     /// <param name="activeElements"></param>
@@ -123,6 +152,18 @@
                 }
             }
         }
+    }
+
+    private async Task DisplayResultMessage()
+    {
+        // Display result message.
+        ShowResultMessage = true;
+
+        // Display it for 2 seconds.
+        await Task.Delay(2000);
+
+        // Hide message.
+        ShowResultMessage = false;
     }
 
 

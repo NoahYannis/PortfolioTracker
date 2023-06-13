@@ -62,12 +62,10 @@ namespace PortfolioTracker.Services.PortfolioService
 
         public async Task UpdateStock(Stock stock)
         {
-            Stock stockToUpdate = PortfolioStocks.First(s => s.Ticker == stock.Ticker);
+            Stock stockToUpdate = PortfolioStocks.FirstOrDefault(s => s.Ticker == stock.Ticker);
 
-            if (stockToUpdate != null && !PortfolioStocks.Any(s => s.Ticker == stock.Ticker))
+            if (stockToUpdate != null && PortfolioStocks.Count(s => s.Ticker == stockToUpdate.Ticker) == 1)
             {
-                // Bug: Stock tickers can still be set to ones already in the portfolio. 
-                
                     stockToUpdate.Ticker = stock.Ticker;
                     stockToUpdate.BuyInPrice = stock.BuyInPrice;
                     stockToUpdate.SharesOwned = stock.SharesOwned;

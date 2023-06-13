@@ -47,8 +47,16 @@
 </div>
 
 @code {
+
+    private Stock _stockToUpdate;
+
     [Parameter]
-    public Stock StockToUpdate { get; set; } = new();
+    public Stock StockToUpdate
+    {
+        get => _stockToUpdate is not null ? _stockToUpdate : new Stock();
+        set => _stockToUpdate = value;
+    }
+
 
     public async Task UpdateStock(Stock stock)
     {
