@@ -11,10 +11,10 @@ namespace PortfolioTracker.Services.PortfolioService
         // Simulating the portfolio for now
         public List<Stock> PortfolioStocks { get; set; } = new List<Stock>()
         {
-          new Stock { Ticker = "GOOGL", PositionSize = 8, SharesOwned = 1, BuyInPrice = 10},
-          new Stock { Ticker = "MSFT", PositionSize = 8, SharesOwned = 1, BuyInPrice = 10},
-          new Stock { Ticker = "ABBV", PositionSize = 8, SharesOwned = 1, BuyInPrice = 10},
-          new Stock { Ticker = "O", PositionSize = 8, SharesOwned = 1, BuyInPrice = 10},
+          new Stock { Ticker = "GOOGL", PositionSize = 28, SharesOwned = 1, BuyInPrice = 10},
+          new Stock { Ticker = "MSFT", PositionSize = 18, SharesOwned = 1, BuyInPrice = 10},
+          new Stock { Ticker = "ABBV", PositionSize = 11, SharesOwned = 1, BuyInPrice = 10},
+          new Stock { Ticker = "O", PositionSize = 5, SharesOwned = 1, BuyInPrice = 10},
         };
 
         public event EventHandler<PortfolioChangedArgs>? PortfolioChanged;
@@ -24,16 +24,18 @@ namespace PortfolioTracker.Services.PortfolioService
             PortfolioChanged?.Invoke(this, new PortfolioChangedArgs(portfolioStocks));
         }
 
-        public Task AddStock(Stock stock)
+        public async Task<bool> AddStock(Stock stock)
         {
             // Avoid duplicate tickers.
             if (!PortfolioStocks.Any(s => s.Ticker == stock.Ticker))
             {
                 PortfolioStocks.Add(stock);
                 OnPortfolioChanged(PortfolioStocks);
+
+                return true;
             }
 
-            return Task.CompletedTask;
+            return false;
         }
 
         public async Task DeleteStock(string ticker)
@@ -60,7 +62,12 @@ namespace PortfolioTracker.Services.PortfolioService
             return await Task.FromResult(PortfolioStocks);
         }
 
-        public async Task UpdateStock(Stock stock)
+        /// <summary>
+        /// Update the specified stock
+        /// </summary>
+        /// <param name="stock"></param>
+        /// <returns>Update success</returns>
+        public async Task<bool> UpdateStock(Stock stock)
         {
             Stock stockToUpdate = PortfolioStocks.FirstOrDefault(s => s.Ticker == stock.Ticker);
 
@@ -75,9 +82,11 @@ namespace PortfolioTracker.Services.PortfolioService
                     stockToUpdate.Industry = stock.Industry;
                     stockToUpdate.PositionSize = stock.PositionSize;
                     OnPortfolioChanged(PortfolioStocks);
+
+                return true;
             }
 
-            await Task.CompletedTask;
+            return false;
         }
 
         #endregion

@@ -41,10 +41,19 @@
         <ValidationMessage For="() => StockToUpdate.DividendYield" />
         <br /><br />
 
-        <button type="submit">Update stock</button>
+        <button class="btn-primary" type="submit">Update</button>
+        <button class="btn-danger" style="margin-left: 10px" @onclick="async() => await ConfirmDelete()">Delete</button>
         <br /><br />
     </EditForm>
-</div>
+</div
+
+@if (ShowResultMessage)
+{
+    <p>
+        @UpdateResultMessage
+    </p>
+}
+
 
 @code {
 
@@ -57,13 +66,55 @@
         set => _stockToUpdate = value;
     }
 
+    private string UpdateResultMessage { get; set; } = string.Empty;
 
-    public async Task UpdateStock(Stock stock)
+    private bool _showResultMessage;
+
+    public bool ShowResultMessage
     {
-        await PortfolioService.UpdateStock(stock);
+        get => _showResultMessage;
+        set
+        {
+            if (_showResultMessage != value)
+            {
+                _showResultMessage = value;
+                StateHasChanged();
+            }
+        }
     }
 
-    public static string GetDisplayValue(Industry value)
+
+    private async Task UpdateStock(Stock stock)
+    {
+        UpdateResultMessage = await PortfolioService.UpdateStock(stock) ? "Update successful" : "Update failed";
+        await DisplayResultMessage();
+    }
+
+    private async Task<bool> ConfirmDelete()
+    {
+        // JS Alert oder Modal?
+        return false;
+    }
+
+    private async Task DeleteStock()
+    {
+        if(await ConfirmDelete())
+        await PortfolioService.DeleteStock(StockToUpdate.Ticker);
+    }
+
+    private async Task DisplayResultMessage()
+    {
+        // Display result message.
+        ShowResultMessage = true;
+
+        // Display it for 2 seconds.
+        await Task.Delay(2000);
+
+        // Hide message.
+        ShowResultMessage = false;
+    }
+
+    private static string GetDisplayValue(Industry value)
     {
         var field = value.GetType().GetField(value.ToString());
         var attribute = (EnumDisplayText)Attribute.GetCustomAttribute(field, typeof(EnumDisplayText));

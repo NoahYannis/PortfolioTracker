@@ -17,13 +17,6 @@
 <UpdateStockComponent StockToUpdate="@ClickedSegmentStock">
 </UpdateStockComponent>
 
-@if (ShowResultMessage)
-{
-    <p>
-        @UpdateResultMessage
-    </p>
-}
-
 @code {
     private PieConfig _config = new();
     private List<Stock> PortfolioStocks { get; set; } = new();
@@ -33,23 +26,6 @@
 
     private Stock ClickedSegmentStock { get; set; } = new();
 
-    private string UpdateResultMessage { get; set; } = string.Empty;
-
-
-    private bool _showResultMessage;
-
-    public bool ShowResultMessage
-    {
-        get => _showResultMessage;
-        set
-        {
-            if (_showResultMessage != value)
-            {
-                _showResultMessage = value;
-                StateHasChanged();
-            }
-        }
-    }
 
     protected override async void OnInitialized()
     {
@@ -108,9 +84,6 @@
 
         Dataset.BackgroundColor = BackgroundColors.ToArray();
         _config.Data.Datasets.Add(Dataset);
-
-        UpdateResultMessage = "Update succesful";
-        DisplayResultMessage();
     }
 
 
@@ -154,17 +127,6 @@
         }
     }
 
-    private async Task DisplayResultMessage()
-    {
-        // Display result message.
-        ShowResultMessage = true;
-
-        // Display it for 2 seconds.
-        await Task.Delay(2000);
-
-        // Hide message.
-        ShowResultMessage = false;
-    }
 
 
     public void Dispose()

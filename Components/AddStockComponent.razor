@@ -46,14 +46,59 @@
     </EditForm>
 </div>
 
+@if (ShowResultMessage)
+{
+    <p>
+        @AddStockResultMessage
+    </p>
+}
+
 @code {
 
-    Stock StockToAdd { get; set; } = new();
+    private Stock _stockToAdd = new Stock();
+
+    private Stock StockToAdd 
+    {
+        get =>  _stockToAdd is not null ? _stockToAdd : new Stock();
+        set => _stockToAdd = value;
+    }
+
+
+    private string AddStockResultMessage { get; set; } = string.Empty;
+
+    private bool _showResultMessage;
+
+    private bool ShowResultMessage
+    {
+        get => _showResultMessage;
+        set
+        {
+            if (_showResultMessage != value)
+            {
+                _showResultMessage = value;
+                StateHasChanged();
+            }
+        }
+    }
 
     public async Task AddStock(Stock stock)
     {
-        await PortfolioService.AddStock(stock);
+        AddStockResultMessage = await PortfolioService.AddStock(stock) ? 
+        $"Added {stock.Ticker} to portfolio!" : $"Warning: Portfolio already contains {stock.Ticker}!";
+        await DisplayResultMessage();
         StockToAdd = new Stock();
+    }
+
+    private async Task DisplayResultMessage()
+    {
+        // Display result message.
+        ShowResultMessage = true;
+
+        // Display it for 2 seconds.
+        await Task.Delay(2000);
+
+        // Hide message.
+        ShowResultMessage = false;
     }
 
     public static string GetDisplayValue(Industry value)
