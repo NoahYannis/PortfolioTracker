@@ -2,6 +2,27 @@
   "version": 3,
   "targets": {
     "net7.0": {
+      "Blazored.Modal/7.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "6.0.3",
+          "Microsoft.AspNetCore.Components.Web": "6.0.3",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.JSInterop.WebAssembly": "6.0.3"
+        },
+        "compile": {
+          "lib/net6.0/Blazored.Modal.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Blazored.Modal.dll": {}
+        },
+        "build": {
+          "buildTransitive/Blazored.Modal.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Blazored.Modal.props": {}
+        }
+      },
       "ChartJs.Blazor/1.1.0": {
         "type": "package",
         "dependencies": {
@@ -769,6 +790,27 @@
       }
     },
     "net7.0/browser-wasm": {
+      "Blazored.Modal/7.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "6.0.3",
+          "Microsoft.AspNetCore.Components.Web": "6.0.3",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.JSInterop.WebAssembly": "6.0.3"
+        },
+        "compile": {
+          "lib/net6.0/Blazored.Modal.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Blazored.Modal.dll": {}
+        },
+        "build": {
+          "buildTransitive/Blazored.Modal.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Blazored.Modal.props": {}
+        }
+      },
       "ChartJs.Blazor/1.1.0": {
         "type": "package",
         "dependencies": {
@@ -1531,6 +1573,25 @@
     }
   },
   "libraries": {
+    "Blazored.Modal/7.1.0": {
+      "sha512": "ft5bX5barhyzpQc9jjU029ByrAQXgqSMItwhmEbr0pb7r+of8XH0E/OyS8K6O6Disq5R+p4wpt+W+NGg3/OTMA==",
+      "type": "package",
+      "path": "blazored.modal/7.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "blazored.modal.7.1.0.nupkg.sha512",
+        "blazored.modal.nuspec",
+        "build/Blazored.Modal.props",
+        "build/Microsoft.AspNetCore.StaticWebAssets.props",
+        "buildMultiTargeting/Blazored.Modal.props",
+        "buildTransitive/Blazored.Modal.props",
+        "icon.png",
+        "lib/net6.0/Blazored.Modal.dll",
+        "staticwebassets/Blazored.Modal.bundle.scp.css",
+        "staticwebassets/BlazoredModal.razor.js"
+      ]
+    },
     "ChartJs.Blazor/1.1.0": {
       "sha512": "MUGYzS5FSx9r17sPVRlREPWU+1mFtggFaQtGKifQg30I48tx3OEDH3JZd07r+jKwtpN/h89HVUYy3IT2FS8ZEw==",
       "type": "package",
@@ -2776,6 +2837,7 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "Blazored.Modal >= 7.1.0",
       "ChartJs.Blazor >= 1.1.0",
       "ChartJs.Blazor.Fork >= 2.0.2",
       "Microsoft.AspNetCore.Components.WebAssembly >= 7.0.2",
@@ -2832,6 +2894,10 @@
       "net7.0": {
         "targetAlias": "net7.0",
         "dependencies": {
+          "Blazored.Modal": {
+            "target": "Package",
+            "version": "[7.1.0, )"
+          },
           "ChartJs.Blazor": {
             "target": "Package",
             "version": "[1.1.0, )"

@@ -1,7 +1,11 @@
 ﻿@using PortfolioTracker.Other;
 @using PortfolioTracker.Services.PortfolioService;
+@using Blazored;
+@using Blazored.Modal;
+@using Blazored.Modal.Services;
 
 @inject IPortfolioService PortfolioService
+@inject IModalService ModalService
 
 <div>
     <EditForm Model="@StockToUpdate" OnValidSubmit='async() => await UpdateStock(StockToUpdate)'>
@@ -42,10 +46,13 @@
         <br /><br />
 
         <button class="btn-primary" type="submit">Update</button>
-        <button class="btn-danger" style="margin-left: 10px" @onclick="async() => await ConfirmDelete()">Delete</button>
+        <button class="btn-danger" type="button" style="margin-left: 10px" @onclick="async() => await ConfirmDelete()">Delete</button>
         <br /><br />
     </EditForm>
+    <button @onclick="@(() => Modal.Show<SurveyPrompt>("My Movies"))">View Movies</button>
 </div
+
+<BlazoredModal/>
 
 @if (ShowResultMessage)
 {
@@ -56,6 +63,8 @@
 
 
 @code {
+
+    [CascadingParameter] IModalService Modal { get; set; } = default!;
 
     private Stock _stockToUpdate;
 
@@ -92,7 +101,17 @@
 
     private async Task<bool> ConfirmDelete()
     {
-        // JS Alert oder Modal?
+        // Test
+
+        var conFirmModal = ModalService.Show<UpdateStockComponent>("Test");
+        var modalResult = await conFirmModal.Result;
+
+        if (!modalResult.Cancelled)
+        {
+                    await PortfolioService.DeleteStock(StockToUpdate.Ticker);
+
+        }
+
         return false;
     }
 

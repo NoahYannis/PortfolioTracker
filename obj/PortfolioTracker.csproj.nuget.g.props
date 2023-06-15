@@ -39,6 +39,7 @@
     <Import Project="$(NuGetPackageRoot)microsoft.aspnetcore.components.webassembly\7.0.2\build\net7.0\Microsoft.AspNetCore.Components.WebAssembly.props" Condition="Exists('$(NuGetPackageRoot)microsoft.aspnetcore.components.webassembly\7.0.2\build\net7.0\Microsoft.AspNetCore.Components.WebAssembly.props')" />
     <Import Project="$(NuGetPackageRoot)chartjs.blazor.fork\2.0.2\buildTransitive\ChartJs.Blazor.Fork.props" Condition="Exists('$(NuGetPackageRoot)chartjs.blazor.fork\2.0.2\buildTransitive\ChartJs.Blazor.Fork.props')" />
     <Import Project="$(NuGetPackageRoot)chartjs.blazor\1.1.0\buildTransitive\ChartJs.Blazor.props" Condition="Exists('$(NuGetPackageRoot)chartjs.blazor\1.1.0\buildTransitive\ChartJs.Blazor.props')" />
+    <Import Project="$(NuGetPackageRoot)blazored.modal\7.1.0\buildTransitive\Blazored.Modal.props" Condition="Exists('$(NuGetPackageRoot)blazored.modal\7.1.0\buildTransitive\Blazored.Modal.props')" />
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <PkgMicrosoft_EntityFrameworkCore_Tools Condition=" '$(PkgMicrosoft_EntityFrameworkCore_Tools)' == '' ">C:\Users\Noah\.nuget\packages\microsoft.entityframeworkcore.tools\7.0.5</PkgMicrosoft_EntityFrameworkCore_Tools>

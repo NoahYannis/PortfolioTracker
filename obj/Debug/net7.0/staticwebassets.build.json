@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "u8M/rzkpeoSKgia77HFRE4DIXgOXBWtWnfOw5tAhxwA=",
+  "Hash": "Uq0ckIeWg/0KR7niMotZTOlYfcxt1JgXV/xmVrXkba0=",
   "Source": "PortfolioTracker",
   "BasePath": "/",
   "Mode": "Root",
@@ -16,6 +16,40 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\Noah\\.nuget\\packages\\blazored.modal\\7.1.0\\staticwebassets\\Blazored.Modal.bundle.scp.css",
+      "SourceId": "Blazored.Modal",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\Noah\\.nuget\\packages\\blazored.modal\\7.1.0\\staticwebassets\\",
+      "BasePath": "_content/Blazored.Modal",
+      "RelativePath": "Blazored.Modal.bundle.scp.css",
+      "AssetKind": "All",
+      "AssetMode": "Reference",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ProjectBundle",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Noah\\.nuget\\packages\\blazored.modal\\7.1.0\\staticwebassets\\Blazored.Modal.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\Noah\\.nuget\\packages\\blazored.modal\\7.1.0\\staticwebassets\\BlazoredModal.razor.js",
+      "SourceId": "Blazored.Modal",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\Noah\\.nuget\\packages\\blazored.modal\\7.1.0\\staticwebassets\\",
+      "BasePath": "_content/Blazored.Modal",
+      "RelativePath": "BlazoredModal.razor.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Noah\\.nuget\\packages\\blazored.modal\\7.1.0\\staticwebassets\\BlazoredModal.razor.js"
+    },
     {
       "Identity": "C:\\Users\\Noah\\.nuget\\packages\\chartjs.blazor.fork\\2.0.2\\contentFiles\\any\\netstandard2.1\\wwwroot\\ChartJsBlazorInterop.js",
       "SourceId": "PortfolioTracker",
@@ -270,6 +304,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Noah\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\7.0.2\\build\\net7.0\\blazor.webassembly.js"
+    },
+    {
+      "Identity": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Blazored.Modal.dll",
+      "SourceId": "PortfolioTracker",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Blazored.Modal.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Noah\\.nuget\\packages\\blazored.modal\\7.1.0\\lib\\net6.0\\Blazored.Modal.dll"
     },
     {
       "Identity": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\ChartJs.Blazor.dll",
@@ -4384,6 +4435,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Runtime.Intrinsics.dll"
+    },
+    {
+      "Identity": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\5OO4O4g1.gz",
+      "SourceId": "PortfolioTracker",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Blazored.Modal.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Blazored.Modal.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Blazored.Modal.dll"
     },
     {
       "Identity": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\6kN1ooLM.gz",

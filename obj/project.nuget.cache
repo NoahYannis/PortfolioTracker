@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "0j54mFqlT2wbx/QQVKWQc5Wp3oadWss7+auhp0t443VqE+QIRsx1TMOI/FRQ4Ke0EF/LATp7IeSvSYQXgZFgYw==",
+  "dgSpecHash": "hZ6jRc7jZeV6LaGlvTIvoalevoR+jj4ydikMzMHOlsFeQvK2pWB03Y3LtjawekoEEzvxT1Se/zd8o4QCaeQp7A==",
   "success": true,
   "projectFilePath": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTracker.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Noah\\.nuget\\packages\\blazored.modal\\7.1.0\\blazored.modal.7.1.0.nupkg.sha512",
     "C:\\Users\\Noah\\.nuget\\packages\\chartjs.blazor\\1.1.0\\chartjs.blazor.1.1.0.nupkg.sha512",
     "C:\\Users\\Noah\\.nuget\\packages\\chartjs.blazor.fork\\2.0.2\\chartjs.blazor.fork.2.0.2.nupkg.sha512",
     "C:\\Users\\Noah\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

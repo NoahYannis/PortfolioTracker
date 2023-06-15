@@ -879,3 +879,7 @@ C:\Users\Noah\source\repos\PortfolioTracker\bin\Debug\net7.0\wwwroot\_framework\
 C:\Users\Noah\source\repos\PortfolioTracker\bin\Debug\net7.0\wwwroot\_framework\ChartJs.Blazor.dll.gz
 C:\Users\Noah\source\repos\PortfolioTracker\bin\Debug\net7.0\ChartJs.Blazor.dll
 C:\Users\Noah\source\repos\PortfolioTracker\obj\Debug\net7.0\build-gz\C+2l+3iy.gz
+C:\Users\Noah\source\repos\PortfolioTracker\bin\Debug\net7.0\wwwroot\_framework\Blazored.Modal.dll
+C:\Users\Noah\source\repos\PortfolioTracker\bin\Debug\net7.0\wwwroot\_framework\Blazored.Modal.dll.gz
+C:\Users\Noah\source\repos\PortfolioTracker\bin\Debug\net7.0\Blazored.Modal.dll
+C:\Users\Noah\source\repos\PortfolioTracker\obj\Debug\net7.0\build-gz\5OO4O4g1.gz
