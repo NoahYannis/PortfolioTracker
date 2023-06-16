@@ -38,7 +38,7 @@ namespace PortfolioTracker.Services.PortfolioService
             return false;
         }
 
-        public async Task DeleteStock(string ticker)
+        public async Task<bool> DeleteStock(string ticker)
         {
             Stock stockToRemove = PortfolioStocks.FirstOrDefault(s => s.Ticker == ticker);
 
@@ -46,9 +46,11 @@ namespace PortfolioTracker.Services.PortfolioService
             {
                 PortfolioStocks.Remove(stockToRemove);
                 OnPortfolioChanged(PortfolioStocks);
+
+                return true;
             }
 
-            await Task.CompletedTask;
+            return false;
         }
 
         public async Task<Stock> GetStock(string ticker)

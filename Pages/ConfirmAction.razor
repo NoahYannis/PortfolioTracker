@@ -1,0 +1,18 @@
+﻿@page "/modal"
+
+
+<div>
+    <p>@Message</p>
+
+<button class="btn btn-primary">Yes</button>
+<button class="btn btn-danger">No</button>
+    <button @onclick="Close">Close</button>
+</div>
+
+@code {
+    [CascadingParameter] BlazoredModalInstance BlazoredModal { get; set; } = default!;
+
+    [Parameter] public string? Message { get; set; }
+
+    private async Task Close() => await BlazoredModal.CloseAsync();
+}

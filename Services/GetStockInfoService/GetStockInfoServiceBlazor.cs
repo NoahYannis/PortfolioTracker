@@ -1,11 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.Extensions.Configuration;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using PortfolioTracker.Other;
-using System.Net.Http;
-using System.Text.Json;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
 using PortfolioTracker.Shared;
 
 namespace PortfolioTracker.Services.GetStockInfoService

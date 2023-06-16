@@ -1,4 +1,5 @@
 ﻿@using PortfolioTracker.Other;
+@using PortfolioTracker.Pages;
 @using PortfolioTracker.Services.PortfolioService;
 @using Blazored;
 @using Blazored.Modal;
@@ -46,10 +47,9 @@
         <br /><br />
 
         <button class="btn-primary" type="submit">Update</button>
-        <button class="btn-danger" type="button" style="margin-left: 10px" @onclick="async() => await ConfirmDelete()">Delete</button>
+        <button class="btn-danger" type="button" style="margin-left: 10px" @onclick="async() => await DeleteStock(StockToUpdate.Ticker)">Delete</button>
         <br /><br />
     </EditForm>
-    <button @onclick="@(() => Modal.Show<SurveyPrompt>("My Movies"))">View Movies</button>
 </div
 
 <BlazoredModal/>
@@ -101,24 +101,22 @@
 
     private async Task<bool> ConfirmDelete()
     {
-        // Test
-
-        var conFirmModal = ModalService.Show<UpdateStockComponent>("Test");
-        var modalResult = await conFirmModal.Result;
-
-        if (!modalResult.Cancelled)
+        if(await ShowModal())
         {
-                    await PortfolioService.DeleteStock(StockToUpdate.Ticker);
-
+            return true;
         }
 
         return false;
     }
 
-    private async Task DeleteStock()
+    private async Task DeleteStock(string ticker)
     {
         if(await ConfirmDelete())
-        await PortfolioService.DeleteStock(StockToUpdate.Ticker);
+        {
+            UpdateResultMessage = await PortfolioService.DeleteStock(ticker)
+            ? $" Deleted {StockToUpdate.Ticker}" : "Deletion failed.";
+            await DisplayResultMessage();
+        }
     }
 
     private async Task DisplayResultMessage()
@@ -138,6 +136,17 @@
         var field = value.GetType().GetField(value.ToString());
         var attribute = (EnumDisplayText)Attribute.GetCustomAttribute(field, typeof(EnumDisplayText));
         return attribute != null ? attribute.Text : value.ToString();
+    }
+
+    private async Task<bool> ShowModal()
+    {
+        var parameters = new ModalParameters()
+            .Add(nameof(ConfirmAction.Message), $"Delete {StockToUpdate.Ticker}?");
+
+        var confirmDeleteModal = Modal.Show<ConfirmAction>("Confirm Action", parameters);
+
+        var result = await confirmDeleteModal.Result;
+        return result.Confirmed ? true : false;
     }
 }
 
