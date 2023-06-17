@@ -146,7 +146,7 @@
         var confirmDeleteModal = Modal.Show<ConfirmAction>("Confirm Action", parameters);
 
         var result = await confirmDeleteModal.Result;
-        return result.Confirmed ? true : false;
+        return result.Confirmed;
     }
 }
 

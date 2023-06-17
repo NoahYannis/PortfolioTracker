@@ -96,10 +96,9 @@
         _config.Data.Datasets.Clear();
         Dataset.Clear();
 
-        // Tell Blazor to update the UI
+        // Tell Blazor to update the UI. Wait to ensure other other processes are finished.
+        await Task.Delay(10);
         StateHasChanged();
-
-        await Task.CompletedTask;
     }
 
 

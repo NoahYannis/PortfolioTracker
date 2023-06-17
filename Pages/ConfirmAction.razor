@@ -4,9 +4,8 @@
 <div>
     <p>@Message</p>
 
-<button class="btn btn-primary">Yes</button>
-<button class="btn btn-danger">No</button>
-    <button @onclick="Close">Close</button>
+    <button class="btn btn-primary" @onclick="async() => await BlazoredModal.CloseAsync(ModalResult.Ok())">Yes</button>
+    <button class="btn btn-danger" @onclick="async() => await BlazoredModal.CloseAsync(ModalResult.Cancel())">No</button>
 </div>
 
 @code {
@@ -14,5 +13,4 @@
 
     [Parameter] public string? Message { get; set; }
 
-    private async Task Close() => await BlazoredModal.CloseAsync();
 }

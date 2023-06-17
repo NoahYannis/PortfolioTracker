@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "nPJSlRG+yX7kulTVQA6AHI1/R+SAS7lI1d4HwKlf+BM=",
+  "Hash": "ldgGNk4tyLmbjv7HFrc13iR1n/FEbpK2BqgN9S5IBI8=",
   "Source": "PortfolioTracker",
   "BasePath": "/",
   "Mode": "Root",
@@ -10,7 +10,7 @@
     {
       "Name": "PortfolioTracker\\wwwroot",
       "Source": "PortfolioTracker",
-      "ContentRoot": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\wwwroot\\",
       "BasePath": "/",
       "Pattern": "**"
     }
@@ -54,7 +54,7 @@
       "Identity": "C:\\Users\\User\\.nuget\\packages\\chartjs.blazor.fork\\2.0.2\\contentFiles\\any\\netstandard2.1\\wwwroot\\ChartJsBlazorInterop.js",
       "SourceId": "PortfolioTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "ChartJsBlazorInterop.js",
       "AssetKind": "All",
@@ -3944,7 +3944,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\7.0.7\\runtimes\\browser-wasm\\lib\\net7.0\\WindowsBase.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\+e1+00b5.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\+e1+00b5.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -3961,7 +3961,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Security.Cryptography.Algorithms.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\+pk52mke.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\+pk52mke.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -3978,7 +3978,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Threading.Thread.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\+VTbnmp9.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\+VTbnmp9.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -3995,7 +3995,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.EntityFrameworkCore.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\+vWsL09Z.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\+vWsL09Z.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -4012,7 +4012,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Security.Principal.Windows.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\+YgXQLPM.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\+YgXQLPM.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -4029,7 +4029,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.IO.Pipes.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\0bAr9Ksm.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\0bAr9Ksm.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -4046,7 +4046,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Net.Http.Json.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\0IrSfWlX.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\0IrSfWlX.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -4063,7 +4063,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Private.Xml.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\0lPKZcBY.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\0lPKZcBY.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -4080,7 +4080,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Configuration.FileExtensions.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\0oRiMMpm.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\0oRiMMpm.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -4097,7 +4097,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\mscorlib.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\0Oyg+3Hk.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\0Oyg+3Hk.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -4114,7 +4114,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Net.WebHeaderCollection.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\0x7U3y4g.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\0x7U3y4g.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -4131,7 +4131,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Diagnostics.Process.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\15ipBkUH.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\15ipBkUH.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -4148,7 +4148,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\WindowsBase.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\1bup+u8N.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\1bup+u8N.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -4165,7 +4165,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Globalization.Calendars.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\1tI9WbFy.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\1tI9WbFy.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -4182,7 +4182,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Runtime.Handles.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\1yBqbHBb.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\1yBqbHBb.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -4199,7 +4199,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Xml.XmlDocument.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\34ZDODHg.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\34ZDODHg.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -4216,7 +4216,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\RestSharp.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\3Fp1pNin.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\3Fp1pNin.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -4233,7 +4233,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Resources.Writer.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\3uLqN9Ek.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\3uLqN9Ek.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -4250,7 +4250,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Runtime.Serialization.Xml.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\3zj0y4jA.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\3zj0y4jA.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -4267,7 +4267,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Configuration.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\4aD7uKMh.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\4aD7uKMh.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -4284,7 +4284,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Runtime.InteropServices.RuntimeInformation.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\4H+8+Rj2.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\4H+8+Rj2.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -4301,7 +4301,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\netstandard.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\4MU9MbuI.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\4MU9MbuI.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -4318,7 +4318,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Xml.XPath.XDocument.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\5CLFM4FI.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\5CLFM4FI.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -4335,7 +4335,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.IO.FileSystem.Watcher.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\5OLZgmo+.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\5OLZgmo+.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -4352,7 +4352,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.CodeDom.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\5wy69BCC.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\5wy69BCC.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -4369,7 +4369,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Globalization.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\68feWdfJ.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\68feWdfJ.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -4386,7 +4386,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Runtime.Serialization.Json.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\6p+vXxZ3.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\6p+vXxZ3.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -4403,7 +4403,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Configuration.Json.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\6pKGbpf3.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\6pKGbpf3.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -4420,7 +4420,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Metadata.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\6SBRLdIM.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\6SBRLdIM.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -4437,7 +4437,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.ServiceModel.Web.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\6x50Dqk0.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\6x50Dqk0.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -4454,7 +4454,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Reflection.Emit.Lightweight.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\7+6Zygg6.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\7+6Zygg6.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -4471,7 +4471,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Data.DataSetExtensions.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\78yAyVU7.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\78yAyVU7.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -4488,7 +4488,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Runtime.Serialization.Formatters.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\7myCwKab.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\7myCwKab.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -4505,7 +4505,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Formats.Asn1.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\7Qwk0Cib.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\7Qwk0Cib.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -4522,7 +4522,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Linq.Parallel.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\80ezqiU0.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\80ezqiU0.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -4539,7 +4539,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Text.Encodings.Web.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\86+Oxy6f.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\86+Oxy6f.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -4556,7 +4556,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\icudt_EFIGS.dat"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\88rz8ogi.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\88rz8ogi.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -4573,7 +4573,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Globalization.Extensions.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\8Vzpdxj9.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\8Vzpdxj9.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -4590,7 +4590,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Security.Cryptography.X509Certificates.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\8ybh+uvQ.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\8ybh+uvQ.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -4607,7 +4607,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.IO.UnmanagedMemoryStream.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\8ZxJaZc4.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\8ZxJaZc4.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -4624,7 +4624,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.WebAssembly.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\9Gbv3+Cz.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\9Gbv3+Cz.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -4641,7 +4641,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.ComponentModel.Annotations.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\9ONg3UjP.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\9ONg3UjP.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -4658,7 +4658,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Runtime.Serialization.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\9u+oKxKW.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\9u+oKxKW.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -4675,7 +4675,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\PortfolioTracker.pdb"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\a0IxNSBS.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\a0IxNSBS.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -4692,7 +4692,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\icudt_no_CJK.dat"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\a3KBt+bU.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\a3KBt+bU.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -4709,7 +4709,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Windows.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\b+XxEiNE.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\b+XxEiNE.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -4726,7 +4726,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.FileProviders.Abstractions.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\B0BWxij7.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\B0BWxij7.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -4743,7 +4743,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.IO.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\b0n2SpSb.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\b0n2SpSb.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -4760,7 +4760,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Text.Encoding.CodePages.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\B9BpNqbl.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\B9BpNqbl.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -4777,7 +4777,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Numerics.Vectors.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\bCicpAer.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\bCicpAer.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -4794,7 +4794,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Threading.Timer.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\BDLXp09J.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\BDLXp09J.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -4811,7 +4811,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Security.Cryptography.Cng.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\BIqXiIoy.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\BIqXiIoy.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -4828,7 +4828,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Security.SecureString.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\BN1Q343M.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\BN1Q343M.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -4845,7 +4845,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Net.Sockets.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\bP+DxE7A.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\bP+DxE7A.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -4862,7 +4862,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Runtime.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\bPubFlW0.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\bPubFlW0.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -4879,7 +4879,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.VisualBasic.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\btu5XRhx.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\btu5XRhx.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -4896,7 +4896,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Configuration.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\C146LXtx.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\C146LXtx.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -4913,7 +4913,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Reflection.Emit.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\C4+ybNSd.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\C4+ybNSd.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -4930,7 +4930,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\dotnet.7.0.7.zvwer97ihj.js"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\C86q9SZa.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\C86q9SZa.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -4947,7 +4947,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.FileProviders.Physical.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\c9fA2bn5.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\c9fA2bn5.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -4964,7 +4964,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Collections.Concurrent.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\CG13NnXC.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\CG13NnXC.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -4981,7 +4981,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Security.Cryptography.Encoding.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\CY5Lrd8d.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\CY5Lrd8d.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -4998,7 +4998,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Configuration.Abstractions.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\D1Z0Y25B.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\D1Z0Y25B.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -5015,7 +5015,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Linq.Queryable.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\d6TQVDW1.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\d6TQVDW1.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -5032,7 +5032,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Runtime.CompilerServices.Unsafe.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\dArE0oUk.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\dArE0oUk.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -5049,7 +5049,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Runtime.InteropServices.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\dSzaplNI.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\dSzaplNI.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -5066,7 +5066,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.DependencyInjection.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\E22h1KEl.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\E22h1KEl.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -5083,7 +5083,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Drawing.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\e2VDOR8m.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\e2VDOR8m.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -5100,7 +5100,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Collections.Specialized.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\EBpNwo4R.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\EBpNwo4R.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -5117,7 +5117,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.AppContext.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\ecE9+sR1.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\ecE9+sR1.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -5134,7 +5134,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Resources.Reader.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\eenE00Os.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\eenE00Os.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -5151,7 +5151,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Reflection.Metadata.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\EmEKBTmF.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\EmEKBTmF.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -5168,7 +5168,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.DependencyModel.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\Es5wUgY2.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\Es5wUgY2.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -5185,7 +5185,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Drawing.Primitives.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\Et9adB01.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\Et9adB01.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -5202,7 +5202,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\ChartJs.Blazor.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\etJQiV63.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\etJQiV63.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -5219,7 +5219,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Threading.Tasks.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\F+eX3tC9.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\F+eX3tC9.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -5236,7 +5236,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Linq.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\f1jmVvpl.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\f1jmVvpl.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -5253,7 +5253,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Reflection.TypeExtensions.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\flHdVJaO.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\flHdVJaO.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -5270,7 +5270,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Net.WebProxy.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\fW2dX3eu.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\fW2dX3eu.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -5287,7 +5287,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Text.Json.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\Gcl1SHES.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\Gcl1SHES.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -5304,7 +5304,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.EntityFrameworkCore.Relational.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\gcNqhn5s.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\gcNqhn5s.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -5321,7 +5321,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Net.WebSockets.Client.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\gDpiTRcF.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\gDpiTRcF.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -5338,7 +5338,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Net.ServicePoint.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\GrPqOco+.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\GrPqOco+.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -5355,7 +5355,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Net.HttpListener.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\Gv68M7Ra.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\Gv68M7Ra.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -5372,7 +5372,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Net.NameResolution.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\gXiBMZ3K.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\gXiBMZ3K.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -5389,7 +5389,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Diagnostics.Contracts.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\HFGVegXI.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\HFGVegXI.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -5406,7 +5406,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Dynamic.Runtime.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\hheP+3V9.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\hheP+3V9.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -5423,7 +5423,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.JSInterop.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\hOsFm7Yt.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\hOsFm7Yt.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -5440,7 +5440,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Threading.Channels.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\hPnbA6ew.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\hPnbA6ew.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -5457,7 +5457,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\icudt.dat"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\HsMHh+Fz.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\HsMHh+Fz.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -5474,7 +5474,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Diagnostics.TraceSource.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\HX4hWcnl.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\HX4hWcnl.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -5491,7 +5491,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Authorization.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\I6X451pT.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\I6X451pT.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -5508,7 +5508,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.FileSystemGlobbing.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\iCjzhYLu.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\iCjzhYLu.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -5525,7 +5525,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Runtime.Extensions.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\IcsLkCsn.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\IcsLkCsn.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -5542,7 +5542,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.CSharp.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\IuOwS5ty.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\IuOwS5ty.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -5559,7 +5559,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Threading.Tasks.Dataflow.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\j61Hc1F3.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\j61Hc1F3.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -5576,7 +5576,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.EntityFrameworkCore.Design.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\JdgpAJ+Z.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\JdgpAJ+Z.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -5593,7 +5593,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.ComponentModel.DataAnnotations.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\jHK01yCx.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\jHK01yCx.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -5610,7 +5610,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Reflection.DispatchProxy.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\JII9sv6K.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\JII9sv6K.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -5627,7 +5627,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.ComponentModel.TypeConverter.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\JqniHISl.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\JqniHISl.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -5644,7 +5644,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Private.Xml.Linq.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\jUQy+RP3.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\jUQy+RP3.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -5661,7 +5661,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Security.Cryptography.Csp.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\JV6+GxgF.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\JV6+GxgF.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -5678,7 +5678,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.ComponentModel.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\k0OeEq5R.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\k0OeEq5R.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -5695,7 +5695,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\blazor.webassembly.js"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\kIIQ3aSC.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\kIIQ3aSC.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -5712,7 +5712,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Security.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\kJJFbPAn.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\kJJFbPAn.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -5729,7 +5729,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Runtime.InteropServices.JavaScript.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\kMnanr64.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\kMnanr64.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -5746,7 +5746,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.IO.IsolatedStorage.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\kucGgTtF.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\kucGgTtF.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -5763,7 +5763,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.ValueTuple.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\KVt7yJgz.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\KVt7yJgz.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -5780,7 +5780,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Net.Http.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\KY+E+QDO.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\KY+E+QDO.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -5797,7 +5797,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\dotnet.timezones.blat"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\kz05Zmmi.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\kz05Zmmi.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -5814,7 +5814,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Diagnostics.FileVersionInfo.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\l7oDMALV.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\l7oDMALV.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -5831,7 +5831,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Private.Uri.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\lH+0gO0D.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\lH+0gO0D.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -5848,7 +5848,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Threading.ThreadPool.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\lHWHf17y.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\lHWHf17y.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -5865,7 +5865,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Humanizer.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\LI6cRAyK.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\LI6cRAyK.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -5882,7 +5882,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Xml.Linq.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\lihrRzFO.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\lihrRzFO.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -5899,7 +5899,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Reflection.Emit.ILGeneration.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\LLjgP+aR.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\LLjgP+aR.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -5916,7 +5916,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.JSInterop.WebAssembly.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\LNG1UPHg.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\LNG1UPHg.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -5933,7 +5933,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Console.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\LNzBq1Qi.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\LNzBq1Qi.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -5950,7 +5950,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Web.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\LSKjvmVz.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\LSKjvmVz.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -5967,7 +5967,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Runtime.CompilerServices.VisualC.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\LSlMiiBm.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\LSlMiiBm.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -5984,7 +5984,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.IO.MemoryMappedFiles.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\LTXe5EuD.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\LTXe5EuD.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -6001,7 +6001,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Security.Cryptography.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\LZBIu33I.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\LZBIu33I.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -6018,7 +6018,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Diagnostics.TextWriterTraceListener.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\m9ZMstKS.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\m9ZMstKS.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -6035,7 +6035,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Reflection.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\MbYE05Yg.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\MbYE05Yg.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -6052,7 +6052,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.IO.Pipelines.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\MdQJ75VI.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\MdQJ75VI.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -6069,7 +6069,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Numerics.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\mE5gDkJB.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\mE5gDkJB.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -6086,7 +6086,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\PortfolioTracker.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\mf+cxTvX.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\mf+cxTvX.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -6103,7 +6103,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Web.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\Mmok901Q.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\Mmok901Q.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -6120,7 +6120,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.IO.Compression.Brotli.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\mvJGIjB1.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\mvJGIjB1.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -6137,7 +6137,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Resources.ResourceManager.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\N4lTLdol.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\N4lTLdol.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -6154,7 +6154,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Linq.Expressions.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\ncaCQsxd.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\ncaCQsxd.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -6171,7 +6171,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Net.WebClient.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\nPKFz3r3.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\nPKFz3r3.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -6188,7 +6188,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Mono.TextTemplating.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\nzfXdRu+.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\nzfXdRu+.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -6205,7 +6205,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Net.Mail.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\o8jVTt6b.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\o8jVTt6b.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -6222,7 +6222,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Threading.Tasks.Parallel.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\O9YU1X0F.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\O9YU1X0F.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -6239,7 +6239,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Private.CoreLib.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\OgwdQWMP.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\OgwdQWMP.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -6256,7 +6256,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Xml.XPath.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\P5EWC73i.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\P5EWC73i.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -6273,7 +6273,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Security.Claims.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\pikJ8jYp.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\pikJ8jYp.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -6290,7 +6290,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.IO.Compression.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\PMVbhgoe.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\PMVbhgoe.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -6307,7 +6307,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Newtonsoft.Json.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\pugsGxRW.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\pugsGxRW.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -6324,7 +6324,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Xml.ReaderWriter.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\pYL7dkds.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\pYL7dkds.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -6341,7 +6341,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Reflection.Extensions.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\q183hngp.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\q183hngp.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -6358,7 +6358,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\icudt_CJK.dat"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\QCD8MKao.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\QCD8MKao.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -6375,7 +6375,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Net.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\QQx2gMKW.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\QQx2gMKW.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -6392,7 +6392,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Xml.XDocument.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\qS9Tgzit.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\qS9Tgzit.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -6409,7 +6409,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.ComponentModel.EventBasedAsync.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\qSklLsNa.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\qSklLsNa.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -6426,7 +6426,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Xml.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\QSVL9KhK.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\QSVL9KhK.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -6443,7 +6443,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.IO.Pipes.AccessControl.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\qtpDsWKa.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\qtpDsWKa.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -6460,7 +6460,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Security.Cryptography.OpenSsl.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\r64KFTuv.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\r64KFTuv.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -6477,7 +6477,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.IO.Compression.ZipFile.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\r6645cPU.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\r6645cPU.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -6494,7 +6494,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.DependencyInjection.Abstractions.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\RC6sBOxZ.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\RC6sBOxZ.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -6511,7 +6511,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Blazored.Modal.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\rHV1Pfmz.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\rHV1Pfmz.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -6528,7 +6528,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Data.Common.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\RltesCZa.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\RltesCZa.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -6545,7 +6545,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Transactions.Local.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\rO5syUnr.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\rO5syUnr.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -6562,7 +6562,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Runtime.Numerics.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\RrOQ8O9B.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\RrOQ8O9B.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -6579,7 +6579,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.IO.Compression.FileSystem.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\s5+LtPtj.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\s5+LtPtj.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -6596,7 +6596,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\dotnet.wasm"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\S6WbJXcx.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\S6WbJXcx.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -6613,7 +6613,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Runtime.Intrinsics.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\saVpA+j+.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\saVpA+j+.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -6630,7 +6630,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.ServiceProcess.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\SD0hBNe3.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\SD0hBNe3.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -6647,7 +6647,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Xml.XmlSerializer.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\sfWdWUFa.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\sfWdWUFa.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -6664,7 +6664,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Net.Security.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\SgD9UXfz.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\SgD9UXfz.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -6681,7 +6681,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Collections.Immutable.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\SlXLUsPd.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\SlXLUsPd.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -6698,7 +6698,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Security.Principal.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\SmEvKhDj.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\SmEvKhDj.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -6715,7 +6715,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Formats.Tar.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\so1P74Aq.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\so1P74Aq.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -6732,7 +6732,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Web.HttpUtility.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\SRaBQEwE.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\SRaBQEwE.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -6749,7 +6749,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Collections.NonGeneric.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\srp26GRA.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\srp26GRA.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -6766,7 +6766,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Diagnostics.Tracing.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\svmngcMj.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\svmngcMj.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -6783,7 +6783,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Net.NetworkInformation.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\T+5XeCCL.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\T+5XeCCL.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -6800,7 +6800,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Text.Encoding.Extensions.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\TDgb+dVU.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\TDgb+dVU.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -6817,7 +6817,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Core.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\TF5wQ17z.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\TF5wQ17z.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -6834,7 +6834,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Net.Quic.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\TiFgc72S.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\TiFgc72S.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -6851,7 +6851,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Logging.Abstractions.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\TjWJAPe9.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\TjWJAPe9.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -6868,7 +6868,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.ObjectModel.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\TJZtSXmZ.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\TJZtSXmZ.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -6885,7 +6885,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Win32.Registry.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\tQGyAmDp.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\tQGyAmDp.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -6902,7 +6902,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.IO.FileSystem.Primitives.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\Ts1o0nn9.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\Ts1o0nn9.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -6919,7 +6919,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Win32.Primitives.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\TzWSaxAs.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\TzWSaxAs.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -6936,7 +6936,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Data.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\u9DzwVpK.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\u9DzwVpK.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -6953,7 +6953,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Threading.Tasks.Extensions.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\UbO5FWaC.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\UbO5FWaC.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -6970,7 +6970,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Forms.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\udq1RBow.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\udq1RBow.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -6987,7 +6987,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Runtime.Loader.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\UkYojai0.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\UkYojai0.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -7004,7 +7004,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Reflection.Primitives.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\um10QReB.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\um10QReB.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -7021,7 +7021,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Diagnostics.DiagnosticSource.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\uNkUs+Y9.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\uNkUs+Y9.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -7038,7 +7038,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Diagnostics.Tools.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\uOA7FZow.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\uOA7FZow.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -7055,7 +7055,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Logging.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\uq6s71PO.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\uq6s71PO.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -7072,7 +7072,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Threading.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\Usj4UepI.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\Usj4UepI.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -7089,7 +7089,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.IO.FileSystem.AccessControl.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\uU3ozVPu.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\uU3ozVPu.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -7106,7 +7106,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Text.Encoding.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\uy+uxyvd.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\uy+uxyvd.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -7123,7 +7123,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Transactions.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\V+ebjUpA.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\V+ebjUpA.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -7140,7 +7140,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Runtime.Serialization.Primitives.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\vAPK89+8.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\vAPK89+8.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -7157,7 +7157,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Options.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\VMUISmk3.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\VMUISmk3.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -7174,7 +7174,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Security.AccessControl.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\VNxC+z6E.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\VNxC+z6E.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -7191,7 +7191,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Xml.Serialization.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\vr9oi5H0.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\vr9oi5H0.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -7208,7 +7208,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.VisualBasic.Core.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\Vtiyd1CC.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\Vtiyd1CC.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -7225,7 +7225,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Net.Requests.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\VVbveZJS.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\VVbveZJS.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -7242,7 +7242,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Primitives.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\wAaPL+lv.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\wAaPL+lv.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -7259,7 +7259,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.EntityFrameworkCore.Abstractions.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\wdrF9aYf.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\wdrF9aYf.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -7276,7 +7276,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Net.Ping.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\whVtyBSw.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\whVtyBSw.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -7293,7 +7293,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\Wp5CdH+h.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\Wp5CdH+h.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -7310,7 +7310,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Text.RegularExpressions.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\WuvCvkJB.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\WuvCvkJB.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -7327,7 +7327,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Configuration.Binder.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\xAmNesua.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\xAmNesua.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -7344,7 +7344,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Net.WebSockets.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\xiQkYnJ1.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\xiQkYnJ1.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -7361,7 +7361,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\xK3sdmJU.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\xK3sdmJU.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -7378,7 +7378,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Buffers.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\XS3CFpVy.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\XS3CFpVy.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -7395,7 +7395,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Memory.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\y68j0Iud.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\y68j0Iud.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -7412,7 +7412,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.IO.FileSystem.DriveInfo.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\YAs7cIP3.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\YAs7cIP3.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -7429,7 +7429,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.IO.FileSystem.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\yccRGkab.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\yccRGkab.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -7446,7 +7446,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Private.DataContractSerialization.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\ygys8Eof.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\ygys8Eof.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -7463,7 +7463,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Diagnostics.StackTrace.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\yIt50SLx.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\yIt50SLx.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -7480,7 +7480,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Caching.Abstractions.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\ynZg2gpb.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\ynZg2gpb.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -7497,7 +7497,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Diagnostics.Debug.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\YPhYOwbt.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\YPhYOwbt.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -7514,7 +7514,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Net.Primitives.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\zkqszqMA.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\zkqszqMA.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -7531,7 +7531,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Security.Cryptography.Primitives.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\ZqH6IOue.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\ZqH6IOue.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -7548,7 +7548,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Threading.Overlapped.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\zrJ+CAqQ.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\zrJ+CAqQ.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -7565,7 +7565,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.ComponentModel.Primitives.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\zsqpu5DP.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\zsqpu5DP.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -7582,7 +7582,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Caching.Memory.dll"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\Zu5g5mHE.gz",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\Zu5g5mHE.gz",
       "SourceId": "PortfolioTracker",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\bin\\Debug\\net7.0\\wwwroot\\",
@@ -7633,10 +7633,10 @@
       "OriginalItemSpec": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\PortfolioTracker.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\wwwroot\\appsettings.json",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\wwwroot\\appsettings.json",
       "SourceId": "PortfolioTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "appsettings.json",
       "AssetKind": "All",
@@ -7653,7 +7653,7 @@
       "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\wwwroot\\css\\app.css",
       "SourceId": "PortfolioTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "css/app.css",
       "AssetKind": "All",
@@ -7670,7 +7670,7 @@
       "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "SourceId": "PortfolioTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "css/bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -7687,7 +7687,7 @@
       "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "PortfolioTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "css/bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -7704,7 +7704,7 @@
       "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
       "SourceId": "PortfolioTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "css/open-iconic/font/css/open-iconic-bootstrap.min.css",
       "AssetKind": "All",
@@ -7721,7 +7721,7 @@
       "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
       "SourceId": "PortfolioTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.eot",
       "AssetKind": "All",
@@ -7738,7 +7738,7 @@
       "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
       "SourceId": "PortfolioTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.otf",
       "AssetKind": "All",
@@ -7755,7 +7755,7 @@
       "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
       "SourceId": "PortfolioTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.svg",
       "AssetKind": "All",
@@ -7772,7 +7772,7 @@
       "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
       "SourceId": "PortfolioTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.ttf",
       "AssetKind": "All",
@@ -7789,7 +7789,7 @@
       "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
       "SourceId": "PortfolioTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.woff",
       "AssetKind": "All",
@@ -7806,7 +7806,7 @@
       "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
       "SourceId": "PortfolioTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "css/open-iconic/FONT-LICENSE",
       "AssetKind": "All",
@@ -7823,7 +7823,7 @@
       "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
       "SourceId": "PortfolioTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "css/open-iconic/ICON-LICENSE",
       "AssetKind": "All",
@@ -7840,7 +7840,7 @@
       "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\wwwroot\\css\\open-iconic\\README.md",
       "SourceId": "PortfolioTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "css/open-iconic/README.md",
       "AssetKind": "All",
@@ -7857,7 +7857,7 @@
       "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\wwwroot\\favicon.png",
       "SourceId": "PortfolioTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "favicon.png",
       "AssetKind": "All",
@@ -7874,7 +7874,7 @@
       "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\wwwroot\\icon-192.png",
       "SourceId": "PortfolioTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "icon-192.png",
       "AssetKind": "All",
@@ -7891,7 +7891,7 @@
       "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\wwwroot\\index.html",
       "SourceId": "PortfolioTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "index.html",
       "AssetKind": "All",
@@ -7908,7 +7908,7 @@
       "Identity": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\wwwroot\\sample-data\\weather.json",
       "SourceId": "PortfolioTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "sample-data/weather.json",
       "AssetKind": "All",

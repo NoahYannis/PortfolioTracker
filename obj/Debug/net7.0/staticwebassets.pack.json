@@ -9,8 +9,16 @@
       "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
     },
     {
+      "Id": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\k0OeEq5R.gz",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
+    },
+    {
       "Id": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\scopedcss\\bundle\\PortfolioTracker.styles.css",
       "PackagePath": "staticwebassets\\PortfolioTracker.styles.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\wwwroot\\appsettings.json",
+      "PackagePath": "staticwebassets\\appsettings.json"
     },
     {
       "Id": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\wwwroot\\css\\app.css",
@@ -75,14 +83,6 @@
     {
       "Id": "C:\\Users\\User\\Source\\Repos\\NoahYannis\\PortfolioTracker\\wwwroot\\sample-data\\weather.json",
       "PackagePath": "staticwebassets\\sample-data\\weather.json"
-    },
-    {
-      "Id": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\obj\\Debug\\net7.0\\build-gz\\k0OeEq5R.gz",
-      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
-    },
-    {
-      "Id": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\wwwroot\\appsettings.json",
-      "PackagePath": "staticwebassets\\appsettings.json"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.PortfolioTracker.Microsoft.AspNetCore.StaticWebAssets.props",

@@ -46,7 +46,6 @@ namespace PortfolioTracker.Services.PortfolioService
             {
                 PortfolioStocks.Remove(stockToRemove);
                 OnPortfolioChanged(PortfolioStocks);
-
                 return true;
             }
 
