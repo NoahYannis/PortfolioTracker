@@ -10,3 +10,10 @@
 *.dll
 *.dll
 obj/Debug/net7.0/ref/PortfolioTracker.dll
+*.cache
+*.json
+*.props
+*.dll
+*.dll
+*.dll
+*.dll

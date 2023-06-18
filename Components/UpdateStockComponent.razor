@@ -52,8 +52,6 @@
     </EditForm>
 </div
 
-<BlazoredModal/>
-
 @if (ShowResultMessage)
 {
     <p>
@@ -144,7 +142,6 @@
             .Add(nameof(ConfirmAction.Message), $"Delete {StockToUpdate.Ticker}?");
 
         var confirmDeleteModal = Modal.Show<ConfirmAction>("Confirm Action", parameters);
-
         var result = await confirmDeleteModal.Result;
         return result.Confirmed;
     }
