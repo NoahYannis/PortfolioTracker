@@ -114,6 +114,7 @@
             UpdateResultMessage = await PortfolioService.DeleteStock(ticker)
             ? $" Deleted {StockToUpdate.Ticker}" : "Deletion failed.";
             await DisplayResultMessage();
+            StockToUpdate = new Stock();
         }
     }
 
