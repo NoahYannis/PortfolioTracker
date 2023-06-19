@@ -1,4 +1,5 @@
 ﻿using PortfolioTracker.Other;
+using System.ComponentModel.DataAnnotations;
 
 namespace PortfolioTracker
 {
@@ -10,13 +11,15 @@ namespace PortfolioTracker
         Energy,
         Materials,
 
-        [EnumDisplayText("Real Estate")]
+        // UpdateStockComponent validation fails when display text contains spaces
+
+        [EnumDisplayText("Real_Estate")]
         Real_Estate,
 
-        [EnumDisplayText("Consumer Staples")]
+        [EnumDisplayText("Consumer_Staples")]
         Consumer_Staples,
 
-        [EnumDisplayText("Consumer Discretionary")]
+        [EnumDisplayText("Consumer_Discretionary")]
         Consumer_Discretionary,
 
         Utilities,

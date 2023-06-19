@@ -69,7 +69,8 @@
     [Parameter]
     public Stock StockToUpdate
     {
-        get => _stockToUpdate is not null ? _stockToUpdate : new Stock();
+        get => _stockToUpdate is not null ? _stockToUpdate : PortfolioService.PortfolioStocks.First();
+
         set => _stockToUpdate = value;
     }
 

@@ -72,6 +72,7 @@ namespace PortfolioTracker.Services.PortfolioService
         {
             Stock stockToUpdate = PortfolioStocks.FirstOrDefault(s => s.Ticker == stock.Ticker);
 
+
             if (stockToUpdate != null && PortfolioStocks.Count(s => s.Ticker == stockToUpdate.Ticker) == 1)
             {
                     stockToUpdate.Ticker = stock.Ticker;
