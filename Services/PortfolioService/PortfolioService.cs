@@ -19,9 +19,9 @@ namespace PortfolioTracker.Services.PortfolioService
 
         public event EventHandler<PortfolioChangedArgs>? PortfolioChanged;
 
-        public void OnPortfolioChanged(List<Stock> portfolioStocks)
+        public void OnPortfolioChanged(List<Stock> portfolioStocks, Stock? deletedStock = null)
         {
-            PortfolioChanged?.Invoke(this, new PortfolioChangedArgs(portfolioStocks));
+            PortfolioChanged?.Invoke(this, new PortfolioChangedArgs(portfolioStocks, deletedStock));
         }
 
         public async Task<bool> AddStock(Stock stock)
@@ -41,11 +41,12 @@ namespace PortfolioTracker.Services.PortfolioService
         public async Task<bool> DeleteStock(string ticker)
         {
             Stock stockToRemove = PortfolioStocks.FirstOrDefault(s => s.Ticker == ticker);
+            Stock stock2 = stockToRemove;
 
             if (stockToRemove != null)
             {
                 PortfolioStocks.Remove(stockToRemove);
-                OnPortfolioChanged(PortfolioStocks);
+                OnPortfolioChanged(PortfolioStocks, stock2);
                 return true;
             }
 

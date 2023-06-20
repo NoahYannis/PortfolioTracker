@@ -18,7 +18,7 @@ namespace PortfolioTracker
         [Required(ErrorMessage = "Buy in price required."), Range(0.1, double.MaxValue, ErrorMessage = "Buy In Price Must Be Greater Than $0.")]
         public decimal? BuyInPrice { get; set; } 
 
-        [Range(0, 200)]
+        [Range(0, 200, ErrorMessage = "Dividend yield must be between 0 and 200%.")]
         public decimal? DividendYield { get; set; }
 
 

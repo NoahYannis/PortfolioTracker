@@ -25,7 +25,7 @@
     private Random random = new Random();
 
     private Stock ClickedSegmentStock { get; set; } = new();
-
+    private int clickedIndex;
 
     protected override async void OnInitialized()
     {
@@ -71,15 +71,16 @@
     {
         ClearPieChart();
 
-        // Pie Chart currently doesn't display changes on ClickedSegmentStock
-
         foreach (Stock stock in p.UpdatedPortfolio)
         {
             _config.Data.Labels.Add(stock.Ticker);
             Dataset.Add(stock.PositionSize);
-            Color randomColor = Color.FromArgb(random.Next(256), random.Next(256), random.Next(256));
-            string colorHex = ColorUtil.ColorHexString(randomColor.R, randomColor.G, randomColor.B);
-            BackgroundColors.Add(colorHex);
+        }
+
+        // If a stock was deleted, also delete the background color at its index
+        if (p.DeletedStock is not null)
+        {
+            BackgroundColors.RemoveAt(clickedIndex);
         }
 
         Dataset.BackgroundColor = BackgroundColors.ToArray();
@@ -120,12 +121,13 @@
                     Console.WriteLine(prop.Value.ToString());
 
                     ClickedSegmentStock = PortfolioStocks.FirstOrDefault(s => s.Ticker == prop.Value.ToString());
+                    clickedIndex = PortfolioStocks.IndexOf(ClickedSegmentStock);
+
                     StateHasChanged();
                 }
             }
         }
     }
-
 
 
     public void Dispose()

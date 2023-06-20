@@ -1,7 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.Text.Json.Serialization;
-
-namespace PortfolioTracker.Other
+﻿namespace PortfolioTracker.Other
 {
     public enum PortfolioAction
     {
@@ -13,11 +10,13 @@ namespace PortfolioTracker.Other
     public class PortfolioChangedArgs : EventArgs
     {
         public List<Stock> UpdatedPortfolio { get; set; }
+        public Stock DeletedStock { get; set; }
         public PortfolioAction PortfolioAction { get; set; }
 
-        public PortfolioChangedArgs(List<Stock> updatedPortfolio)
+        public PortfolioChangedArgs(List<Stock> updatedPortfolio, Stock? deletedStock = null)
         {
             UpdatedPortfolio = updatedPortfolio;
+            DeletedStock = deletedStock;
         }
 
     }
