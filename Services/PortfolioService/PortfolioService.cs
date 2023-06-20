@@ -41,12 +41,11 @@ namespace PortfolioTracker.Services.PortfolioService
         public async Task<bool> DeleteStock(string ticker)
         {
             Stock stockToRemove = PortfolioStocks.FirstOrDefault(s => s.Ticker == ticker);
-            Stock stock2 = stockToRemove;
 
             if (stockToRemove != null)
             {
                 PortfolioStocks.Remove(stockToRemove);
-                OnPortfolioChanged(PortfolioStocks, stock2);
+                OnPortfolioChanged(PortfolioStocks, stockToRemove);
                 return true;
             }
 
