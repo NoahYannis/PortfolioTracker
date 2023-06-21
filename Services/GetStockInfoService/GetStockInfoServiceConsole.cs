@@ -1,8 +1,7 @@
 ﻿using Newtonsoft.Json;
-using Microsoft.Extensions.Configuration;
-using System.Net.Http.Json;
+using PortfolioTrackerShared.Models;
 
-namespace PortfolioTracker.Services.GetStockInfoService
+namespace PortfolioTrackerClient.Services.GetStockInfoService
 {
     public class GetStockInfoServiceCole
     {

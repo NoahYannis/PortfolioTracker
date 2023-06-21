@@ -1,4 +1,6 @@
-﻿namespace PortfolioTracker.Other
+﻿using PortfolioTrackerShared.Models;
+
+namespace PortfolioTrackerShared.Other
 {
     public enum PortfolioAction
     {

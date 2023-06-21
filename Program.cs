@@ -1,9 +1,9 @@
 using Blazored.Modal;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
-using PortfolioTracker;
-using PortfolioTracker.Services.GetStockInfoService;
-using PortfolioTracker.Services.PortfolioService;
+using PortfolioTrackerClient;
+using PortfolioTrackerClient.Services.GetStockInfoService;
+using PortfolioTrackerClient.Services.PortfolioService;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");

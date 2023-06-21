@@ -1,8 +1,9 @@
 ﻿using Newtonsoft.Json;
-using PortfolioTracker.Other;
-using PortfolioTracker.Shared;
+using PortfolioTrackerClient.Shared;
+using PortfolioTrackerShared.Models;
+using PortfolioTrackerShared.Other;
 
-namespace PortfolioTracker.Services.GetStockInfoService
+namespace PortfolioTrackerClient.Services.GetStockInfoService
 {
     public class GetStockInfoServiceBlazor : IGetStockInfoService
     {

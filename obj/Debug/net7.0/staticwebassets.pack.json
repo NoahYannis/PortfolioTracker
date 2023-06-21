@@ -13,8 +13,8 @@
       "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
     },
     {
-      "Id": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\obj\\Debug\\net7.0\\scopedcss\\bundle\\PortfolioTracker.styles.css",
-      "PackagePath": "staticwebassets\\PortfolioTracker.styles.css"
+      "Id": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\obj\\Debug\\net7.0\\scopedcss\\bundle\\PortfolioTrackerClient.styles.css",
+      "PackagePath": "staticwebassets\\PortfolioTrackerClient.styles.css"
     },
     {
       "Id": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\wwwroot\\appsettings.json",
@@ -85,20 +85,20 @@
       "PackagePath": "staticwebassets\\sample-data\\weather.json"
     },
     {
-      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.PortfolioTracker.Microsoft.AspNetCore.StaticWebAssets.props",
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.PortfolioTrackerClient.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
     {
-      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.PortfolioTracker.props",
-      "PackagePath": "build\\PortfolioTracker.props"
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.PortfolioTrackerClient.props",
+      "PackagePath": "build\\PortfolioTrackerClient.props"
     },
     {
-      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.PortfolioTracker.props",
-      "PackagePath": "buildMultiTargeting\\PortfolioTracker.props"
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.PortfolioTrackerClient.props",
+      "PackagePath": "buildMultiTargeting\\PortfolioTrackerClient.props"
     },
     {
-      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.PortfolioTracker.props",
-      "PackagePath": "buildTransitive\\PortfolioTracker.props"
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.PortfolioTrackerClient.props",
+      "PackagePath": "buildTransitive\\PortfolioTrackerClient.props"
     }
   ],
   "ElementsToRemove": []

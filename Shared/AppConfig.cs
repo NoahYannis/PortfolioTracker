@@ -1,7 +1,4 @@
-﻿using PortfolioTracker.Models;
-using System.Text.Json;
-
-namespace PortfolioTracker.Shared
+﻿namespace PortfolioTrackerClient.Shared
 {
     public class AppConfig
     {

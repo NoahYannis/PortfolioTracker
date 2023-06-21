@@ -1,4 +1,4 @@
-﻿namespace PortfolioTracker.Controllers
+﻿namespace PortfolioTrackerShared.Controllers
 {
     public class StockInfoController
     {

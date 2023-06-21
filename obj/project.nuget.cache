@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hZ6jRc7jZeV6LaGlvTIvoalevoR+jj4ydikMzMHOlsFeQvK2pWB03Y3LtjawekoEEzvxT1Se/zd8o4QCaeQp7A==",
+  "dgSpecHash": "JfRF/RmXvSrvSmAOqtbAkTnTW2kQjH3WheUeort1HV4PQQdn5wtNLlqk6r5AuKAUMMkekD6Z1XM8kVg3wt5VJg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTracker.csproj",
+  "projectFilePath": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerClient.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Noah\\.nuget\\packages\\blazored.modal\\7.1.0\\blazored.modal.7.1.0.nupkg.sha512",
     "C:\\Users\\Noah\\.nuget\\packages\\chartjs.blazor\\1.1.0\\chartjs.blazor.1.1.0.nupkg.sha512",
@@ -49,7 +49,7 @@
     "C:\\Users\\Noah\\.nuget\\packages\\system.io.pipelines\\7.0.0\\system.io.pipelines.7.0.0.nupkg.sha512",
     "C:\\Users\\Noah\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
     "C:\\Users\\Noah\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512",
-    "C:\\Users\\Noah\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\7.0.2\\microsoft.netcore.app.runtime.mono.browser-wasm.7.0.2.nupkg.sha512"
+    "C:\\Users\\Noah\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\7.0.7\\microsoft.netcore.app.runtime.mono.browser-wasm.7.0.7.nupkg.sha512"
   ],
   "logs": []
 }

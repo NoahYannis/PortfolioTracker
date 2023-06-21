@@ -787,6 +787,16 @@
         "build": {
           "buildTransitive/net6.0/System.Text.Json.targets": {}
         }
+      },
+      "PortfolioTrackerShared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/PortfolioTrackerShared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PortfolioTrackerShared.dll": {}
+        }
       }
     },
     "net7.0/browser-wasm": {
@@ -1568,6 +1578,16 @@
         },
         "build": {
           "buildTransitive/net6.0/System.Text.Json.targets": {}
+        }
+      },
+      "PortfolioTrackerShared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/PortfolioTrackerShared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PortfolioTrackerShared.dll": {}
         }
       }
     }
@@ -2833,6 +2853,11 @@
         "system.text.json.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "PortfolioTrackerShared/1.0.0": {
+      "type": "project",
+      "path": "../PortfolioTrackerShared/PortfolioTrackerShared.csproj",
+      "msbuildProject": "../PortfolioTrackerShared/PortfolioTrackerShared.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -2846,6 +2871,7 @@
       "Microsoft.EntityFrameworkCore.Design >= 7.0.5",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.5",
       "Newtonsoft.Json >= 13.0.2",
+      "PortfolioTrackerShared >= 1.0.0",
       "RestSharp >= 108.0.3"
     ]
   },
@@ -2856,9 +2882,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTracker.csproj",
-      "projectName": "PortfolioTracker",
-      "projectPath": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTracker.csproj",
+      "projectUniqueName": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerClient.csproj",
+      "projectName": "PortfolioTrackerClient",
+      "projectPath": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerClient.csproj",
       "packagesPath": "C:\\Users\\Noah\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\obj\\",
       "projectStyle": "PackageReference",
@@ -2881,7 +2907,11 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Noah\\source\\repos\\PortfolioTrackerShared\\PortfolioTrackerShared.csproj": {
+              "projectPath": "C:\\Users\\Noah\\source\\repos\\PortfolioTrackerShared\\PortfolioTrackerShared.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -2954,7 +2984,7 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
-            "version": "[7.0.2, 7.0.2]"
+            "version": "[7.0.7, 7.0.7]"
           }
         ],
         "frameworkReferences": {
@@ -2962,7 +2992,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {

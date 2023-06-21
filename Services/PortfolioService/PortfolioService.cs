@@ -1,7 +1,7 @@
-﻿using PortfolioTracker.Models;
-using PortfolioTracker.Other;
+﻿using PortfolioTrackerShared.Other;
+using PortfolioTrackerShared.Models;
 
-namespace PortfolioTracker.Services.PortfolioService
+namespace PortfolioTrackerClient.Services.PortfolioService
 {
     public class PortfolioService : IPortfolioService
     {
