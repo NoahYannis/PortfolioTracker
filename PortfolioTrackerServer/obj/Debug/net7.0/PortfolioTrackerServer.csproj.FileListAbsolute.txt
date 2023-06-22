@@ -1,0 +1,8 @@
+C:\Users\Noah\source\repos\PortfolioTrackerServer\obj\Debug\net7.0\PortfolioTrackerServer.csproj.AssemblyReference.cache
+C:\Users\Noah\source\repos\PortfolioTrackerServer\obj\Debug\net7.0\PortfolioTrackerServer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Noah\source\repos\PortfolioTrackerServer\obj\Debug\net7.0\PortfolioTrackerServer.AssemblyInfoInputs.cache
+C:\Users\Noah\source\repos\PortfolioTrackerServer\obj\Debug\net7.0\PortfolioTrackerServer.AssemblyInfo.cs
+C:\Users\Noah\source\repos\PortfolioTrackerServer\obj\Debug\net7.0\PortfolioTrackerServer.csproj.CoreCompileInputs.cache
+C:\Users\Noah\source\repos\PortfolioTrackerServer\obj\Debug\net7.0\PortfolioTrackerServer.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Noah\source\repos\PortfolioTrackerServer\obj\Debug\net7.0\PortfolioTrackerServer.RazorAssemblyInfo.cache
+C:\Users\Noah\source\repos\PortfolioTrackerServer\obj\Debug\net7.0\PortfolioTrackerServer.RazorAssemblyInfo.cs

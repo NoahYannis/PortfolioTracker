@@ -1,0 +1,65 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = browser
+build_property.RootNamespace = PortfolioTrackerClient
+build_property.RootNamespace = PortfolioTrackerClient
+build_property.ProjectDir = C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerClient\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerClient
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Noah/source/repos/PortfolioTracker/PortfolioTrackerClient/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Noah/source/repos/PortfolioTracker/PortfolioTrackerClient/Components/AddStockComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBZGRTdG9ja0NvbXBvbmVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Noah/source/repos/PortfolioTracker/PortfolioTrackerClient/Components/PolygonStockAPI.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQb2x5Z29uU3RvY2tBUEkucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Noah/source/repos/PortfolioTracker/PortfolioTrackerClient/Components/PortfolioPieChart.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQb3J0Zm9saW9QaWVDaGFydC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Noah/source/repos/PortfolioTracker/PortfolioTrackerClient/Components/UpdateStockComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xVcGRhdGVTdG9ja0NvbXBvbmVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Noah/source/repos/PortfolioTracker/PortfolioTrackerClient/Pages/ConfirmAction.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29uZmlybUFjdGlvbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Noah/source/repos/PortfolioTracker/PortfolioTrackerClient/Pages/Home.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Noah/source/repos/PortfolioTracker/PortfolioTrackerClient/Pages/Portfolio.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9ydGZvbGlvLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Noah/source/repos/PortfolioTracker/PortfolioTrackerClient/Shared/SurveyPrompt.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Noah/source/repos/PortfolioTracker/PortfolioTrackerClient/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Noah/source/repos/PortfolioTracker/PortfolioTrackerClient/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-yad0rt9llc
+
+[C:/Users/Noah/source/repos/PortfolioTracker/PortfolioTrackerClient/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-03wqgx41fb

@@ -1,9 +1,9 @@
-﻿
+﻿﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PortfolioTrackerClient", "PortfolioTrackerClient.csproj", "{BC3A6CA7-320F-4AF8-856C-D6A062F604CD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PortfolioTrackerClient", "..\PortfolioTracker\PortfolioTrackerClient\PortfolioTrackerClient.csproj", "{BC3A6CA7-320F-4AF8-856C-D6A062F604CD}"
 	ProjectSection(ProjectDependencies) = postProject
 		{B92EBD45-DAF0-4AD9-8C3D-46938A184BA2} = {B92EBD45-DAF0-4AD9-8C3D-46938A184BA2}
 	EndProjectSection
@@ -14,7 +14,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{DBDC5F
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server", "Server", "{463A5B3C-F2C7-4343-9B1E-4EE89E34F9DF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PortfolioTrackerServer", "..\PortfolioTrackerServer\PortfolioTrackerServer.csproj", "{078902D4-F308-4666-A8F0-FB3DAA7F4EB1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PortfolioTrackerServer", "..\PortfolioTracker\PortfolioTrackerServer\PortfolioTrackerServer.csproj", "{078902D4-F308-4666-A8F0-FB3DAA7F4EB1}"
 	ProjectSection(ProjectDependencies) = postProject
 		{B92EBD45-DAF0-4AD9-8C3D-46938A184BA2} = {B92EBD45-DAF0-4AD9-8C3D-46938A184BA2}
 		{BC3A6CA7-320F-4AF8-856C-D6A062F604CD} = {BC3A6CA7-320F-4AF8-856C-D6A062F604CD}
@@ -22,7 +22,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PortfolioTrackerServer", ".
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{9C1B0C69-89E8-438E-9F26-2CC4047C5154}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortfolioTrackerShared", "..\PortfolioTrackerShared\PortfolioTrackerShared.csproj", "{B92EBD45-DAF0-4AD9-8C3D-46938A184BA2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortfolioTrackerShared", "..\PortfolioTracker\PortfolioTrackerShared\PortfolioTrackerShared.csproj", "{B92EBD45-DAF0-4AD9-8C3D-46938A184BA2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
