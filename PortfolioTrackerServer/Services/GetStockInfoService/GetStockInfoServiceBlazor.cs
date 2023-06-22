@@ -1,8 +1,9 @@
 ﻿using Newtonsoft.Json;
 using PortfolioTrackerShared.Models;
 using PortfolioTrackerShared.Other;
+using PortfolioTrackerServer.Data;
 
-namespace PortfolioTrackerClient.Services.GetStockInfoService
+namespace PortfolioTrackerServer.Services.GetStockInfoService
 {
     public class GetStockInfoServiceBlazor : IGetStockInfoService
     {
@@ -20,7 +21,7 @@ namespace PortfolioTrackerClient.Services.GetStockInfoService
 
 
         /// <summary>
-        /// Retrieves stock data for the specified ticker symbol from an API.
+        /// Sends an API request with the specified stock ticker and returns its result 
         /// </summary>
         /// <param name="tickerSymbol"></param>
         /// <returns></returns>

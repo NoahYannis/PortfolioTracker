@@ -5,7 +5,6 @@
 @using PortfolioTrackerClient.Services.PortfolioService;
 @using PortfolioTrackerShared.Other;
 @using System.Drawing;
-@using PortfolioTrackerShared.Models;
 
 @inject IPortfolioService PortfolioService
 @inject IJSRuntime JsRuntime;
@@ -76,14 +75,19 @@
         {
             _config.Data.Labels.Add(stock.Ticker);
             Dataset.Add(stock.PositionSize);
+
+            if (p.PortfolioAction is PortfolioAction.Added && stock == p.ModifiedStock)
+            {
+                Color randomColor = Color.FromArgb(random.Next(256), random.Next(256), random.Next(256));
+                string colorHex = ColorUtil.ColorHexString(randomColor.R, randomColor.G, randomColor.B);
+                BackgroundColors.Add(colorHex);
+            }
         }
 
         // If a stock was deleted, also delete the background color at its index
-        if (p.DeletedStock is not null)
-        {
+        if (p.PortfolioAction is PortfolioAction.Deleted)
             BackgroundColors.RemoveAt(clickedIndex);
-        }
-
+        
         Dataset.BackgroundColor = BackgroundColors.ToArray();
         _config.Data.Datasets.Add(Dataset);
     }

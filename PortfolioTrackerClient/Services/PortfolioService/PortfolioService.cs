@@ -19,9 +19,9 @@ namespace PortfolioTrackerClient.Services.PortfolioService
 
         public event EventHandler<PortfolioChangedArgs>? PortfolioChanged;
 
-        public void OnPortfolioChanged(List<Stock> portfolioStocks, Stock? deletedStock = null)
+        public void OnPortfolioChanged(List<Stock> portfolioStocks, Stock? modifiedStock = null, PortfolioAction portfolioAction = 0)
         {
-            PortfolioChanged?.Invoke(this, new PortfolioChangedArgs(portfolioStocks, deletedStock));
+            PortfolioChanged?.Invoke(this, new PortfolioChangedArgs(portfolioStocks, modifiedStock, portfolioAction));
         }
 
         public async Task<bool> AddStock(Stock stock)
@@ -30,7 +30,7 @@ namespace PortfolioTrackerClient.Services.PortfolioService
             if (!PortfolioStocks.Any(s => s.Ticker == stock.Ticker))
             {
                 PortfolioStocks.Add(stock);
-                OnPortfolioChanged(PortfolioStocks);
+                OnPortfolioChanged(PortfolioStocks, stock, PortfolioAction.Added);
 
                 return true;
             }
@@ -45,7 +45,7 @@ namespace PortfolioTrackerClient.Services.PortfolioService
             if (stockToRemove != null)
             {
                 PortfolioStocks.Remove(stockToRemove);
-                OnPortfolioChanged(PortfolioStocks, stockToRemove);
+                OnPortfolioChanged(PortfolioStocks, stockToRemove, PortfolioAction.Deleted);
                 return true;
             }
 
@@ -83,7 +83,7 @@ namespace PortfolioTrackerClient.Services.PortfolioService
                     stockToUpdate.DividendYield = stock.DividendYield;
                     stockToUpdate.Industry = stock.Industry;
                     stockToUpdate.PositionSize = stock.PositionSize;
-                    OnPortfolioChanged(PortfolioStocks);
+                    OnPortfolioChanged(PortfolioStocks, stockToUpdate, PortfolioAction.Modified);
 
                 return true;
             }

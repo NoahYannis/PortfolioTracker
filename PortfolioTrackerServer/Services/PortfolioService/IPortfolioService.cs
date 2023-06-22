@@ -1,7 +1,7 @@
 ﻿using PortfolioTrackerShared.Models;
 using PortfolioTrackerShared.Other;
 
-namespace PortfolioTrackerClient.Services.PortfolioService
+namespace PortfolioTrackerServer.Services.PortfolioService
 {
     /// <summary>
     /// Portfolio functionalities
@@ -17,8 +17,8 @@ namespace PortfolioTrackerClient.Services.PortfolioService
         Task<bool> DeleteStock(string ticker);
         Task<bool> UpdateStock(Stock stock);
 
-        event EventHandler<PortfolioChangedArgs> PortfolioChanged;
-        void OnPortfolioChanged(List<Stock> portfolioStocks, Stock? modifiedStock = null, PortfolioAction portfolioAction = 0);
+        //event EventHandler<PortfolioChangedArgs> PortfolioChanged;
+        void OnPortfolioChanged(List<Stock> portfolioStocks, Stock? deletedStock = null);
 
 
         #endregion

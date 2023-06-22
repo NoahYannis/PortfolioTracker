@@ -1,4 +1,4 @@
-﻿namespace PortfolioTrackerClient.Shared
+﻿namespace PortfolioTrackerServer.Data
 {
     public class AppConfig
     {
