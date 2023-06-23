@@ -10,15 +10,15 @@ namespace PortfolioTrackerClient.Services.PortfolioService
     {
         #region Stocks 
 
-        List<Stock> PortfolioStocks { get; set; }
-        Task<List<Stock>> GetStocks();
-        Task<Stock> GetStock(string ticker);
-        Task<bool> AddStock(Stock stock);
+        List<PortfolioStock> PortfolioStocks { get; set; }
+        Task<List<PortfolioStock>> GetStocks();
+        Task<PortfolioStock> GetStock(string ticker);
+        Task<bool> AddStock(PortfolioStock stock);
         Task<bool> DeleteStock(string ticker);
-        Task<bool> UpdateStock(Stock stock);
+        Task<bool> UpdateStock(PortfolioStock stock);
 
         event EventHandler<PortfolioChangedArgs> PortfolioChanged;
-        void OnPortfolioChanged(List<Stock> portfolioStocks, Stock? modifiedStock = null, PortfolioAction portfolioAction = 0);
+        void OnPortfolioChanged(List<PortfolioStock> portfolioStocks, PortfolioStock? modifiedStock = null, PortfolioAction portfolioAction = 0);
 
 
         #endregion

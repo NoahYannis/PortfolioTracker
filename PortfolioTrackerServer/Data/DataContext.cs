@@ -5,8 +5,14 @@ namespace PortfolioTrackerServer.Data
 {
     public class DataContext : DbContext
     {
-        public DbSet<User> User { get; set; }
-        public DbSet<Stock> Stock { get; set; }
+        public DataContext(DbContextOptions<DataContext> options) : base(options)
+        {
+
+        }
+
+        public DbSet<User> Users { get; set; }
+        public DbSet<PortfolioStock> Stocks { get; set; }
+
 
     }
 }

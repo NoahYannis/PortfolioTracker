@@ -1,20 +1,25 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
 
 namespace PortfolioTrackerShared.Models
 {
 
-    public class Stock
+    public class PortfolioStock
     {
+        [Key]
         [Required(ErrorMessage = "Ticker required."), StringLength(5, MinimumLength = 1, ErrorMessage = "Ticker Must Be Between 1 And 5 Characters")]
         public string Ticker { get; set; } = string.Empty;
 
+        [Column(TypeName = "decimal(18,2)")]
         [Required(ErrorMessage = "Position size required."), Range(0.01f, double.MaxValue, ErrorMessage = "Position Size Must Be Greater Than $0.")]
         public decimal? PositionSize { get; set; }
 
+        [Column(TypeName = "decimal(18,2)")]
         [Required(ErrorMessage = "Shares owned required."), Range(0.01, double.MaxValue, ErrorMessage = "Shares Owned Must Be Greater Than Zero.")]
         public decimal? SharesOwned { get; set; }
 
+        [Column(TypeName = "decimal(8,2)")]
         [Required(ErrorMessage = "Buy in price required."), Range(0.1, double.MaxValue, ErrorMessage = "Buy In Price Must Be Greater Than $0.")]
         public decimal? BuyInPrice { get; set; }
 
@@ -22,7 +27,7 @@ namespace PortfolioTrackerShared.Models
         public decimal? DividendYield { get; set; }
 
 
-
+        [Column(TypeName = "decimal(8,2)")]
         private decimal? _relativePerformance;
         public decimal? RelativePerformance
         {
@@ -37,6 +42,7 @@ namespace PortfolioTrackerShared.Models
         }
 
 
+        [Column(TypeName = "decimal(8,2)")]
         private decimal? _absolutePerformance;
         public decimal? AbsolutePerformance
         {
@@ -52,26 +58,5 @@ namespace PortfolioTrackerShared.Models
 
         public Industry Industry { get; set; }
 
-        #region Polygon API Properties
-
-        [JsonPropertyName("afterHours")]
-        public decimal AfterHours { get; set; } = 0;
-
-        [JsonPropertyName("afterHours")]
-        public decimal Open { get; set; } = 0;
-
-        [JsonPropertyName("close")]
-        public decimal Close { get; set; } = 0;
-
-        [JsonPropertyName("preMarket")]
-        public decimal PreMarket { get; set; } = 0;
-
-        [JsonPropertyName("high")]
-        public decimal High { get; set; } = 0;
-
-        [JsonPropertyName("low")]
-        public decimal Low { get; set; } = 0;
-
-        #endregion
     }
 }

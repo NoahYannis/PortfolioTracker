@@ -13,12 +13,12 @@ namespace PortfolioTrackerServer.Services.GetStockInfoService
         /// </summary>
         /// <param name="tickerSymbol"></param>
         /// <returns></returns>
-        Task<ServiceResponse<Stock>> GetStockData(string tickerSymbol);
+        Task<ServiceResponse<ApiQueryStock>> GetStockData(string tickerSymbol);
 
 
         /// <summary>
         /// The result of the API call
         /// </summary>
-        public Stock CurrentStock { get; set; }
+        public ApiQueryStock CurrentStock { get; set; }
     }
 }

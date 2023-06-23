@@ -14,11 +14,11 @@ namespace PortfolioTrackerShared.Other
     /// </summary>
     public class PortfolioChangedArgs : EventArgs
     {
-        public List<Stock> UpdatedPortfolio { get; set; }
-        public Stock ModifiedStock { get; set; }
+        public List<PortfolioStock> UpdatedPortfolio { get; set; }
+        public PortfolioStock ModifiedStock { get; set; }
         public PortfolioAction PortfolioAction { get; set; }
 
-        public PortfolioChangedArgs(List<Stock> updatedPortfolio, Stock? modifiedStock = null, PortfolioAction portfolioAction = 0)
+        public PortfolioChangedArgs(List<PortfolioStock> updatedPortfolio, PortfolioStock? modifiedStock = null, PortfolioAction portfolioAction = 0)
         {
             UpdatedPortfolio = updatedPortfolio;
             ModifiedStock = modifiedStock;

@@ -19,12 +19,12 @@
 
 @code {
     private PieConfig _config = new();
-    private List<Stock> PortfolioStocks { get; set; } = new();
+    private List<PortfolioStock> PortfolioStocks { get; set; } = new();
     private List<string> BackgroundColors { get; set; } = new List<string>();
     private PieDataset<decimal?> Dataset { get; set; } = new PieDataset<decimal?>();
     private Random random = new Random();
 
-    private Stock ClickedSegmentStock { get; set; } = new();
+    private PortfolioStock ClickedSegmentStock { get; set; } = new();
     private int clickedIndex;
 
     protected override async void OnInitialized()
@@ -49,7 +49,7 @@
 
 
         // For each stock inside the portfolio display its ticker and set the background to a random color.
-        foreach (Stock stock in PortfolioStocks)
+        foreach (PortfolioStock stock in PortfolioStocks)
         {
             _config.Data.Labels.Add(stock.Ticker);
             Dataset.Add(stock.PositionSize);
@@ -71,7 +71,7 @@
     {
         ClearPieChart();
 
-        foreach (Stock stock in p.UpdatedPortfolio)
+        foreach (PortfolioStock stock in p.UpdatedPortfolio)
         {
             _config.Data.Labels.Add(stock.Ticker);
             Dataset.Add(stock.PositionSize);

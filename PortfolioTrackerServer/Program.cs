@@ -1,6 +1,16 @@
+using Microsoft.EntityFrameworkCore;
+using PortfolioTrackerServer.Data;
+using PortfolioTrackerShared.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+builder.Services.AddDbContext<DataContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+});
+
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 

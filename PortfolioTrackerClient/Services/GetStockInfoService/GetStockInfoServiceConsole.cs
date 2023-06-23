@@ -34,7 +34,7 @@ namespace PortfolioTrackerClient.Services.GetStockInfoService
             return ticker.ToUpper();
         }
 
-        public List<decimal> GetRequestedParametersFromUser(Stock stock)
+        public List<decimal> GetRequestedParametersFromUser(ApiQueryStock stock)
         {
             Console.WriteLine("Enter all requested parameters. Press Enter to continue and display the data." + "\n");
 
@@ -85,7 +85,7 @@ namespace PortfolioTrackerClient.Services.GetStockInfoService
             return parameters;
         }
 
-        public async Task GetStockData(Stock stock)
+        public async Task GetStockData(ApiQueryStock stock)
         {
             string apiKey = _config?.GetValue<string>("AppSettings:ApiKey");
             string date = DateTime.Now.AddHours(-24).ToString("yyyy-MM-dd");  // The free API version only delivers end of day data. A 24h delay is required.
@@ -99,7 +99,7 @@ namespace PortfolioTrackerClient.Services.GetStockInfoService
             if (response.IsSuccessStatusCode)
             {
                 string json = await response.Content.ReadAsStringAsync();
-                stock = JsonConvert.DeserializeObject<Stock>(json);
+                stock = JsonConvert.DeserializeObject<ApiQueryStock>(json);
                 DisplayRequestedParameters(GetRequestedParametersFromUser(stock));
             }
             else

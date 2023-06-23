@@ -5,7 +5,7 @@
         /// <summary>
         /// All stocks inside the user's portfolio
         /// </summary>
-        public List<Stock> Positions { get; set; } = new();
+        public List<PortfolioStock> Positions { get; set; } = new();
         public List<Order> OrderHistory { get; set; } = new();
         public string Name { get; set; } = string.Empty;
         public string Description { get; set; } = string.Empty;
@@ -29,7 +29,7 @@
         {
             if (Positions.Any())
             {
-                foreach (Stock stock in Positions)
+                foreach (PortfolioStock stock in Positions)
                 {
                     RelativePerformance += stock.RelativePerformance;
                 }
@@ -43,7 +43,7 @@
         {
             if (Positions.Any())
             {
-                foreach (Stock stock in Positions)
+                foreach (PortfolioStock stock in Positions)
                 {
                     AbsolutePerformance += stock.AbsolutePerformance;
                 }

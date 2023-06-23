@@ -65,12 +65,12 @@
 
     [CascadingParameter] IModalService Modal { get; set; } = default!;
 
-    private Stock _stockToUpdate;
+    private PortfolioStock _stockToUpdate;
 
     [Parameter]
-    public Stock StockToUpdate
+    public PortfolioStock StockToUpdate
     {
-        get => _stockToUpdate is not null ? _stockToUpdate : new Stock();
+        get => _stockToUpdate is not null ? _stockToUpdate : new PortfolioStock();
 
         set => _stockToUpdate = value;
     }
@@ -93,7 +93,7 @@
     }
 
 
-    private async Task UpdateStock(Stock stock)
+    private async Task UpdateStock(PortfolioStock stock)
     {
         UpdateResultMessage = await PortfolioService.UpdateStock(stock) ? "Update successful" : "Update failed";
         await DisplayResultMessage();
@@ -116,7 +116,7 @@
             UpdateResultMessage = await PortfolioService.DeleteStock(ticker)
             ? $" Deleted {StockToUpdate.Ticker}" : "Deletion failed.";
             await DisplayResultMessage();
-            StockToUpdate = new Stock();
+            StockToUpdate = new PortfolioStock();
         }
     }
 

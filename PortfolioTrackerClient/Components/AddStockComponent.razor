@@ -56,11 +56,11 @@
 
 @code {
 
-    private Stock _stockToAdd = new Stock();
+    private PortfolioStock _stockToAdd = new PortfolioStock();
 
-    private Stock StockToAdd 
+    private PortfolioStock StockToAdd 
     {
-        get =>  _stockToAdd is not null ? _stockToAdd : new Stock();
+        get =>  _stockToAdd is not null ? _stockToAdd : new PortfolioStock();
         set => _stockToAdd = value;
     }
 
@@ -82,12 +82,12 @@
         }
     }
 
-    public async Task AddStock(Stock stock)
+    public async Task AddStock(PortfolioStock stock)
     {
         AddStockResultMessage = await PortfolioService.AddStock(stock) ? 
         $"Added {stock.Ticker} to portfolio!" : $"Warning: Portfolio already contains {stock.Ticker}!";
         await DisplayResultMessage();
-        StockToAdd = new Stock();
+        StockToAdd = new PortfolioStock();
     }
 
     private async Task DisplayResultMessage()

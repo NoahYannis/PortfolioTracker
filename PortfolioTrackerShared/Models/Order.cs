@@ -12,7 +12,7 @@
         /// <summary>
         /// The order stock's ticker symbol
         /// </summary>
-        public string Ticker { get; set; }
+        public string Ticker { get; set; } = string.Empty;
 
         public int OrderNumber { get; set; }
         public OrderType OrderType { get; set; }

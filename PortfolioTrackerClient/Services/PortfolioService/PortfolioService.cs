@@ -9,22 +9,22 @@ namespace PortfolioTrackerClient.Services.PortfolioService
         #region Stock-CRUD
 
         // Simulating the portfolio for now
-        public List<Stock> PortfolioStocks { get; set; } = new List<Stock>()
+        public List<PortfolioStock> PortfolioStocks { get; set; } = new List<PortfolioStock>()
         {
-          new Stock { Ticker = "GOOGL", PositionSize = 28, SharesOwned = 1, BuyInPrice = 10},
-          new Stock { Ticker = "MSFT", PositionSize = 18, SharesOwned = 1, BuyInPrice = 10},
-          new Stock { Ticker = "ABBV", PositionSize = 11, SharesOwned = 1, BuyInPrice = 10},
-          new Stock { Ticker = "O", PositionSize = 5, SharesOwned = 1, BuyInPrice = 10},
+          new PortfolioStock { Ticker = "GOOGL", PositionSize = 28, SharesOwned = 1, BuyInPrice = 10},
+          new PortfolioStock { Ticker = "MSFT", PositionSize = 18, SharesOwned = 1, BuyInPrice = 10},
+          new PortfolioStock { Ticker = "ABBV", PositionSize = 11, SharesOwned = 1, BuyInPrice = 10},
+          new PortfolioStock { Ticker = "O", PositionSize = 5, SharesOwned = 1, BuyInPrice = 10},
         };
 
         public event EventHandler<PortfolioChangedArgs>? PortfolioChanged;
 
-        public void OnPortfolioChanged(List<Stock> portfolioStocks, Stock? modifiedStock = null, PortfolioAction portfolioAction = 0)
+        public void OnPortfolioChanged(List<PortfolioStock> portfolioStocks, PortfolioStock? modifiedStock = null, PortfolioAction portfolioAction = 0)
         {
             PortfolioChanged?.Invoke(this, new PortfolioChangedArgs(portfolioStocks, modifiedStock, portfolioAction));
         }
 
-        public async Task<bool> AddStock(Stock stock)
+        public async Task<bool> AddStock(PortfolioStock stock)
         {
             // Avoid duplicate tickers.
             if (!PortfolioStocks.Any(s => s.Ticker == stock.Ticker))
@@ -40,7 +40,7 @@ namespace PortfolioTrackerClient.Services.PortfolioService
 
         public async Task<bool> DeleteStock(string ticker)
         {
-            Stock stockToRemove = PortfolioStocks.FirstOrDefault(s => s.Ticker == ticker);
+            PortfolioStock stockToRemove = PortfolioStocks.FirstOrDefault(s => s.Ticker == ticker);
 
             if (stockToRemove != null)
             {
@@ -52,13 +52,13 @@ namespace PortfolioTrackerClient.Services.PortfolioService
             return false;
         }
 
-        public async Task<Stock> GetStock(string ticker)
+        public async Task<PortfolioStock> GetStock(string ticker)
         {
-            Stock stock = PortfolioStocks.FirstOrDefault(s => s.Ticker == ticker);
-            return await Task.FromResult(stock ?? new Stock());
+            PortfolioStock stock = PortfolioStocks.FirstOrDefault(s => s.Ticker == ticker);
+            return await Task.FromResult(stock ?? new PortfolioStock());
         }
 
-        public async Task<List<Stock>> GetStocks()
+        public async Task<List<PortfolioStock>> GetStocks()
         {
             return await Task.FromResult(PortfolioStocks);
         }
@@ -68,9 +68,9 @@ namespace PortfolioTrackerClient.Services.PortfolioService
         /// </summary>
         /// <param name="stock"></param>
         /// <returns>Update success</returns>
-        public async Task<bool> UpdateStock(Stock stock)
+        public async Task<bool> UpdateStock(PortfolioStock stock)
         {
-            Stock stockToUpdate = PortfolioStocks.FirstOrDefault(s => s.Ticker == stock.Ticker);
+            PortfolioStock stockToUpdate = PortfolioStocks.FirstOrDefault(s => s.Ticker == stock.Ticker);
 
 
             if (stockToUpdate != null && PortfolioStocks.Count(s => s.Ticker == stockToUpdate.Ticker) == 1)

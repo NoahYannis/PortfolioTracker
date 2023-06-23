@@ -45,7 +45,7 @@
     /// <summary>
     /// The current stock requested by the user.
     /// </summary>
-    public Stock CurrentStock { get; set; } = new();
+    public ApiQueryStock CurrentStock { get; set; } = new();
 
     /// <summary>
     /// Error message that is displayed after an unsuccessful API call.
@@ -57,7 +57,7 @@
     /// </summary>
     /// <param name="tickerSymbol"></param>
     /// <returns>The stock entered by the user</returns>
-    public async Task<Stock> ReturnStockFromApiCall(string tickerSymbol)
+    public async Task<ApiQueryStock> ReturnStockFromApiCall(string tickerSymbol)
     {
         var response = GetStockInfoService.GetStockData(Ticker.ToUpper());
         var stockData = await response;
@@ -69,7 +69,7 @@
 
         CurrentStock = stockData?.Data;
 
-        return CurrentStock ?? new Stock();
+        return CurrentStock ?? new ApiQueryStock();
     }
 }
 

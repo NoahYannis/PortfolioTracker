@@ -9,7 +9,7 @@ namespace PortfolioTrackerServer.Services.GetStockInfoService
     {
         private readonly HttpClient _httpClient;
         private readonly IConfiguration _config;
-        public Stock CurrentStock { get; set; } = new Stock { Ticker = "GOOGL" };
+        public ApiQueryStock CurrentStock { get; set; } = new ApiQueryStock { Ticker = "GOOGL" };
         public bool ApiCallSuccesful = true;
         private object httpClient;
 
@@ -25,7 +25,7 @@ namespace PortfolioTrackerServer.Services.GetStockInfoService
         /// </summary>
         /// <param name="tickerSymbol"></param>
         /// <returns></returns>
-        public async Task<ServiceResponse<Stock>> GetStockData(string tickerSymbol)
+        public async Task<ServiceResponse<ApiQueryStock>> GetStockData(string tickerSymbol)
         {
             AppConfig appConfig = _config.GetSection("AppSettings").Get<AppConfig>(); // Returns the API Key from the appsettings.json file
             string apiKey = appConfig?.ApiKey;
@@ -37,12 +37,12 @@ namespace PortfolioTrackerServer.Services.GetStockInfoService
             HttpClient client = new HttpClient();
             HttpResponseMessage httpResponse = await client.GetAsync(url);
 
-            var serviceResponse = new ServiceResponse<Stock>();
+            var serviceResponse = new ServiceResponse<ApiQueryStock>();
 
             if (httpResponse.IsSuccessStatusCode)
             {
                 string json = await httpResponse.Content.ReadAsStringAsync();
-                serviceResponse.Data = CurrentStock = JsonConvert.DeserializeObject<Stock>(json);
+                serviceResponse.Data = CurrentStock = JsonConvert.DeserializeObject<ApiQueryStock>(json);
 
                 if (serviceResponse.Data != null)
                 {
