@@ -11,14 +11,14 @@ namespace PortfolioTrackerServer.Services.PortfolioService
         #region Stocks 
 
         List<PortfolioStock> PortfolioStocks { get; set; }
-        Task<List<PortfolioStock>> GetStocks();
-        Task<PortfolioStock> GetStock(string ticker);
-        Task<bool> AddStock(PortfolioStock stock);
-        Task<bool> DeleteStock(string ticker);
-        Task<bool> UpdateStock(PortfolioStock stock);
+        Task<ServiceResponse<List<PortfolioStock>>> GetStocks();
+        Task<ServiceResponse<PortfolioStock>> GetStock(string ticker);
+        Task<ServiceResponse<bool>> DeleteStock(string ticker);
+        Task<ServiceResponse<bool>> AddStock(PortfolioStock stock);
+        Task<ServiceResponse<bool>> UpdateStock(PortfolioStock stock);
 
         //event EventHandler<PortfolioChangedArgs> PortfolioChanged;
-        void OnPortfolioChanged(List<PortfolioStock> portfolioStocks, PortfolioStock? deletedStock = null);
+        //void OnPortfolioChanged(List<PortfolioStock> portfolioStocks, PortfolioStock? deletedStock = null);
 
 
         #endregion
@@ -26,12 +26,13 @@ namespace PortfolioTrackerServer.Services.PortfolioService
         #region Orders
 
         List<Order> Orders { get; set; }
-        Task<List<Order>> GetOrders();
-        Task<Order> GetOrder(int orderNumber);
-        Task UpdateOrder(Order order);
-        Task DeleteOrder(int orderNumber);
+        Task<ServiceResponse<List<Order>>> GetOrders();
+        Task<ServiceResponse<Order>> GetOrder(int orderNumber);
+        Task<ServiceResponse<bool>> CreateOrder(Order order);
+        Task<ServiceResponse<bool>> UpdateOrder(Order order);
+        Task<ServiceResponse<bool>> DeleteOrder(int orderNumber);
 
-        
+
         #endregion
 
 

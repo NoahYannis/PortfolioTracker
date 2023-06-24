@@ -8,50 +8,26 @@
         public List<PortfolioStock> Positions { get; set; } = new();
         public List<Order> OrderHistory { get; set; } = new();
         public string Name { get; set; } = string.Empty;
-        public string Description { get; set; } = string.Empty;
         public decimal TotalValue { get; set; } = decimal.Zero;
 
         #region Portfolio Performance
 
         public decimal? RelativePerformance
         {
-            get { return GetRelativePerformance(); }
+            get
+            {
+                return Positions.Any() ? Positions.Sum(stock => stock.RelativePerformance) : decimal.Zero;
+            }
             set { }
         }
 
         public decimal? AbsolutePerformance
         {
-            get { return GetAbsolutePerformance(); }
+            get
+            {
+                return Positions.Any() ? Positions.Sum(stock => stock.AbsolutePerformance) : decimal.Zero;
+            }
             set { }
-        }
-
-        public decimal? GetRelativePerformance()
-        {
-            if (Positions.Any())
-            {
-                foreach (PortfolioStock stock in Positions)
-                {
-                    RelativePerformance += stock.RelativePerformance;
-                }
-
-                return RelativePerformance;
-            }
-
-            return decimal.Zero;
-        }
-        public decimal? GetAbsolutePerformance()
-        {
-            if (Positions.Any())
-            {
-                foreach (PortfolioStock stock in Positions)
-                {
-                    AbsolutePerformance += stock.AbsolutePerformance;
-                }
-
-                return AbsolutePerformance;
-            }
-
-            return decimal.Zero;
         }
 
         #endregion
