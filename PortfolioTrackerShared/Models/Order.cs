@@ -30,6 +30,5 @@ namespace PortfolioTrackerShared.Models
         public DateTime Date { get; set; }
         public int Quantity { get; set; } = 0;
         public decimal Price { get; set; } = decimal.Zero;
-        public string Message { get; set; } = string.Empty;
     }
 }

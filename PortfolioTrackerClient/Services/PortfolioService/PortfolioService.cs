@@ -5,7 +5,6 @@ namespace PortfolioTrackerClient.Services.PortfolioService
 {
     public class PortfolioService : IPortfolioService
     {
-
         #region Stock-CRUD
 
         // Simulating the portfolio for now
@@ -107,15 +106,7 @@ namespace PortfolioTrackerClient.Services.PortfolioService
         public async Task<Order> GetOrder(int orderNumber)
         {
             Order order = Orders.FirstOrDefault(o => o.OrderNumber == orderNumber);
-
-            if (order != null)
-            {
-                return await Task.FromResult(order);
-            }
-            else
-            {
-                return await Task.FromResult(new Order() { Message = $"Couldn't retrieve Order {orderNumber}" });
-            }
+            return order is not null ? await Task.FromResult(order) : new Order();
         }
 
         public Task UpdateOrder(Order order)
@@ -129,7 +120,6 @@ namespace PortfolioTrackerClient.Services.PortfolioService
                 order.Ticker = orderToUpdate.Ticker;
                 order.OrderType = orderToUpdate.OrderType;
                 order.Date = orderToUpdate.Date;
-                order.Message = orderToUpdate.Message;
             }
 
             return Task.CompletedTask;
