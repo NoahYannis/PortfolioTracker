@@ -29,7 +29,7 @@
 
     protected override async void OnInitialized()
     {
-        PortfolioStocks = await PortfolioService.GetStocks();
+        //PortfolioStocks = await PortfolioService.GetStocks();
 
         PortfolioService.PortfolioChanged += UpdatePieChart;
 

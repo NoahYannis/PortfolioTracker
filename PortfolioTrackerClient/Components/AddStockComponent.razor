@@ -84,9 +84,11 @@
 
     public async Task AddStock(PortfolioStock stock)
     {
-        AddStockResultMessage = await PortfolioService.AddStock(stock) ? 
-        $"Added {stock.Ticker} to portfolio!" : $"Warning: Portfolio already contains {stock.Ticker}!";
-        await DisplayResultMessage();
+        //AddStockResultMessage = await PortfolioService.AddStock(stock) ? 
+        //$"Added {stock.Ticker} to portfolio!" : $"Warning: Portfolio already contains {stock.Ticker}!";
+        //await DisplayResultMessage();
+
+        await PortfolioService.AddStock(stock);
         StockToAdd = new PortfolioStock();
     }
 

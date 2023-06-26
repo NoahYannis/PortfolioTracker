@@ -1,10 +1,21 @@
 ﻿using PortfolioTrackerShared.Other;
 using PortfolioTrackerShared.Models;
+using System.Net.Http.Json;
+using System.Runtime.CompilerServices;
 
 namespace PortfolioTrackerClient.Services.PortfolioService
 {
     public class PortfolioService : IPortfolioService
     {
+
+        private readonly HttpClient _httpClient;
+
+        public PortfolioService(HttpClient httpClient)
+        {
+            _httpClient = httpClient;
+        }
+
+
         #region Stock-CRUD
 
         // Simulating the portfolio for now
@@ -16,6 +27,7 @@ namespace PortfolioTrackerClient.Services.PortfolioService
           new PortfolioStock { Ticker = "O", PositionSize = 5, SharesOwned = 1, BuyInPrice = 10},
         };
 
+    
         public event EventHandler<PortfolioChangedArgs>? PortfolioChanged;
 
         public void OnPortfolioChanged(List<PortfolioStock> portfolioStocks, PortfolioStock? modifiedStock = null, PortfolioAction portfolioAction = 0)
@@ -23,43 +35,30 @@ namespace PortfolioTrackerClient.Services.PortfolioService
             PortfolioChanged?.Invoke(this, new PortfolioChangedArgs(portfolioStocks, modifiedStock, portfolioAction));
         }
 
-        public async Task<bool> AddStock(PortfolioStock stock)
+        public async Task<PortfolioStock> AddStock(PortfolioStock stock)
         {
-            // Avoid duplicate tickers.
-            if (!PortfolioStocks.Any(s => s.Ticker == stock.Ticker))
-            {
-                PortfolioStocks.Add(stock);
-                OnPortfolioChanged(PortfolioStocks, stock, PortfolioAction.Added);
-
-                return true;
-            }
-
-            return false;
+            var result = await _httpClient.PostAsJsonAsync("api/portfolio", stock);
+            var newStock = (await result.Content.ReadFromJsonAsync<ServiceResponse<PortfolioStock>>()).Data;
+            OnPortfolioChanged(PortfolioStocks, newStock, PortfolioAction.Added);
+            return newStock;
         }
 
-        public async Task<bool> DeleteStock(string ticker)
+        public async Task DeleteStock(string ticker)
         {
-            PortfolioStock stockToRemove = PortfolioStocks.FirstOrDefault(s => s.Ticker == ticker);
-
-            if (stockToRemove != null)
-            {
-                PortfolioStocks.Remove(stockToRemove);
-                OnPortfolioChanged(PortfolioStocks, stockToRemove, PortfolioAction.Deleted);
-                return true;
-            }
-
-            return false;
+            var response = await _httpClient.DeleteAsync($"api/portfolio/{ticker}");
+            OnPortfolioChanged(PortfolioStocks, PortfolioStocks.FirstOrDefault(s => s.Ticker == ticker), PortfolioAction.Deleted);
         }
 
         public async Task<PortfolioStock> GetStock(string ticker)
         {
-            PortfolioStock stock = PortfolioStocks.FirstOrDefault(s => s.Ticker == ticker);
-            return await Task.FromResult(stock ?? new PortfolioStock());
+            var response = await _httpClient.GetFromJsonAsync<ServiceResponse<PortfolioStock>>("api/portfolio");
+            return response.Data;
         }
 
         public async Task<List<PortfolioStock>> GetStocks()
         {
-            return await Task.FromResult(PortfolioStocks);
+            var response = await _httpClient.GetFromJsonAsync<ServiceResponse<List<PortfolioStock>>>("api/portfolio");
+            return response.Data;
         }
 
         /// <summary>
@@ -67,27 +66,11 @@ namespace PortfolioTrackerClient.Services.PortfolioService
         /// </summary>
         /// <param name="stock"></param>
         /// <returns>Update success</returns>
-        public async Task<bool> UpdateStock(PortfolioStock stock)
+        public async Task<PortfolioStock> UpdateStock(PortfolioStock stock)
         {
-            PortfolioStock stockToUpdate = PortfolioStocks.FirstOrDefault(s => s.Ticker == stock.Ticker);
-
-
-            if (stockToUpdate != null && PortfolioStocks.Count(s => s.Ticker == stockToUpdate.Ticker) == 1)
-            {
-                    stockToUpdate.Ticker = stock.Ticker;
-                    stockToUpdate.BuyInPrice = stock.BuyInPrice;
-                    stockToUpdate.SharesOwned = stock.SharesOwned;
-                    stockToUpdate.AbsolutePerformance = stock.RelativePerformance;
-                    stockToUpdate.AbsolutePerformance = stock.AbsolutePerformance;
-                    stockToUpdate.DividendYield = stock.DividendYield;
-                    stockToUpdate.Industry = stock.Industry;
-                    stockToUpdate.PositionSize = stock.PositionSize;
-                    OnPortfolioChanged(PortfolioStocks, stockToUpdate, PortfolioAction.Modified);
-
-                return true;
-            }
-
-            return false;
+            var response = await _httpClient.PutAsJsonAsync("api/portfolio", stock);
+            OnPortfolioChanged(PortfolioStocks, stock, PortfolioAction.Modified);
+            return (await response.Content.ReadFromJsonAsync<ServiceResponse<PortfolioStock>>()).Data;
         }
 
         #endregion

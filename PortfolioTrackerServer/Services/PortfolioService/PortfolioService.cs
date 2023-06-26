@@ -43,15 +43,15 @@ namespace PortfolioTrackerServer.Services.PortfolioService
         }
 
 
-        public async Task<ServiceResponse<bool>> AddStock(PortfolioStock stock)
+        public async Task<ServiceResponse<PortfolioStock>> AddStock(PortfolioStock stock)
         {
-            if (stock is not null)
+            if (stock is not null && _dataContext.Stocks.Contains(stock) is false)
             {
                 _dataContext.Stocks.Add(stock);
                 await _dataContext.SaveChangesAsync();
             }
 
-            return new ServiceResponse<bool> { Data = true };
+            return new ServiceResponse<PortfolioStock> { Data = stock };
         }
 
         public async Task<ServiceResponse<bool>> UpdateStock(PortfolioStock stock)

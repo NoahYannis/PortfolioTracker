@@ -95,27 +95,24 @@
 
     private async Task UpdateStock(PortfolioStock stock)
     {
-        UpdateResultMessage = await PortfolioService.UpdateStock(stock) ? "Update successful" : "Update failed";
-        await DisplayResultMessage();
+        await PortfolioService.UpdateStock(stock);
+        //UpdateResultMessage = await PortfolioService.UpdateStock(stock) ? "Update successful" : "Update failed";
+        //await DisplayResultMessage();
     }
 
     private async Task<bool> ConfirmDelete()
     {
-        if(await ShowModal())
-        {
-            return true;
-        }
-
-        return false;
+        return await ShowModal() ? true : false;
     }
 
     private async Task DeleteStock(string ticker)
     {
         if(await ConfirmDelete())
         {
-            UpdateResultMessage = await PortfolioService.DeleteStock(ticker)
-            ? $" Deleted {StockToUpdate.Ticker}" : "Deletion failed.";
-            await DisplayResultMessage();
+            //UpdateResultMessage = await PortfolioService.DeleteStock(ticker)
+            //? $" Deleted {StockToUpdate.Ticker}" : "Deletion failed.";
+            //await DisplayResultMessage();
+            await PortfolioService.DeleteStock(ticker);
             StockToUpdate = new PortfolioStock();
         }
     }
