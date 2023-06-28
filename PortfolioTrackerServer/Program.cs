@@ -13,6 +13,8 @@ builder.Services.AddDbContext<DataContext>(options =>
 
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 

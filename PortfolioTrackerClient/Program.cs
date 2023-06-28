@@ -1,6 +1,7 @@
 using Blazored.Modal;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+using Microsoft.Extensions.Configuration;
 using PortfolioTrackerClient;
 using PortfolioTrackerClient.Services.GetStockInfoService;
 using PortfolioTrackerClient.Services.PortfolioService;
@@ -13,6 +14,7 @@ builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.
 
 builder.Services.AddScoped<IGetStockInfoService, GetStockInfoServiceBlazor>();
 builder.Services.AddScoped<IPortfolioService, PortfolioService>();
+builder.Services.AddSingleton<IConfiguration>();
 builder.Services.AddBlazoredModal();
 
 await builder.Build().RunAsync();

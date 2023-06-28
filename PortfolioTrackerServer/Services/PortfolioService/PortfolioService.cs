@@ -8,10 +8,12 @@ namespace PortfolioTrackerServer.Services.PortfolioService
     public class PortfolioService : IPortfolioService
     {
         private readonly DataContext _dataContext;
+        private readonly HttpContextAccessor _httpContextAccessor;
 
-        public PortfolioService(DataContext dataContext)
+        public PortfolioService(DataContext dataContext, HttpContextAccessor httpContextAccessor)
         {
             _dataContext = dataContext;
+            _httpContextAccessor = httpContextAccessor;
         }
 
         public List<PortfolioStock> PortfolioStocks { get; set; } = new();
@@ -34,12 +36,7 @@ namespace PortfolioTrackerServer.Services.PortfolioService
 
         public async Task<ServiceResponse<List<PortfolioStock>>> GetStocks()
         {
-            var tickers = PortfolioStocks.Select(s => s.Ticker).ToList();
-            var stocks = await _dataContext.Stocks.Where(s => tickers.Contains(s.Ticker)).ToListAsync();
-
-            var result = new ServiceResponse<List<PortfolioStock>> { Data = stocks };
-
-            return result;
+            return new ServiceResponse<List<PortfolioStock>> { Data = await _dataContext.Stocks.ToListAsync() };
         }
 
 
