@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using PortfolioTrackerServer.Data;
+using PortfolioTrackerServer.Services.GetStockInfoService;
 using PortfolioTrackerShared.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,6 +16,9 @@ builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddControllersWithViews();
+builder.Services.AddHttpClient();
+builder.Services.AddScoped<IGetStockInfoService, GetStockInfoServiceBlazor>();
+
 
 var app = builder.Build();
 

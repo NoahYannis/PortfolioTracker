@@ -14,7 +14,6 @@ builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.
 
 builder.Services.AddScoped<IGetStockInfoService, GetStockInfoServiceBlazor>();
 builder.Services.AddScoped<IPortfolioService, PortfolioService>();
-builder.Services.AddSingleton<IConfiguration>();
 builder.Services.AddBlazoredModal();
 
 await builder.Build().RunAsync();

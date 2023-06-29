@@ -13,7 +13,7 @@ namespace PortfolioTrackerClient.Services.GetStockInfoService
         /// </summary>
         /// <param name="tickerSymbol"></param>
         /// <returns></returns>
-        Task<ServiceResponse<ApiQueryStock>> GetStockData(string tickerSymbol);
+        Task<ApiQueryStock> GetStockData(string tickerSymbol);
 
 
         /// <summary>

@@ -3,14 +3,14 @@ using PortfolioTrackerShared.Models;
 
 namespace PortfolioTrackerClient.Services.GetStockInfoService
 {
-    public class GetStockInfoServiceCole
+    public class GetStockInfoServiceConsole
     {
         private readonly HttpClient _httpClient;
         private readonly IConfiguration _config;
 
-        public GetStockInfoServiceCole(HttpClient httpClient, IConfiguration config)
+        public GetStockInfoServiceConsole(HttpClient httpClient, IConfiguration config)
         {
-            httpClient = _httpClient;
+            _httpClient = httpClient;
             _config = config;
         }
 

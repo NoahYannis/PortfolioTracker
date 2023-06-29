@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
+using PortfolioTrackerClient;
 using PortfolioTrackerShared.Models;
 using PortfolioTrackerShared.Other;
-using PortfolioTrackerServer.Data;
 
 namespace PortfolioTrackerServer.Services.GetStockInfoService
 {
@@ -9,13 +9,11 @@ namespace PortfolioTrackerServer.Services.GetStockInfoService
     {
         private readonly HttpClient _httpClient;
         private readonly IConfiguration _config;
-        public ApiQueryStock CurrentStock { get; set; } = new ApiQueryStock { Ticker = "GOOGL" };
-        public bool ApiCallSuccesful = true;
-        private object httpClient;
+        public ApiQueryStock CurrentStock { get; set; } = new();
 
         public GetStockInfoServiceBlazor(HttpClient httpClient, IConfiguration config)
         {
-            httpClient = _httpClient;
+            _httpClient = httpClient;
             _config = config;
         }
 
@@ -27,15 +25,13 @@ namespace PortfolioTrackerServer.Services.GetStockInfoService
         /// <returns></returns>
         public async Task<ServiceResponse<ApiQueryStock>> GetStockData(string tickerSymbol)
         {
-            AppConfig appConfig = _config.GetSection("AppSettings").Get<AppConfig>(); // Returns the API Key from the appsettings.json file
+            AppConfig appConfig = _config.GetSection("AppSettings").Get<AppConfig>();  // Returns the API Key from the appsettings.json file
             string apiKey = appConfig?.ApiKey;
 
             string date = DateTime.Now.AddHours(-24).ToString("yyyy-MM-dd");  // The free API version only delivers end of day data. A 24h delay is required.
-
             string url = $"https://api.polygon.io/v1/open-close/{tickerSymbol}/{date}?adjusted=true&apiKey={apiKey}";
 
-            HttpClient client = new HttpClient();
-            HttpResponseMessage httpResponse = await client.GetAsync(url);
+            HttpResponseMessage httpResponse = await _httpClient.GetAsync(url);
 
             var serviceResponse = new ServiceResponse<ApiQueryStock>();
 

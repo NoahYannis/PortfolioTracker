@@ -2,6 +2,9 @@
 using PortfolioTrackerServer.Services.PortfolioService;
 using PortfolioTrackerShared.Models;
 using PortfolioTrackerShared.Other;
+using System.Net.Http;
+using System.Net;
+using System;
 
 namespace PortfolioTrackerServer.Controller
 {

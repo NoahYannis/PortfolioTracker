@@ -3,12 +3,12 @@ using PortfolioTrackerShared.Models;
 
 namespace PortfolioTrackerServer.Services.GetStockInfoService
 {
-    public class GetStockInfoServiceCole
+    public class GetStockInfoServiceConsole
     {
         private readonly HttpClient _httpClient;
         private readonly IConfiguration _config;
 
-        public GetStockInfoServiceCole(HttpClient httpClient, IConfiguration config)
+        public GetStockInfoServiceConsole(HttpClient httpClient, IConfiguration config)
         {
             httpClient = _httpClient;
             _config = config;
@@ -87,7 +87,7 @@ namespace PortfolioTrackerServer.Services.GetStockInfoService
 
         public async Task GetStockData(ApiQueryStock stock)
         {
-            string apiKey = _config?.GetValue<string>("AppSettings:ApiKey");
+            string apiKey = _config["AppSettings:ApiKey"];
             string date = DateTime.Now.AddHours(-24).ToString("yyyy-MM-dd");  // The free API version only delivers end of day data. A 24h delay is required.
             string ticker = GetTickerSymbolFromUser();
 

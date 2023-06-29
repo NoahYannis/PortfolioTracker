@@ -2,6 +2,7 @@
 @using PortfolioTrackerShared.Other;
 
 @inject IGetStockInfoService GetStockInfoService
+@inject HttpClient Http
 
 <div>
     <label for="stockTicker">Enter a stock ticker: </label>
@@ -62,12 +63,12 @@
         var response = GetStockInfoService.GetStockData(Ticker.ToUpper());
         var stockData = await response;
 
-        if (stockData != null && !stockData.Success)
+        if (stockData != null/* &&*//* !stockData.Success*/)
         {
-            ErrorMessage = "Error: " + stockData.Message;
+            ErrorMessage = "Error: ";
         }
 
-        CurrentStock = stockData?.Data;
+        CurrentStock = stockData;
 
         return CurrentStock ?? new ApiQueryStock();
     }
