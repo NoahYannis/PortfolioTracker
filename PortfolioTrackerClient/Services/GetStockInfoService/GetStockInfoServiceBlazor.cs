@@ -18,17 +18,7 @@ namespace PortfolioTrackerClient.Services.GetStockInfoService
         public async Task<ApiQueryStock> GetStockData(string tickerSymbol)
         {
             var response = await _httpClient.GetAsync($"api/polygon/{tickerSymbol}");
-
-            if (response.IsSuccessStatusCode)
-            {
-                var result = await response.Content.ReadFromJsonAsync<ServiceResponse<ApiQueryStock>>();
-                return result.Data;
-            }
-            else
-            {
-                await Console.Out.WriteLineAsync(response.ReasonPhrase);
-                return null;
-            }
+            return CurrentStock = (await response.Content.ReadFromJsonAsync<ServiceResponse<ApiQueryStock>>()).Data;
         }
     }
 }

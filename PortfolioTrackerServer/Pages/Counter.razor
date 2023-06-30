@@ -1,4 +1,7 @@
 ﻿@page "/counter"
+@using PortfolioTrackerServer.Services.GetStockInfoService;
+@using System.Diagnostics;
+@inject IGetStockInfoService GetStock
 
 <PageTitle>Counter</PageTitle>
 
@@ -9,10 +12,13 @@
 <button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
 
 @code {
-    private int currentCount = 0;
+    private decimal currentCount = 0;
 
-    private void IncrementCount()
+    private async Task IncrementCount()
     {
-        currentCount++;
+        var s = await GetStock.GetStockData("GOOG");
+        Debug.WriteLine(s.Data.High);
+        currentCount = s.Data.High;
     }
 }
+

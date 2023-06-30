@@ -15,7 +15,9 @@
 
     @if (!string.IsNullOrEmpty(CurrentStock.Ticker))
     {
-        <br/><br/>
+        <br />
+
+        <br />
         <p>Pre Market: $@CurrentStock.PreMarket </p>
         <p>After Hours: $@CurrentStock.AfterHours</p>
         <p>Open: $@CurrentStock.Open</p>
@@ -27,10 +29,12 @@
     {
         @if (!string.IsNullOrEmpty(ErrorMessage))
         {
-            <br/><br/>
+            <br />
+
+            <br />
             <p>@ErrorMessage</p>
         }
-        
+
     }
 
 </div>
@@ -60,15 +64,15 @@
     /// <returns>The stock entered by the user</returns>
     public async Task<ApiQueryStock> ReturnStockFromApiCall(string tickerSymbol)
     {
-        var response = GetStockInfoService.GetStockData(Ticker.ToUpper());
+        var response = GetStockInfoService.GetStockData(tickerSymbol);
         var stockData = await response;
 
-        if (stockData != null/* &&*//* !stockData.Success*/)
-        {
-            ErrorMessage = "Error: ";
-        }
+        //if (stockData != null/* &&*//* !stockData.Success*/)
+        //{
+        //    ErrorMessage = "Error: ";
+        //}
 
-        CurrentStock = stockData;
+        //CurrentStock = stockData;
 
         return CurrentStock ?? new ApiQueryStock();
     }

@@ -11,10 +11,10 @@ namespace PortfolioTrackerServer.Services.GetStockInfoService
         private readonly IConfiguration _config;
         public ApiQueryStock CurrentStock { get; set; } = new();
 
-        public GetStockInfoServiceBlazor(HttpClient httpClient, IConfiguration config)
+        public GetStockInfoServiceBlazor(IConfiguration config, HttpClient httpClient)
         {
-            _httpClient = httpClient;
             _config = config;
+            _httpClient = httpClient;
         }
 
 
@@ -30,7 +30,6 @@ namespace PortfolioTrackerServer.Services.GetStockInfoService
 
             string date = DateTime.Now.AddHours(-24).ToString("yyyy-MM-dd");  // The free API version only delivers end of day data. A 24h delay is required.
             string url = $"https://api.polygon.io/v1/open-close/{tickerSymbol}/{date}?adjusted=true&apiKey={apiKey}";
-
             HttpResponseMessage httpResponse = await _httpClient.GetAsync(url);
 
             var serviceResponse = new ServiceResponse<ApiQueryStock>();
@@ -43,8 +42,8 @@ namespace PortfolioTrackerServer.Services.GetStockInfoService
                 if (serviceResponse.Data != null)
                 {
                     serviceResponse.Data.Ticker = tickerSymbol;
-                }              
-                
+                }
+                await Task.Delay(1000);
                 return serviceResponse;
             }
             else

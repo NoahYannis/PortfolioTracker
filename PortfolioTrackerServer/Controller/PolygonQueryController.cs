@@ -6,8 +6,8 @@ using System.Net;
 
 namespace PortfolioTrackerServer.Controller
 {
-    [ApiController]
     [Route("api/polygon")]
+    [ApiController]
     public class PolygonQueryController : ControllerBase
     {
         private readonly IGetStockInfoService _stockInfoService;
