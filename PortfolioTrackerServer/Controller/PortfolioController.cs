@@ -35,7 +35,7 @@ namespace PortfolioTrackerServer.Controller
         }
 
         [HttpPost]
-        public async Task<ActionResult<ServiceResponse<PortfolioStock>>> AddStock(PortfolioStock portfolioStock)
+        public async Task<ActionResult<ServiceResponse<PortfolioStock>>> AddStock([FromBody] PortfolioStock portfolioStock)
         {
             var result = await _portfolioService.AddStock(portfolioStock);
             return Ok(result);

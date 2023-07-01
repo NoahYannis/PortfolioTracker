@@ -1,5 +1,5 @@
 ﻿using Newtonsoft.Json;
-using PortfolioTrackerClient;
+using PortfolioTrackerServer;
 using PortfolioTrackerShared.Models;
 using PortfolioTrackerShared.Other;
 
@@ -43,7 +43,7 @@ namespace PortfolioTrackerServer.Services.GetStockInfoService
                 {
                     serviceResponse.Data.Ticker = tickerSymbol;
                 }
-                await Task.Delay(1000);
+
                 return serviceResponse;
             }
             else

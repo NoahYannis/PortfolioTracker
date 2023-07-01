@@ -1,4 +1,4 @@
-﻿namespace PortfolioTrackerClient
+﻿namespace PortfolioTrackerServer
 {
 
     public class AppConfig

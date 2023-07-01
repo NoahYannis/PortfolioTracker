@@ -64,9 +64,8 @@
     /// <returns>The stock entered by the user</returns>
     public async Task<ApiQueryStock> ReturnStockFromApiCall(string tickerSymbol)
     {
-        var response = GetStockInfoService.GetStockData(tickerSymbol);
-        var stockData = await response;
-
+        var response = await GetStockInfoService.GetStockData(tickerSymbol);
+        var stockData = response;
         //if (stockData != null/* &&*//* !stockData.Success*/)
         //{
         //    ErrorMessage = "Error: ";

@@ -38,7 +38,7 @@ namespace PortfolioTrackerClient.Services.PortfolioService
 
         public async Task<PortfolioStock> AddStock(PortfolioStock stock)
         {
-            var result = await _httpClient.PostAsJsonAsync("api/Portfolio", stock);
+            var result = await _httpClient.PostAsJsonAsync("api/portfolio", stock);
             var newStock = (await result.Content.ReadFromJsonAsync<ServiceResponse<PortfolioStock>>()).Data;
             OnPortfolioChanged(PortfolioStocks, newStock, PortfolioAction.Added);
             return newStock;
