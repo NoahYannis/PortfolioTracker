@@ -1,7 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using PortfolioTrackerServer.Data;
 using PortfolioTrackerServer.Services.GetStockInfoService;
-using PortfolioTrackerShared.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,6 +20,17 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddHttpClient();
 builder.Services.AddScoped<IGetStockInfoService, GetStockInfoServiceBlazor>();
 
+// Consider changing this once application is fully developed for additional security.
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAllOrigins", builder =>
+    {
+        builder.AllowAnyOrigin()
+               .AllowAnyMethod()
+               .AllowAnyHeader();
+    });
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -30,6 +40,8 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
+
+app.UseCors("AllowAllOrigins");
 
 app.UseStaticFiles();
 app.UseRouting();

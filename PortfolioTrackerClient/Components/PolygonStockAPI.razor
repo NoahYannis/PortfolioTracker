@@ -66,14 +66,14 @@
     {
         var response = await GetStockInfoService.GetStockData(tickerSymbol);
         var stockData = response;
-        //if (stockData != null/* &&*//* !stockData.Success*/)
-        //{
-        //    ErrorMessage = "Error: ";
-        //}
 
-        //CurrentStock = stockData;
+        // TODO: Add more error handling akin to PieChart component
+        if (string.IsNullOrEmpty(stockData.Ticker))
+        {
+            ErrorMessage = "Error: No Ticker Was Specified";
+        }
 
-        return CurrentStock ?? new ApiQueryStock();
+        return response is not null ? CurrentStock = response : new();
     }
 }
 

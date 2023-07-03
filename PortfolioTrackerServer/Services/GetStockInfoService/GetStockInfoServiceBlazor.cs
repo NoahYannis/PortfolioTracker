@@ -30,6 +30,7 @@ namespace PortfolioTrackerServer.Services.GetStockInfoService
 
             string date = DateTime.Now.AddHours(-24).ToString("yyyy-MM-dd");  // The free API version only delivers end of day data. A 24h delay is required.
             string url = $"https://api.polygon.io/v1/open-close/{tickerSymbol}/{date}?adjusted=true&apiKey={apiKey}";
+
             HttpResponseMessage httpResponse = await _httpClient.GetAsync(url);
 
             var serviceResponse = new ServiceResponse<ApiQueryStock>();

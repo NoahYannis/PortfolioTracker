@@ -1,7 +1,6 @@
 using Blazored.Modal;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
-using Microsoft.Extensions.Configuration;
 using PortfolioTrackerClient;
 using PortfolioTrackerClient.Services.GetStockInfoService;
 using PortfolioTrackerClient.Services.PortfolioService;
