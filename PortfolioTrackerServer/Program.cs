@@ -5,17 +5,6 @@ using PortfolioTrackerShared.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddCors(options =>
-{
-    options.AddPolicy("AllowAllOrigins",
-        builder =>
-        {
-            builder.AllowAnyOrigin();
-            builder.AllowAnyHeader();
-            builder.AllowAnyMethod();
-        });
-});
-
 
 // Add services to the container.
 
@@ -42,13 +31,10 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
-
-
 app.UseStaticFiles();
-
 app.UseRouting();
-app.UseCors("AllowAllOrigins");
 app.MapBlazorHub();
 app.MapFallbackToPage("/_Host");
+app.MapControllers();
 
 app.Run();

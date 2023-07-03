@@ -14,7 +14,7 @@ namespace PortfolioTrackerShared.Models
         [JsonPropertyName("afterHours")]
         public decimal AfterHours { get; set; } = 0;
 
-        [JsonPropertyName("afterHours")]
+        [JsonPropertyName("open")]
         public decimal Open { get; set; } = 0;
 
         [JsonPropertyName("close")]
