@@ -2,7 +2,6 @@
 @using PortfolioTrackerShared.Other;
 
 @inject IGetStockInfoService GetStockInfoService
-@inject HttpClient Http
 
 <div>
     <label for="stockTicker">Enter a stock ticker: </label>
@@ -13,10 +12,10 @@
         Confirm
     </button>
 
-    @if (!string.IsNullOrEmpty(CurrentStock.Ticker))
+    <!-- Display stock data if a ticker was specified and no error occured-->
+    @if (!string.IsNullOrEmpty(CurrentStock.Ticker) && string.IsNullOrEmpty(ErrorMessage))
     {
         <br />
-
         <br />
         <p>Pre Market: $@CurrentStock.PreMarket </p>
         <p>After Hours: $@CurrentStock.AfterHours</p>
@@ -27,14 +26,10 @@
     }
     else
     {
-        @if (!string.IsNullOrEmpty(ErrorMessage))
-        {
-            <br />
-
-            <br />
-            <p>@ErrorMessage</p>
-        }
-
+        <p>
+            <br>
+            @(ErrorMessage)
+        </p>
     }
 
 </div>
@@ -47,33 +42,35 @@
     /// </summary>
     public string Ticker { get; set; } = string.Empty;
 
+
     /// <summary>
     /// The current stock requested by the user.
     /// </summary>
     public ApiQueryStock CurrentStock { get; set; } = new();
 
+
     /// <summary>
-    /// Error message that is displayed after an unsuccessful API call.
+    /// Error message that contains the Http.ReasonPhrase
     /// </summary>
     public string ErrorMessage { get; set; } = string.Empty;
 
+
     /// <summary>
-    /// Returns the stock entered by the user if the API call is successful, alternatively an error message is displayed.
+    /// Returns stock data from api call and sets the error message 
     /// </summary>
-    /// <param name="tickerSymbol"></param>
-    /// <returns>The stock entered by the user</returns>
     public async Task<ApiQueryStock> ReturnStockFromApiCall(string tickerSymbol)
     {
-        var response = await GetStockInfoService.GetStockData(tickerSymbol);
-        var stockData = response;
-
-        // TODO: Add more error handling akin to PieChart component
-        if (string.IsNullOrEmpty(stockData.Ticker))
+        if (string.IsNullOrWhiteSpace(tickerSymbol))
         {
-            ErrorMessage = "Error: No Ticker Was Specified";
+            ErrorMessage = "No ticker was specified";
+            return CurrentStock;
         }
 
-        return response is not null ? CurrentStock = response : new();
+        var response = await GetStockInfoService.GetStockData(tickerSymbol.ToUpper());
+        ErrorMessage = response.Success ? string.Empty : response.Message;
+
+        return response.Data ?? CurrentStock;
     }
+
 }
 

@@ -13,17 +13,17 @@ namespace PortfolioTrackerClient.Services.GetStockInfoService
         {
             _httpClient = httpClient;
         }
+
         public ApiQueryStock CurrentStock { get; set; } = new();
 
-        public async Task<ApiQueryStock> GetStockData(string tickerSymbol)
+        /// <summary>
+        /// Sends an HTTP request to the server with the specified ticker
+        /// </summary>
+        /// <param name="tickerSymbol"></param>
+        /// <returns></returns>
+        public async Task<ServiceResponse<ApiQueryStock>> GetStockData(string tickerSymbol)
         {
-            if (!string.IsNullOrWhiteSpace(tickerSymbol))
-            {
-                var response = await _httpClient.GetFromJsonAsync<ServiceResponse<ApiQueryStock>>($"https://localhost:7207/api/polygon/{tickerSymbol}");
-                return CurrentStock = response.Data;
-            }
-
-            return new();
+            return await _httpClient.GetFromJsonAsync<ServiceResponse<ApiQueryStock>>($"https://localhost:7207/api/polygon/{tickerSymbol}");
         }
     }
 }
