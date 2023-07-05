@@ -10,7 +10,6 @@
 @inject IJSRuntime JsRuntime;
 
 
-
 <Chart Config="_config" />
 <br />
 
@@ -29,9 +28,10 @@
 
     protected override async void OnInitialized()
     {
-        //PortfolioStocks = await PortfolioService.GetStocks();
-
         PortfolioService.PortfolioChanged += UpdatePieChart;
+
+        PortfolioStocks = await PortfolioService.GetStocks();
+        //UpdatePieChart(this, new() { UpdatedPortfolio = PortfolioStocks});
 
         _config = new PieConfig
             {

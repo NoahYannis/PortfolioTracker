@@ -22,3 +22,15 @@ C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerShared\obj\Debug\net
 C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerShared\obj\Debug\net7.0\refint\PortfolioTrackerShared.dll
 C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerShared\obj\Debug\net7.0\PortfolioTrackerShared.pdb
 C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerShared\obj\Debug\net7.0\ref\PortfolioTrackerShared.dll
+C:\Users\User\source\repos\NoahYannis\PortfolioTracker\PortfolioTrackerShared\bin\Debug\net7.0\PortfolioTrackerShared.deps.json
+C:\Users\User\source\repos\NoahYannis\PortfolioTracker\PortfolioTrackerShared\bin\Debug\net7.0\PortfolioTrackerShared.dll
+C:\Users\User\source\repos\NoahYannis\PortfolioTracker\PortfolioTrackerShared\bin\Debug\net7.0\PortfolioTrackerShared.pdb
+C:\Users\User\source\repos\NoahYannis\PortfolioTracker\PortfolioTrackerShared\obj\Debug\net7.0\PortfolioTrackerShared.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\NoahYannis\PortfolioTracker\PortfolioTrackerShared\obj\Debug\net7.0\PortfolioTrackerShared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\NoahYannis\PortfolioTracker\PortfolioTrackerShared\obj\Debug\net7.0\PortfolioTrackerShared.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\NoahYannis\PortfolioTracker\PortfolioTrackerShared\obj\Debug\net7.0\PortfolioTrackerShared.AssemblyInfo.cs
+C:\Users\User\source\repos\NoahYannis\PortfolioTracker\PortfolioTrackerShared\obj\Debug\net7.0\PortfolioTrackerShared.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\NoahYannis\PortfolioTracker\PortfolioTrackerShared\obj\Debug\net7.0\PortfolioTrackerShared.dll
+C:\Users\User\source\repos\NoahYannis\PortfolioTracker\PortfolioTrackerShared\obj\Debug\net7.0\refint\PortfolioTrackerShared.dll
+C:\Users\User\source\repos\NoahYannis\PortfolioTracker\PortfolioTrackerShared\obj\Debug\net7.0\PortfolioTrackerShared.pdb
+C:\Users\User\source\repos\NoahYannis\PortfolioTracker\PortfolioTrackerShared\obj\Debug\net7.0\ref\PortfolioTrackerShared.dll

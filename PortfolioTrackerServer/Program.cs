@@ -1,6 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using PortfolioTrackerServer.Data;
 using PortfolioTrackerServer.Services.GetStockInfoService;
+using PortfolioTrackerServer.Services.PortfolioService;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,10 +17,11 @@ builder.Services.AddDbContext<DataContext>(options =>
 
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
-builder.Services.AddHttpContextAccessor();
 builder.Services.AddControllersWithViews();
 builder.Services.AddHttpClient();
+builder.Services.AddHttpContextAccessor();
 builder.Services.AddScoped<IGetStockInfoService, GetStockInfoServiceBlazor>();
+builder.Services.AddScoped<IPortfolioService, PortfolioService>();
 
 // Consider changing this once application is fully developed for additional security.
 builder.Services.AddCors(options =>
@@ -30,6 +33,7 @@ builder.Services.AddCors(options =>
                .AllowAnyHeader();
     });
 });
+
 
 var app = builder.Build();
 

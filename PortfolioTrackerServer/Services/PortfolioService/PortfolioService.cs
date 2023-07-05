@@ -2,15 +2,16 @@
 using PortfolioTrackerServer.Data;
 using PortfolioTrackerShared.Models;
 using PortfolioTrackerShared.Other;
+using System.Diagnostics;
 
 namespace PortfolioTrackerServer.Services.PortfolioService
 {
     public class PortfolioService : IPortfolioService
     {
         private readonly DataContext _dataContext;
-        private readonly HttpContextAccessor _httpContextAccessor;
+        private readonly IHttpContextAccessor _httpContextAccessor;
 
-        public PortfolioService(DataContext dataContext, HttpContextAccessor httpContextAccessor)
+        public PortfolioService(DataContext dataContext, IHttpContextAccessor httpContextAccessor)
         {
             _dataContext = dataContext;
             _httpContextAccessor = httpContextAccessor;
@@ -46,6 +47,7 @@ namespace PortfolioTrackerServer.Services.PortfolioService
             {
                 _dataContext.Stocks.Add(stock);
                 await _dataContext.SaveChangesAsync();
+                Debug.WriteLine("SaveAsync");
             }
 
             return new ServiceResponse<PortfolioStock> { Data = stock };

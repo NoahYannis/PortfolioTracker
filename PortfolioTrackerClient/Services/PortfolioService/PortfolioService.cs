@@ -16,8 +16,11 @@ namespace PortfolioTrackerClient.Services.PortfolioService
             _httpClient = httpClient;
         }
 
+        private string serverBaseDomain = "https://localhost:7207";
+
 
         #region Stock-CRUD
+
 
         // Simulating the portfolio for now
         public List<PortfolioStock> PortfolioStocks { get; set; } = new List<PortfolioStock>()
@@ -38,15 +41,15 @@ namespace PortfolioTrackerClient.Services.PortfolioService
 
         public async Task<PortfolioStock> AddStock(PortfolioStock stock)
         {
-            var result = await _httpClient.PostAsJsonAsync("api/portfolio", stock);
-            var newStock = (await result.Content.ReadFromJsonAsync<ServiceResponse<PortfolioStock>>()).Data;
+            var response = await _httpClient.PostAsJsonAsync($"{serverBaseDomain}/api/portfolio", stock);
+            var newStock = (await response.Content.ReadFromJsonAsync<ServiceResponse<PortfolioStock>>()).Data;
             OnPortfolioChanged(PortfolioStocks, newStock, PortfolioAction.Added);
             return newStock;
         }
 
         public async Task DeleteStock(string ticker)
         {
-            var response = await _httpClient.DeleteAsync($"api/portfolio/{ticker}");
+            var response = await _httpClient.DeleteAsync($"{serverBaseDomain}/api/portfolio");
             OnPortfolioChanged(PortfolioStocks, PortfolioStocks.FirstOrDefault(s => s.Ticker == ticker), PortfolioAction.Deleted);
         }
 
@@ -58,7 +61,7 @@ namespace PortfolioTrackerClient.Services.PortfolioService
 
         public async Task<List<PortfolioStock>> GetStocks()
         {
-            var response = await _httpClient.GetFromJsonAsync<ServiceResponse<List<PortfolioStock>>>("api/Portfolio");
+            var response = await _httpClient.GetFromJsonAsync<ServiceResponse<List<PortfolioStock>>>($"{serverBaseDomain}/api/portfolio");
             return response.Data;
         }
 

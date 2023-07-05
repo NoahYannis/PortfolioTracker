@@ -9,7 +9,7 @@ using System;
 namespace PortfolioTrackerServer.Controller
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/portfolio")]
     public class PortfolioController : ControllerBase
     {
 
@@ -20,7 +20,7 @@ namespace PortfolioTrackerServer.Controller
             _portfolioService = portfolioService;
         }
 
-        [HttpGet]
+        [HttpGet("{ticker}")]
         public async Task<ActionResult<ServiceResponse<PortfolioStock>>> GetStock(string ticker)
         {
             var result = await _portfolioService.GetStock(ticker);
@@ -41,7 +41,7 @@ namespace PortfolioTrackerServer.Controller
             return Ok(result);
         }
 
-        [HttpDelete("{ticker}")]
+        [HttpDelete]
         public async Task<ActionResult<ServiceResponse<bool>>> DeleteStock(string ticker)
         {
             var result = await _portfolioService.DeleteStock(ticker);
