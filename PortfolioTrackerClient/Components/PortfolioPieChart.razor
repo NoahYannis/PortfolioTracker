@@ -7,8 +7,6 @@
 @using System.Drawing;
 
 @inject IPortfolioService PortfolioService
-@inject IJSRuntime JsRuntime;
-
 
 <Chart Config="_config" />
 <br />
@@ -17,8 +15,8 @@
 </UpdateStockComponent>
 
 @code {
+
     private PieConfig _config = new();
-    private List<PortfolioStock> PortfolioStocks { get; set; } = new();
     private List<string> BackgroundColors { get; set; } = new List<string>();
     private PieDataset<decimal?> Dataset { get; set; } = new PieDataset<decimal?>();
     private Random random = new Random();
@@ -28,10 +26,9 @@
 
     protected override async void OnInitialized()
     {
-        PortfolioService.PortfolioChanged += UpdatePieChart;
+        await PortfolioService.InitializeAsync();
 
-        PortfolioStocks = await PortfolioService.GetStocks();
-        //UpdatePieChart(this, new() { UpdatedPortfolio = PortfolioStocks});
+        PortfolioService.PortfolioChanged += UpdatePieChart;
 
         _config = new PieConfig
             {
@@ -42,14 +39,15 @@
                     Title = new OptionsTitle
                     {
                         Display = true,
-                        Text = "Your Portfolio",
+                        Text = "Your Portfolio", // TODO Display username
                     }
+
                 }
             };
 
 
         // For each stock inside the portfolio display its ticker and set the background to a random color.
-        foreach (PortfolioStock stock in PortfolioStocks)
+        foreach (PortfolioStock stock in PortfolioService.PortfolioStocks)
         {
             _config.Data.Labels.Add(stock.Ticker);
             Dataset.Add(stock.PositionSize);
@@ -61,6 +59,8 @@
 
         Dataset.BackgroundColor = BackgroundColors.ToArray();
         _config.Data.Datasets.Add(Dataset);
+
+        StateHasChanged();
     }
 
 
@@ -122,18 +122,14 @@
             {
                 if (prop.Name.Equals("label"))
                 {
-                    // Debug
-                    Console.WriteLine(prop.Value.ToString());
-
-                    ClickedSegmentStock = PortfolioStocks.FirstOrDefault(s => s.Ticker == prop.Value.ToString());
-                    clickedIndex = PortfolioStocks.IndexOf(ClickedSegmentStock);
+                    ClickedSegmentStock = PortfolioService.PortfolioStocks.FirstOrDefault(s => s.Ticker == prop.Value.ToString());
+                    clickedIndex = PortfolioService.PortfolioStocks.IndexOf(ClickedSegmentStock);
 
                     StateHasChanged();
                 }
             }
         }
     }
-
 
     public void Dispose()
     {

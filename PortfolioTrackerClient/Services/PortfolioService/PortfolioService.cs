@@ -3,12 +3,15 @@ using PortfolioTrackerShared.Models;
 using System.Net.Http.Json;
 using System.Runtime.CompilerServices;
 using Newtonsoft.Json;
+using System.IO;
+using System.Net.Http;
 
 namespace PortfolioTrackerClient.Services.PortfolioService
 {
     public class PortfolioService : IPortfolioService
     {
 
+        private string serverBaseDomain = "https://localhost:7207";
         private readonly HttpClient _httpClient;
 
         public PortfolioService(HttpClient httpClient)
@@ -16,23 +19,17 @@ namespace PortfolioTrackerClient.Services.PortfolioService
             _httpClient = httpClient;
         }
 
-        private string serverBaseDomain = "https://localhost:7207";
-
 
         #region Stock-CRUD
 
-
-        // Simulating the portfolio for now
-        public List<PortfolioStock> PortfolioStocks { get; set; } = new List<PortfolioStock>()
-        {
-          new PortfolioStock { Ticker = "GOOGL", PositionSize = 28, SharesOwned = 1, BuyInPrice = 10},
-          new PortfolioStock { Ticker = "MSFT", PositionSize = 18, SharesOwned = 1, BuyInPrice = 10},
-          new PortfolioStock { Ticker = "ABBV", PositionSize = 11, SharesOwned = 1, BuyInPrice = 10},
-          new PortfolioStock { Ticker = "O", PositionSize = 5, SharesOwned = 1, BuyInPrice = 10},
-        };
-
-    
+        public List<PortfolioStock> PortfolioStocks { get; set; }
+   
         public event EventHandler<PortfolioChangedArgs>? PortfolioChanged;
+
+        public async Task InitializeAsync()
+        {
+            PortfolioStocks = await GetStocks();
+        }
 
         public void OnPortfolioChanged(List<PortfolioStock> portfolioStocks, PortfolioStock? modifiedStock = null, PortfolioAction portfolioAction = 0)
         {
@@ -55,7 +52,7 @@ namespace PortfolioTrackerClient.Services.PortfolioService
 
         public async Task<PortfolioStock> GetStock(string ticker)
         {
-            var response = await _httpClient.GetFromJsonAsync<ServiceResponse<PortfolioStock>>("api/portfolio");
+            var response = await _httpClient.GetFromJsonAsync<ServiceResponse<PortfolioStock>>($"{serverBaseDomain}/api/portfolio/{ticker}");
             return response.Data;
         }
 
@@ -72,7 +69,7 @@ namespace PortfolioTrackerClient.Services.PortfolioService
         /// <returns>Update success</returns>
         public async Task<PortfolioStock> UpdateStock(PortfolioStock stock)
         {
-            var response = await _httpClient.PutAsJsonAsync("api/portfolio", stock);
+            var response = await _httpClient.PutAsJsonAsync($"{serverBaseDomain}/api/portfolio", stock);
             OnPortfolioChanged(PortfolioStocks, stock, PortfolioAction.Modified);
             return (await response.Content.ReadFromJsonAsync<ServiceResponse<PortfolioStock>>()).Data;
         }

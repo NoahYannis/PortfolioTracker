@@ -16,6 +16,7 @@ namespace PortfolioTrackerClient.Services.PortfolioService
         Task<PortfolioStock> AddStock(PortfolioStock stock);
         Task<PortfolioStock> UpdateStock(PortfolioStock stock);
         Task DeleteStock(string ticker);
+        Task InitializeAsync();
 
         event EventHandler<PortfolioChangedArgs> PortfolioChanged;
         void OnPortfolioChanged(List<PortfolioStock> portfolioStocks, PortfolioStock? modifiedStock = null, PortfolioAction portfolioAction = 0);
