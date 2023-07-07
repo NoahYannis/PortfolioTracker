@@ -1,10 +1,6 @@
 ﻿using PortfolioTrackerShared.Other;
 using PortfolioTrackerShared.Models;
 using System.Net.Http.Json;
-using System.Runtime.CompilerServices;
-using Newtonsoft.Json;
-using System.IO;
-using System.Net.Http;
 
 namespace PortfolioTrackerClient.Services.PortfolioService
 {

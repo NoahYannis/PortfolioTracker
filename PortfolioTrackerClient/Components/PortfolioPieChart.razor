@@ -26,10 +26,6 @@
 
     protected override async void OnInitialized()
     {
-        await PortfolioService.InitializeAsync();
-
-        PortfolioService.PortfolioChanged += UpdatePieChart;
-
         _config = new PieConfig
             {
                 Options = new PieOptions
@@ -45,6 +41,9 @@
                 }
             };
 
+
+        PortfolioService.PortfolioChanged += UpdatePieChart;
+        await PortfolioService.InitializeAsync();
 
         // For each stock inside the portfolio display its ticker and set the background to a random color.
         foreach (PortfolioStock stock in PortfolioService.PortfolioStocks)
@@ -87,7 +86,7 @@
         // If a stock was deleted, also delete the background color at its index
         if (p.PortfolioAction is PortfolioAction.Deleted)
             BackgroundColors.RemoveAt(clickedIndex);
-        
+
         Dataset.BackgroundColor = BackgroundColors.ToArray();
         _config.Data.Datasets.Add(Dataset);
     }

@@ -1,5 +1,4 @@
-﻿using Newtonsoft.Json;
-using PortfolioTrackerShared.Models;
+﻿using PortfolioTrackerShared.Models;
 using PortfolioTrackerShared.Other;
 using System.Net.Http.Json;
 
