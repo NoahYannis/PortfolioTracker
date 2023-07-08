@@ -19,7 +19,7 @@ namespace PortfolioTrackerClient.Services.PortfolioService
         #region Stock-CRUD
 
         public List<PortfolioStock> PortfolioStocks { get; set; }
-   
+
         public event EventHandler<PortfolioChangedArgs>? PortfolioChanged;
 
         public async Task InitializeAsync()
@@ -40,10 +40,15 @@ namespace PortfolioTrackerClient.Services.PortfolioService
             return newStock;
         }
 
-        public async Task DeleteStock(string ticker)
+        public async Task<bool> DeleteStock(string stockToDelete)
         {
-            var response = await _httpClient.DeleteAsync($"{serverBaseDomain}/api/portfolio");
-            OnPortfolioChanged(PortfolioStocks, PortfolioStocks.FirstOrDefault(s => s.Ticker == ticker), PortfolioAction.Deleted);
+            var response = await _httpClient.DeleteAsync($"{serverBaseDomain}/api/portfolio/{stockToDelete}");
+
+            if (response.IsSuccessStatusCode)
+                OnPortfolioChanged(PortfolioStocks, PortfolioStocks.FirstOrDefault(s => s.Ticker == stockToDelete) , PortfolioAction.Deleted);
+
+            return response.IsSuccessStatusCode;
+
         }
 
         public async Task<PortfolioStock> GetStock(string ticker)
@@ -63,11 +68,14 @@ namespace PortfolioTrackerClient.Services.PortfolioService
         /// </summary>
         /// <param name="stock"></param>
         /// <returns>Update success</returns>
-        public async Task<PortfolioStock> UpdateStock(PortfolioStock stock)
+        public async Task<ServiceResponse<PortfolioStock>> UpdateStock(PortfolioStock stock)
         {
             var response = await _httpClient.PutAsJsonAsync($"{serverBaseDomain}/api/portfolio", stock);
-            OnPortfolioChanged(PortfolioStocks, stock, PortfolioAction.Modified);
-            return (await response.Content.ReadFromJsonAsync<ServiceResponse<PortfolioStock>>()).Data;
+
+            if (response.IsSuccessStatusCode)
+                OnPortfolioChanged(PortfolioStocks, stock, PortfolioAction.Modified);
+
+            return (await response.Content.ReadFromJsonAsync<ServiceResponse<PortfolioStock>>());
         }
 
         #endregion

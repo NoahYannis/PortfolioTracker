@@ -41,7 +41,7 @@ namespace PortfolioTrackerServer.Controller
             return Ok(result);
         }
 
-        [HttpDelete]
+        [HttpDelete("{ticker}")]
         public async Task<ActionResult<ServiceResponse<bool>>> DeleteStock(string ticker)
         {
             var result = await _portfolioService.DeleteStock(ticker);
@@ -49,7 +49,7 @@ namespace PortfolioTrackerServer.Controller
         }
 
         [HttpPut]
-        public async Task<ActionResult<ServiceResponse<bool>>> UpdateStock(PortfolioStock portfolioStock)
+        public async Task<ActionResult<ServiceResponse<PortfolioStock>>> UpdateStock(PortfolioStock portfolioStock)
         {
             var result = await _portfolioService.UpdateStock(portfolioStock);
             return Ok(result);

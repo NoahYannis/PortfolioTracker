@@ -47,20 +47,19 @@ namespace PortfolioTrackerServer.Services.PortfolioService
             {
                 _dataContext.Stocks.Add(stock);
                 await _dataContext.SaveChangesAsync();
-                Debug.WriteLine("SaveAsync");
             }
 
             return new ServiceResponse<PortfolioStock> { Data = stock };
         }
 
-        public async Task<ServiceResponse<bool>> UpdateStock(PortfolioStock stock)
+        public async Task<ServiceResponse<PortfolioStock>> UpdateStock(PortfolioStock stock)
         {
             var dbStock = await _dataContext.Stocks.FirstOrDefaultAsync(s => s.Ticker == stock.Ticker);
 
             if (dbStock is not null)
             {
                 dbStock.Ticker = stock.Ticker;
-                dbStock.BuyInPrice = stock.BuyInPrice;
+                dbStock.BuyInPrice = 69;
                 dbStock.SharesOwned = stock.SharesOwned;
                 dbStock.RelativePerformance = stock.RelativePerformance;
                 dbStock.AbsolutePerformance = stock.AbsolutePerformance;
@@ -72,27 +71,25 @@ namespace PortfolioTrackerServer.Services.PortfolioService
             }
             else
             {
-                return new ServiceResponse<bool>
+                return new ServiceResponse<PortfolioStock>
                 {
-                    Data = false,
-                    Message = "Stock does not exist.",
-                    Success = false
+                    Data = null,
+                    Success = false,
                 };
             }
 
-            return new ServiceResponse<bool> { Data = true };
+            return new ServiceResponse<PortfolioStock> { Data = dbStock };
         }
 
-        public async Task<ServiceResponse<bool>> DeleteStock(string ticker)
+        public async Task<ServiceResponse<bool>> DeleteStock(string stockToDelete)
         {
-            var dbStock = await _dataContext.Stocks.FirstOrDefaultAsync(s => s.Ticker == ticker);
+            var dbStock = await _dataContext.Stocks.FirstOrDefaultAsync(s => s.Ticker == stockToDelete);
 
             if (dbStock is null)
             {
                 return new ServiceResponse<bool>
                 {
                     Data = false,
-                    Message = $"There was no stock '{ticker}' to delete in the database.",
                     Success = false
                 };
             }
