@@ -35,7 +35,7 @@ namespace PortfolioTrackerServer.Services.PortfolioService
         }
 
 
-        public async Task<ServiceResponse<List<PortfolioStock>>> GetStocks()
+        public async Task<ServiceResponse<List<PortfolioStock>>> GetDatabaseStocks()
         {
             return new ServiceResponse<List<PortfolioStock>> { Data = await _dataContext.Stocks.ToListAsync() };
         }
@@ -59,7 +59,7 @@ namespace PortfolioTrackerServer.Services.PortfolioService
             if (dbStock is not null)
             {
                 dbStock.Ticker = stock.Ticker;
-                dbStock.BuyInPrice = 69;
+                dbStock.BuyInPrice = stock.BuyInPrice;
                 dbStock.SharesOwned = stock.SharesOwned;
                 dbStock.RelativePerformance = stock.RelativePerformance;
                 dbStock.AbsolutePerformance = stock.AbsolutePerformance;

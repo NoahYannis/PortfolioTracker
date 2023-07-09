@@ -8,10 +8,10 @@ namespace PortfolioTrackerServer.Services.PortfolioService
     /// </summary>
     public interface IPortfolioService
     {
-        #region Stocks 
+        #region Database Stocks 
 
         List<PortfolioStock> PortfolioStocks { get; set; }
-        Task<ServiceResponse<List<PortfolioStock>>> GetStocks();
+        Task<ServiceResponse<List<PortfolioStock>>> GetDatabaseStocks();
         Task<ServiceResponse<PortfolioStock>> GetStock(string ticker);
         Task<ServiceResponse<bool>> DeleteStock(string ticker);
         Task<ServiceResponse<PortfolioStock>> AddStock(PortfolioStock stock);

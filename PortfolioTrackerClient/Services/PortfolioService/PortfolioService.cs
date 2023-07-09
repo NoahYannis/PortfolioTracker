@@ -24,7 +24,7 @@ namespace PortfolioTrackerClient.Services.PortfolioService
 
         public async Task InitializeAsync()
         {
-            PortfolioStocks = await GetStocks();
+            PortfolioStocks = await GetDatabaseStocks();
         }
 
         public void OnPortfolioChanged(List<PortfolioStock> portfolioStocks, PortfolioStock? modifiedStock = null, PortfolioAction portfolioAction = 0)
@@ -36,7 +36,7 @@ namespace PortfolioTrackerClient.Services.PortfolioService
         {
             var response = await _httpClient.PostAsJsonAsync($"{serverBaseDomain}/api/portfolio", stock);
             var newStock = (await response.Content.ReadFromJsonAsync<ServiceResponse<PortfolioStock>>()).Data;
-            OnPortfolioChanged(PortfolioStocks, newStock, PortfolioAction.Added);
+            OnPortfolioChanged(PortfolioStocks = await GetDatabaseStocks(), PortfolioStocks.FirstOrDefault(s => s.Ticker == stock.Ticker), PortfolioAction.Added);
             return newStock;
         }
 
@@ -45,19 +45,19 @@ namespace PortfolioTrackerClient.Services.PortfolioService
             var response = await _httpClient.DeleteAsync($"{serverBaseDomain}/api/portfolio/{stockToDelete}");
 
             if (response.IsSuccessStatusCode)
-                OnPortfolioChanged(PortfolioStocks, PortfolioStocks.FirstOrDefault(s => s.Ticker == stockToDelete) , PortfolioAction.Deleted);
+                OnPortfolioChanged(PortfolioStocks = await GetDatabaseStocks(), PortfolioStocks.FirstOrDefault(s => s.Ticker == stockToDelete), PortfolioAction.Deleted);
 
             return response.IsSuccessStatusCode;
 
         }
 
-        public async Task<PortfolioStock> GetStock(string ticker)
+        public async Task<PortfolioStock> GetDatabaseStock(string ticker)
         {
             var response = await _httpClient.GetFromJsonAsync<ServiceResponse<PortfolioStock>>($"{serverBaseDomain}/api/portfolio/{ticker}");
             return response.Data;
         }
 
-        public async Task<List<PortfolioStock>> GetStocks()
+        public async Task<List<PortfolioStock>> GetDatabaseStocks()
         {
             var response = await _httpClient.GetFromJsonAsync<ServiceResponse<List<PortfolioStock>>>($"{serverBaseDomain}/api/portfolio");
             return response.Data;
