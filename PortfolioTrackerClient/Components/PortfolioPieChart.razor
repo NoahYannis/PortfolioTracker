@@ -123,7 +123,6 @@
                 {
                     ClickedSegmentStock = PortfolioService.PortfolioStocks.FirstOrDefault(s => s.Ticker == prop.Value.ToString());
                     clickedIndex = PortfolioService.PortfolioStocks.IndexOf(ClickedSegmentStock);
-
                     StateHasChanged();
                 }
             }

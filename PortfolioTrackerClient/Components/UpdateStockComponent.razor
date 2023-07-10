@@ -14,7 +14,7 @@
         <DataAnnotationsValidator />
 
         <label for="stockTicker">Stock Ticker: </label>
-        <InputText id="stockTicker" @bind-Value="StockToUpdate.Ticker" />
+        <InputText id="stockTicker" @bind-Value="StockToUpdate.Ticker" readonly/>
         <ValidationMessage For="() => StockToUpdate.Ticker" />
         <br /><br />
 
