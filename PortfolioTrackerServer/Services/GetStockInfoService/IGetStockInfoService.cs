@@ -1,4 +1,5 @@
-﻿using PortfolioTrackerShared.Models;
+﻿using Microsoft.AspNetCore.Mvc;
+using PortfolioTrackerShared.Models;
 using PortfolioTrackerShared.Other;
 
 namespace PortfolioTrackerServer.Services.GetStockInfoService
@@ -14,6 +15,7 @@ namespace PortfolioTrackerServer.Services.GetStockInfoService
         /// <param name="tickerSymbol"></param>
         /// <returns></returns>
         Task<ServiceResponse<ApiQueryStock>> GetStockData(string tickerSymbol);
+        Task<ServiceResponse<List<ApiQueryStock>>> GetAllStockData(List<PortfolioStock> portfolioStocks);
 
 
         /// <summary>

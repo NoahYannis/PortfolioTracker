@@ -33,10 +33,6 @@ namespace PortfolioTrackerServer.Migrations
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Message")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<int>("OrderType")
                         .HasColumnType("int");
 
@@ -69,6 +65,9 @@ namespace PortfolioTrackerServer.Migrations
 
                     b.Property<decimal?>("BuyInPrice")
                         .IsRequired()
+                        .HasColumnType("decimal(8,2)");
+
+                    b.Property<decimal?>("CurrentPrice")
                         .HasColumnType("decimal(8,2)");
 
                     b.Property<decimal?>("DividendYield")

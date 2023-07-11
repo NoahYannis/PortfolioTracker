@@ -11,50 +11,47 @@ namespace PortfolioTrackerShared.Models
         [Required(ErrorMessage = "Ticker required."), StringLength(5, MinimumLength = 1, ErrorMessage = "Ticker Must Be Between 1 And 5 Characters")]
         public string Ticker { get; set; } = string.Empty;
 
+
         [Column(TypeName = "decimal(18,2)")]
         [Required(ErrorMessage = "Position size required."), Range(0.01f, double.MaxValue, ErrorMessage = "Position Size Must Be Greater Than $0.")]
         public decimal? PositionSize { get; set; }
+
 
         [Column(TypeName = "decimal(18,2)")]
         [Required(ErrorMessage = "Shares owned required."), Range(0.01, double.MaxValue, ErrorMessage = "Shares Owned Must Be Greater Than Zero.")]
         public decimal? SharesOwned { get; set; }
 
+
         [Column(TypeName = "decimal(8,2)")]
         [Required(ErrorMessage = "Buy in price required."), Range(0.1, double.MaxValue, ErrorMessage = "Buy In Price Must Be Greater Than $0.")]
         public decimal? BuyInPrice { get; set; }
+
+
+        [Column(TypeName = "decimal(8,2)")]
+        public decimal? CurrentPrice { get; set; } = 0;
+
 
         [Range(0, 200, ErrorMessage = "Dividend yield must be between 0 and 200%.")]
         public decimal? DividendYield { get; set; }
 
 
         [Column(TypeName = "decimal(8,2)")]
-        private decimal? _relativePerformance;
-        public decimal? RelativePerformance
+        private decimal? _absolutePerformance;
+        public decimal? AbsolutePerformance
         {
-            get
-            {
-                return _relativePerformance;
-            }
-            set
-            {
-                _relativePerformance = value;
-            }
+            get => _absolutePerformance; 
+            set => _absolutePerformance = (CurrentPrice - BuyInPrice) * SharesOwned; 
         }
 
 
         [Column(TypeName = "decimal(8,2)")]
-        private decimal? _absolutePerformance;
-        public decimal? AbsolutePerformance
+        private decimal? _relativePerformance;
+        public decimal? RelativePerformance
         {
-            get
-            {
-                return _absolutePerformance;
-            }
-            set
-            {
-                _absolutePerformance = value;
-            }
+            get => _relativePerformance;
+            set => _relativePerformance = ((CurrentPrice - BuyInPrice) / BuyInPrice) * 100;
         }
+
 
         public Industry Industry { get; set; }
 
