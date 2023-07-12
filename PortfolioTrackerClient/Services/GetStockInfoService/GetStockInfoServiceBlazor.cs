@@ -24,5 +24,11 @@ namespace PortfolioTrackerClient.Services.GetStockInfoService
         {
             return await _httpClient.GetFromJsonAsync<ServiceResponse<ApiQueryStock>>($"https://localhost:7207/api/polygon/{tickerSymbol}");
         }
+
+        public async Task<ServiceResponse<List<ApiQueryStock>>> GetAllStockData()
+        {
+            return await _httpClient.GetFromJsonAsync<ServiceResponse<List<ApiQueryStock>>>($"https://localhost:7207/api/polygon");
+        }
+
     }
 }

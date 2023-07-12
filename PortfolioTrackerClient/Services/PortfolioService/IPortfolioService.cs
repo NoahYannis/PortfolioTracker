@@ -18,6 +18,13 @@ namespace PortfolioTrackerClient.Services.PortfolioService
         Task<bool> DeleteStock(string ticker);
         Task InitializeAsync();
 
+        /// <summary>
+        /// Fetches the current share price of all portfolio stocks
+        /// </summary>
+        /// <returns></returns>
+        Task UpdateSharePrices();
+
+
         event EventHandler<PortfolioChangedArgs> PortfolioChanged;
         void OnPortfolioChanged(List<PortfolioStock> portfolioStocks, PortfolioStock? modifiedStock = null, PortfolioAction portfolioAction = 0);
 

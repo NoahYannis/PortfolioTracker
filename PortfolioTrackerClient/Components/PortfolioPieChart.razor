@@ -7,10 +7,11 @@
 @using System.Drawing;
 
 @inject IPortfolioService PortfolioService
+@inject IGetStockInfoService StockInfoService
 
 <Chart Config="_config" />
 <br />
-
+<button @onclick="async() => await PortfolioService.UpdateSharePrices() ">Update share prices</button>
 <UpdateStockComponent StockToUpdate="@ClickedSegmentStock">
 </UpdateStockComponent>
 
@@ -105,7 +106,6 @@
         await Task.Delay(10);
         StateHasChanged();
     }
-
 
 
     /// <summary>

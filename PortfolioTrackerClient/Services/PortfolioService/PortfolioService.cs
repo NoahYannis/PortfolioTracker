@@ -1,6 +1,7 @@
 ﻿using PortfolioTrackerShared.Other;
 using PortfolioTrackerShared.Models;
 using System.Net.Http.Json;
+using PortfolioTrackerClient.Services.GetStockInfoService;
 
 namespace PortfolioTrackerClient.Services.PortfolioService
 {
@@ -9,10 +10,12 @@ namespace PortfolioTrackerClient.Services.PortfolioService
 
         private string serverBaseDomain = "https://localhost:7207";
         private readonly HttpClient _httpClient;
+        private readonly IGetStockInfoService _stockInfoService;
 
-        public PortfolioService(HttpClient httpClient)
+        public PortfolioService(HttpClient httpClient, IGetStockInfoService stockInfoService)
         {
             _httpClient = httpClient;
+            _stockInfoService = stockInfoService;
         }
 
 
@@ -76,6 +79,30 @@ namespace PortfolioTrackerClient.Services.PortfolioService
                 OnPortfolioChanged(PortfolioStocks, stock, PortfolioAction.Modified);
 
             return (await response.Content.ReadFromJsonAsync<ServiceResponse<PortfolioStock>>());
+        }
+
+
+        /// <summary>
+        /// Fetches the current stock price for each stock inside the portfolio
+        /// </summary>
+        /// <returns></returns>
+        public async Task UpdateSharePrices()
+        {
+            var response = await _stockInfoService.GetAllStockData();
+            Console.WriteLine(response.Success);
+
+            if (response.Success)
+            {
+                for (int i = 0; i < response.Data.Count; i++)
+                {
+                    PortfolioStocks[i].CurrentPrice = response.Data[i].Close;
+                    PortfolioStocks[i].PositionSize = PortfolioStocks[i].CurrentPrice * PortfolioStocks[i].SharesOwned;
+
+                    OnPortfolioChanged(PortfolioStocks, PortfolioStocks[i], PortfolioAction.Modified);
+                    Console.WriteLine(PortfolioStocks[0].PositionSize);
+                }
+
+            }
         }
 
         #endregion

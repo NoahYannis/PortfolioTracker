@@ -1,7 +1,8 @@
 ﻿using Newtonsoft.Json;
-using PortfolioTrackerServer;
+using PortfolioTrackerServer.Services.PortfolioService;
 using PortfolioTrackerShared.Models;
 using PortfolioTrackerShared.Other;
+using System.Globalization;
 
 namespace PortfolioTrackerServer.Services.GetStockInfoService
 {
@@ -9,6 +10,12 @@ namespace PortfolioTrackerServer.Services.GetStockInfoService
     {
         private readonly HttpClient _httpClient;
         private readonly IConfiguration _config;
+        private readonly IPortfolioService _portfolioService;
+
+        // The free API version only delivers end of day data. A 24h delay is required.
+        private string date = DateTime.Now.AddHours(-24).ToString("yyyy-MM-dd"); 
+
+
         public ApiQueryStock CurrentStock { get; set; } = new();
 
         /// <summary>
@@ -16,10 +23,11 @@ namespace PortfolioTrackerServer.Services.GetStockInfoService
         /// </summary>
         public string apiKey => _config.GetSection("AppSettings").Get<AppConfig>().ApiKey;
 
-        public GetStockInfoServiceBlazor(IConfiguration config, HttpClient httpClient)
+        public GetStockInfoServiceBlazor(IConfiguration config, HttpClient httpClient, IPortfolioService portfolioService)
         {
             _config = config;
             _httpClient = httpClient;
+            _portfolioService = portfolioService;
         }
 
 
@@ -30,9 +38,7 @@ namespace PortfolioTrackerServer.Services.GetStockInfoService
         /// <returns></returns>
         public async Task<ServiceResponse<ApiQueryStock>> GetStockData(string tickerSymbol)
         {
-            string date = DateTime.Now.AddHours(-24).ToString("yyyy-MM-dd");  // The free API version only delivers end of day data. A 24h delay is required.
             string url = $"https://api.polygon.io/v1/open-close/{tickerSymbol}/{date}?adjusted=true&apiKey={apiKey}";
-            Console.WriteLine(url);
 
             HttpResponseMessage httpResponse = await _httpClient.GetAsync(url);
 
@@ -58,9 +64,20 @@ namespace PortfolioTrackerServer.Services.GetStockInfoService
             }
         }
 
-        public Task<ServiceResponse<List<ApiQueryStock>>> GetAllStockData(List<PortfolioStock> portfolioStocks)
+        public async Task<ServiceResponse<List<ApiQueryStock>>> GetAllStockData()
         {
-            throw new NotImplementedException();
+            var serviceResponse = new ServiceResponse<List<ApiQueryStock>>();
+
+            // TODO Error handling
+
+            foreach (var stock in _portfolioService.PortfolioStocks)
+            {
+                var response = GetStockData(stock.Ticker);
+                serviceResponse.Data.Add(response.Result.Data);
+            }
+
+            return serviceResponse;
         }
+
     }
 }
