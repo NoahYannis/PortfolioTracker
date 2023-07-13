@@ -2,6 +2,7 @@
 using PortfolioTrackerServer.Services.PortfolioService;
 using PortfolioTrackerShared.Models;
 using PortfolioTrackerShared.Other;
+using System.Diagnostics;
 using System.Globalization;
 
 namespace PortfolioTrackerServer.Services.GetStockInfoService
@@ -66,14 +67,16 @@ namespace PortfolioTrackerServer.Services.GetStockInfoService
 
         public async Task<ServiceResponse<List<ApiQueryStock>>> GetAllStockData()
         {
-            var serviceResponse = new ServiceResponse<List<ApiQueryStock>>();
+            var serviceResponse = new ServiceResponse<List<ApiQueryStock>>() { Data = new List<ApiQueryStock>() };
 
-            // TODO Error handling
+            // TODO More Error handling
 
-            foreach (var stock in _portfolioService.PortfolioStocks)
+            var portfolioStocks = await _portfolioService.GetDatabaseStocks();
+
+            foreach (var stock in portfolioStocks.Data)
             {
-                var response = GetStockData(stock.Ticker);
-                serviceResponse.Data.Add(response.Result.Data);
+                var response = await GetStockData(stock.Ticker);
+                serviceResponse.Data.Add(response.Data);
             }
 
             return serviceResponse;
