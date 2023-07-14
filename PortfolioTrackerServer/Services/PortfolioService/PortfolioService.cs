@@ -3,6 +3,7 @@ using PortfolioTrackerServer.Data;
 using PortfolioTrackerShared.Models;
 using PortfolioTrackerShared.Other;
 using System.Diagnostics;
+using System.Security.Cryptography.Xml;
 
 namespace PortfolioTrackerServer.Services.PortfolioService
 {
@@ -81,123 +82,154 @@ namespace PortfolioTrackerServer.Services.PortfolioService
             return new ServiceResponse<PortfolioStock> { Data = dbStock };
         }
 
-        public async Task<ServiceResponse<bool>> DeleteStock(string stockToDelete)
+        public async Task<bool> UpdateAllStocks()
         {
-            var dbStock = await _dataContext.Stocks.FirstOrDefaultAsync(s => s.Ticker == stockToDelete);
-
-            if (dbStock is null)
+            foreach (var stock in PortfolioStocks)
             {
-                return new ServiceResponse<bool>
+                if (stock is null) { return false; }
+
+                var dbStock = await _dataContext.Stocks.FirstOrDefaultAsync(s => s.Ticker == stock.Ticker);
+
+                if (dbStock is not null)
                 {
-                    Data = false,
-                    Success = false
-                };
-            }
+                    dbStock.Ticker = stock.Ticker;
+                    dbStock.BuyInPrice = stock.BuyInPrice;
+                    dbStock.SharesOwned = stock.SharesOwned;
+                    dbStock.RelativePerformance = stock.RelativePerformance;
+                    dbStock.AbsolutePerformance = stock.AbsolutePerformance;
+                    dbStock.DividendYield = stock.DividendYield;
+                    dbStock.Industry = stock.Industry;
+                    dbStock.PositionSize = stock.PositionSize;
 
-            _dataContext.Stocks.Remove(dbStock);
-            await _dataContext.SaveChangesAsync();
-
-            return new ServiceResponse<bool> { Data = true };
-        }
-
-
-        #endregion
-
-
-        #region Order
-        public async Task<ServiceResponse<bool>> DeleteOrder(int orderNumber)
-        {
-            var dbOrder = await _dataContext.Orders.FirstOrDefaultAsync(o => o.OrderNumber == orderNumber);
-
-            if (dbOrder is null)
-            {
-                return new ServiceResponse<bool>
+                    await _dataContext.SaveChangesAsync();
+                }
+                else
                 {
-                    Data = false,
-                    Message = $"There was no order '{orderNumber}' to delete in the database.",
-                    Success = false
-                };
+                    return false;
+                }
             }
 
-            _dataContext.Orders.Remove(dbOrder);
-            await _dataContext.SaveChangesAsync();
+            return true;
 
-            return new ServiceResponse<bool> { Data = true };
         }
 
-        public async Task<ServiceResponse<bool>> CreateOrder(Order order)
+    public async Task<ServiceResponse<bool>> DeleteStock(string stockToDelete)
+    {
+        var dbStock = await _dataContext.Stocks.FirstOrDefaultAsync(s => s.Ticker == stockToDelete);
+
+        if (dbStock is null)
         {
-            if (order is not null)
+            return new ServiceResponse<bool>
             {
-                _dataContext.Orders.Add(order);
-                await _dataContext.SaveChangesAsync();
-            }
-
-            return new ServiceResponse<bool> { Data = true };
+                Data = false,
+                Success = false
+            };
         }
 
+        _dataContext.Stocks.Remove(dbStock);
+        await _dataContext.SaveChangesAsync();
 
-        public async Task<ServiceResponse<Order>> GetOrder(int orderNumber)
-        {
-            var dbOrder = _dataContext.Orders.FirstOrDefaultAsync(o => o.OrderNumber == orderNumber);
-
-            if (dbOrder is null)
-            {
-                return new ServiceResponse<Order>
-                {
-                    Data = new Order(),
-                    Message = $"There was no order '{orderNumber}' in the database.",
-                    Success = false
-                };
-            }
-
-            return new ServiceResponse<Order> { Data = await dbOrder };
-        }
-
-        public async Task<ServiceResponse<List<Order>>> GetOrders()
-        {
-            var orderNumbers = Orders.Select(o => o.OrderNumber).ToList();
-            var dbOrders = await _dataContext.Orders.Where(o => orderNumbers.Contains(o.OrderNumber)).ToListAsync();
-
-            var result = new ServiceResponse<List<Order>> { Data = dbOrders };
-
-            return result;
-        }
-
-
-
-
-        public async Task<ServiceResponse<bool>> UpdateOrder(Order order)
-        {
-            var dbOrder = await _dataContext.Orders.FirstOrDefaultAsync(o => order.OrderNumber == order.OrderNumber);
-
-            if (dbOrder is null)
-            {
-                return new ServiceResponse<bool>
-                {
-                    Data = false,
-                    Message = $"There was no order '{order.OrderNumber}' in the database.",
-                    Success = false
-                };
-            }
-            else
-            {
-                dbOrder.OrderNumber = order.OrderNumber;
-                dbOrder.Ticker = order.Ticker;
-                dbOrder.Price = order.Price;
-                dbOrder.UserId = order.UserId;
-                dbOrder.Date = order.Date;
-                dbOrder.OrderType = order.OrderType;
-                dbOrder.Quantity = order.Quantity;
-
-                await _dataContext.SaveChangesAsync();
-            }
-
-            return new ServiceResponse<bool> { Data = true };
-        }
-
-        #endregion
-
-
+        return new ServiceResponse<bool> { Data = true };
     }
+
+
+    #endregion
+
+
+    #region Order
+    public async Task<ServiceResponse<bool>> DeleteOrder(int orderNumber)
+    {
+        var dbOrder = await _dataContext.Orders.FirstOrDefaultAsync(o => o.OrderNumber == orderNumber);
+
+        if (dbOrder is null)
+        {
+            return new ServiceResponse<bool>
+            {
+                Data = false,
+                Message = $"There was no order '{orderNumber}' to delete in the database.",
+                Success = false
+            };
+        }
+
+        _dataContext.Orders.Remove(dbOrder);
+        await _dataContext.SaveChangesAsync();
+
+        return new ServiceResponse<bool> { Data = true };
+    }
+
+    public async Task<ServiceResponse<bool>> CreateOrder(Order order)
+    {
+        if (order is not null)
+        {
+            _dataContext.Orders.Add(order);
+            await _dataContext.SaveChangesAsync();
+        }
+
+        return new ServiceResponse<bool> { Data = true };
+    }
+
+
+    public async Task<ServiceResponse<Order>> GetOrder(int orderNumber)
+    {
+        var dbOrder = _dataContext.Orders.FirstOrDefaultAsync(o => o.OrderNumber == orderNumber);
+
+        if (dbOrder is null)
+        {
+            return new ServiceResponse<Order>
+            {
+                Data = new Order(),
+                Message = $"There was no order '{orderNumber}' in the database.",
+                Success = false
+            };
+        }
+
+        return new ServiceResponse<Order> { Data = await dbOrder };
+    }
+
+    public async Task<ServiceResponse<List<Order>>> GetOrders()
+    {
+        var orderNumbers = Orders.Select(o => o.OrderNumber).ToList();
+        var dbOrders = await _dataContext.Orders.Where(o => orderNumbers.Contains(o.OrderNumber)).ToListAsync();
+
+        var result = new ServiceResponse<List<Order>> { Data = dbOrders };
+
+        return result;
+    }
+
+
+
+
+    public async Task<ServiceResponse<bool>> UpdateOrder(Order order)
+    {
+        var dbOrder = await _dataContext.Orders.FirstOrDefaultAsync(o => order.OrderNumber == order.OrderNumber);
+
+        if (dbOrder is null)
+        {
+            return new ServiceResponse<bool>
+            {
+                Data = false,
+                Message = $"There was no order '{order.OrderNumber}' in the database.",
+                Success = false
+            };
+        }
+        else
+        {
+            dbOrder.OrderNumber = order.OrderNumber;
+            dbOrder.Ticker = order.Ticker;
+            dbOrder.Price = order.Price;
+            dbOrder.UserId = order.UserId;
+            dbOrder.Date = order.Date;
+            dbOrder.OrderType = order.OrderType;
+            dbOrder.Quantity = order.Quantity;
+
+            await _dataContext.SaveChangesAsync();
+        }
+
+        return new ServiceResponse<bool> { Data = true };
+    }
+
+    #endregion
+
+
+}
 }
