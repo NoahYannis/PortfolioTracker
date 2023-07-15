@@ -28,7 +28,7 @@ namespace PortfolioTrackerServer.Controller
         [HttpGet]
         public async Task<ActionResult<ServiceResponse<List<ApiQueryStock>>>> GetAllStockData()
         {
-            var result = await _stockInfoService.GetAllStockData();
+            var result = await _stockInfoService.FetchCurrentStockPrices();
             return Ok(result);
         }
 

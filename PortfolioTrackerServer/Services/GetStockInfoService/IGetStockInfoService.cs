@@ -21,7 +21,7 @@ namespace PortfolioTrackerServer.Services.GetStockInfoService
         /// Stockdata for all stocks in side a portfolio
         /// </summary>
         /// <returns></returns>
-        Task<ServiceResponse<List<ApiQueryStock>>> GetAllStockData();
+        Task<ServiceResponse<List<ApiQueryStock>>> FetchCurrentStockPrices();
 
 
         /// <summary>

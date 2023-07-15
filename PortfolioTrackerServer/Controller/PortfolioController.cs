@@ -5,6 +5,7 @@ using PortfolioTrackerShared.Other;
 using System.Net.Http;
 using System.Net;
 using System;
+using System.Diagnostics;
 
 namespace PortfolioTrackerServer.Controller
 {
@@ -33,6 +34,14 @@ namespace PortfolioTrackerServer.Controller
             var result = await _portfolioService.GetDatabaseStocks();
             return Ok(result);
         }
+
+        [HttpGet("update")]
+        public async Task<ActionResult<ServiceResponse<List<PortfolioStock>>>> UpdatePriceAndPositionSize()
+        {
+            var result = await _portfolioService.UpdatePriceAndPositionSize();
+            return Ok(result);
+        }
+
 
         [HttpPost]
         public async Task<ActionResult<ServiceResponse<PortfolioStock>>> AddStock([FromBody] PortfolioStock portfolioStock)

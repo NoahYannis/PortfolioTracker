@@ -2,8 +2,6 @@
 using PortfolioTrackerServer.Services.PortfolioService;
 using PortfolioTrackerShared.Models;
 using PortfolioTrackerShared.Other;
-using System.Diagnostics;
-using System.Globalization;
 
 namespace PortfolioTrackerServer.Services.GetStockInfoService
 {
@@ -13,8 +11,16 @@ namespace PortfolioTrackerServer.Services.GetStockInfoService
         private readonly IConfiguration _config;
         private readonly IPortfolioService _portfolioService;
 
+        public GetStockInfoServiceBlazor(IConfiguration config, HttpClient httpClient, IPortfolioService portfolioService)
+        {
+            _config = config;
+            _httpClient = httpClient;
+            _portfolioService = portfolioService;
+        }
+
+
         // The free API version only delivers end of day data. A 24h delay is required.
-        private string date = DateTime.Now.AddHours(-24).ToString("yyyy-MM-dd"); 
+        private string date = DateTime.Now.AddHours(-24).ToString("yyyy-MM-dd");
 
 
         public ApiQueryStock CurrentStock { get; set; } = new();
@@ -23,14 +29,6 @@ namespace PortfolioTrackerServer.Services.GetStockInfoService
         ///  Returns the API Key from the appsettings.json file
         /// </summary>
         public string apiKey => _config.GetSection("AppSettings").Get<AppConfig>().ApiKey;
-
-        public GetStockInfoServiceBlazor(IConfiguration config, HttpClient httpClient, IPortfolioService portfolioService)
-        {
-            _config = config;
-            _httpClient = httpClient;
-            _portfolioService = portfolioService;
-        }
-
 
         /// <summary>
         /// Sends an API request with the specified stock ticker and returns its result 
@@ -65,18 +63,28 @@ namespace PortfolioTrackerServer.Services.GetStockInfoService
             }
         }
 
-        public async Task<ServiceResponse<List<ApiQueryStock>>> GetAllStockData()
+        public async Task<ServiceResponse<List<ApiQueryStock>>> FetchCurrentStockPrices()
         {
-            var serviceResponse = new ServiceResponse<List<ApiQueryStock>>() { Data = new List<ApiQueryStock>() };
-
-            // TODO More Error handling
 
             var portfolioStocks = await _portfolioService.GetDatabaseStocks();
 
-            foreach (var stock in portfolioStocks.Data)
+            if (portfolioStocks.Data is null || portfolioStocks.Data.Count is 0)
+                return new ServiceResponse<List<ApiQueryStock>>() { Data = null, Success = false, Message = "Couldn't fetch database stocks" };
+
+            var serviceResponse = new ServiceResponse<List<ApiQueryStock>>() { Data = new List<ApiQueryStock>() };
+
+            foreach (PortfolioStock stock in portfolioStocks.Data)
             {
-                var response = await GetStockData(stock.Ticker);
-                serviceResponse.Data.Add(response.Data);
+                var response = await GetStockData(stock?.Ticker);
+
+                if (response.Success)
+                {
+                    serviceResponse.Data.Add(response.Data);
+                }
+                else
+                {
+                    serviceResponse.Success = false;
+                }
             }
 
             return serviceResponse;

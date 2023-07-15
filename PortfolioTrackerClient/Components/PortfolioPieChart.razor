@@ -11,7 +11,7 @@
 
 <Chart Config="_config" />
 <br />
-<button @onclick="async() => await PortfolioService.UpdateSharePrices() ">Update share prices</button>
+<button @onclick="async() => await PortfolioService.UpdatePriceAndPositionSize() ">Update share prices</button>
 <UpdateStockComponent StockToUpdate="@ClickedSegmentStock">
 </UpdateStockComponent>
 

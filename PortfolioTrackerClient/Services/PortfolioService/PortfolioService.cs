@@ -9,6 +9,7 @@ namespace PortfolioTrackerClient.Services.PortfolioService
     {
 
         private string serverBaseDomain = "https://localhost:7207";
+
         private readonly HttpClient _httpClient;
         private readonly IGetStockInfoService _stockInfoService;
 
@@ -86,23 +87,21 @@ namespace PortfolioTrackerClient.Services.PortfolioService
         /// Fetches the current stock price for each stock inside the portfolio
         /// </summary>
         /// <returns></returns>
-        public async Task UpdateSharePrices()
+        public async Task<bool> UpdatePriceAndPositionSize()
         {
-            var response = await _stockInfoService.GetAllStockData();
-            Console.WriteLine(response.Success);
+            var response = await _httpClient.GetFromJsonAsync<ServiceResponse<List<PortfolioStock>>>($"{serverBaseDomain}/api/portfolio/update");
 
             if (response.Success)
             {
                 for (int i = 0; i < response.Data.Count; i++)
                 {
-                    PortfolioStocks[i].CurrentPrice = response.Data[i].Close;
-                    PortfolioStocks[i].PositionSize = PortfolioStocks[i].CurrentPrice * PortfolioStocks[i].SharesOwned;
-
                     OnPortfolioChanged(PortfolioStocks, PortfolioStocks[i], PortfolioAction.Modified);
-                    Console.WriteLine(PortfolioStocks[0].PositionSize);
                 }
 
+                return true;
             }
+
+            return false;
         }
 
         #endregion
@@ -117,6 +116,7 @@ namespace PortfolioTrackerClient.Services.PortfolioService
         {
             return await Task.FromResult(Orders);
         }
+
 
         public async Task<Order> GetOrder(int orderNumber)
         {

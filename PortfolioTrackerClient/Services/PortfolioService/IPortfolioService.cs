@@ -19,10 +19,10 @@ namespace PortfolioTrackerClient.Services.PortfolioService
         Task InitializeAsync();
 
         /// <summary>
-        /// Fetches the current share price of all portfolio stocks
+        /// Fetches and updates the current share price and position size of all portfolio stocks
         /// </summary>
         /// <returns></returns>
-        Task UpdateSharePrices();
+        Task<bool> UpdatePriceAndPositionSize();
 
 
         event EventHandler<PortfolioChangedArgs> PortfolioChanged;
