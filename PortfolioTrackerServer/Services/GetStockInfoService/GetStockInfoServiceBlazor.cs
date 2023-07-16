@@ -9,18 +9,16 @@ namespace PortfolioTrackerServer.Services.GetStockInfoService
     {
         private readonly HttpClient _httpClient;
         private readonly IConfiguration _config;
-        private readonly IPortfolioService _portfolioService;
-
-        public GetStockInfoServiceBlazor(IConfiguration config, HttpClient httpClient, IPortfolioService portfolioService)
+        private readonly IFetchAndUpdateStockPriceService _fetchAndUpdate;
+        public GetStockInfoServiceBlazor(IConfiguration config, HttpClient httpClient)
         {
             _config = config;
             _httpClient = httpClient;
-            _portfolioService = portfolioService;
         }
 
 
         // The free API version only delivers end of day data. A 24h delay is required.
-        private string date = DateTime.Now.AddHours(-24).ToString("yyyy-MM-dd");
+        private string date = DateTime.Now.AddHours(-48).ToString("yyyy-MM-dd");
 
 
         public ApiQueryStock CurrentStock { get; set; } = new();
@@ -62,33 +60,5 @@ namespace PortfolioTrackerServer.Services.GetStockInfoService
                 return serviceResponse;
             }
         }
-
-        public async Task<ServiceResponse<List<ApiQueryStock>>> FetchCurrentStockPrices()
-        {
-
-            var portfolioStocks = await _portfolioService.GetDatabaseStocks();
-
-            if (portfolioStocks.Data is null || portfolioStocks.Data.Count is 0)
-                return new ServiceResponse<List<ApiQueryStock>>() { Data = null, Success = false, Message = "Couldn't fetch database stocks" };
-
-            var serviceResponse = new ServiceResponse<List<ApiQueryStock>>() { Data = new List<ApiQueryStock>() };
-
-            foreach (PortfolioStock stock in portfolioStocks.Data)
-            {
-                var response = await GetStockData(stock?.Ticker);
-
-                if (response.Success)
-                {
-                    serviceResponse.Data.Add(response.Data);
-                }
-                else
-                {
-                    serviceResponse.Success = false;
-                }
-            }
-
-            return serviceResponse;
-        }
-
     }
 }

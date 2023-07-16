@@ -12,10 +12,12 @@ namespace PortfolioTrackerServer.Controller
     public class PolygonQueryController : ControllerBase
     {
         private readonly IGetStockInfoService _stockInfoService;
+        private readonly IFetchAndUpdateStockPriceService _fetchAndUpdate;
 
-        public PolygonQueryController(IGetStockInfoService stockInfoService)
+        public PolygonQueryController(IGetStockInfoService stockInfoService, IFetchAndUpdateStockPriceService fetchAndUpdate)
         {
             _stockInfoService = stockInfoService;
+            _fetchAndUpdate = fetchAndUpdate;
         }
 
         [HttpGet("{tickerSymbol}")]
@@ -28,7 +30,7 @@ namespace PortfolioTrackerServer.Controller
         [HttpGet]
         public async Task<ActionResult<ServiceResponse<List<ApiQueryStock>>>> GetAllStockData()
         {
-            var result = await _stockInfoService.FetchCurrentStockPrices();
+            var result = await _fetchAndUpdate.FetchCurrentStockPrices();
             return Ok(result);
         }
 

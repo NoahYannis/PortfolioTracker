@@ -16,7 +16,6 @@ namespace PortfolioTrackerServer.Services.PortfolioService
         Task<ServiceResponse<bool>> DeleteStock(string ticker);
         Task<ServiceResponse<PortfolioStock>> AddStock(PortfolioStock stock);
         Task<ServiceResponse<PortfolioStock>> UpdateStock(PortfolioStock stock);
-        Task<ServiceResponse<List<PortfolioStock>>> UpdatePriceAndPositionSize();
 
         //event EventHandler<PortfolioChangedArgs> PortfolioChanged;
         //void OnPortfolioChanged(List<PortfolioStock> portfolioStocks, PortfolioStock? deletedStock = null);

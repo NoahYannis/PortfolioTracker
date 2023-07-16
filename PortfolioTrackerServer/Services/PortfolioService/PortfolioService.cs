@@ -11,15 +11,12 @@ namespace PortfolioTrackerServer.Services.PortfolioService
     {
         private readonly DataContext _dataContext;
         private readonly IHttpContextAccessor _httpContextAccessor;
-        private readonly IGetStockInfoService _getStockInfoService;
-        private readonly HttpClient _httpClient;
 
 
-        public PortfolioService(DataContext dataContext, IHttpContextAccessor httpContextAccessor, IGetStockInfoService getStockInfoService)
+        public PortfolioService(DataContext dataContext, IHttpContextAccessor httpContextAccessor)
         {
             _dataContext = dataContext;
             _httpContextAccessor = httpContextAccessor;
-            _getStockInfoService = getStockInfoService;
         }
 
         private List<PortfolioStock> _portfolioStocks;
@@ -62,10 +59,7 @@ namespace PortfolioTrackerServer.Services.PortfolioService
 
         public async Task<ServiceResponse<List<PortfolioStock>>> GetDatabaseStocks()
         {
-            var s = await _dataContext.Stocks.ToListAsync();
-            Console.WriteLine(s.Count);
-            Console.WriteLine(s.First().Ticker);
-            return new ServiceResponse<List<PortfolioStock>> { Data = await _dataContext.Stocks.ToListAsync() };
+            return new ServiceResponse<List<PortfolioStock>> { Data = PortfolioStocks = await _dataContext.Stocks.ToListAsync() };
         }
 
 
@@ -217,25 +211,7 @@ namespace PortfolioTrackerServer.Services.PortfolioService
             return new ServiceResponse<bool> { Data = true };
         }
 
-        public async Task<ServiceResponse<List<PortfolioStock>>> UpdatePriceAndPositionSize()
-        {
-            var result = await _getStockInfoService.FetchCurrentStockPrices();
 
-            if (result.Success)
-            {
-                // Update share price
-                PortfolioStocks.ForEach(s => s.CurrentPrice = result.Data?[PortfolioStocks.IndexOf(s)].Close);
-
-                // Update position size
-                PortfolioStocks.ForEach(s => s.PositionSize = s.CurrentPrice * s.SharesOwned);
-
-                await _dataContext.SaveChangesAsync();
-
-                return new ServiceResponse<List<PortfolioStock>> { Data = PortfolioStocks };
-            }
-
-            return new ServiceResponse<List<PortfolioStock>> { Success = false };
-        }
 
         #endregion
 

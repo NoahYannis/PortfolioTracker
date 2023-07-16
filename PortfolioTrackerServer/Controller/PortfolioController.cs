@@ -6,6 +6,7 @@ using System.Net.Http;
 using System.Net;
 using System;
 using System.Diagnostics;
+using PortfolioTrackerServer.Services.GetStockInfoService;
 
 namespace PortfolioTrackerServer.Controller
 {
@@ -15,10 +16,12 @@ namespace PortfolioTrackerServer.Controller
     {
 
         private readonly IPortfolioService _portfolioService;
+        private readonly IFetchAndUpdateStockPriceService _fetchAndUpdate;
 
-        public PortfolioController(IPortfolioService portfolioService)
+        public PortfolioController(IPortfolioService portfolioService, IFetchAndUpdateStockPriceService fetchAndUpdate)
         {
             _portfolioService = portfolioService;
+            _fetchAndUpdate = fetchAndUpdate;
         }
 
         [HttpGet("{ticker}")]
@@ -38,7 +41,7 @@ namespace PortfolioTrackerServer.Controller
         [HttpGet("update")]
         public async Task<ActionResult<ServiceResponse<List<PortfolioStock>>>> UpdatePriceAndPositionSize()
         {
-            var result = await _portfolioService.UpdatePriceAndPositionSize();
+            var result = await _fetchAndUpdate.UpdatePriceAndPositionSize();
             return Ok(result);
         }
 

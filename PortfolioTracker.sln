@@ -14,6 +14,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{DBDC5F
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server", "Server", "{463A5B3C-F2C7-4343-9B1E-4EE89E34F9DF}"
 	ProjectSection(SolutionItems) = preProject
+		PortfolioTrackerClient\Program.cs = PortfolioTrackerClient\Program.cs
 		PortfolioTrackerClient\README.md = PortfolioTrackerClient\README.md
 	EndProjectSection
 EndProject
