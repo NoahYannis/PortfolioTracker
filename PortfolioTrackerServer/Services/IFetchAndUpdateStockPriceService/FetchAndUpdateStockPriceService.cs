@@ -40,6 +40,7 @@ namespace PortfolioTrackerServer.Services.FetchAndUpdateStockPriceService
                 else
                 {
                     serviceResponse.Success = false;
+                    serviceResponse.Message = response.Message;
                 }
             }
 
@@ -63,7 +64,7 @@ namespace PortfolioTrackerServer.Services.FetchAndUpdateStockPriceService
                 return new ServiceResponse<List<PortfolioStock>> { Data = _portfolioService.PortfolioStocks };
             }
 
-            return new ServiceResponse<List<PortfolioStock>> { Success = false };
+            return new ServiceResponse<List<PortfolioStock>> { Success = false, Message = result.Message };
         }
 
     }

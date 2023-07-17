@@ -15,7 +15,10 @@
 
         <label for="stockTicker">Stock Ticker: </label>
         <InputText id="stockTicker" @bind-Value="StockToUpdate.Ticker" readonly/>
-        <ValidationMessage For="() => StockToUpdate.Ticker" />
+        <br /><br />
+
+        <label for="currentPrice">Current Price: </label>
+        <InputNumber id="currentPrice" @bind-Value="StockToUpdate.CurrentPrice" readonly/>
         <br /><br />
 
         <label for="sharesOwned">Shares Owned: </label>
@@ -45,6 +48,16 @@
         <label for="dividendYield">Dividend Yield % (optional): </label>
         <InputNumber id="dividendYield" @bind-Value="StockToUpdate.DividendYield" min="0" />
         <ValidationMessage For="() => StockToUpdate.DividendYield" />
+        <br /><br />
+
+        <br />
+
+        <label for="relativePerformance">Relative Performance ($): </label>
+        <InputNumber id="relativePerformance" @bind-Value="StockToUpdate.RelativePerformance" readonly/>
+        <br /><br />
+
+        <label for="absolutePerformance">Absolute Performance ($): </label>
+        <InputNumber id="absolutePerformance" @bind-Value="StockToUpdate.AbsolutePerformance" readonly/>
         <br /><br />
 
         <button class="btn-primary" type="submit">Update</button>

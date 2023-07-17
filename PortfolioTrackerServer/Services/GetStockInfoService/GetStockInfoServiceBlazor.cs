@@ -18,7 +18,7 @@ namespace PortfolioTrackerServer.Services.GetStockInfoService
 
 
         // The free API version only delivers end of day data. A 24h delay is required.
-        private string date = DateTime.Now.AddHours(-48).ToString("yyyy-MM-dd");
+        private string date = DateTime.Now.AddHours(-96).ToString("yyyy-MM-dd");
 
 
         public ApiQueryStock CurrentStock { get; set; } = new();
