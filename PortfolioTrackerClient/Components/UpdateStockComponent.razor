@@ -52,12 +52,12 @@
 
         <br />
 
-        <label for="relativePerformance">Relative Performance ($): </label>
-        <InputNumber id="relativePerformance" @bind-Value="StockToUpdate.RelativePerformance" readonly/>
+        <label for="relativePerformance">Relative Performance (%): </label>
+        <InputNumber style="@DeterminePerformanceColor(StockToUpdate.RelativePerformance)" id="relativePerformance" @bind-Value="StockToUpdate.RelativePerformance" readonly/>
         <br /><br />
 
         <label for="absolutePerformance">Absolute Performance ($): </label>
-        <InputNumber id="absolutePerformance" @bind-Value="StockToUpdate.AbsolutePerformance" readonly/>
+        <InputNumber style="@DeterminePerformanceColor(StockToUpdate.AbsolutePerformance)" id="absolutePerformance" @bind-Value="StockToUpdate.AbsolutePerformance" readonly/>
         <br /><br />
 
         <button class="btn-primary" type="submit">Update</button>
@@ -83,7 +83,7 @@
     [Parameter]
     public PortfolioStock StockToUpdate
     {
-        get => _stockToUpdate is not null ? _stockToUpdate : new PortfolioStock();
+        get => _stockToUpdate ?? new PortfolioStock();
 
         set => _stockToUpdate = value;
     }
@@ -156,6 +156,18 @@
         var confirmDeleteModal = Modal.Show<ConfirmAction>("Confirm Action", parameters);
         var result = await confirmDeleteModal.Result;
         return result.Confirmed;
+    }
+
+    /// <summary>
+    /// Determine CSS class based on stock performance.
+    /// </summary>
+    /// <returns></returns>
+    private string DeterminePerformanceColor(decimal? performance)
+    {
+        if (performance is not null)
+             return performance > 0 ? "color: green" : "color: red";
+
+        return string.Empty;
     }
 }
 
