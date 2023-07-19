@@ -1,0 +1,24 @@
+﻿@page "/compound"
+@using CompoundInterestCalc;
+
+<h3>CompoundInterestCalculator</h3>
+<br /><br />
+
+
+<EditForm Model="@CalcModel" OnValidSubmit="CalculateCompoundInterest">
+    <DataAnnotationsValidator />
+
+    <label for="startingSum">Starting Sum:</label>
+    <InputNumber id="startingSum" @bind-Value="@CalcModel.StartingSum" />
+</EditForm>
+
+
+@code {
+
+    [Parameter]
+    public CalculatorModel CalcModel { get; set; } = new();
+
+    private void CalculateCompoundInterest()
+    {
+    }
+}

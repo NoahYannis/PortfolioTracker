@@ -1,0 +1,78 @@
+﻿@page "/polygon"
+
+@using PortfolioTrackerClient.Services.GetStockInfoService;
+@using PortfolioTrackerShared.Other;
+
+@inject IGetStockInfoService GetStockInfoService
+
+<div>
+    <label for="stockTicker">Enter a stock ticker: </label>
+    <InputText id="stockTicker" @bind-Value="Ticker" />
+</div>
+<div>
+    <button @onclick='async () => CurrentStock = await ReturnStockFromApiCall(Ticker)'>
+        Confirm
+    </button>
+
+    <!-- Display stock data if a ticker was specified and no error occured-->
+    @if (!string.IsNullOrEmpty(CurrentStock.Ticker) && string.IsNullOrEmpty(ErrorMessage))
+    {
+        <br />
+        <br />
+        <p>Pre Market: $@CurrentStock.PreMarket </p>
+        <p>After Hours: $@CurrentStock.AfterHours</p>
+        <p>Open: $@CurrentStock.Open</p>
+        <p>Close: $@CurrentStock.Close</p>
+        <p>Low: $@CurrentStock.Low</p>
+        <p>High: $@CurrentStock.High</p>
+    }
+    else
+    {
+        <p>
+            <br>
+            @(ErrorMessage)
+        </p>
+    }
+
+</div>
+
+
+@code {
+
+    /// <summary>
+    /// The ticker symbol entered by the user inside the input text field.
+    /// </summary>
+    public string Ticker { get; set; } = string.Empty;
+
+
+    /// <summary>
+    /// The current stock requested by the user.
+    /// </summary>
+    public ApiQueryStock CurrentStock { get; set; } = new();
+
+
+    /// <summary>
+    /// Error message that contains the Http.ReasonPhrase
+    /// </summary>
+    public string ErrorMessage { get; set; } = string.Empty;
+
+
+    /// <summary>
+    /// Returns stock data from api call and sets the error message 
+    /// </summary>
+    public async Task<ApiQueryStock> ReturnStockFromApiCall(string tickerSymbol)
+    {
+        if (string.IsNullOrWhiteSpace(tickerSymbol))
+        {
+            ErrorMessage = "No ticker was specified";
+            return CurrentStock;
+        }
+
+        var response = await GetStockInfoService.GetStockData(tickerSymbol.ToUpper());
+        ErrorMessage = response.Success ? string.Empty : response.Message;
+
+        return response.Data ?? CurrentStock;
+    }
+
+}
+

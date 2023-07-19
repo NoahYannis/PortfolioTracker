@@ -9,7 +9,7 @@ namespace PortfolioTrackerServer.Services.GetStockInfoService
     {
         private readonly HttpClient _httpClient;
         private readonly IConfiguration _config;
-        private readonly IFetchAndUpdateStockPriceService _fetchAndUpdate;
+
         public GetStockInfoServiceBlazor(IConfiguration config, HttpClient httpClient)
         {
             _config = config;
