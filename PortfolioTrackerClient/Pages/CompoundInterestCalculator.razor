@@ -2,15 +2,60 @@
 @using CompoundInterestCalc;
 
 <h3>CompoundInterestCalculator</h3>
-<br /><br />
+<br />
+<br />
 
+<div>
+    <EditForm Model="@CalcModel" OnValidSubmit="CalculateCompoundInterest">
+        <DataAnnotationsValidator />
 
-<EditForm Model="@CalcModel" OnValidSubmit="CalculateCompoundInterest">
-    <DataAnnotationsValidator />
+        <div class="input-element">
+            <label for="startingSum">Starting Sum ($):</label>
+            <InputNumber id="startingSum" @bind-Value="@CalcModel.StartingSum" min="0" />
+            <ValidationMessage For="() => CalcModel.StartingSum" />
+        </div>
 
-    <label for="startingSum">Starting Sum:</label>
-    <InputNumber id="startingSum" @bind-Value="@CalcModel.StartingSum" />
-</EditForm>
+        <div class="input-element">
+            <label for="monthlyContribution">Monthly Contribution ($):</label>
+            <InputNumber id="monthlyContribution" @bind-Value="@CalcModel.MonthlyContribution" min="0" />
+            <ValidationMessage For="() => CalcModel.MonthlyContribution" />
+            <br />
+        </div>
+
+        <div class="input-element">
+            <label for="interestRate">Interest Rate (%):</label>
+            <InputNumber id="interestRate" @bind-Value="@CalcModel.InterestRate" min="0" />
+            <ValidationMessage For="() => CalcModel.InterestRate" />
+            <br />
+        </div>
+
+        <div class="input-element">
+            <label for="numberOfYears">Number Of Years:</label>
+            <InputNumber id="numberOfYears" @bind-Value="@CalcModel.NumberOfYears" min="0" />
+            <ValidationMessage For="() => CalcModel.NumberOfYears" />
+            <br />
+        </div>
+
+        <div class="input-element">
+            <label for="considerInflation">Consider Inflation:</label>
+            <InputCheckbox id="considerInflation" @bind-Value="@CalcModel.ConsiderInflation" />
+            <br />
+        </div>
+
+        @if (CalcModel.ConsiderInflation)
+        {
+            <div class="input-element">
+                <label for="inflationRate">Inflation Rate (%):</label>
+                <InputNumber id="inflationRate" @bind-Value="@CalcModel.InflationRate" min="-20" />
+                <ValidationMessage For="() => CalcModel.InflationRate" />
+                <br />
+            </div>
+        }
+
+        <button class="btn-primary" type="submit">Calculate</button>
+        <button class="btn-danger" type="button" style="margin-left: 10px" @onclick="(() => CalcModel = new())">Reset</button>
+    </EditForm>
+</div>
 
 
 @code {
@@ -20,5 +65,6 @@
 
     private void CalculateCompoundInterest()
     {
+
     }
 }
