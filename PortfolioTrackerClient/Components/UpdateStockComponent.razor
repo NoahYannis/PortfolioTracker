@@ -62,6 +62,8 @@
 
         <button class="btn-primary" type="submit">Update</button>
         <button class="btn-danger" type="button" style="margin-left: 10px" @onclick="async() => await DeleteStock(StockToUpdate.Ticker)">Delete</button>
+        <button style="margin-left: 10px" @onclick="async() => await UpdatePriceAndPositionSize() ">Update share prices</button>
+
         <br /><br />
     </EditForm>
 </div
@@ -169,5 +171,12 @@
 
         return string.Empty;
     }
+
+     public async Task UpdatePriceAndPositionSize()
+    {
+        await PortfolioService.UpdatePriceAndPositionSize();
+        StateHasChanged();
+    }
+
 }
 
