@@ -20,5 +20,7 @@ namespace CompoundInterestCalc
         public int NumberOfYears { get; set; } = 0;
 
         public bool ConsiderInflation { get; set; } = false;
+
+        public double? CalculationResult { get; set; } = null;
     }
 }

@@ -54,6 +54,16 @@
 
         <button class="btn-primary" type="submit">Calculate</button>
         <button class="btn-danger" type="button" style="margin-left: 10px" @onclick="(() => CalcModel = new())">Reset</button>
+
+        @if (CalcModel.CalculationResult is not null)
+        {
+            <div class="input-element" style="margin: 50px 0px 0px 0px;">
+                <label for="calcResult">Result ($):</label>
+               <InputNumber id="calcResult" @bind-Value="@CalcModel.CalculationResult" readonly/>
+                <br />
+            </div>
+        }
+
     </EditForm>
 </div>
 
@@ -65,6 +75,24 @@
 
     private void CalculateCompoundInterest()
     {
+        double monthlyInterestRate = CalcModel.InterestRate / 12;
+        int totalMonths = CalcModel.NumberOfYears * 12;
 
+        if (CalcModel.ConsiderInflation)
+        {
+            CalcModel.CalculationResult =
+                (CalcModel.StartingSum * Math.Pow(1 + CalcModel.InterestRate - CalcModel.InflationRate, CalcModel.NumberOfYears)
+                + CalcModel.MonthlyContribution * ((Math.Pow(1 + monthlyInterestRate, totalMonths) - 1) / monthlyInterestRate));
+
+            CalcModel.CalculationResult = Math.Round((CalcModel.CalculationResult).Value, 2);
+        }
+        else
+        {
+            CalcModel.CalculationResult =
+                CalcModel.StartingSum * Math.Pow(1 + CalcModel.InterestRate, CalcModel.NumberOfYears)
+                + CalcModel.MonthlyContribution * ((Math.Pow(1 + monthlyInterestRate, totalMonths) - 1) / monthlyInterestRate);
+
+            CalcModel.CalculationResult = Math.Round((CalcModel.CalculationResult).Value, 2);
+        }
     }
 }

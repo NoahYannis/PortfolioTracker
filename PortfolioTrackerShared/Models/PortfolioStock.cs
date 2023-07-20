@@ -40,7 +40,7 @@ namespace PortfolioTrackerShared.Models
         public decimal? AbsolutePerformance
         {
             get => _absolutePerformance;
-            set => _absolutePerformance = (decimal?)Math.Round(((CurrentPrice - BuyInPrice) * SharesOwned).Value, 2 );
+            set => _absolutePerformance = Math.Round(((CurrentPrice - BuyInPrice) * SharesOwned).Value, 2 );
             // Calculates absolute performance and rounds to 2 decimal places
         }
 
@@ -50,7 +50,7 @@ namespace PortfolioTrackerShared.Models
         public decimal? RelativePerformance
         {
             get => _relativePerformance;
-            set => _relativePerformance = (decimal?)Math.Round((((CurrentPrice - BuyInPrice) / BuyInPrice) * 100).Value, 2);
+            set => _relativePerformance = Math.Round((((CurrentPrice - BuyInPrice) / BuyInPrice) * 100).Value, 2);
             // Calculates relative performance and rounds to 2 decimal places
         }
 
