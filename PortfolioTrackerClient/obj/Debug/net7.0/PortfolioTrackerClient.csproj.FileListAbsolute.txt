@@ -2596,3 +2596,4 @@ C:\Users\User\source\repos\NoahYannis\PortfolioTracker\PortfolioTrackerClient\ob
 C:\Users\User\source\repos\NoahYannis\PortfolioTracker\PortfolioTrackerClient\obj\Debug\net7.0\PortfolioTrackerClient.csproj.CopyComplete
 C:\Users\User\source\repos\NoahYannis\PortfolioTracker\PortfolioTrackerClient\obj\Debug\net7.0\ref\PortfolioTrackerClient.dll
 C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerClient\obj\Debug\net7.0\scopedcss\Pages\CompoundInterestCalculator.razor.rz.scp.css
+C:\Users\User\source\repos\NoahYannis\PortfolioTracker\PortfolioTrackerClient\obj\Debug\net7.0\scopedcss\Pages\CompoundInterestCalculator.razor.rz.scp.css
