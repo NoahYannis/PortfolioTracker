@@ -16,6 +16,11 @@ namespace PortfolioTrackerClient.Services.PortfolioService
         Task<PortfolioStock> AddStock(PortfolioStock stockToAdd);
         Task<ServiceResponse<PortfolioStock>> UpdateStock(PortfolioStock stockToUpdate);
         Task<bool> DeleteStock(string ticker);
+
+        /// <summary>
+        /// Fetches Database stocks and sets PortfolioStocks on startup
+        /// </summary>
+        /// <returns></returns>
         Task InitializeAsync();
 
         /// <summary>
