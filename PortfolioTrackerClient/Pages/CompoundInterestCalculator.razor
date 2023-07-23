@@ -59,7 +59,7 @@
         {
             <div class="input-element" style="margin: 50px 0px 0px 0px;">
                 <label for="calcResult">Result ($):</label>
-               <InputNumber id="calcResult" @bind-Value="@CalcModel.CalculationResult" readonly/>
+                <InputNumber id="calcResult" @bind-Value="@CalcModel.CalculationResult" readonly />
                 <br />
             </div>
         }
@@ -75,7 +75,7 @@
 
     private void CalculateCompoundInterest()
     {
-        double monthlyInterestRate = CalcModel.InterestRate / 12;
+        double monthlyInterestRate = CalcModel.InterestRate * 0.01 / 12;
         int totalMonths = CalcModel.NumberOfYears * 12;
 
         // TODO: Fix calculation, current results too high.
@@ -90,8 +90,7 @@
         }
         else
         {
-            CalcModel.CalculationResult =
-                CalcModel.StartingSum * Math.Pow(1 + CalcModel.InterestRate, CalcModel.NumberOfYears)
+            CalcModel.CalculationResult = CalcModel.StartingSum * Math.Pow(1 + CalcModel.InterestRate * 0.01, CalcModel.NumberOfYears)
                 + CalcModel.MonthlyContribution * ((Math.Pow(1 + monthlyInterestRate, totalMonths) - 1) / monthlyInterestRate);
 
             CalcModel.CalculationResult = Math.Round((CalcModel.CalculationResult).Value, 2);
