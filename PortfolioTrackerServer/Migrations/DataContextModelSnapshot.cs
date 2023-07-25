@@ -36,6 +36,9 @@ namespace PortfolioTrackerServer.Migrations
                     b.Property<int>("OrderType")
                         .HasColumnType("int");
 
+                    b.Property<int?>("PortfolioId")
+                        .HasColumnType("int");
+
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
 
@@ -51,7 +54,40 @@ namespace PortfolioTrackerServer.Migrations
 
                     b.HasKey("OrderNumber");
 
+                    b.HasIndex("PortfolioId");
+
                     b.ToTable("Orders");
+                });
+
+            modelBuilder.Entity("PortfolioTrackerShared.Models.Portfolio", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("TotalAbsolutePerformance")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("TotalRelativePerfomance")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("Value")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Portfolios");
                 });
 
             modelBuilder.Entity("PortfolioTrackerShared.Models.PortfolioStock", b =>
@@ -76,6 +112,9 @@ namespace PortfolioTrackerServer.Migrations
                     b.Property<int>("Industry")
                         .HasColumnType("int");
 
+                    b.Property<int?>("PortfolioId")
+                        .HasColumnType("int");
+
                     b.Property<decimal?>("PositionSize")
                         .IsRequired()
                         .HasColumnType("decimal(18,2)");
@@ -88,6 +127,8 @@ namespace PortfolioTrackerServer.Migrations
                         .HasColumnType("decimal(18,2)");
 
                     b.HasKey("Ticker");
+
+                    b.HasIndex("PortfolioId");
 
                     b.ToTable("Stocks");
                 });
@@ -118,6 +159,38 @@ namespace PortfolioTrackerServer.Migrations
                     b.HasKey("UserId");
 
                     b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("PortfolioTrackerShared.Models.Order", b =>
+                {
+                    b.HasOne("PortfolioTrackerShared.Models.Portfolio", null)
+                        .WithMany("OrderHistory")
+                        .HasForeignKey("PortfolioId");
+                });
+
+            modelBuilder.Entity("PortfolioTrackerShared.Models.Portfolio", b =>
+                {
+                    b.HasOne("PortfolioTrackerShared.Models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("PortfolioTrackerShared.Models.PortfolioStock", b =>
+                {
+                    b.HasOne("PortfolioTrackerShared.Models.Portfolio", null)
+                        .WithMany("Positions")
+                        .HasForeignKey("PortfolioId");
+                });
+
+            modelBuilder.Entity("PortfolioTrackerShared.Models.Portfolio", b =>
+                {
+                    b.Navigation("OrderHistory");
+
+                    b.Navigation("Positions");
                 });
 #pragma warning restore 612, 618
         }

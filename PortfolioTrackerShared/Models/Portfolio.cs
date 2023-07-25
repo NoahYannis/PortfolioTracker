@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PortfolioTrackerShared.Models
 {
@@ -17,6 +18,7 @@ namespace PortfolioTrackerShared.Models
         /// <summary>
         /// Portfolio Owner
         /// </summary>
+        /// 
         public User User { get; set; } = new();
 
 
@@ -26,7 +28,7 @@ namespace PortfolioTrackerShared.Models
         public string Name { get; set; } = string.Empty;
 
         /// <summary>
-        /// Total value
+        /// Total value ($)
         /// </summary>
         public decimal Value { get; set; } = decimal.Zero;
         public decimal TotalRelativePerfomance { get; set; } = decimal.Zero;
