@@ -83,7 +83,7 @@
         if (CalcModel.ConsiderInflation)
         {
             CalcModel.CalculationResult =
-                (CalcModel.StartingSum * Math.Pow(1 + CalcModel.InterestRate - CalcModel.InflationRate, CalcModel.NumberOfYears)
+                (CalcModel.StartingSum * Math.Pow(1 + (CalcModel.InterestRate * 0.01) - (CalcModel.InflationRate * 0.01), CalcModel.NumberOfYears)
                 + CalcModel.MonthlyContribution * ((Math.Pow(1 + monthlyInterestRate, totalMonths) - 1) / monthlyInterestRate));
 
             CalcModel.CalculationResult = Math.Round((CalcModel.CalculationResult).Value, 2);
