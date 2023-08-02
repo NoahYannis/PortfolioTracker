@@ -56,6 +56,8 @@
 
 @code {
 
+    [CascadingParameter] BlazoredModalInstance BlazoredModal { get; set; } = default!;
+
     private PortfolioStock _stockToAdd = new PortfolioStock();
 
     private PortfolioStock StockToAdd
@@ -90,6 +92,7 @@
 
         await PortfolioService.AddStock(stock);
         StockToAdd = new PortfolioStock();
+        await BlazoredModal.CloseAsync(ModalResult.Ok());
     }
 
     private async Task DisplayResultMessage()

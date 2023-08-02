@@ -4,6 +4,31 @@
 .input-element[b-re5p8nnu7y] {
     margin-bottom: 10px
 }
+/* /Pages/Signup.razor.rz.scp.css */
+.signup-page[b-rq2px2kgmq] {
+    margin: 0 auto;
+    width: 400px;
+    padding: 20px;
+}
+
+.input-group[b-rq2px2kgmq] {
+    margin-bottom: 10px;
+}
+
+.input-label[b-rq2px2kgmq] {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.input-field[b-rq2px2kgmq] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+    .input-field:focus[b-rq2px2kgmq] {
+        border-color: #000;
+    }
 /* /Shared/MainLayout.razor.rz.scp.css */
 .page[b-yad0rt9llc] {
     position: relative;

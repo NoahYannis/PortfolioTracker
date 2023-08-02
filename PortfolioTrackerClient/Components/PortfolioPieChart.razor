@@ -8,15 +8,12 @@
 
 @inject IPortfolioService PortfolioService
 @inject IGetStockInfoService StockInfoService
+@inject IModalService ModalService
 
-
-@*<label for="portfolioPerformance">Portfolio Performance: </label>
-<InputNumber id="portfolioPerformance" @bind-Value="Performance" readonly />
-<br />
-<br />*@
 
 <Chart Config="_config" />
 <br />
+<button @onclick="OpenModal">Add new stock</button>
 <UpdateStockComponent StockToUpdate="@ClickedSegmentStock">
 </UpdateStockComponent>
 
@@ -28,8 +25,13 @@
     private Random random = new Random();
     private decimal? Performance { get; set; }
 
+    // AddStock modal
+    [CascadingParameter] IModalService Modal { get; set; } = default!;
+
     private PortfolioStock ClickedSegmentStock { get; set; } = new();
     private int clickedIndex;
+
+
 
     protected override async void OnInitialized()
     {
@@ -159,6 +161,14 @@
         return string.Empty;
     }
 
+    /// <summary>
+    /// Shows the AddStock modal
+    /// </summary>
+    /// <returns>Whether a stock should be added or not</returns>
+    private void OpenModal()
+    {
+        var confirmDeleteModal = Modal.Show<AddStockComponent>("Add new stock");
+    }
 
     public void Dispose()
     {
