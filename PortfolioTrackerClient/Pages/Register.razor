@@ -1,0 +1,55 @@
+﻿@page "/register"
+
+@using PortfolioTrackerShared.Models.UserModels;
+
+<PageTitle>Register</PageTitle>
+
+<h3>Register</h3>
+
+<EditForm Model="user" OnValidSubmit="HandleRegistration">
+    <DataAnnotationsValidator />
+    <div class="mb-3">
+        <label for="email">Email</label>
+        <InputText id="email" @bind-Value="user.Email" class="form-control"></InputText>
+        <ValidationMessage For="@(() => user.Email)" />
+    </div>
+    <div class="mb-3">
+        <label for="password">Password</label>
+        <InputText id="password" @bind-Value="user.Password" type="password" class="form-control"></InputText>
+        <ValidationMessage For="@(() => user.Password)" />
+    </div>
+    <div class="mb-3">
+        <label for="confirmPassord">Confirm Password</label>
+        <InputText id="confirmPassord" @bind-Value="user.ConfirmPassword" type="password" class="form-control"></InputText>
+        <ValidationMessage For="@(() => user.ConfirmPassword)" />
+    </div>
+    <button type="submit" class="btn btn-primary">Register</button>
+    <div class="@messageCssClass">
+        <span>@message</span>
+    </div>
+</EditForm>
+
+@code {
+
+    UserRegister user = new();
+
+    string message = string.Empty;
+    string messageCssClass = string.Empty;
+
+    async Task HandleRegistration()
+    {
+
+        //var result = await AuthService.Register(user);
+
+        //message = result.Message;
+    
+        //if (result.Success)
+        //{
+        //    messageCssClass = "text-success";
+        //}
+        //else
+        //{
+        //    messageCssClass = "text-danger";
+        //}
+    }
+}

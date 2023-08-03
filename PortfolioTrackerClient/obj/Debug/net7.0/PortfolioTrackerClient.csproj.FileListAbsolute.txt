@@ -1744,6 +1744,12 @@ C:\Users\User\source\repos\NoahYannis\PortfolioTracker\PortfolioTrackerClient\ob
 C:\Users\User\source\repos\NoahYannis\PortfolioTracker\PortfolioTrackerClient\obj\Debug\net7.0\PortfolioTrackerClient.csproj.CopyComplete
 C:\Users\User\source\repos\NoahYannis\PortfolioTracker\PortfolioTrackerClient\obj\Debug\net7.0\ref\PortfolioTrackerClient.dll
 C:\Users\User\source\repos\NoahYannis\PortfolioTracker\PortfolioTrackerClient\obj\Debug\net7.0\scopedcss\Pages\CompoundInterestCalculator.razor.rz.scp.css
+C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerClient\obj\Debug\net7.0\PortfolioTrackerClient.csproj.AssemblyReference.cache
+C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerClient\obj\Debug\net7.0\PortfolioTrackerClient.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerClient\obj\Debug\net7.0\PortfolioTrackerClient.AssemblyInfoInputs.cache
+C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerClient\obj\Debug\net7.0\PortfolioTrackerClient.AssemblyInfo.cs
+C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerClient\obj\Debug\net7.0\PortfolioTrackerClient.csproj.CoreCompileInputs.cache
+C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerClient\obj\Debug\net7.0\PortfolioTrackerClient.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerClient\bin\Debug\net7.0\wwwroot\_framework\blazor.boot.json
 C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerClient\bin\Debug\net7.0\wwwroot\_framework\blazor.webassembly.js
 C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerClient\bin\Debug\net7.0\wwwroot\_framework\Blazored.Modal.dll
@@ -2366,12 +2372,6 @@ C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerClient\bin\Debug\net
 C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerClient\bin\Debug\net7.0\icudt_no_CJK.dat
 C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerClient\bin\Debug\net7.0\PortfolioTrackerShared.dll
 C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerClient\bin\Debug\net7.0\PortfolioTrackerShared.pdb
-C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerClient\obj\Debug\net7.0\PortfolioTrackerClient.csproj.AssemblyReference.cache
-C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerClient\obj\Debug\net7.0\PortfolioTrackerClient.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerClient\obj\Debug\net7.0\PortfolioTrackerClient.AssemblyInfoInputs.cache
-C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerClient\obj\Debug\net7.0\PortfolioTrackerClient.AssemblyInfo.cs
-C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerClient\obj\Debug\net7.0\PortfolioTrackerClient.csproj.CoreCompileInputs.cache
-C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerClient\obj\Debug\net7.0\PortfolioTrackerClient.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerClient\obj\Debug\net7.0\build-gz\5OO4O4g1.gz
 C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerClient\obj\Debug\net7.0\build-gz\C+2l+3iy.gz
 C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerClient\obj\Debug\net7.0\build-gz\OQV+YNCC.gz
@@ -2588,6 +2588,7 @@ C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerClient\obj\Debug\net
 C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerClient\obj\Debug\net7.0\staticwebassets.build.json
 C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerClient\obj\Debug\net7.0\staticwebassets.development.json
 C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerClient\obj\Debug\net7.0\scopedcss\Pages\CompoundInterestCalculator.razor.rz.scp.css
+C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerClient\obj\Debug\net7.0\scopedcss\Pages\Register.razor.rz.scp.css
 C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerClient\obj\Debug\net7.0\scopedcss\Shared\MainLayout.razor.rz.scp.css
 C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerClient\obj\Debug\net7.0\scopedcss\Shared\NavMenu.razor.rz.scp.css
 C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerClient\obj\Debug\net7.0\scopedcss\bundle\PortfolioTrackerClient.styles.css
@@ -2597,4 +2598,3 @@ C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerClient\obj\Debug\net
 C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerClient\obj\Debug\net7.0\refint\PortfolioTrackerClient.dll
 C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerClient\obj\Debug\net7.0\PortfolioTrackerClient.pdb
 C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerClient\obj\Debug\net7.0\ref\PortfolioTrackerClient.dll
-C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerClient\obj\Debug\net7.0\scopedcss\Pages\Signup.razor.rz.scp.css

@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PortfolioTrackerShared.Models;
+using PortfolioTrackerShared.Models.UserModels;
 
 namespace PortfolioTrackerServer.Data
 {

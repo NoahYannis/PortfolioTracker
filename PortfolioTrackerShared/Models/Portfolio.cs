@@ -1,5 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+using PortfolioTrackerShared.Models.UserModels;
 
 namespace PortfolioTrackerShared.Models
 {
