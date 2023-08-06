@@ -1,4 +1,5 @@
 using Blazored.Modal;
+using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using PortfolioTrackerClient;
@@ -15,6 +16,8 @@ builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.
 builder.Services.AddScoped<IGetStockInfoService, GetStockInfoServiceBlazor>();
 builder.Services.AddScoped<IPortfolioService, PortfolioService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<AuthenticationStateProvider, CustomAuthStateProvider>();
+
 builder.Services.AddBlazoredModal();
 
 await builder.Build().RunAsync();

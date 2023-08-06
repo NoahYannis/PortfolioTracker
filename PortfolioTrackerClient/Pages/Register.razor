@@ -1,6 +1,8 @@
 ﻿@page "/register"
 
+@using PortfolioTrackerClient.Services.AuthService;
 @using PortfolioTrackerShared.Models.UserModels;
+@inject IAuthService AuthService
 
 <PageTitle>Register</PageTitle>
 
@@ -38,18 +40,9 @@
 
     async Task HandleRegistration()
     {
+        var result = await AuthService.Register(user);
 
-        //var result = await AuthService.Register(user);
-
-        //message = result.Message;
-    
-        //if (result.Success)
-        //{
-        //    messageCssClass = "text-success";
-        //}
-        //else
-        //{
-        //    messageCssClass = "text-danger";
-        //}
+        message = result.Message;
+        messageCssClass = result.Success ? "text-success" : "text-danger";
     }
 }
