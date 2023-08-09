@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using PortfolioTrackerServer.Data;
+using PortfolioTrackerServer.Services.AuthService;
 using PortfolioTrackerServer.Services.FetchAndUpdateStockPriceService;
 using PortfolioTrackerServer.Services.GetStockInfoService;
 using PortfolioTrackerServer.Services.PortfolioService;
@@ -24,6 +25,7 @@ builder.Services.AddHttpContextAccessor();
 builder.Services.AddScoped<IGetStockInfoService, GetStockInfoServiceBlazor>();
 builder.Services.AddScoped<IPortfolioService, PortfolioService>();
 builder.Services.AddScoped<IFetchAndUpdateStockPriceService, FetchAndUpdateStockPriceService>();
+builder.Services.AddScoped<IAuthService, AuthService>();
 
 // Consider changing this once application is fully developed for additional security.
 builder.Services.AddCors(options =>

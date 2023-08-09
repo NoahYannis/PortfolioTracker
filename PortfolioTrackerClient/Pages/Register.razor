@@ -2,6 +2,7 @@
 
 @using PortfolioTrackerClient.Services.AuthService;
 @using PortfolioTrackerShared.Models.UserModels;
+
 @inject IAuthService AuthService
 
 <PageTitle>Register</PageTitle>
@@ -26,6 +27,8 @@
         <ValidationMessage For="@(() => user.ConfirmPassword)" />
     </div>
     <button type="submit" class="btn btn-primary">Register</button>
+    <a style="margin-left: 10px;" href="/login">Login</a>
+
     <div class="@messageCssClass">
         <span>@message</span>
     </div>
