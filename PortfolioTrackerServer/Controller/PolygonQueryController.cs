@@ -1,9 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using PortfolioTrackerServer.Services.GetStockInfoService;
-using PortfolioTrackerServer.Services.PortfolioService;
 using PortfolioTrackerShared.Models;
 using PortfolioTrackerShared.Other;
-using System.Net;
 
 namespace PortfolioTrackerServer.Controller
 {
