@@ -3,7 +3,6 @@ using Microsoft.IdentityModel.Tokens;
 using PortfolioTrackerServer.Data;
 using PortfolioTrackerShared.Models.UserModels;
 using PortfolioTrackerShared.Other;
-using System.Diagnostics;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Security.Cryptography;

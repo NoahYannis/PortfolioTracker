@@ -2,10 +2,6 @@
 using PortfolioTrackerServer.Services.PortfolioService;
 using PortfolioTrackerShared.Models;
 using PortfolioTrackerShared.Other;
-using System.Net.Http;
-using System.Net;
-using System;
-using System.Diagnostics;
 using PortfolioTrackerServer.Services.GetStockInfoService;
 
 namespace PortfolioTrackerServer.Controller
