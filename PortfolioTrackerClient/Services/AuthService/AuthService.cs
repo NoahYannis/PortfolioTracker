@@ -7,6 +7,8 @@ namespace PortfolioTrackerClient.Services.AuthService
 {
     public class AuthService : IAuthService
     {
+        private string serverBaseDomain = "https://localhost:7207";
+
         private readonly HttpClient _http;
         private readonly AuthenticationStateProvider _authenticationStateProvider;
 
@@ -16,9 +18,21 @@ namespace PortfolioTrackerClient.Services.AuthService
             _authenticationStateProvider = authenticationStateProvider;
         }
 
+        public async Task<ServiceResponse<int>> Register(UserRegister request)
+        {
+            var result = await _http.PostAsJsonAsync($"{serverBaseDomain}api/auth/register", request);
+            return await result.Content.ReadFromJsonAsync<ServiceResponse<int>>();
+        }
+
+        public async Task<ServiceResponse<string>> Login(UserLogin request)
+        {
+            var result = await _http.PostAsJsonAsync($"{serverBaseDomain}api/auth/login", request);
+            return await result.Content.ReadFromJsonAsync<ServiceResponse<string>>();
+        }
+
         public async Task<ServiceResponse<bool>> ChangePassword(UserChangePassword request)
         {
-            var result = await _http.PostAsJsonAsync("api/auth/change-password", request.Password);
+            var result = await _http.PostAsJsonAsync($"{serverBaseDomain}api/auth/change-password", request.Password);
             return await result.Content.ReadFromJsonAsync<ServiceResponse<bool>>();
         }
 
@@ -27,17 +41,5 @@ namespace PortfolioTrackerClient.Services.AuthService
             return (await _authenticationStateProvider.GetAuthenticationStateAsync()).User.Identity.IsAuthenticated;
         }
 
-
-        public async Task<ServiceResponse<string>> Login(UserLogin request)
-        {
-            var result = await _http.PostAsJsonAsync("api/auth/login", request);
-            return await result.Content.ReadFromJsonAsync<ServiceResponse<string>>();
-        }
-
-        public async Task<ServiceResponse<int>> Register(UserRegister request)
-        {
-            var result = await _http.PostAsJsonAsync("api/auth/register", request);
-            return await result.Content.ReadFromJsonAsync<ServiceResponse<int>>();
-        }
     }
 }
