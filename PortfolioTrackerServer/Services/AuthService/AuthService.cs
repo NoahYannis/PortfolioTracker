@@ -122,8 +122,7 @@ namespace PortfolioTrackerServer.Services.AuthService
                 expires: DateTime.Now.AddDays(1),
                 signingCredentials: creds);
 
-            var jwt = new JwtSecurityTokenHandler().WriteToken(token);
-            return jwt;
+            return new JwtSecurityTokenHandler().WriteToken(token);
         }
     }
 }

@@ -21,7 +21,7 @@ namespace PortfolioTrackerServer.Controller
         [HttpPost("register")]
         public async Task<ActionResult<ServiceResponse<int>>> Register(UserRegister request)
         {
-            var response = await _authService.Register(new User { Email = request.Email }, request.Password);
+            var response = await _authService.Register(new User { Email = request.Email, UserName = request.Name }, request.Password);
 
             if (response.Success is false)
                 return BadRequest(response);
