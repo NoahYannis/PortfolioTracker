@@ -87,6 +87,30 @@ namespace PortfolioTrackerServer.Services.AuthService
             return await _dataContext.Users.AnyAsync(user => user.Email.ToLower().Equals(email.ToLower()));
         }
 
+
+        /// <summary>
+        /// Returns a user from the database with a given email.
+        /// </summary>
+        /// <param name="email"></param>
+        /// <returns></returns>
+        public async Task<ServiceResponse<User>> GetUserFromDb(string email)
+        {
+            ServiceResponse<User> response = new();
+
+            if (!(await UserExists(email)))
+            {
+                response.Success = false;
+                response.Message = $"User with email '{email}' does not exist.";
+            }
+            else
+            {
+                response.Data = await _dataContext.Users.FirstOrDefaultAsync
+                    (user => user.Email.ToLower().Equals(email.ToLower()));
+            }
+
+            return response;
+        }
+
         public async Task<ServiceResponse<int>> Register(User user, string password)
         {
             if (await UserExists(user.Email))

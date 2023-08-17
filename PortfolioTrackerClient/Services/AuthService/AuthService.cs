@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Components.Authorization;
+using PortfolioTrackerShared.Models;
 using PortfolioTrackerShared.Models.UserModels;
 using PortfolioTrackerShared.Other;
+using System.Net.Http;
 using System.Net.Http.Json;
 
 namespace PortfolioTrackerClient.Services.AuthService
@@ -41,5 +43,10 @@ namespace PortfolioTrackerClient.Services.AuthService
             return (await _authenticationStateProvider.GetAuthenticationStateAsync()).User.Identity.IsAuthenticated;
         }
 
+        public async Task<ServiceResponse<User>> GetUserFromDb(string email)
+        {
+            var response = await _http.GetFromJsonAsync<ServiceResponse<User>>($"{serverBaseDomain}/api/auth/user");
+            return response;
+        }
     }
 }

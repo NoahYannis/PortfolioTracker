@@ -40,6 +40,17 @@ namespace PortfolioTrackerServer.Controller
             return Ok(response);
         }
 
+        [HttpGet("user")]
+        public async Task<ActionResult<ServiceResponse<User>>> GetUserFromDb(string email)
+        {
+            var response = await _authService.GetUserFromDb(email);
+
+            if (!response.Success)
+                return BadRequest(response);
+
+            return Ok(response);
+        }
+
         [HttpPost("change-password"), Authorize]
         public async Task<ActionResult<ServiceResponse<bool>>> ChangePassword([FromBody] string newPassword)
         {

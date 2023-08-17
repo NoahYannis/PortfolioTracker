@@ -1,9 +1,20 @@
 ﻿@page "/portfolio"
 @page "/home"
 
+@using Microsoft.AspNetCore.Components.Authorization;
+@inject IAuthService AuthService
+@attribute [Authorize]
 
+<CascadingAuthenticationState>
+    <AuthorizeView>
+        <h3>Hi. You're logged in with <i>@context.User.Identity.Name</i></h3>
+    </AuthorizeView>
+</CascadingAuthenticationState>
 
+@using Microsoft.AspNetCore.Authorization;
 @using PortfolioTrackerClient.Components
+@using PortfolioTrackerClient.Services.AuthService;
+@using PortfolioTrackerShared.Models.UserModels;
 <h3>Portfolio</h3>
 
 <p>Hello, world</p>
@@ -13,4 +24,8 @@
 
 @code {
 
+    private User GetUserFromDb(AuthenticationState authState)
+    {
+        return  AuthService.GetUserFromDb(authState.User.Identity.ToString());
+    }
 }

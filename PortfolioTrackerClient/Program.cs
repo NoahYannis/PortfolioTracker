@@ -1,12 +1,12 @@
-using Blazored.LocalStorage;
-using Blazored.Modal;
-using Microsoft.AspNetCore.Components.Authorization;
-using Microsoft.AspNetCore.Components.Web;
-using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
-using PortfolioTrackerClient;
-using PortfolioTrackerClient.Services.AuthService;
-using PortfolioTrackerClient.Services.GetStockInfoService;
-using PortfolioTrackerClient.Services.PortfolioService;
+global using Microsoft.AspNetCore.Components.Authorization;
+global using Blazored.LocalStorage;
+global using Blazored.Modal;
+global using Microsoft.AspNetCore.Components.Web;
+global using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+global using PortfolioTrackerClient;
+global using PortfolioTrackerClient.Services.AuthService;
+global using PortfolioTrackerClient.Services.GetStockInfoService;
+global using PortfolioTrackerClient.Services.PortfolioService;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
@@ -23,5 +23,5 @@ builder.Services.AddBlazoredModal();
 builder.Services.AddOptions();
 builder.Services.AddAuthorizationCore();
 builder.Services.AddScoped<AuthenticationStateProvider, CustomAuthStateProvider>();
-    
+
 await builder.Build().RunAsync();
