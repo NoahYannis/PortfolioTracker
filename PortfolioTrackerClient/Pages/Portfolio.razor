@@ -24,8 +24,8 @@
 
 @code {
 
-    private User GetUserFromDb(AuthenticationState authState)
+    private async Task<ServiceResponse<User>> GetUserFromDb(AuthenticationState authState)
     {
-        return  AuthService.GetUserFromDb(authState.User.Identity.ToString());
+        return await AuthService.GetUserFromDb(authState.User.Identity.ToString());
     }
 }
