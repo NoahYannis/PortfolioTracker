@@ -4,10 +4,10 @@ namespace PortfolioTrackerShared.Models.UserModels
 {
     public class UserLogin
     {
-        [Required]
+        [Required(ErrorMessage = "Please enter an email.")]
         public string Email { get; set; } = string.Empty;
 
-        [Required]
+        [Required(ErrorMessage = "Please enter a password.")]
         public string Password { get; set; } = string.Empty;
     }
 }
