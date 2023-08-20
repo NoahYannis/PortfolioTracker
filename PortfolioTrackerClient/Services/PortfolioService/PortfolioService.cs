@@ -112,12 +112,21 @@ namespace PortfolioTrackerClient.Services.PortfolioService
 
         // Implement OnOrdersChangedEvent;
 
+
+        /// <summary>
+        /// Gets all orders from the data base
+        /// </summary>
+        /// <returns></returns>
         public async Task<List<Order>> GetOrders()
         {
             return await Task.FromResult(Orders);
         }
 
-
+        /// <summary>
+        /// Gets one order from the data base
+        /// </summary>
+        /// <param name="orderNumber"></param>
+        /// <returns></returns>
         public async Task<Order> GetOrder(int orderNumber)
         {
             Order order = Orders.FirstOrDefault(o => o.OrderNumber == orderNumber);
