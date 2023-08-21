@@ -1,5 +1,7 @@
 ﻿@inherits LayoutComponentBase
 
+@inject AuthenticationStateProvider AuthenticationStateProvider
+
 <div class="page">
     <div class="sidebar">
         <NavMenu />
@@ -9,7 +11,14 @@
         <div class="top-row px-4">
             <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
             <a href="/register" target="_self">Register</a>
-            <a href="/login" target="_self">Login</a>
+            @if (IsAuthenticated)
+            {
+                <a href="#" target="_self">Logout</a>
+            }
+            else
+            {
+                <a href="/login" target="_self">Login</a>
+            }
         </div>
 
         <article class="content px-4">
@@ -17,3 +26,14 @@
         </article>
     </main>
 </div>
+
+@code {
+    private AuthenticationState authenticationState;
+    bool IsAuthenticated;
+
+    protected override async Task OnInitializedAsync()
+    {
+        authenticationState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        IsAuthenticated = authenticationState.User.Identity.IsAuthenticated;
+    }
+}
