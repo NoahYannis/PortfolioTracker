@@ -1,6 +1,9 @@
 ﻿@inherits LayoutComponentBase
 
 @inject AuthenticationStateProvider AuthenticationStateProvider
+@inject ILocalStorageService LocalStorage
+@inject NavigationManager NavigationManager
+
 
 <div class="page">
     <div class="sidebar">
@@ -13,7 +16,7 @@
             <a href="/register" target="_self">Register</a>
             @if (IsAuthenticated)
             {
-                <a href="#" target="_self">Logout</a> // Implement logout
+                <a href="#" @onclick="Logout" target="_self">Logout</a>
             }
             else
             {
@@ -30,6 +33,14 @@
 @code {
     private AuthenticationState authenticationState;
     bool IsAuthenticated;
+
+    private async Task Logout()
+    {
+        await LocalStorage.RemoveItemAsync("authToken");
+        StateHasChanged();
+        NavigationManager.NavigateTo("/", forceLoad: true);
+    }
+
 
     protected override async Task OnInitializedAsync()
     {
