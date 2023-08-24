@@ -7,7 +7,8 @@
 
 <CascadingAuthenticationState>
     <AuthorizeView>
-        <h3>Hi. You're logged in with <i>@context.User.Identity.Name</i></h3>
+        @*@TODO: Fix username not displayed properly*@*@
+        <h3>Hi @GetUserFromDb(context). You're logged in with <i>@context.User.Identity.Name</i></h3>
     </AuthorizeView>
 </CascadingAuthenticationState>
 
@@ -23,8 +24,15 @@
 
 @code {
 
-    private async Task<ServiceResponse<User>> GetUserFromDb(AuthenticationState authState)
+    /// <summary>
+    /// Returns the user name associated with an authenticated user.
+    /// </summary>
+    /// <param name="authState"></param>
+    /// <returns></returns>
+    private async Task<string> GetUserFromDb(AuthenticationState authState)
     {
-        return await AuthService.GetUserFromDb(authState.User.Identity.ToString());
+        var response = await AuthService.GetUserFromDb(authState.User.Identity.Name);
+        return response.Data is not null ? response.Data.UserName : string.Empty;
     }
+
 }

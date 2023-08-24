@@ -100,6 +100,7 @@ namespace PortfolioTrackerServer.Services.AuthService
             if (!(await UserExists(email)))
             {
                 response.Success = false;
+                response.Data = null;
                 response.Message = $"User with email '{email}' does not exist.";
             }
             else
