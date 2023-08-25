@@ -134,7 +134,8 @@ namespace PortfolioTrackerServer.Services.AuthService
             List<Claim> claims = new()
             {
                 new Claim(ClaimTypes.NameIdentifier, user.UserId.ToString()),
-                new Claim(ClaimTypes.Name, user.Email),
+                new Claim(ClaimTypes.Name, user.UserName),
+                new Claim(ClaimTypes.Email, user.Email)
             };
 
             var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8
