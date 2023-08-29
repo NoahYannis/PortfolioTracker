@@ -133,7 +133,7 @@ namespace PortfolioTrackerServer.Migrations
                     b.ToTable("Stocks");
                 });
 
-            modelBuilder.Entity("PortfolioTrackerShared.Models.User", b =>
+            modelBuilder.Entity("PortfolioTrackerShared.Models.UserModels.User", b =>
                 {
                     b.Property<int>("UserId")
                         .ValueGeneratedOnAdd()
@@ -167,6 +167,34 @@ namespace PortfolioTrackerServer.Migrations
                     b.ToTable("Users");
                 });
 
+            modelBuilder.Entity("PortfolioTrackerShared.Models.UserModels.UserSettings", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ColorScheme")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("InvestingGoals")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PreferedLanguage")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("UserSettings");
+                });
+
             modelBuilder.Entity("PortfolioTrackerShared.Models.Order", b =>
                 {
                     b.HasOne("PortfolioTrackerShared.Models.Portfolio", null)
@@ -176,7 +204,7 @@ namespace PortfolioTrackerServer.Migrations
 
             modelBuilder.Entity("PortfolioTrackerShared.Models.Portfolio", b =>
                 {
-                    b.HasOne("PortfolioTrackerShared.Models.User", "User")
+                    b.HasOne("PortfolioTrackerShared.Models.UserModels.User", "User")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)

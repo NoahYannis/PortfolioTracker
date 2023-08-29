@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,12 +14,17 @@ namespace PortfolioTrackerShared.Models.UserModels
 	/// </summary>
 	public class UserSettings
 	{
-		public Color ColorScheme { get; set; } = Color.Purple; // Todo: Implement color wheel
+		[Key]
+		public int Id { get; set; }
+
+		[ForeignKey("UserId")]
+		public int UserId { get; set; }
+		public string ColorScheme { get; set; } = "purple"; // Todo: Implement color wheel
 
 		/// <summary>
 		/// Investing goals (portfolio value, dividend income per month...)
 		/// </summary>
-		public List<string> InvestingGoals { get; set; } = new List<string>();
+		public string InvestingGoals { get; set; } = string.Empty;
 
 		public string PreferedLanguage { get; set; } = "en";
 	}

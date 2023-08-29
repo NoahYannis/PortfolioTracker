@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "gpbFIp5ij2WtgsIKuSACNH921x58BvuRuIdSsvzcFP4=",
+  "Hash": "asB3ndu+ebi3pylFCWndDOTA++A59PeL3Xg0+qaScOc=",
   "Source": "PortfolioTrackerServer",
   "BasePath": "_content/PortfolioTrackerServer",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Identity": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerServer\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "SourceId": "PortfolioTrackerServer",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerServer\\wwwroot\\",
+      "BasePath": "_content/PortfolioTrackerServer",
+      "RelativePath": "css/open-iconic/FONT-LICENSE",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
     },
     {
       "Identity": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerServer\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
@@ -185,23 +202,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
-    },
-    {
-      "Identity": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerServer\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
-      "SourceId": "PortfolioTrackerServer",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerServer\\wwwroot\\",
-      "BasePath": "_content/PortfolioTrackerServer",
-      "RelativePath": "css/open-iconic/FONT-LICENSE",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
     },
     {
       "Identity": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerServer\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
