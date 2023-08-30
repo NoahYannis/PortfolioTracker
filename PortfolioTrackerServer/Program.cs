@@ -6,7 +6,7 @@ using PortfolioTrackerServer.Services.AuthService;
 using PortfolioTrackerServer.Services.FetchAndUpdateStockPriceService;
 using PortfolioTrackerServer.Services.GetStockInfoService;
 using PortfolioTrackerServer.Services.PortfolioService;
-
+using PortfolioTrackerServer.Services.SettingsService;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -43,21 +43,9 @@ builder.Services.AddScoped<IGetStockInfoService, GetStockInfoServiceBlazor>();
 builder.Services.AddScoped<IPortfolioService, PortfolioService>();
 builder.Services.AddScoped<IFetchAndUpdateStockPriceService, FetchAndUpdateStockPriceService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<ISettingsService, SettingsService>();
 
 // Consider changing this once application is fully developed for additional security.
-
-//builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-//    .AddJwtBearer(options =>
-//    {
-//        options.TokenValidationParameters = new TokenValidationParameters
-//        {
-//            ValidateIssuerSigningKey = true,
-//            IssuerSigningKey = new SymmetricSecurityKey(System.Text.Encoding.UTF8
-//                .GetBytes(builder.Configuration.GetSection("AppSettings:Token").Value)),
-//            ValidateIssuer = false,
-//            ValidateAudience = false
-//        };
-//    });
 
 builder.Services.AddHttpContextAccessor();
 var app = builder.Build();
@@ -74,9 +62,6 @@ app.UseCors("AllowAllOrigins");
 
 app.UseStaticFiles();
 app.UseRouting();
-
-//app.UseAuthentication();
-//app.UseAuthorization();
 
 app.MapRazorPages();
 app.MapControllers();

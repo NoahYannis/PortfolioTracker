@@ -7,6 +7,7 @@ global using PortfolioTrackerClient;
 global using PortfolioTrackerClient.Services.AuthService;
 global using PortfolioTrackerClient.Services.GetStockInfoService;
 global using PortfolioTrackerClient.Services.PortfolioService;
+using PortfolioTrackerClient.Services.SettingsService;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
@@ -18,6 +19,7 @@ builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.
 builder.Services.AddScoped<IGetStockInfoService, GetStockInfoServiceBlazor>();
 builder.Services.AddScoped<IPortfolioService, PortfolioService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<ISettingsService, SettingsService>();
 
 builder.Services.AddBlazoredModal();
 builder.Services.AddOptions();
