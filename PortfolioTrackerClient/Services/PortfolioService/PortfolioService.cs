@@ -1,11 +1,8 @@
-﻿using PortfolioTrackerShared.Other;
-using PortfolioTrackerShared.Models;
+﻿using PortfolioTrackerShared.Models;
 using System.Net.Http.Json;
-using PortfolioTrackerClient.Services.GetStockInfoService;
-
 namespace PortfolioTrackerClient.Services.PortfolioService
 {
-    public class PortfolioService : IPortfolioService
+	public class PortfolioService : IPortfolioService
     {
 
         private string serverBaseDomain = "https://localhost:7207";
