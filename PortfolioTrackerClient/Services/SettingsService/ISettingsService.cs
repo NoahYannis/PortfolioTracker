@@ -4,7 +4,8 @@ namespace PortfolioTrackerClient.Services.SettingsService
 {
 	public interface ISettingsService
 	{
-		Task<ServiceResponse<bool>> SaveSettings(UserSettings settings);
-		Task<UserSettings> GetSettings(User user);
+		Task<UserSettings> GetUserSettings(User user);
+		Task<ServiceResponse<bool>> UpdateUserSettings(User user, UserSettings settings);
+		Task<ServiceResponse<bool>> ResetUserSettings(User user);
 	}
 }

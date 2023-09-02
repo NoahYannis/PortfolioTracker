@@ -1,41 +1,41 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using PortfolioTrackerServer.Services.SettingsService;
+using PortfolioTrackerShared.Models.UserModels;
+using PortfolioTrackerShared.Other;
 
 namespace PortfolioTrackerServer.Controller
 {
-	[Route("api/[controller]")]
-	[ApiController]
-	public class SettingsController : ControllerBase
-	{
-		// GET: api/<SettingsController>
-		[HttpGet]
-		public IEnumerable<string> Get()
-		{
-			return new string[] { "value1", "value2" };
-		}
+    [Route("api/[controller]")]
+    [ApiController]
+    public class SettingsController : ControllerBase
+    {
+        private readonly SettingsService _settingsService;
 
-		// GET api/<SettingsController>/5
-		[HttpGet("{id}")]
-		public string Get(int id)
-		{
-			return "value";
-		}
+        public SettingsController(SettingsService settingsService)
+        {
+            _settingsService = settingsService;
+        }
 
-		// POST api/<SettingsController>
-		[HttpPost]
-		public void Post([FromBody] string value)
-		{
-		}
+        [HttpGet]
+        public async Task<ActionResult<UserSettings>> GetUserSettings(User user)
+        {
+            var result = await _settingsService.GetUserSettings(user);
+            return Ok(result);
+        }
 
-		// PUT api/<SettingsController>/5
-		[HttpPut("{id}")]
-		public void Put(int id, [FromBody] string value)
-		{
-		}
+        [HttpPut]
+        public async Task<ActionResult<ServiceResponse<bool>>> UpdateUserSettings(User user, UserSettings settings)
+        {
+            var result = await _settingsService.UpdateUserSettings(user, settings);
+            return Ok(result);
+        }
 
-		// DELETE api/<SettingsController>/5
-		[HttpDelete("{id}")]
-		public void Delete(int id)
-		{
-		}
-	}
+        [HttpGet]
+        public async Task<ActionResult<bool>> ResetUserSettings(User user)
+        {
+            var result = await _settingsService.ResetUserSettings(user);
+            return Ok(result);
+        }
+
+    }
 }

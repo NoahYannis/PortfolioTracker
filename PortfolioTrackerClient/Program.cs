@@ -7,6 +7,7 @@ global using PortfolioTrackerClient;
 global using PortfolioTrackerClient.Services.AuthService;
 global using PortfolioTrackerClient.Services.GetStockInfoService;
 global using PortfolioTrackerClient.Services.PortfolioService;
+global using PortfolioTrackerShared.Models.UserModels;
 global using PortfolioTrackerShared.Other;
 using PortfolioTrackerClient.Services.SettingsService;
 

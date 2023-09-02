@@ -16,12 +16,12 @@
             @if (IsAuthenticated)
             {
                 <a href="#" @onclick="Logout" target="_self">Logout</a>
+                <a href="/settings" target="_self">Settings</a>
             }
             else
             {
                 <a href="/login" target="_self">Login</a>
             }
-            <a href="/settings" target="_self">Settings</a>
         </div>
 
         <article class="content px-4">
