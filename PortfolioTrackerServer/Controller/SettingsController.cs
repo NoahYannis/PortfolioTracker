@@ -24,9 +24,9 @@ namespace PortfolioTrackerServer.Controller
         }
 
         [HttpPut]
-        public async Task<ActionResult<ServiceResponse<bool>>> UpdateUserSettings(User user, UserSettings settings)
+        public async Task<ActionResult<ServiceResponse<bool>>> UpdateUserSettings(UserSettings settings)
         {
-            var result = await _settingsService.UpdateUserSettings(user, settings);
+            var result = await _settingsService.UpdateUserSettings(settings);
             return Ok(result);
         }
 

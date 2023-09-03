@@ -20,9 +20,9 @@ namespace PortfolioTrackerClient.Services.SettingsService
 			var response = await _http.GetFromJsonAsync<ServiceResponse<UserSettings>>($"{serverBaseDomain}/api/settings/{user.UserId}");
 			return response?.Data;
 		}
-        public async Task<ServiceResponse<bool>> UpdateUserSettings(User user, UserSettings settings)
+        public async Task<ServiceResponse<bool>> UpdateUserSettings(UserSettings settings)
         {
-            var response = await _http.PutAsJsonAsync($"{serverBaseDomain}/api/settings/save", new { user, settings });
+            var response = await _http.PutAsJsonAsync($"{serverBaseDomain}/api/settings/save", settings);
             return await response.Content.ReadFromJsonAsync<ServiceResponse<bool>>();
         }
 

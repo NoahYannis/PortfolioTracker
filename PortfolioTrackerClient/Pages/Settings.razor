@@ -1,17 +1,63 @@
 ﻿@page "/settings"
+@using System.Collections.Generic
+@using Microsoft.AspNetCore.Authorization;
+@attribute [Authorize]
+@inject NavigationManager NavManager;
+@inject IAuthService AuthService
 
 <h3>Settings</h3>
 
-
-@*@* To DO
-	- Contact data (email, password, adress, profile picture
-	- change password
-	- account data 
-	- preferences (dark mode, color wheel)
-	- investing goals (dividend milestones, portfolio value
-	- portfolio export
-*@*@@
+@if (isUserAuthenticated)
+{
+    @if (editing)
+    {
+        <div>
+            <label for="Name">Name:</label>
+            <input type="text" id="Name" @bind="User.UserName" />
+        </div>
+        <div>
+            <label for="Email">Email:</label>
+            <input type="email" id="Email" @bind="User.Email" />
+        </div>
+        <button class="btn btn-primary" @onclick="SaveProfile">Save</button>
+    }
+    else
+    {
+        <div>
+            <strong>Name:</strong> @User.UserName
+        </div>
+        <div>
+            <strong>Email:</strong> @User.Email
+        </div>
+        <button class="btn btn-primary" @onclick="EditProfile">Edit</button>
+    }
+}
+else
+{
+    NavManager.NavigateTo("/login");
+}
 
 @code {
 
+    [Parameter]
+    public User User { get; set; } = new();
+
+    private bool editing = false;
+
+    private bool isUserAuthenticated;
+
+    private void EditProfile() => editing = true;
+
+    protected override async Task OnInitializedAsync()
+    {
+        isUserAuthenticated = await AuthService.IsUserAuthenticated();
+        Console.WriteLine(isUserAuthenticated);
+    }
+
+    private void SaveProfile()
+    {
+        // Speichern Sie die Benutzerdaten in der Datenbank oder einem anderen Speicherort
+        editing = false;
+    }
 }
+

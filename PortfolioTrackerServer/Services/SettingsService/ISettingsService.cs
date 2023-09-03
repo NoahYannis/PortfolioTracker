@@ -7,7 +7,7 @@ namespace PortfolioTrackerServer.Services.SettingsService
 	{
 		Task<ServiceResponse<UserSettings>> GetUserSettings(User user);
 		Task<bool> ResetUserSettings(User user);
-		Task<bool> UpdateUserSettings(User user, UserSettings newSettings);
+		Task<bool> UpdateUserSettings(UserSettings newSettings);
 
 	}
 }

@@ -38,9 +38,11 @@ namespace PortfolioTrackerServer.Services.SettingsService
 		/// </summary>
 		/// <param name="user"></param>
 		/// <returns></returns>
-		public async Task<bool> UpdateUserSettings(User user, UserSettings newSettings)
+		public async Task<bool> UpdateUserSettings(UserSettings newSettings)
 		{
-			var existingSettings = await _dataContext.UserSettings.FirstOrDefaultAsync(us => us.UserId == user.UserId);
+			var existingUser = await _dataContext.Users.FirstOrDefaultAsync(us => us.UserId == newSettings.UserId);
+
+			var existingSettings = await _dataContext.UserSettings.FirstOrDefaultAsync(us => us.UserId == existingUser.UserId);
 
 			if (existingSettings is null)
 				return false;
