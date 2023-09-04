@@ -40,7 +40,7 @@ namespace PortfolioTrackerServer.Controller
             return Ok(response);
         }
 
-        [HttpGet("user")]
+        [HttpGet("user/{email}")]
         public async Task<ActionResult<ServiceResponse<User>>> GetUserFromDb(string email)
         {
             var response = await _authService.GetUserFromDb(email);

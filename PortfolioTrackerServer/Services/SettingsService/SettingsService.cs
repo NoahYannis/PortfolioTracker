@@ -24,7 +24,7 @@ namespace PortfolioTrackerServer.Services.SettingsService
 			// User whose settings we want
 			var userSettings = await _dataContext.UserSettings.FirstOrDefaultAsync(us => us.UserId == user.UserId);
 
-			// If found return the corresponding user`s settings or 
+			// If found return the corresponding user`s settings.
 			return userSettings is not null ? new ServiceResponse<UserSettings> { Data = userSettings }
 				: new ServiceResponse<UserSettings>
 				{

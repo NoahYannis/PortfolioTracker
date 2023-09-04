@@ -1,40 +1,36 @@
 ﻿@page "/settings"
 @using System.Collections.Generic
 @using Microsoft.AspNetCore.Authorization;
+
 @attribute [Authorize]
+
 @inject NavigationManager NavManager;
 @inject IAuthService AuthService
+@inject AuthenticationStateProvider AuthStateProvider;
 
 <h3>Settings</h3>
 
-@if (isUserAuthenticated)
+@if (editing)
 {
-    @if (editing)
-    {
-        <div>
-            <label for="Name">Name:</label>
-            <input type="text" id="Name" @bind="User.UserName" />
-        </div>
-        <div>
-            <label for="Email">Email:</label>
-            <input type="email" id="Email" @bind="User.Email" />
-        </div>
-        <button class="btn btn-primary" @onclick="SaveProfile">Save</button>
-    }
-    else
-    {
-        <div>
-            <strong>Name:</strong> @User.UserName
-        </div>
-        <div>
-            <strong>Email:</strong> @User.Email
-        </div>
-        <button class="btn btn-primary" @onclick="EditProfile">Edit</button>
-    }
+    <div>
+        <label for="Name">Name:</label>
+        <input type="text" id="Name" @bind="User.UserName" />
+    </div>
+    <div>
+        <label for="Email">Email:</label>
+        <input type="email" id="Email" @bind="User.Email" />
+    </div>
+    <button class="btn btn-primary" @onclick="SaveProfile">Save</button>
 }
 else
 {
-    NavManager.NavigateTo("/login");
+    <div>
+        <strong>Name:</strong> @User.UserName
+    </div>
+    <div>
+        <strong>Email:</strong> @User.Email
+    </div>
+    <button class="btn btn-primary" @onclick="EditProfile">Edit</button>
 }
 
 @code {
@@ -50,13 +46,20 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        isUserAuthenticated = await AuthService.IsUserAuthenticated();
-        Console.WriteLine(isUserAuthenticated);
+        // Get the email of the currently authenticated user.
+        AuthenticationState authState = await AuthStateProvider.GetAuthenticationStateAsync();
+        string email = authState.User.Claims.ElementAt(2).Value;
+
+        // Get the user from the database.
+        var userServiceResponse = await AuthService.GetUserFromDb(email);
+
+        // Set the current user to the user from the database.
+        User = userServiceResponse.Data ?? new();
     }
+
 
     private void SaveProfile()
     {
-        // Speichern Sie die Benutzerdaten in der Datenbank oder einem anderen Speicherort
         editing = false;
     }
 }

@@ -45,7 +45,7 @@ namespace PortfolioTrackerClient.Services.AuthService
 
         public async Task<ServiceResponse<User>> GetUserFromDb(string email)
         {
-            var response = await _http.GetFromJsonAsync<ServiceResponse<User>>($"{serverBaseDomain}/api/auth/user");
+            var response = await _http.GetFromJsonAsync<ServiceResponse<User>>($"{serverBaseDomain}/api/auth/user/{email}");
             return response;
         }
     }
