@@ -1,6 +1,7 @@
 ﻿@page "/settings"
 @using System.Collections.Generic
 @using Microsoft.AspNetCore.Authorization;
+@using BlazorColorPicker;
 
 @attribute [Authorize]
 
@@ -12,35 +13,55 @@
 
 @if (editing)
 {
+        <h3>Contact Data</h3>
+
     <div>
         <label for="Name">Name:</label>
-        <input type="text" id="Name" @bind="User.UserName" />
+        <span id="Name">@User.UserName</span>
     </div>
     <div>
         <label for="Email">Email:</label>
-        <input type="email" id="Email" @bind="User.Email" />
+        <span id="Email">@User.Email</span>
     </div>
+    <hr /> <!-- Separator -->
+
+        <h3>Preferences</h3>
+
+    <div>
+        <label for="ColorScheme">Color scheme</label>
+        <ColorPicker IsOpened="@colorPickerOpen" Closed="CloseColorPicker" MyColor="UserSettings.ColorScheme" />
+        <button class="btn btn-primary" @onclick="OpenModal">
+        </button>
+    </div>
+
+
+
     <button class="btn btn-primary" @onclick="SaveProfile">Save</button>
 }
 else
 {
     <div>
-        <strong>Name:</strong> @User.UserName
+        <label for="Name">Name:</label>
+        <span id="Name">@User.UserName</span>
     </div>
     <div>
-        <strong>Email:</strong> @User.Email
+        <label for="Email">Email:</label>
+        <span id="Email">@User.Email</span>
     </div>
     <button class="btn btn-primary" @onclick="EditProfile">Edit</button>
 }
 
 @code {
 
-    [Parameter]
-    public User User { get; set; } = new();
+    private User User { get; set; } = new();
 
-    private bool editing = false;
+    private UserSettings UserSettings { get; set; } = new();
+
+    private bool editing;
 
     private bool isUserAuthenticated;
+
+    private bool colorPickerOpen;
 
     private void EditProfile() => editing = true;
 
@@ -55,12 +76,20 @@ else
 
         // Set the current user to the user from the database.
         User = userServiceResponse.Data ?? new();
+
+        UserSettings = User.Settings;
     }
 
 
-    private void SaveProfile()
+    private void SaveProfile() => editing = false;
+
+    private void OpenModal() => colorPickerOpen = true;
+
+
+    private void CloseColorPicker(string chosenColor)
     {
-        editing = false;
+        UserSettings.ColorScheme = chosenColor;
+        colorPickerOpen = false;
     }
 }
 

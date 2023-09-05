@@ -49,9 +49,13 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "BlazorColorPicker": {
+              "target": "Package",
+              "version": "[2.3.0, )"
+            },
             "Blazored.LocalStorage": {
               "target": "Package",
-              "version": "[4.3.0, )"
+              "version": "[4.4.0, )"
             },
             "Blazored.Modal": {
               "target": "Package",
@@ -67,16 +71,16 @@
             },
             "Microsoft.AspNetCore.Components.Authorization": {
               "target": "Package",
-              "version": "[7.0.9, )"
+              "version": "[7.0.10, )"
             },
             "Microsoft.AspNetCore.Components.WebAssembly": {
               "target": "Package",
-              "version": "[7.0.2, )"
+              "version": "[7.0.10, )"
             },
             "Microsoft.AspNetCore.Components.WebAssembly.DevServer": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.2, )"
+              "version": "[7.0.10, )"
             },
             "Microsoft.AspNetCore.WebUtilities": {
               "target": "Package",
@@ -88,7 +92,7 @@
             },
             "RestSharp": {
               "target": "Package",
-              "version": "[108.0.3, )"
+              "version": "[110.2.0, )"
             }
           },
           "imports": [

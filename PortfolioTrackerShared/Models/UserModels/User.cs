@@ -13,6 +13,8 @@ namespace PortfolioTrackerShared.Models.UserModels
         [Required(ErrorMessage = "Email required."), StringLength(100, ErrorMessage = "Email must not exceed 100 characters")]
         public string Email { get; set; } = string.Empty;
 
+        public UserSettings Settings { get; set; } = new UserSettings();
+
         public byte[] PasswordHash { get; set; }
         public byte[] PasswordSalt { get; set; }
         public DateTime DateCreated { get; set; } = DateTime.Now;
