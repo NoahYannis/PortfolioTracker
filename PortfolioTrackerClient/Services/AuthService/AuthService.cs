@@ -43,7 +43,7 @@ namespace PortfolioTrackerClient.Services.AuthService
             return (await _authenticationStateProvider.GetAuthenticationStateAsync()).User.Identity.IsAuthenticated;
         }
 
-        public async Task<ServiceResponse<User>> GetUserFromDb(string email)
+        public async Task<ServiceResponse<User>> GetUserFromDbByEmail(string email)
         {
             var response = await _http.GetFromJsonAsync<ServiceResponse<User>>($"{serverBaseDomain}/api/auth/user/{email}");
             return response;

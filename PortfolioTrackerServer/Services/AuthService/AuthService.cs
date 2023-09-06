@@ -93,7 +93,7 @@ namespace PortfolioTrackerServer.Services.AuthService
         /// </summary>
         /// <param name="email"></param>
         /// <returns></returns>
-        public async Task<ServiceResponse<User>> GetUserFromDb(string email)
+        public async Task<ServiceResponse<User>> GetUserFromDbByEmail(string email)
         {
             ServiceResponse<User> response = new();
 

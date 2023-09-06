@@ -2,12 +2,14 @@
 @using System.Collections.Generic
 @using Microsoft.AspNetCore.Authorization;
 @using BlazorColorPicker;
+@using PortfolioTrackerClient.Services.SettingsService;
 
 @attribute [Authorize]
 
-@inject NavigationManager NavManager;
+@inject NavigationManager NavManager
 @inject IAuthService AuthService
-@inject AuthenticationStateProvider AuthStateProvider;
+@inject AuthenticationStateProvider AuthStateProvider
+@inject ISettingsService SettingsService
 
 <h3>Settings</h3>
 
@@ -29,12 +31,12 @@
 
     <div>
         <label for="ColorScheme">Color scheme</label>
-        <ColorPicker IsOpened="@colorPickerOpen" Closed="CloseColorPicker" MyColor="UserSettings.ColorScheme" />
+        <ColorPicker IsOpened="@colorPickerOpen" Closed="CloseColorPicker" MyColor="UserSettings.ColorScheme"/>
         <button class="btn btn-primary" @onclick="OpenModal">
+            <div style="background-color: @UserSettings.ColorScheme" class="buttonColor"></div>
+            Select Color
         </button>
     </div>
-
-
 
     <button class="btn btn-primary" @onclick="SaveProfile">Save</button>
 }
@@ -72,24 +74,27 @@ else
         string email = authState.User.Claims.ElementAt(2).Value;
 
         // Get the user from the database.
-        var userServiceResponse = await AuthService.GetUserFromDb(email);
+        var userServiceResponse = await AuthService.GetUserFromDbByEmail(email);
 
-        // Set the current user to the user from the database.
-        User = userServiceResponse.Data ?? new();
-
-        UserSettings = User.Settings;
+        UserSettings = userServiceResponse?.Data?.Settings ?? new();
     }
 
 
-    private void SaveProfile() => editing = false;
+    private async void SaveProfile()
+    {
+        editing = false;
+        await SettingsService.UpdateUserSettings(UserSettings);
+        Console.WriteLine(UserSettings.ColorScheme);
+    }
 
     private void OpenModal() => colorPickerOpen = true;
 
 
-    private void CloseColorPicker(string chosenColor)
+    private async void CloseColorPicker(string chosenColor)
     {
         UserSettings.ColorScheme = chosenColor;
         colorPickerOpen = false;
+        await SettingsService.UpdateUserSettings(UserSettings);
     }
 }
 

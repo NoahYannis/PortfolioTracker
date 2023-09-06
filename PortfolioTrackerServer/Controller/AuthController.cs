@@ -41,9 +41,9 @@ namespace PortfolioTrackerServer.Controller
         }
 
         [HttpGet("user/{email}")]
-        public async Task<ActionResult<ServiceResponse<User>>> GetUserFromDb(string email)
+        public async Task<ActionResult<ServiceResponse<User>>> GetUserFromDbByEmail(string email)
         {
-            var response = await _authService.GetUserFromDb(email);
+            var response = await _authService.GetUserFromDbByEmail(email);
 
             if (!response.Success)
                 return BadRequest(response);

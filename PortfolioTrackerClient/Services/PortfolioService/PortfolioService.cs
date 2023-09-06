@@ -4,7 +4,6 @@ namespace PortfolioTrackerClient.Services.PortfolioService
 {
 	public class PortfolioService : IPortfolioService
     {
-
         private string serverBaseDomain = "https://localhost:7207";
 
         private readonly HttpClient _httpClient;

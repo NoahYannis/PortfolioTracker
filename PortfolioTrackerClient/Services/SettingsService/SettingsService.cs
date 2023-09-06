@@ -7,9 +7,9 @@ namespace PortfolioTrackerClient.Services.SettingsService
 {
 	public class SettingsService : ISettingsService
 	{
-		private readonly HttpClient _http;
 		private string serverBaseDomain = "https://localhost:7207";
 
+		private readonly HttpClient _http;
 
 		public SettingsService(HttpClient http)
 		{
@@ -20,10 +20,10 @@ namespace PortfolioTrackerClient.Services.SettingsService
 			var response = await _http.GetFromJsonAsync<ServiceResponse<UserSettings>>($"{serverBaseDomain}/api/settings/{user.UserId}");
 			return response?.Data;
 		}
-        public async Task<ServiceResponse<bool>> UpdateUserSettings(UserSettings settings)
+        public async Task<bool> UpdateUserSettings(UserSettings settings)
         {
             var response = await _http.PutAsJsonAsync($"{serverBaseDomain}/api/settings/save", settings);
-            return await response.Content.ReadFromJsonAsync<ServiceResponse<bool>>();
+            return await response.Content.ReadFromJsonAsync<bool>();
         }
 
 		public async Task<ServiceResponse<bool>> ResetUserSettings(User user)

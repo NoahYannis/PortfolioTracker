@@ -1,18 +1,20 @@
-﻿@inherits LayoutComponentBase
+﻿@using PortfolioTrackerClient.Services.SettingsService;
+@inherits LayoutComponentBase
 
 @inject AuthenticationStateProvider AuthenticationStateProvider
 @inject ILocalStorageService LocalStorage
 @inject NavigationManager NavigationManager
+@inject ISettingsService SettingsService
+@inject IAuthService AuthService
 
 
 <div class="page">
-    <div class="sidebar">
+    <div class="sidebar" style="background-image: linear-gradient(180deg, @sidebarcolor 0%, #3a0647 100%);">
         <NavMenu />
     </div>
 
     <main>
         <div class="top-row px-4">
-            <a href="/register" target="_self">Register</a>
             @if (IsAuthenticated)
             {
                 <a href="#" @onclick="Logout" target="_self">Logout</a>
@@ -20,6 +22,7 @@
             }
             else
             {
+                <a href="/register" target="_self">Register</a>
                 <a href="/login" target="_self">Login</a>
             }
         </div>
@@ -32,7 +35,8 @@
 
 @code {
     private AuthenticationState authenticationState;
-    bool IsAuthenticated;
+    private bool IsAuthenticated;
+    private string sidebarcolor = string.Empty;
 
     private async Task Logout()
     {
@@ -46,5 +50,8 @@
     {
         authenticationState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
         IsAuthenticated = authenticationState.User.Identity.IsAuthenticated;
+
+        var userServiceResponse = await AuthService.GetUserFromDbByEmail(authenticationState.User.Claims.ElementAt(2).Value);
+        sidebarcolor = userServiceResponse?.Data?.Settings.ColorScheme ?? "#000000";
     }
 }
