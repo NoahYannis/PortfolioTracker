@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "gpbFIp5ij2WtgsIKuSACNH921x58BvuRuIdSsvzcFP4=",
+  "Hash": "1DbA6DeYIPH1c4ry861R3nBzunpnLo/60hpjiOB8GAI=",
   "Source": "PortfolioTrackerServer",
   "BasePath": "_content/PortfolioTrackerServer",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "PortfolioTrackerServer\\wwwroot",
       "Source": "PortfolioTrackerServer",
-      "ContentRoot": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerServer\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\PortfolioTrackerServer\\wwwroot\\",
       "BasePath": "_content/PortfolioTrackerServer",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerServer\\obj\\Debug\\net7.0\\scopedcss\\bundle\\PortfolioTrackerServer.styles.css",
+      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\PortfolioTrackerServer\\obj\\Debug\\net7.0\\scopedcss\\bundle\\PortfolioTrackerServer.styles.css",
       "SourceId": "PortfolioTrackerServer",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerServer\\obj\\Debug\\net7.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\PortfolioTrackerServer\\obj\\Debug\\net7.0\\scopedcss\\bundle\\",
       "BasePath": "_content/PortfolioTrackerServer",
       "RelativePath": "PortfolioTrackerServer.styles.css",
       "AssetKind": "All",
@@ -31,13 +31,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerServer\\obj\\Debug\\net7.0\\scopedcss\\bundle\\PortfolioTrackerServer.styles.css"
+      "OriginalItemSpec": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\PortfolioTrackerServer\\obj\\Debug\\net7.0\\scopedcss\\bundle\\PortfolioTrackerServer.styles.css"
     },
     {
-      "Identity": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerServer\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\PortfolioTrackerServer.bundle.scp.css",
+      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\PortfolioTrackerServer\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\PortfolioTrackerServer.bundle.scp.css",
       "SourceId": "PortfolioTrackerServer",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerServer\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\PortfolioTrackerServer\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/PortfolioTrackerServer",
       "RelativePath": "PortfolioTrackerServer.bundle.scp.css",
       "AssetKind": "All",
@@ -48,13 +48,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerServer\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\PortfolioTrackerServer.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\PortfolioTrackerServer\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\PortfolioTrackerServer.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerServer\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\PortfolioTrackerServer\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "SourceId": "PortfolioTrackerServer",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerServer\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\PortfolioTrackerServer\\wwwroot\\",
       "BasePath": "_content/PortfolioTrackerServer",
       "RelativePath": "css/bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerServer\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\PortfolioTrackerServer\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "PortfolioTrackerServer",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerServer\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\PortfolioTrackerServer\\wwwroot\\",
       "BasePath": "_content/PortfolioTrackerServer",
       "RelativePath": "css/bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -85,10 +85,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerServer\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\PortfolioTrackerServer\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
       "SourceId": "PortfolioTrackerServer",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerServer\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\PortfolioTrackerServer\\wwwroot\\",
       "BasePath": "_content/PortfolioTrackerServer",
       "RelativePath": "css/open-iconic/font/css/open-iconic-bootstrap.min.css",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerServer\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\PortfolioTrackerServer\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
       "SourceId": "PortfolioTrackerServer",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerServer\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\PortfolioTrackerServer\\wwwroot\\",
       "BasePath": "_content/PortfolioTrackerServer",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.eot",
       "AssetKind": "All",
@@ -119,10 +119,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
     },
     {
-      "Identity": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerServer\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\PortfolioTrackerServer\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
       "SourceId": "PortfolioTrackerServer",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerServer\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\PortfolioTrackerServer\\wwwroot\\",
       "BasePath": "_content/PortfolioTrackerServer",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.otf",
       "AssetKind": "All",
@@ -136,10 +136,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
     },
     {
-      "Identity": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerServer\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\PortfolioTrackerServer\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
       "SourceId": "PortfolioTrackerServer",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerServer\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\PortfolioTrackerServer\\wwwroot\\",
       "BasePath": "_content/PortfolioTrackerServer",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.svg",
       "AssetKind": "All",
@@ -153,10 +153,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
     },
     {
-      "Identity": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerServer\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\PortfolioTrackerServer\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
       "SourceId": "PortfolioTrackerServer",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerServer\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\PortfolioTrackerServer\\wwwroot\\",
       "BasePath": "_content/PortfolioTrackerServer",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.ttf",
       "AssetKind": "All",
@@ -170,10 +170,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
     },
     {
-      "Identity": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerServer\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\PortfolioTrackerServer\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
       "SourceId": "PortfolioTrackerServer",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerServer\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\PortfolioTrackerServer\\wwwroot\\",
       "BasePath": "_content/PortfolioTrackerServer",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.woff",
       "AssetKind": "All",
@@ -187,10 +187,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
     },
     {
-      "Identity": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerServer\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\PortfolioTrackerServer\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
       "SourceId": "PortfolioTrackerServer",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerServer\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\PortfolioTrackerServer\\wwwroot\\",
       "BasePath": "_content/PortfolioTrackerServer",
       "RelativePath": "css/open-iconic/FONT-LICENSE",
       "AssetKind": "All",
@@ -204,10 +204,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
     },
     {
-      "Identity": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerServer\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\PortfolioTrackerServer\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
       "SourceId": "PortfolioTrackerServer",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerServer\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\PortfolioTrackerServer\\wwwroot\\",
       "BasePath": "_content/PortfolioTrackerServer",
       "RelativePath": "css/open-iconic/ICON-LICENSE",
       "AssetKind": "All",
@@ -221,10 +221,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\ICON-LICENSE"
     },
     {
-      "Identity": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerServer\\wwwroot\\css\\open-iconic\\README.md",
+      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\PortfolioTrackerServer\\wwwroot\\css\\open-iconic\\README.md",
       "SourceId": "PortfolioTrackerServer",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerServer\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\PortfolioTrackerServer\\wwwroot\\",
       "BasePath": "_content/PortfolioTrackerServer",
       "RelativePath": "css/open-iconic/README.md",
       "AssetKind": "All",
@@ -238,10 +238,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\README.md"
     },
     {
-      "Identity": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerServer\\wwwroot\\css\\site.css",
+      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\PortfolioTrackerServer\\wwwroot\\css\\site.css",
       "SourceId": "PortfolioTrackerServer",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerServer\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\PortfolioTrackerServer\\wwwroot\\",
       "BasePath": "_content/PortfolioTrackerServer",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -255,10 +255,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerServer\\wwwroot\\favicon.png",
+      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\PortfolioTrackerServer\\wwwroot\\favicon.png",
       "SourceId": "PortfolioTrackerServer",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerServer\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\PortfolioTrackerServer\\wwwroot\\",
       "BasePath": "_content/PortfolioTrackerServer",
       "RelativePath": "favicon.png",
       "AssetKind": "All",

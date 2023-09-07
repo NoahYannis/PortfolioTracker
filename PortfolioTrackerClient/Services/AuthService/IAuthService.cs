@@ -1,7 +1,4 @@
-﻿using PortfolioTrackerShared.Models.UserModels;
-using PortfolioTrackerShared.Other;
-
-namespace PortfolioTrackerClient.Services.AuthService
+﻿namespace PortfolioTrackerClient.Services.AuthService
 {
     /// <summary>
     /// User authentication and authorization

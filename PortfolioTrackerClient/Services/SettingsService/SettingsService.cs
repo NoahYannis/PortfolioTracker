@@ -1,11 +1,8 @@
-﻿using PortfolioTrackerClient.Pages;
-using PortfolioTrackerShared.Models;
-using PortfolioTrackerShared.Models.UserModels;
-using System.Net.Http.Json;
+﻿using System.Net.Http.Json;
 
 namespace PortfolioTrackerClient.Services.SettingsService
 {
-	public class SettingsService : ISettingsService
+    public class SettingsService : ISettingsService
 	{
 		private string serverBaseDomain = "https://localhost:7207";
 
