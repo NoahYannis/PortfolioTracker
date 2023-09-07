@@ -19,17 +19,17 @@ namespace PortfolioTrackerServer.Services.SettingsService
 		/// </summary>
 		/// <param name="user"></param>
 		/// <returns></returns>
-		public async Task<ServiceResponse<UserSettings>> GetUserSettings(User user)
+		public async Task<ServiceResponse<UserSettings>> GetUserSettings(int userId)
 		{
 			// User whose settings we want
-			var userSettings = await _dataContext.UserSettings.FirstOrDefaultAsync(us => us.UserId == user.UserId);
+			var userSettings = await _dataContext.UserSettings.FirstOrDefaultAsync(us => us.UserId == userId);
 
 			// If found return the corresponding user`s settings.
 			return userSettings is not null ? new ServiceResponse<UserSettings> { Data = userSettings }
 				: new ServiceResponse<UserSettings>
 				{
 					Success = false,
-					Message = $"No settings found for User '{user.UserName}'"
+					Message = "No settings found."
 				};
 		}
 

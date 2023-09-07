@@ -57,7 +57,7 @@ else
 
     private User User { get; set; } = new();
 
-    private UserSettings UserSettings { get; set; }
+    private UserSettings UserSettings { get; set; } = new();
 
     private bool editing;
 
@@ -75,9 +75,9 @@ else
 
         // Get the user from the database.
         var userServiceResponse = await AuthService.GetUserFromDbByEmail(email);
+        User user = userServiceResponse.Data;
 
-        UserSettings = userServiceResponse?.Data?.Settings/* ?? new()*/;
-        UserSettings.UserId = userServiceResponse.Data.UserId;
+        UserSettings = await SettingsService.GetUserSettings(user.UserId);
     }
 
 
@@ -85,17 +85,18 @@ else
     {
         editing = false;
         await SettingsService.UpdateUserSettings(UserSettings);
-        Console.WriteLine(UserSettings.ColorScheme);
+
+        // Reload page to apply changes. StateHasChanged() doesnt seem to work here.
+        NavManager.NavigateTo(NavManager.Uri, forceLoad: true); 
     }
 
     private void OpenModal() => colorPickerOpen = true;
 
 
-    private async void CloseColorPicker(string chosenColor)
+    private void CloseColorPicker(string chosenColor)
     {
         UserSettings.ColorScheme = chosenColor;
         colorPickerOpen = false;
-        await SettingsService.UpdateUserSettings(UserSettings);
     }
 }
 

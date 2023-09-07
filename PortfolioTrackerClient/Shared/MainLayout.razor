@@ -52,6 +52,8 @@
         IsAuthenticated = authenticationState.User.Identity.IsAuthenticated;
 
         var userServiceResponse = await AuthService.GetUserFromDbByEmail(authenticationState.User.Claims.ElementAt(2).Value);
-        sidebarcolor = userServiceResponse?.Data?.Settings.ColorScheme ?? "#000000";
+        var userSettings = await SettingsService.GetUserSettings(userServiceResponse.Data.UserId);
+
+        sidebarcolor = userSettings.ColorScheme;
     }
 }

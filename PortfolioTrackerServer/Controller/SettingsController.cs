@@ -16,12 +16,13 @@ namespace PortfolioTrackerServer.Controller
             _settingsService = settingsService;
         }
 
-        [HttpGet()] //TODO: adjust routing
-        public async Task<ActionResult<UserSettings>> GetUserSettings(User user)
+        [HttpGet()]
+        public async Task<ActionResult<UserSettings>> GetUserSettings(int userId)
         {
-            var result = await _settingsService.GetUserSettings(user);
+            var result = await _settingsService.GetUserSettings(userId);
             return Ok(result);
         }
+
 
         [HttpPut("save")]
         public async Task<ActionResult<bool>> UpdateUserSettings(UserSettings settings)
