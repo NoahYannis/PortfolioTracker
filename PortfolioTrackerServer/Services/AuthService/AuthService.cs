@@ -123,6 +123,7 @@ namespace PortfolioTrackerServer.Services.AuthService
             user.PasswordHash = passwordHash;
 
             _dataContext.Users.Add(user);
+            _dataContext.UserSettings.Add(new UserSettings { UserId = user.UserId });
 
             await _dataContext.SaveChangesAsync();
 

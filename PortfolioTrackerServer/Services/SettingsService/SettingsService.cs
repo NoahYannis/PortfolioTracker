@@ -37,20 +37,22 @@ namespace PortfolioTrackerServer.Services.SettingsService
 		/// Updates a user's settings.
 		/// </summary>
 		/// <param name="user"></param>
-		/// <returns></returns>
 		public async Task<bool> UpdateUserSettings(UserSettings updatedSettings)
 		{
 			//var existingUser = await _dataContext.Users.FirstOrDefaultAsync(us => us.UserId == updatedSettings.UserId);
 			//var existingSettings = await _dataContext.UserSettings.FirstOrDefaultAsync(us => us.UserId == existingUser.UserId);
 
-			var existingUser = await _dataContext.Users.FirstOrDefaultAsync(us => us.Settings.UserId == updatedSettings.UserId);
+			var existingUser = await _dataContext.Users.FirstOrDefaultAsync(us => us.UserId == updatedSettings.UserId);
 
 			if (existingUser is null)
 				return false;
 
 			//_dataContext.UserSettings.Remove(existingSettings);
-			//_dataContext.UserSettings.Add(updatedSettings);
+			//_dataContext.UserSettings.Add(updatedSettings)
+
+			existingUser.Settings = updatedSettings;
 			_dataContext.Users.Update(existingUser);
+			_dataContext.UserSettings.Update(existingUser.Settings);
 
 			await _dataContext.SaveChangesAsync(); // Save the changes to the database
 

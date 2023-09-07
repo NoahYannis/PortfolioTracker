@@ -57,7 +57,7 @@ else
 
     private User User { get; set; } = new();
 
-    private UserSettings UserSettings { get; set; } = new();
+    private UserSettings UserSettings { get; set; }
 
     private bool editing;
 
@@ -76,7 +76,8 @@ else
         // Get the user from the database.
         var userServiceResponse = await AuthService.GetUserFromDbByEmail(email);
 
-        UserSettings = userServiceResponse?.Data?.Settings ?? new();
+        UserSettings = userServiceResponse?.Data?.Settings/* ?? new()*/;
+        UserSettings.UserId = userServiceResponse.Data.UserId;
     }
 
 
