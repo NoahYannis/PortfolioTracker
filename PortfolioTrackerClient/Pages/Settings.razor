@@ -38,6 +38,12 @@
         </button>
     </div>
 
+    <hr /> <!-- Separator -->
+
+    <h3>Investing Goals</h3>
+
+    <hr /> <!-- Separator -->
+
     <button class="btn btn-primary" @onclick="SaveProfile">Save</button>
 }
 else
@@ -50,6 +56,21 @@ else
         <label for="Email">Email:</label>
         <span id="Email">@User.Email</span>
     </div>
+
+    <hr /> <!-- Separator -->
+
+    <h3>Preferences</h3>
+
+    <div>
+        <label for="ColorScheme">Color scheme</label>
+        <ColorPicker IsOpened="@colorPickerOpen" Closed="CloseColorPicker" MyColor="UserSettings.ColorScheme" />
+        <button class="btn btn-primary" @onclick="OpenModal">
+            <div style="background-color: @UserSettings.ColorScheme" class="buttonColor"></div>
+            Select Color
+        </button>
+    </div>
+
+    <hr /> <!-- Separator -->
     <button class="btn btn-primary" @onclick="EditProfile">Edit</button>
 }
 
@@ -75,9 +96,9 @@ else
 
         // Get the user from the database.
         var userServiceResponse = await AuthService.GetUserFromDbByEmail(email);
-        User user = userServiceResponse.Data;
+        User = userServiceResponse.Data;
 
-        UserSettings = await SettingsService.GetUserSettings(user.UserId);
+        UserSettings = await SettingsService.GetUserSettings(User.UserId);
     }
 
 

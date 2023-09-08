@@ -12,6 +12,7 @@ namespace PortfolioTrackerClient.Services.SettingsService
 		{
 			_http = http;
 		}
+
         public async Task<UserSettings> GetUserSettings(int userId)
         {
             var response = await _http.GetFromJsonAsync<ServiceResponse<UserSettings>>($"{serverBaseDomain}/api/settings?userId={userId}");
