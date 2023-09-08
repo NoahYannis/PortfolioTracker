@@ -2637,3 +2637,7 @@ C:\Users\User\source\repos\NoahYannis\PortfolioTracker\PortfolioTrackerClient\ob
 C:\Users\User\source\repos\NoahYannis\PortfolioTracker\PortfolioTrackerClient\obj\Debug\net7.0\refint\PortfolioTrackerClient.dll
 C:\Users\User\source\repos\NoahYannis\PortfolioTracker\PortfolioTrackerClient\obj\Debug\net7.0\PortfolioTrackerClient.pdb
 C:\Users\User\source\repos\NoahYannis\PortfolioTracker\PortfolioTrackerClient\obj\Debug\net7.0\ref\PortfolioTrackerClient.dll
+C:\Users\User\source\repos\NoahYannis\PortfolioTracker\PortfolioTrackerClient\bin\Debug\net7.0\wwwroot\_framework\Blazored.TextEditor.dll
+C:\Users\User\source\repos\NoahYannis\PortfolioTracker\PortfolioTrackerClient\bin\Debug\net7.0\wwwroot\_framework\Blazored.TextEditor.dll.gz
+C:\Users\User\source\repos\NoahYannis\PortfolioTracker\PortfolioTrackerClient\bin\Debug\net7.0\Blazored.TextEditor.dll
+C:\Users\User\source\repos\NoahYannis\PortfolioTracker\PortfolioTrackerClient\obj\Debug\net7.0\build-gz\nfzztseL.gz

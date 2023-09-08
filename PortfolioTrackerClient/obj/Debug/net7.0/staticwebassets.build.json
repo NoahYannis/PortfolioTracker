@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "qgUmOXFEfCpizo4c4VOE4GnO2+JxA6jzo9AI1J8N/RM=",
+  "Hash": "2Ui3DywofXjyjkq5CX/g+1Q7xkq1y/eGpTukYaimO1s=",
   "Source": "PortfolioTrackerClient",
   "BasePath": "/",
   "Mode": "Root",
@@ -83,6 +83,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\User\\.nuget\\packages\\blazored.modal\\7.1.0\\staticwebassets\\BlazoredModal.razor.js"
+    },
+    {
+      "Identity": "C:\\Users\\User\\.nuget\\packages\\blazored.texteditor\\1.1.0\\staticwebassets\\Blazored-BlazorQuill.js",
+      "SourceId": "Blazored.TextEditor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\User\\.nuget\\packages\\blazored.texteditor\\1.1.0\\staticwebassets\\",
+      "BasePath": "_content/Blazored.TextEditor",
+      "RelativePath": "Blazored-BlazorQuill.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\User\\.nuget\\packages\\blazored.texteditor\\1.1.0\\staticwebassets\\Blazored-BlazorQuill.js"
+    },
+    {
+      "Identity": "C:\\Users\\User\\.nuget\\packages\\blazored.texteditor\\1.1.0\\staticwebassets\\quill-blot-formatter.min.js",
+      "SourceId": "Blazored.TextEditor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\User\\.nuget\\packages\\blazored.texteditor\\1.1.0\\staticwebassets\\",
+      "BasePath": "_content/Blazored.TextEditor",
+      "RelativePath": "quill-blot-formatter.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\User\\.nuget\\packages\\blazored.texteditor\\1.1.0\\staticwebassets\\quill-blot-formatter.min.js"
     },
     {
       "Identity": "C:\\Users\\User\\.nuget\\packages\\chartjs.blazor.fork\\2.0.2\\contentFiles\\any\\netstandard2.1\\wwwroot\\ChartJsBlazorInterop.js",
@@ -389,6 +423,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\User\\.nuget\\packages\\blazored.modal\\7.1.0\\lib\\net6.0\\Blazored.Modal.dll"
+    },
+    {
+      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\PortfolioTrackerClient\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Blazored.TextEditor.dll",
+      "SourceId": "PortfolioTrackerClient",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\PortfolioTrackerClient\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Blazored.TextEditor.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\User\\.nuget\\packages\\blazored.texteditor\\1.1.0\\lib\\netstandard2.0\\Blazored.TextEditor.dll"
     },
     {
       "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\PortfolioTrackerClient\\bin\\Debug\\net7.0\\wwwroot\\_framework\\ChartJs.Blazor.dll",
@@ -6084,6 +6135,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\PortfolioTrackerClient\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Net.WebClient.dll"
+    },
+    {
+      "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\PortfolioTrackerClient\\obj\\Debug\\net7.0\\build-gz\\nfzztseL.gz",
+      "SourceId": "PortfolioTrackerClient",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\PortfolioTrackerClient\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Blazored.TextEditor.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\PortfolioTrackerClient\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Blazored.TextEditor.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\PortfolioTrackerClient\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Blazored.TextEditor.dll"
     },
     {
       "Identity": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\PortfolioTrackerClient\\obj\\Debug\\net7.0\\build-gz\\nzfXdRu+.gz",

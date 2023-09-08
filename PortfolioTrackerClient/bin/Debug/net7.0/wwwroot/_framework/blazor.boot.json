@@ -10,6 +10,7 @@
       "BlazorColorPicker.dll": "sha256-eTOWgUrfMV8LuAKX4n5baQjSt0ZFpLhEvs8MIeUp25k=",
       "Blazored.LocalStorage.dll": "sha256-5V8ovY1srbIIz7lzzMhLd3nNJ9LJ6bHoBOnLJahv8Go=",
       "Blazored.Modal.dll": "sha256-Sr30UiM7JErBe8hojY6HAgaOOgfQE5zHijI0uVypmkM=",
+      "Blazored.TextEditor.dll": "sha256-6o6WOuk4mnjpW8SpSUUlvO2Fv+LMQTgHlBwaZhDcwDE=",
       "ChartJs.Blazor.dll": "sha256-0ciRJps8EWsbo3zIh4fYA2+QBnZIl1lSu4aydLaQDEo=",
       "Microsoft.AspNetCore.Authorization.dll": "sha256-t7KDwXpfEy\/UbmAIpuMJI0h+MMOTr8jLi1ei0lP44QI=",
       "Microsoft.AspNetCore.Components.dll": "sha256-CCnE1pQ8XDRrJWlqnelqinQo1pisIEK3lPSLNsOThy8=",
@@ -208,14 +209,14 @@
       "netstandard.dll": "sha256-IEYNogoWZgSKXlx0+Pn2bt3irEZ1nuCnjK9Bm+3OWYw=",
       "System.Private.CoreLib.dll": "sha256-XrgDwG5fUErLSziY3dAwA0PYLIirTlornT8Lb6U2DUs=",
       "PortfolioTrackerShared.dll": "sha256-0g\/o2bP1qVXOrTXfcD9S2+8HtYJEfbQDqw5WcXQ7pc8=",
-      "PortfolioTrackerClient.dll": "sha256-nf1HnQrNFvhAvcMflBoR7YvGdBBb3rCazu1XU1tt+vw="
+      "PortfolioTrackerClient.dll": "sha256-1ulTWOW10fOZMkXws35zhwuAoCvTMO4ishkG8NuKN+M="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
       "PortfolioTrackerShared.pdb": "sha256-GiyDp8SSbxXFrLAoYYhc5sWw9RZmfoIYLm9AxgEK0+4=",
-      "PortfolioTrackerClient.pdb": "sha256-TPaSI\/kq8Miz1AJzSjBClkEs6L1aJj2Aef7BvK3vVdA="
+      "PortfolioTrackerClient.pdb": "sha256-LhFlDXF4nEPadNCNyggVqQwDLaQucN8TlUtUPi5Qvyo="
     },
     "runtime": {
       "dotnet.7.0.7.zvwer97ihj.js": "sha256-JmMF+3r0RjsO0yYBfDP8Pq2ahxBSJHFu7mZNB9lqLsw=",

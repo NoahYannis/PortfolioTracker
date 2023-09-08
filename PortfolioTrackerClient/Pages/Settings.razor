@@ -3,6 +3,7 @@
 @using Microsoft.AspNetCore.Authorization;
 @using BlazorColorPicker;
 @using PortfolioTrackerClient.Services.SettingsService;
+@using Blazored.TextEditor;
 
 @attribute [Authorize]
 
@@ -38,11 +39,33 @@
         </button>
     </div>
 
+    <div style="margin-top: 20px;">
+        <EditForm Model="UserSettings">
+            <label for="preferedLanguage">Prefered Language:</label>
+            <InputSelect id="preferedLanguage" @bind-Value="UserSettings.PreferedLanguage">
+                <option value="Deutsch">Deutsch</option>
+                <option value="English">English</option>
+                <option value="français">français</option>
+                <option value="español">español</option>
+                <option value="русский">русский</option>
+            </InputSelect>
+        </EditForm>
+    </div>
+
     <hr /> <!-- Separator -->
 
     <h3>Investing Goals</h3>
 
     <hr /> <!-- Separator -->
+
+    <BlazoredTextEditor @ref="@richEditor" Placeholder="Make $100/month in dividends. Achieve a $100,000 portfolio.">
+        <EditorContent>
+            @UserSettings.InvestingGoals
+        </EditorContent>
+    </BlazoredTextEditor>
+
+    <hr /> <!-- Separator -->
+    <button class="btn btn-primary" @onclick="SaveInvestingGoals">Save Goals</button>
 
     <button class="btn btn-primary" @onclick="SaveProfile">Save</button>
 }
@@ -71,6 +94,7 @@ else
     </div>
 
     <hr /> <!-- Separator -->
+
     <button class="btn btn-primary" @onclick="EditProfile">Edit</button>
 }
 
@@ -79,6 +103,8 @@ else
     private User User { get; set; } = new();
 
     private UserSettings UserSettings { get; set; } = new();
+
+    BlazoredTextEditor richEditor { get; set; } = new();
 
     private bool editing;
 
@@ -113,11 +139,15 @@ else
 
     private void OpenModal() => colorPickerOpen = true;
 
-
     private void CloseColorPicker(string chosenColor)
     {
         UserSettings.ColorScheme = chosenColor;
         colorPickerOpen = false;
+    }
+
+    private async void SaveInvestingGoals()
+    {
+        UserSettings.InvestingGoals = await richEditor.GetText();
     }
 }
 

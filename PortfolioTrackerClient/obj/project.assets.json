@@ -53,6 +53,25 @@
           "buildMultiTargeting/Blazored.Modal.props": {}
         }
       },
+      "Blazored.TextEditor/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "3.1.0",
+          "Microsoft.AspNetCore.Components.Web": "3.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Blazored.TextEditor.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Blazored.TextEditor.dll": {}
+        },
+        "build": {
+          "buildTransitive/Blazored.TextEditor.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Blazored.TextEditor.props": {}
+        }
+      },
       "ChartJs.Blazor/1.1.0": {
         "type": "package",
         "dependencies": {
@@ -750,6 +769,25 @@
           "buildMultiTargeting/Blazored.Modal.props": {}
         }
       },
+      "Blazored.TextEditor/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "3.1.0",
+          "Microsoft.AspNetCore.Components.Web": "3.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Blazored.TextEditor.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Blazored.TextEditor.dll": {}
+        },
+        "build": {
+          "buildTransitive/Blazored.TextEditor.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Blazored.TextEditor.props": {}
+        }
+      },
       "ChartJs.Blazor/1.1.0": {
         "type": "package",
         "dependencies": {
@@ -1441,6 +1479,25 @@
         "lib/net6.0/Blazored.Modal.dll",
         "staticwebassets/Blazored.Modal.bundle.scp.css",
         "staticwebassets/BlazoredModal.razor.js"
+      ]
+    },
+    "Blazored.TextEditor/1.1.0": {
+      "sha512": "f2aC1vQlYCYmRXkXr66XF9B8i/QpODtbq7GR1AWmRVcY1NR7HgN7jvgPOObzfu6r8IDod6B3YDkH+KSEh+QiUg==",
+      "type": "package",
+      "path": "blazored.texteditor/1.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "blazored.texteditor.1.1.0.nupkg.sha512",
+        "blazored.texteditor.nuspec",
+        "build/Blazored.TextEditor.props",
+        "build/Microsoft.AspNetCore.StaticWebAssets.props",
+        "buildMultiTargeting/Blazored.TextEditor.props",
+        "buildTransitive/Blazored.TextEditor.props",
+        "icon.png",
+        "lib/netstandard2.0/Blazored.TextEditor.dll",
+        "staticwebassets/Blazored-BlazorQuill.js",
+        "staticwebassets/quill-blot-formatter.min.js"
       ]
     },
     "ChartJs.Blazor/1.1.0": {
@@ -2538,6 +2595,7 @@
       "BlazorColorPicker >= 2.3.0",
       "Blazored.LocalStorage >= 4.4.0",
       "Blazored.Modal >= 7.1.0",
+      "Blazored.TextEditor >= 1.1.0",
       "ChartJs.Blazor >= 1.1.0",
       "ChartJs.Blazor.Fork >= 2.0.2",
       "Microsoft.AspNetCore.Components.Authorization >= 7.0.10",
@@ -2609,6 +2667,10 @@
           "Blazored.Modal": {
             "target": "Package",
             "version": "[7.1.0, )"
+          },
+          "Blazored.TextEditor": {
+            "target": "Package",
+            "version": "[1.1.0, )"
           },
           "ChartJs.Blazor": {
             "target": "Package",
