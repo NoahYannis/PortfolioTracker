@@ -208,18 +208,18 @@
       "mscorlib.dll": "sha256-gEh2pbf9QBKUbbQNDp178pkm5vz7xXFGhpFgUcAhyTE=",
       "netstandard.dll": "sha256-IEYNogoWZgSKXlx0+Pn2bt3irEZ1nuCnjK9Bm+3OWYw=",
       "System.Private.CoreLib.dll": "sha256-XrgDwG5fUErLSziY3dAwA0PYLIirTlornT8Lb6U2DUs=",
-      "PortfolioTrackerShared.dll": "sha256-0g\/o2bP1qVXOrTXfcD9S2+8HtYJEfbQDqw5WcXQ7pc8=",
-      "PortfolioTrackerClient.dll": "sha256-1ulTWOW10fOZMkXws35zhwuAoCvTMO4ishkG8NuKN+M="
+      "PortfolioTrackerShared.dll": "sha256-7xTOBIeaIZpk3MGQQFk0etwi5+wFjKNGLOraXXwqt7w=",
+      "PortfolioTrackerClient.dll": "sha256-3AfRpmpKY8NGX3\/YIsAquAGf00vpZby95KxLlCLwJRQ="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "PortfolioTrackerShared.pdb": "sha256-GiyDp8SSbxXFrLAoYYhc5sWw9RZmfoIYLm9AxgEK0+4=",
-      "PortfolioTrackerClient.pdb": "sha256-LhFlDXF4nEPadNCNyggVqQwDLaQucN8TlUtUPi5Qvyo="
+      "PortfolioTrackerShared.pdb": "sha256-uPtrYWnq9w0MKTj0mXPyA5I0eUW91WEUH\/dFwWk0hzI=",
+      "PortfolioTrackerClient.pdb": "sha256-nMVune3RVirc64+OrVo\/8T1CKuYw\/pHOChyxL2o5T5Q="
     },
     "runtime": {
-      "dotnet.7.0.7.zvwer97ihj.js": "sha256-JmMF+3r0RjsO0yYBfDP8Pq2ahxBSJHFu7mZNB9lqLsw=",
+      "dotnet.7.0.7.7fiatcki9i.js": "sha256-JmMF+3r0RjsO0yYBfDP8Pq2ahxBSJHFu7mZNB9lqLsw=",
       "dotnet.timezones.blat": "sha256-E5nX3n\/\/2kvaYqbQ2VjaS4BXnlnEYW3gU0pr58g11a4=",
       "dotnet.wasm": "sha256-q7mSjRyJTT10PpQnSxO1TZAwei3YpzD76Akn6E57GTU=",
       "icudt.dat": "sha256-tO5O5YzMTVSaKBboxAqezOQL9ewmupzV2JrB5Rkc8a4=",
