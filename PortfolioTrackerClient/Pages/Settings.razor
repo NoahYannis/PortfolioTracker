@@ -11,8 +11,10 @@
 @inject IAuthService AuthService
 @inject AuthenticationStateProvider AuthStateProvider
 @inject ISettingsService SettingsService
+@inject IStringLocalizer<PortfolioTrackerClient.Resources.English> Localizer
 
-<h3>Settings</h3>
+ @*Test*@
+<h3>@Localizer["HelloWorld"]</h3>
 
 @if (editing)
 {
