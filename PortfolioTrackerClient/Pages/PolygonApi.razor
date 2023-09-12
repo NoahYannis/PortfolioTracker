@@ -12,7 +12,7 @@
 </div>
 <div>
     <button @onclick='async () => CurrentStock = await ReturnStockFromApiCall(Ticker)'>
-        Confirm
+        @Localizer["Confirm"]
     </button>
 
     <!-- Display stock data if a ticker was specified and no error occured-->

@@ -249,6 +249,9 @@
   <data name="RelativePerformance" xml:space="preserve">
     <value>Relative performance (%)</value>
   </data>
+  <data name="Reset" xml:space="preserve">
+    <value>Reset</value>
+  </data>
   <data name="Result" xml:space="preserve">
     <value>Result ($)</value>
   </data>
