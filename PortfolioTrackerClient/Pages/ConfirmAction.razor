@@ -1,14 +1,17 @@
 ﻿@page "/modal"
 
+@inject IStringLocalizer<Resource> Localizer
+
 
 <div>
     <p>@Message</p>
 
-    <button class="btn btn-primary" @onclick="async() => await BlazoredModal.CloseAsync(ModalResult.Ok())">Yes</button>
-    <button class="btn btn-danger" @onclick="async() => await BlazoredModal.CloseAsync(ModalResult.Cancel())">No</button>
+    <button class="btn btn-primary" @onclick="async() => await BlazoredModal.CloseAsync(ModalResult.Ok())">@Localizer["Yes"]</button>
+    <button class="btn btn-danger" @onclick="async() => await BlazoredModal.CloseAsync(ModalResult.Cancel())">@Localizer["No"]</button>
 </div>
 
 @code {
+
     [CascadingParameter] BlazoredModalInstance BlazoredModal { get; set; } = default!;
 
     [Parameter] public string? Message { get; set; }

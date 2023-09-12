@@ -155,7 +155,7 @@
         var parameters = new ModalParameters()
             .Add(nameof(ConfirmAction.Message), $"Delete {StockToUpdate.Ticker}?");
 
-        var confirmDeleteModal = Modal.Show<ConfirmAction>("Confirm Action", parameters);
+        var confirmDeleteModal = Modal.Show<ConfirmAction>(Localizer["ConfirmAction"], parameters);
         var result = await confirmDeleteModal.Result;
         return result.Confirmed;
     }
