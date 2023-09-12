@@ -412,15 +412,6 @@ namespace PortfolioTrackerClient.Resources {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Prefered Language ähnelt.
-        /// </summary>
-        public static string PreferedLanguage {
-            get {
-                return ResourceManager.GetString("PreferedLanguage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Preferences ähnelt.
         /// </summary>
         public static string Preferences {
@@ -565,7 +556,7 @@ namespace PortfolioTrackerClient.Resources {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Update share price ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Update share prices ähnelt.
         /// </summary>
         public static string UpdateSharePrice {
             get {

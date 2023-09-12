@@ -12,7 +12,6 @@ global using PortfolioTrackerShared.Other;
 global using Microsoft.Extensions.Localization;
 global using PortfolioTrackerClient.Resources;
 using PortfolioTrackerClient.Services.SettingsService;
-using System.Globalization;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
@@ -20,9 +19,6 @@ builder.Services.AddLocalization();
 builder.RootComponents.Add<HeadOutlet>("head::after");
 builder.Services.AddBlazoredLocalStorage();
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
-
-CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("fr");
-CultureInfo.DefaultThreadCurrentUICulture = new CultureInfo("fr");
 
 builder.Services.AddScoped<IGetStockInfoService, GetStockInfoServiceBlazor>();
 builder.Services.AddScoped<IPortfolioService, PortfolioService>();

@@ -20,6 +20,5 @@ namespace PortfolioTrackerShared.Models.UserModels
 		/// </summary>
 		public string InvestingGoals { get; set; } = string.Empty;
 
-		public string PreferedLanguage { get; set; } = "en";
 	}
 }

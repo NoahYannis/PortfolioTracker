@@ -4,6 +4,7 @@
 @using BlazorColorPicker;
 @using PortfolioTrackerClient.Services.SettingsService;
 @using Blazored.TextEditor;
+@using System.Globalization;
 
 @attribute [Authorize]
 
@@ -39,19 +40,6 @@
             <div style="background-color: @UserSettings.ColorScheme" class="buttonColor"></div>
             @Localizer["SelectColor"]
         </button>
-    </div>
-
-    <div style="margin-top: 20px;">
-        <EditForm Model="UserSettings">
-            <label for="preferedLanguage">@Localizer["PreferedLanguage"]:</label>
-            <InputSelect id="preferedLanguage" @bind-Value="UserSettings.PreferedLanguage">
-                <option value="de">Deutsch</option>
-                <option value="en">English</option>
-                <option value="fr">français</option>
-                <option value="es">español</option>
-                <option value="ru">русский</option>
-            </InputSelect>
-        </EditForm>
     </div>
 
     <hr /> <!-- Separator -->

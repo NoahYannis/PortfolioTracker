@@ -62,8 +62,8 @@
         <br /><br />
 
         <button class="btn-primary" type="submit">@Localizer["Update"]</button>
-        <button class="btn-danger" type="button" style="margin-left: 10px" @onclick="async() => await DeleteStock(StockToUpdate.Ticker)">Delete</button>
-        <button style="margin-left: 10px" @onclick="async() => await UpdatePriceAndPositionSize() ">Update share prices</button>
+        <button class="btn-danger" type="button" style="margin-left: 10px" @onclick="async() => await DeleteStock(StockToUpdate.Ticker)">@Localizer["Delete"]</button>
+        <button style="margin-left: 10px" @onclick="async() => await UpdatePriceAndPositionSize() ">@Localizer["UpdateSharePrice"]</button>
 
         <br /><br />
     </EditForm>

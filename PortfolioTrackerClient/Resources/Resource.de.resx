@@ -234,9 +234,6 @@
   <data name="PositionSize" xml:space="preserve">
     <value>Positionsgröße</value>
   </data>
-  <data name="PreferedLanguage" xml:space="preserve">
-    <value>Bevorzugte Sprache</value>
-  </data>
   <data name="Preferences" xml:space="preserve">
     <value>Präferenzen</value>
   </data>
