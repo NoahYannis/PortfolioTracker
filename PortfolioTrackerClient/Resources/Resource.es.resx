@@ -175,8 +175,7 @@
     <value>Habiá error :(</value>
   </data>
   <data name="FetchStockData" xml:space="preserve">
-    <value>Obtener datos de	Получить данные об	Obtenir des données
-acciones</value>
+    <value>Datos de acciones</value>
   </data>
   <data name="Greeting" xml:space="preserve">
     <value>Hola</value>

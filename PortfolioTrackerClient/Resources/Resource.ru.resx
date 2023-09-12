@@ -118,186 +118,186 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="About" xml:space="preserve">
-    <value>About</value>
+    <value>О приложении</value>
   </data>
   <data name="AbsolutePerformance" xml:space="preserve">
-    <value>Absolute performance ($)</value>
+    <value>Абсолютная производтельность</value>
   </data>
   <data name="AddNewStock" xml:space="preserve">
-    <value>Add new stock</value>
+    <value>Добавить новую акцию</value>
   </data>
   <data name="BuyInPrice" xml:space="preserve">
-    <value>Buy in price ($)</value>
+    <value>Цена покупки</value>
   </data>
   <data name="Calculate" xml:space="preserve">
-    <value>Calculate</value>
+    <value>Рассчитать</value>
   </data>
   <data name="ColorScheme" xml:space="preserve">
-    <value>Color scheme</value>
+    <value>Цветовая схема</value>
   </data>
   <data name="CompoundInterest" xml:space="preserve">
-    <value>Compound Interest</value>
+    <value>Сложные проценты</value>
   </data>
   <data name="Confirm" xml:space="preserve">
-    <value>Confirm</value>
+    <value>Подтвердить</value>
   </data>
   <data name="ConfirmAction" xml:space="preserve">
-    <value>Confirm action</value>
+    <value>Подтвердить действие</value>
   </data>
   <data name="ConfirmPassword" xml:space="preserve">
-    <value>Confirm password</value>
+    <value>Подтвердить пароль</value>
   </data>
   <data name="ConsiderInflation" xml:space="preserve">
-    <value>Consider inflation</value>
+    <value>Учесть инфляцию</value>
   </data>
   <data name="ContactData" xml:space="preserve">
-    <value>Contact Data</value>
+    <value>Контактные данные</value>
   </data>
   <data name="CurrentPrice" xml:space="preserve">
-    <value>Current price ($)</value>
+    <value>Текущая цена</value>
   </data>
   <data name="Delete" xml:space="preserve">
-    <value>Delete</value>
+    <value>Удалить</value>
   </data>
   <data name="DividendYield" xml:space="preserve">
-    <value>Dividend yield (%)</value>
+    <value>Дивидендная доходность (%)</value>
   </data>
   <data name="Edit" xml:space="preserve">
-    <value>Edit</value>
+    <value>Редактировать</value>
   </data>
   <data name="Email" xml:space="preserve">
-    <value>Email</value>
+    <value>Электронная почта</value>
   </data>
   <data name="EnterStockTicker" xml:space="preserve">
-    <value>Enter a stock ticker</value>
+    <value>Введите код акции</value>
   </data>
   <data name="ErrorMessage" xml:space="preserve">
-    <value>An error occured :(</value>
+    <value>Произошла ошибка :(</value>
   </data>
   <data name="FetchStockData" xml:space="preserve">
-    <value>Fetch Stock Data</value>
+    <value>данные об акциях</value>
   </data>
   <data name="Greeting" xml:space="preserve">
-    <value>Hi</value>
+    <value>Приветствие</value>
   </data>
   <data name="HelloWorld" xml:space="preserve">
-    <value>Hello, world!</value>
+    <value>Привет, Мир!</value>
   </data>
   <data name="Home" xml:space="preserve">
-    <value>Home</value>
+    <value>Главная</value>
   </data>
   <data name="Industry" xml:space="preserve">
-    <value>Industry</value>
+    <value>Индустрия</value>
   </data>
   <data name="InflationRate" xml:space="preserve">
-    <value>Inflation rate</value>
+    <value>Уровень инфляции (%)</value>
   </data>
   <data name="InterestRate" xml:space="preserve">
-    <value>Interest rate (%)</value>
+    <value>Уровень инфляции (%)</value>
   </data>
   <data name="InvestingGoals" xml:space="preserve">
-    <value>Investing goals</value>
+    <value>Цели инвестирования</value>
   </data>
   <data name="InvestingGoalsPlaceholder" xml:space="preserve">
-    <value>Make $100/month in dividends.</value>
+    <value>100 евро в месяц на дивидендах</value>
   </data>
   <data name="Login" xml:space="preserve">
     <value>Login</value>
   </data>
   <data name="LoginRequired" xml:space="preserve">
-    <value>Login required to access.</value>
+    <value>Требуется вход</value>
   </data>
   <data name="Logout" xml:space="preserve">
-    <value>Logout</value>
+    <value>Выйти</value>
   </data>
   <data name="MonthlyContribution" xml:space="preserve">
-    <value>Monthly contribution ($)</value>
+    <value>Ежемесячный вклад</value>
   </data>
   <data name="Name" xml:space="preserve">
-    <value>Name</value>
+    <value>Имя</value>
   </data>
   <data name="No" xml:space="preserve">
-    <value>No</value>
+    <value>Нет</value>
   </data>
   <data name="NotFound" xml:space="preserve">
-    <value>Not found</value>
+    <value>Не найдено</value>
   </data>
   <data name="NumberOfYears" xml:space="preserve">
-    <value>Number of years</value>
+    <value>Количество лет</value>
   </data>
   <data name="PageNotFound" xml:space="preserve">
-    <value>The page you tried to access was not found.</value>
+    <value>Страница не найдена</value>
   </data>
   <data name="Password" xml:space="preserve">
-    <value>Password</value>
+    <value>Пароль</value>
   </data>
   <data name="PositionSize" xml:space="preserve">
-    <value>Position size ($)</value>
+    <value>Размер позиции</value>
   </data>
   <data name="PreferedLanguage" xml:space="preserve">
-    <value>Prefered Language</value>
+    <value>Предпочтительный язык</value>
   </data>
   <data name="Preferences" xml:space="preserve">
-    <value>Preferences</value>
+    <value>Предпочтения</value>
   </data>
   <data name="Register" xml:space="preserve">
-    <value>Register</value>
+    <value>Регистрация</value>
   </data>
   <data name="RegistrationSuccessful" xml:space="preserve">
-    <value>Registration successful</value>
+    <value>Регистрация успешная</value>
   </data>
   <data name="RelativePerformance" xml:space="preserve">
-    <value>Relative performance (%)</value>
+    <value>Относительная производительность</value>
   </data>
   <data name="Reset" xml:space="preserve">
-    <value />
+    <value>перезагрузить</value>
   </data>
   <data name="Result" xml:space="preserve">
-    <value>Result ($)</value>
+    <value>Результат</value>
   </data>
   <data name="Save" xml:space="preserve">
-    <value>Save</value>
+    <value>Сохранить</value>
   </data>
   <data name="SaveGoals" xml:space="preserve">
-    <value>Save goals</value>
+    <value>Сохранить цели</value>
   </data>
   <data name="SelectColor" xml:space="preserve">
-    <value>Select color</value>
+    <value>Выбрать цвет</value>
   </data>
   <data name="Settings" xml:space="preserve">
-    <value>Settings</value>
+    <value>Настройки</value>
   </data>
   <data name="SharesOwned" xml:space="preserve">
-    <value>Shares owned</value>
+    <value>Владеемые акции</value>
   </data>
   <data name="SignUp" xml:space="preserve">
-    <value>Sign up</value>
+    <value>Зарегистрироваться</value>
   </data>
   <data name="StartingSum" xml:space="preserve">
-    <value>Starting sum ($)</value>
+    <value>Начальная сумма</value>
   </data>
   <data name="StockTicker" xml:space="preserve">
-    <value>Stock ticker</value>
+    <value>Код акции</value>
   </data>
   <data name="TooManyRequests" xml:space="preserve">
-    <value>Too Many Requests</value>
+    <value>Слишком много запросов</value>
   </data>
   <data name="Update" xml:space="preserve">
-    <value>Update</value>
+    <value>Обновить</value>
   </data>
   <data name="UpdateSharePrice" xml:space="preserve">
-    <value>Update share price</value>
+    <value>Обновить цену акций</value>
   </data>
   <data name="UserAlreadyExists" xml:space="preserve">
-    <value>User already exists</value>
+    <value>Пользователь уже существует</value>
   </data>
   <data name="Username" xml:space="preserve">
-    <value>Username</value>
+    <value>Имя пользователя</value>
   </data>
   <data name="Yes" xml:space="preserve">
-    <value>Yes</value>
+    <value>Да</value>
   </data>
   <data name="YourPortfolio" xml:space="preserve">
-    <value>Your portfolio</value>
+    <value>Ваше портфолио</value>
   </data>
 </root>

@@ -28,8 +28,8 @@
         <InputText id="password" @bind-Value="user.Password" type="password" class="form-control"></InputText>
         <ValidationMessage For="@(() => user.Password)" />
     </div>
-    <button type="submit" class="btn btn-primary">Login</button>
-    <a style="margin-left: 10px;" href="/register">Sign up</a>
+    <button type="submit" class="btn btn-primary">@Localizer["Login"]</button>
+    <a style="margin-left: 10px;" href="/register">@Localizer["SignUp"]</a>
 
 </EditForm>
 <div class="text-danger" style="margin-top: 10px;">
