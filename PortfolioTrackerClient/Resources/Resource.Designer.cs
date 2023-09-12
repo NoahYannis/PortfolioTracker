@@ -70,7 +70,7 @@ namespace PortfolioTrackerClient.Resources {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die absolute performance ($) ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Absolute performance ($) ähnelt.
         /// </summary>
         public static string AbsolutePerformance {
             get {
@@ -88,7 +88,7 @@ namespace PortfolioTrackerClient.Resources {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die buy in price ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Buy in price ($) ähnelt.
         /// </summary>
         public static string BuyInPrice {
             get {
@@ -117,9 +117,9 @@ namespace PortfolioTrackerClient.Resources {
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Compound Interest ähnelt.
         /// </summary>
-        public static string Compound_Interest {
+        public static string CompoundInterest {
             get {
-                return ResourceManager.GetString("Compound Interest", resourceCulture);
+                return ResourceManager.GetString("CompoundInterest", resourceCulture);
             }
         }
         
@@ -151,7 +151,7 @@ namespace PortfolioTrackerClient.Resources {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die consider inflation ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Consider inflation ähnelt.
         /// </summary>
         public static string ConsiderInflation {
             get {
@@ -169,7 +169,7 @@ namespace PortfolioTrackerClient.Resources {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die current price ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Current price ($) ähnelt.
         /// </summary>
         public static string CurrentPrice {
             get {
@@ -187,7 +187,7 @@ namespace PortfolioTrackerClient.Resources {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die dividend yield ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Dividend yield (%) ähnelt.
         /// </summary>
         public static string DividendYield {
             get {
@@ -223,7 +223,7 @@ namespace PortfolioTrackerClient.Resources {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die An errror occured :( ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die An error occured :( ähnelt.
         /// </summary>
         public static string ErrorMessage {
             get {
@@ -268,7 +268,7 @@ namespace PortfolioTrackerClient.Resources {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die industry ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Industry ähnelt.
         /// </summary>
         public static string Industry {
             get {
@@ -277,7 +277,16 @@ namespace PortfolioTrackerClient.Resources {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die interest rate ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Inflation rate ähnelt.
+        /// </summary>
+        public static string InflationRate {
+            get {
+                return ResourceManager.GetString("InflationRate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Interest rate (%) ähnelt.
         /// </summary>
         public static string InterestRate {
             get {
@@ -295,7 +304,7 @@ namespace PortfolioTrackerClient.Resources {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Make $100/months in dividends. ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Make $100/month in dividends. ähnelt.
         /// </summary>
         public static string InvestingGoalsPlaceholder {
             get {
@@ -331,7 +340,7 @@ namespace PortfolioTrackerClient.Resources {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die monthly contribution ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Monthly contribution ($) ähnelt.
         /// </summary>
         public static string MonthlyContribution {
             get {
@@ -367,7 +376,7 @@ namespace PortfolioTrackerClient.Resources {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die number of years ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Number of years ähnelt.
         /// </summary>
         public static string NumberOfYears {
             get {
@@ -394,7 +403,7 @@ namespace PortfolioTrackerClient.Resources {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die position size ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Position size ($) ähnelt.
         /// </summary>
         public static string PositionSize {
             get {
@@ -439,11 +448,20 @@ namespace PortfolioTrackerClient.Resources {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die relative performance (%) ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Relative performance (%) ähnelt.
         /// </summary>
         public static string RelativePerformance {
             get {
                 return ResourceManager.GetString("RelativePerformance", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Result ($) ähnelt.
+        /// </summary>
+        public static string Result {
+            get {
+                return ResourceManager.GetString("Result", resourceCulture);
             }
         }
         
@@ -484,7 +502,7 @@ namespace PortfolioTrackerClient.Resources {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die shares owned ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Shares owned ähnelt.
         /// </summary>
         public static string SharesOwned {
             get {
@@ -502,7 +520,7 @@ namespace PortfolioTrackerClient.Resources {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die starting sum ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Starting sum ($) ähnelt.
         /// </summary>
         public static string StartingSum {
             get {
@@ -511,7 +529,7 @@ namespace PortfolioTrackerClient.Resources {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die stock ticker ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Stock ticker ähnelt.
         /// </summary>
         public static string StockTicker {
             get {

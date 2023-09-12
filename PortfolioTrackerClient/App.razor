@@ -1,20 +1,22 @@
 ﻿@using PortfolioTrackerClient.Shared;
 @using Microsoft.AspNetCore.Components.Authorization;
 
+@inject IStringLocalizer<Resource> Localizer
+
 <CascadingBlazoredModal>
     <Router AppAssembly="@typeof(App).Assembly">
         <Found Context="routeData">
             <AuthorizeRouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)">
                 <NotAuthorized>
-                    <p>Log in required to access this page.</p>
+                    <p>@Localizer["LoginRequired"]</p>
                 </NotAuthorized>
             </AuthorizeRouteView>
             <FocusOnNavigate RouteData="@routeData" Selector="h1" />
         </Found>
         <NotFound>
-            <PageTitle>Not found</PageTitle>
+            <PageTitle>@Localizer["NotFound"]</PageTitle>
             <LayoutView Layout="@typeof(MainLayout)">
-                <p role="alert">Sorry, there's nothing at this address.</p>
+                <p role="alert">@Localizer["PageNotFound"]</p>
             </LayoutView>
         </NotFound>
     </Router>   

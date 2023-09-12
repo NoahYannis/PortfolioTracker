@@ -9,11 +9,12 @@
 @inject IPortfolioService PortfolioService
 @inject IGetStockInfoService StockInfoService
 @inject IModalService ModalService
+@inject IStringLocalizer<Resource> Localizer
 
 
 <Chart Config="_config" />
 <br />
-<button @onclick="OpenModal">Add new stock</button>
+<button @onclick="OpenModal">@Localizer["AddNewStock"]</button>
 <UpdateStockComponent StockToUpdate="@ClickedSegmentStock">
 </UpdateStockComponent>
 
@@ -41,12 +42,7 @@
                 {
                     OnClick = new DelegateHandler<ChartMouseEvent>(ChartClicked),
                     Responsive = true,
-                    Title = new OptionsTitle
-                    {
-                        Display = true,
-                        Text = "Your Portfolio", // TODO Display username
-                    }
-
+                    Title = new OptionsTitle {Display = true},
                 }
             };
 

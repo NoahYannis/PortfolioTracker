@@ -8,35 +8,36 @@
 
 @inject IPortfolioService PortfolioService
 @inject IModalService ModalService
+@inject IStringLocalizer<Resource> Localizer
 
 <div>
     <EditForm Model="@StockToUpdate" OnValidSubmit='async() => await UpdateStock(StockToUpdate)'>
         <DataAnnotationsValidator />
 
-        <label for="stockTicker">Stock Ticker: </label>
+        <label for="stockTicker">@Localizer["StockTicker"]: </label>
         <InputText id="stockTicker" @bind-Value="StockToUpdate.Ticker" readonly/>
         <br /><br />
 
-        <label for="currentPrice">Current Price: </label>
+        <label for="currentPrice">@Localizer["CurrentPrice"]: </label>
         <InputNumber id="currentPrice" @bind-Value="StockToUpdate.CurrentPrice" readonly/>
         <br /><br />
 
-        <label for="sharesOwned">Shares Owned: </label>
+        <label for="sharesOwned">@Localizer["SharesOwned"]: </label>
         <InputNumber id="sharesOwned" @bind-Value="StockToUpdate.SharesOwned" min="0" />
         <ValidationMessage For="() => StockToUpdate.SharesOwned" />
         <br /><br />
 
-        <label for="positionSize">Position Size ($): </label>
+        <label for="positionSize">@Localizer["PositionSize"]: </label>
         <InputNumber id="positionSize" @bind-Value="StockToUpdate.PositionSize" min="0" />
         <ValidationMessage For="() => StockToUpdate.PositionSize" />
         <br /><br />
 
-        <label for="buyinPrice">Buy In Price ($): </label>
+        <label for="buyinPrice">@Localizer["BuyInPrice"]: </label>
         <InputNumber id="buyinPrice" @bind-Value="StockToUpdate.BuyInPrice" min="0" />
         <ValidationMessage For="() => StockToUpdate.BuyInPrice" />
         <br /><br />
 
-        <label for="industry">Stock Industry: </label>
+        <label for="industry">@Localizer["Industry"]: </label>
         <InputSelect id="industry" @bind-Value="StockToUpdate.Industry">
             @foreach (Industry industry in Enum.GetValues(typeof(Industry)))
             {
@@ -45,22 +46,22 @@
         </InputSelect>
         <br /><br />
 
-        <label for="dividendYield">Dividend Yield % (optional): </label>
+        <label for="dividendYield">@Localizer["DividendYield"]: </label>
         <InputNumber id="dividendYield" @bind-Value="StockToUpdate.DividendYield" min="0" />
         <ValidationMessage For="() => StockToUpdate.DividendYield" />
         <br /><br />
 
         <br />
 
-        <label for="relativePerformance">Relative Performance (%): </label>
+        <label for="relativePerformance">@Localizer["RelativePerformance"]: </label>
         <InputNumber style="@DeterminePerformanceColor(StockToUpdate.RelativePerformance)" id="relativePerformance" @bind-Value="StockToUpdate.RelativePerformance" readonly/>
         <br /><br />
 
-        <label for="absolutePerformance">Absolute Performance ($): </label>
+        <label for="absolutePerformance">@Localizer["AbsolutePerformance"]: </label>
         <InputNumber style="@DeterminePerformanceColor(StockToUpdate.AbsolutePerformance)" id="absolutePerformance" @bind-Value="StockToUpdate.AbsolutePerformance" readonly/>
         <br /><br />
 
-        <button class="btn-primary" type="submit">Update</button>
+        <button class="btn-primary" type="submit">@Localizer["Update"]</button>
         <button class="btn-danger" type="button" style="margin-left: 10px" @onclick="async() => await DeleteStock(StockToUpdate.Ticker)">Delete</button>
         <button style="margin-left: 10px" @onclick="async() => await UpdatePriceAndPositionSize() ">Update share prices</button>
 

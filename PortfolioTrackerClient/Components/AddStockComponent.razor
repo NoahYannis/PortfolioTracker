@@ -3,32 +3,33 @@
 @using PortfolioTrackerShared.Other;
 
 @inject IPortfolioService PortfolioService
+@inject IStringLocalizer<Resource> Localizer
 
 <div>
     <EditForm Model="@StockToAdd" OnValidSubmit='async() => await AddStock(StockToAdd)'>
         <DataAnnotationsValidator />
 
-        <label for="stockTicker">Stock Ticker: </label>
+        <label for="stockTicker">@Localizer["StockTicker"]:</label>
         <InputText id="stockTicker" @bind-Value="StockToAdd.Ticker" />
         <ValidationMessage For="() => StockToAdd.Ticker" />
         <br /><br />
 
-        <label for="sharesOwned">Shares Owned: </label>
+        <label for="sharesOwned">@Localizer["SharesOwned"]: </label>
         <InputNumber id="sharesOwned" @bind-Value="StockToAdd.SharesOwned" min="0" />
         <ValidationMessage For="() => StockToAdd.SharesOwned" />
         <br /><br />
 
-        <label for="positionSize">Position Size ($): </label>
+        <label for="positionSize">@Localizer["PositionSize"]: </label>
         <InputNumber id="positionSize" @bind-Value="StockToAdd.PositionSize" min="0" />
         <ValidationMessage For="() => StockToAdd.PositionSize" />
         <br /><br />
 
-        <label for="buyinPrice">Buy In Price ($): </label>
+        <label for="buyinPrice">@Localizer["BuyInPrice"]: </label>
         <InputNumber id="buyinPrice" @bind-Value="StockToAdd.BuyInPrice" min="0" />
         <ValidationMessage For="() => StockToAdd.BuyInPrice" />
         <br /><br />
 
-        <label for="industry">Stock Industry: </label>
+        <label for="industry">@Localizer["Industry"]: </label>
         <InputSelect id="industry" @bind-Value="StockToAdd.Industry">
             @foreach (Industry industry in Enum.GetValues(typeof(Industry)))
             {
@@ -37,12 +38,12 @@
         </InputSelect>
         <br /><br />
 
-        <label for="dividendYield">Dividend Yield % (optional): </label>
+        <label for="dividendYield">@Localizer["DividendYield"]: </label>
         <InputNumber id="dividendYield" @bind-Value="StockToAdd.DividendYield" min="0" />
         <ValidationMessage For="() => StockToAdd.DividendYield" />
         <br /><br />
 
-        <button type="submit">Add new stock</button>
+        <button type="submit">@Localizer["AddNewStock"]</button>
         <br /><br />
     </EditForm>
 </div>
@@ -86,10 +87,6 @@
 
     public async Task AddStock(PortfolioStock stock)
     {
-        //AddStockResultMessage = await PortfolioService.AddStock(stock) ?
-        //$"Added {stock.Ticker} to portfolio!" : $"Warning: Portfolio already contains {stock.Ticker}!";
-        //await DisplayResultMessage();
-
         await PortfolioService.AddStock(stock);
         StockToAdd = new PortfolioStock();
         await BlazoredModal.CloseAsync(ModalResult.Ok());

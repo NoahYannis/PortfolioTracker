@@ -6,6 +6,7 @@
 @inject NavigationManager NavigationManager
 @inject ISettingsService SettingsService
 @inject IAuthService AuthService
+@inject IStringLocalizer<Resource> Localizer
 
 
 <div class="page">
@@ -18,11 +19,11 @@
             @if (IsAuthenticated)
             {
                 <a href="#" @onclick="Logout" target="_self">Logout</a>
-                <a href="/settings" target="_self">Settings</a>
+                <a href="/settings" target="_self">@Localizer["Settings"]</a>
             }
             else
             {
-                <a href="/register" target="_self">Register</a>
+                <a href="/register" target="_self">@Localizer["Register"]</a>
                 <a href="/login" target="_self">Login</a>
             }
         </div>

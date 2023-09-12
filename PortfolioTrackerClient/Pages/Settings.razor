@@ -18,32 +18,32 @@
 
 @if (editing)
 {
-        <h3>Contact Data</h3>
+    <h3>@Localizer["ContactData"]</h3>
 
     <div>
-        <label for="Name">Name:</label>
+        <label for="Name">@Localizer["Username"]:</label>
         <span id="Name">@User.UserName</span>
     </div>
     <div>
-        <label for="Email">Email:</label>
+        <label for="Email">@Localizer["Email"]:</label>
         <span id="Email">@User.Email</span>
     </div>
     <hr /> <!-- Separator -->
 
-        <h3>Preferences</h3>
+    <h3>@Localizer["Preferences"]</h3>
 
     <div>
-        <label for="ColorScheme">Color scheme</label>
+        <label for="ColorScheme">@Localizer["ColorScheme"]</label>
         <ColorPicker IsOpened="@colorPickerOpen" Closed="CloseColorPicker" MyColor="UserSettings.ColorScheme"/>
         <button class="btn btn-primary" @onclick="OpenModal">
             <div style="background-color: @UserSettings.ColorScheme" class="buttonColor"></div>
-            Select Color
+            @Localizer["SelectColor"]
         </button>
     </div>
 
     <div style="margin-top: 20px;">
         <EditForm Model="UserSettings">
-            <label for="preferedLanguage">Prefered Language:</label>
+            <label for="preferedLanguage">@Localizer["PreferedLanguage"]:</label>
             <InputSelect id="preferedLanguage" @bind-Value="UserSettings.PreferedLanguage">
                 <option value="Deutsch">Deutsch</option>
                 <option value="English">English</option>
@@ -56,42 +56,42 @@
 
     <hr /> <!-- Separator -->
 
-    <h3>Investing Goals</h3>
+    <h3>@Localizer["InvestingGoals"]</h3>
 
     <hr /> <!-- Separator -->
 
-    <BlazoredTextEditor @ref="@richEditor" Placeholder="Make $100/month in dividends. Achieve a $100,000 portfolio.">
+    <BlazoredTextEditor @ref="@richEditor" Placeholder="@Localizer["InvestingGoalsPlaceholder"]">
         <EditorContent>
             @UserSettings.InvestingGoals
         </EditorContent>
     </BlazoredTextEditor>
 
     <hr /> <!-- Separator -->
-    <button class="btn btn-primary" @onclick="SaveInvestingGoals">Save Goals</button>
+    <button class="btn btn-primary" @onclick="SaveInvestingGoals">@Localizer["SaveGoals"]</button>
 
-    <button class="btn btn-primary" @onclick="SaveProfile">Save</button>
+    <button class="btn btn-primary" @onclick="SaveProfile">@Localizer["Save"]</button>
 }
 else
 {
     <div>
-        <label for="Name">Name:</label>
+        <label for="Name">@Localizer["Username"]:</label>
         <span id="Name">@User.UserName</span>
     </div>
     <div>
-        <label for="Email">Email:</label>
+        <label for="Email">@Localizer["Email"]:</label>
         <span id="Email">@User.Email</span>
     </div>
 
     <hr /> <!-- Separator -->
 
-    <h3>Preferences</h3>
+    <h3>@Localizer["Preferences"]</h3>
 
     <div>
-        <label for="ColorScheme">Color scheme</label>
+        <label for="ColorScheme">@Localizer["ColorScheme"]</label>
         <ColorPicker IsOpened="@colorPickerOpen" Closed="CloseColorPicker" MyColor="UserSettings.ColorScheme" />
         <button class="btn btn-primary" @onclick="OpenModal">
             <div style="background-color: @UserSettings.ColorScheme" class="buttonColor"></div>
-            Select Color
+            @Localizer["SelectColor"]
         </button>
     </div>
 

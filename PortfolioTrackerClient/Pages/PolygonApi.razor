@@ -4,9 +4,10 @@
 @using PortfolioTrackerShared.Other;
 
 @inject IGetStockInfoService GetStockInfoService
+@inject IStringLocalizer<Resource> Localizer
 
 <div>
-    <label for="stockTicker">Enter a stock ticker: </label>
+    <label for="stockTicker">@Localizer["EnterStockTicker"]: </label>
     <InputText id="stockTicker" @bind-Value="Ticker" />
 </div>
 <div>

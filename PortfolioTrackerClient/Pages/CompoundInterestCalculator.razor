@@ -1,6 +1,8 @@
 ﻿@page "/compound"
 @using CompoundInterestCalc;
 
+@inject IStringLocalizer<Resource> Localizer
+
 <h3>CompoundInterestCalculator</h3>
 <br />
 <br />
@@ -10,34 +12,34 @@
         <DataAnnotationsValidator />
 
         <div class="input-element">
-            <label for="startingSum">Starting Sum ($):</label>
+            <label for="startingSum">@Localizer["StartingSum"]:</label>
             <InputNumber id="startingSum" @bind-Value="@CalcModel.StartingSum" min="0" />
             <ValidationMessage For="() => CalcModel.StartingSum" />
         </div>
 
         <div class="input-element">
-            <label for="monthlyContribution">Monthly Contribution ($):</label>
+            <label for="monthlyContribution">@Localizer["MonthlyContribution"]:</label>
             <InputNumber id="monthlyContribution" @bind-Value="@CalcModel.MonthlyContribution" min="0" />
             <ValidationMessage For="() => CalcModel.MonthlyContribution" />
             <br />
         </div>
 
         <div class="input-element">
-            <label for="interestRate">Interest Rate (%):</label>
+            <label for="interestRate">@Localizer["InterestRate"]:</label>
             <InputNumber id="interestRate" @bind-Value="@CalcModel.InterestRate" min="0" />
             <ValidationMessage For="() => CalcModel.InterestRate" />
             <br />
         </div>
 
         <div class="input-element">
-            <label for="numberOfYears">Number Of Years:</label>
+            <label for="numberOfYears">@Localizer["NumberOfYears"]:</label>
             <InputNumber id="numberOfYears" @bind-Value="@CalcModel.NumberOfYears" min="0" />
             <ValidationMessage For="() => CalcModel.NumberOfYears" />
             <br />
         </div>
 
         <div class="input-element">
-            <label for="considerInflation">Consider Inflation:</label>
+            <label for="considerInflation">@Localizer["ConsiderInflation"]:</label>
             <InputCheckbox id="considerInflation" @bind-Value="@CalcModel.ConsiderInflation" />
             <br />
         </div>
@@ -45,20 +47,20 @@
         @if (CalcModel.ConsiderInflation)
         {
             <div class="input-element">
-                <label for="inflationRate">Inflation Rate (%):</label>
+                <label for="inflationRate">@Localizer["InflationRate"]:</label>
                 <InputNumber id="inflationRate" @bind-Value="@CalcModel.InflationRate" min="-20" />
                 <ValidationMessage For="() => CalcModel.InflationRate" />
                 <br />
             </div>
         }
 
-        <button class="btn-primary" type="submit">Calculate</button>
-        <button class="btn-danger" type="button" style="margin-left: 10px" @onclick="(() => CalcModel = new())">Reset</button>
+        <button class="btn-primary" type="submit">@Localizer["Calculate"]</button>
+        <button class="btn-danger" type="button" style="margin-left: 10px" @onclick="(() => CalcModel = new())">@Localizer["Reset"]</button>
 
         @if (CalcModel.CalculationResult is not null)
         {
             <div class="input-element" style="margin: 50px 0px 0px 0px;">
-                <label for="calcResult">Result ($):</label>
+                <label for="calcResult">@Localizer["Result"]:</label>
                 <InputNumber id="calcResult" @bind-Value="@CalcModel.CalculationResult" readonly />
                 <br />
             </div>

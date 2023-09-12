@@ -4,35 +4,36 @@
 @using PortfolioTrackerShared.Models.UserModels;
 
 @inject IAuthService AuthService
+@inject IStringLocalizer<Resource> Localizer
 
-<PageTitle>Register</PageTitle>
+<PageTitle>@Localizer["Register"]</PageTitle>
 
-<h3>Register</h3>
+<h3>@Localizer["Register"]</h3>
 
 <EditForm Model="user" OnValidSubmit="HandleRegistration">
     <DataAnnotationsValidator />
 
     <div class="mb-3">
-        <label for="name">Username</label>
+        <label for="name">@Localizer["Username"]:</label>
         <InputText id="name" @bind-Value="user.Name" class="form-control"></InputText>
         <ValidationMessage For="@(() => user.Name)" />
     </div>
     <div class="mb-3">
-        <label for="email">Email</label>
+        <label for="email">@Localizer["Email"]:</label>
         <InputText id="email" @bind-Value="user.Email" class="form-control"></InputText>
         <ValidationMessage For="@(() => user.Email)" />
     </div>
     <div class="mb-3">
-        <label for="password">Password</label>
+        <label for="password">@Localizer["Password"]</label>
         <InputText id="password" @bind-Value="user.Password" type="password" class="form-control"></InputText>
         <ValidationMessage For="@(() => user.Password)" />
     </div>
     <div class="mb-3">
-        <label for="confirmPassord">Confirm Password</label>
+        <label for="confirmPassord">@Localizer["ConfirmPassword"]</label>
         <InputText id="confirmPassord" @bind-Value="user.ConfirmPassword" type="password" class="form-control"></InputText>
         <ValidationMessage For="@(() => user.ConfirmPassword)" />
     </div>
-    <button type="submit" class="btn btn-primary">Register</button>
+    <button type="submit" class="btn btn-primary">@Localizer["Register"]</button>
     <a style="margin-left: 10px;" href="/login">Login</a>
     <div class="@messageCssClass" style="margin-top: 10px;">
         <span>@message</span>
