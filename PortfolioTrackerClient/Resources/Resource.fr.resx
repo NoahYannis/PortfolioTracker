@@ -118,186 +118,190 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="About" xml:space="preserve">
-    <value>About</value>
+    <value>À propos</value>
   </data>
   <data name="AbsolutePerformance" xml:space="preserve">
-    <value>Absolute performance ($)</value>
+    <value>Performance absolue</value>
   </data>
   <data name="AddNewStock" xml:space="preserve">
-    <value>Add new stock</value>
+    <value>Ajouter nouvelle action</value>
   </data>
   <data name="BuyInPrice" xml:space="preserve">
-    <value>Buy in price ($)</value>
+    <value>Prix d'achat</value>
   </data>
   <data name="Calculate" xml:space="preserve">
-    <value>Calculate</value>
+    <value>Calculer</value>
   </data>
   <data name="ColorScheme" xml:space="preserve">
-    <value>Color scheme</value>
+    <value>Schéma de couleur</value>
   </data>
   <data name="CompoundInterest" xml:space="preserve">
-    <value>Compound Interest</value>
+    <value>Intérêt composé</value>
   </data>
   <data name="Confirm" xml:space="preserve">
-    <value>Confirm</value>
+    <value>Confirmer</value>
   </data>
   <data name="ConfirmAction" xml:space="preserve">
-    <value>Confirm action</value>
+    <value>Confirmer l'action</value>
   </data>
   <data name="ConfirmPassword" xml:space="preserve">
-    <value>Confirm password</value>
+    <value>Confirmer mot de
+passe</value>
   </data>
   <data name="ConsiderInflation" xml:space="preserve">
-    <value>Consider inflation</value>
+    <value>Tenir compte de
+l'inflation</value>
   </data>
   <data name="ContactData" xml:space="preserve">
-    <value>Contact Data</value>
+    <value>Coordonnées de
+contact</value>
   </data>
   <data name="CurrentPrice" xml:space="preserve">
-    <value>Current price ($)</value>
+    <value>Prix actuel</value>
   </data>
   <data name="Delete" xml:space="preserve">
-    <value>Delete</value>
+    <value>Supprimer</value>
   </data>
   <data name="DividendYield" xml:space="preserve">
-    <value>Dividend yield (%)</value>
+    <value>Rendement en dividendes (%)</value>
   </data>
   <data name="Edit" xml:space="preserve">
-    <value>Edit</value>
+    <value>Éditer</value>
   </data>
   <data name="Email" xml:space="preserve">
-    <value>Email</value>
+    <value>Courriel</value>
   </data>
   <data name="EnterStockTicker" xml:space="preserve">
-    <value>Enter a stock ticker</value>
+    <value>Entrer ticker de l'action</value>
   </data>
   <data name="ErrorMessage" xml:space="preserve">
-    <value>An error occured :(</value>
+    <value>Une erreur est survenue :(fet</value>
   </data>
   <data name="FetchStockData" xml:space="preserve">
-    <value>Fetch Stock Data</value>
+    <value>Obtenir donnés sur les actions</value>
   </data>
   <data name="Greeting" xml:space="preserve">
-    <value>Hi</value>
+    <value>Coucou</value>
   </data>
   <data name="HelloWorld" xml:space="preserve">
-    <value>Hello, world!</value>
+    <value>Bonjour le monde!</value>
   </data>
   <data name="Home" xml:space="preserve">
-    <value>Home</value>
+    <value>Accueil</value>
   </data>
   <data name="Industry" xml:space="preserve">
-    <value>Industry</value>
+    <value>Industrie</value>
   </data>
   <data name="InflationRate" xml:space="preserve">
-    <value>Inflation rate</value>
+    <value>Taux d'inflation (%)</value>
   </data>
   <data name="InterestRate" xml:space="preserve">
-    <value>Interest rate (%)</value>
+    <value>Taux d'intérêt (%)</value>
   </data>
   <data name="InvestingGoals" xml:space="preserve">
-    <value>Investing goals</value>
+    <value>Objectifs
+d'investissement</value>
   </data>
   <data name="InvestingGoalsPlaceholder" xml:space="preserve">
-    <value>Make $100/month in dividends.</value>
+    <value>Gagner 100€/mois de dividendes</value>
   </data>
   <data name="Login" xml:space="preserve">
-    <value>Login</value>
+    <value>Connexion</value>
   </data>
   <data name="LoginRequired" xml:space="preserve">
-    <value>Login required to access.</value>
+    <value>Connexion requise pour accéder</value>
   </data>
   <data name="Logout" xml:space="preserve">
-    <value>Logout</value>
+    <value>Déconnexion</value>
   </data>
   <data name="MonthlyContribution" xml:space="preserve">
-    <value>Monthly contribution ($)</value>
+    <value>Cotisation mensuelle</value>
   </data>
   <data name="Name" xml:space="preserve">
-    <value>Name</value>
+    <value>Nom</value>
   </data>
   <data name="No" xml:space="preserve">
-    <value>No</value>
+    <value>Non</value>
   </data>
   <data name="NotFound" xml:space="preserve">
-    <value>Not found</value>
+    <value>Introuvable</value>
   </data>
   <data name="NumberOfYears" xml:space="preserve">
-    <value>Number of years</value>
+    <value>Nombre d'années</value>
   </data>
   <data name="PageNotFound" xml:space="preserve">
-    <value>The page you tried to access was not found.</value>
+    <value>Page non trouvée</value>
   </data>
   <data name="Password" xml:space="preserve">
-    <value>Password</value>
+    <value>Mot de passe</value>
   </data>
   <data name="PositionSize" xml:space="preserve">
-    <value>Position size ($)</value>
+    <value>Taille de position</value>
   </data>
   <data name="PreferedLanguage" xml:space="preserve">
-    <value>Prefered Language</value>
+    <value>Langue préférée</value>
   </data>
   <data name="Preferences" xml:space="preserve">
-    <value>Preferences</value>
+    <value>Préférences</value>
   </data>
   <data name="Register" xml:space="preserve">
-    <value>Register</value>
+    <value>S'inscrire</value>
   </data>
   <data name="RegistrationSuccessful" xml:space="preserve">
-    <value>Registration successful</value>
+    <value>Inscription réussie</value>
   </data>
   <data name="RelativePerformance" xml:space="preserve">
-    <value>Relative performance (%)</value>
+    <value>Performance relative (%)</value>
   </data>
   <data name="Reset" xml:space="preserve">
-    <value />
+    <value>Réinitialiser</value>
   </data>
   <data name="Result" xml:space="preserve">
-    <value>Result ($)</value>
+    <value>Résultat</value>
   </data>
   <data name="Save" xml:space="preserve">
-    <value>Save</value>
+    <value>Sauvegarder</value>
   </data>
   <data name="SaveGoals" xml:space="preserve">
-    <value>Save goals</value>
+    <value>Sauvegarder objectifs</value>
   </data>
   <data name="SelectColor" xml:space="preserve">
-    <value>Select color</value>
+    <value>Choisis couleuer</value>
   </data>
   <data name="Settings" xml:space="preserve">
-    <value>Settings</value>
+    <value>Paramètres</value>
   </data>
   <data name="SharesOwned" xml:space="preserve">
-    <value>Shares owned</value>
+    <value>Actions possédées</value>
   </data>
   <data name="SignUp" xml:space="preserve">
-    <value>Sign up</value>
+    <value>S'inscrire</value>
   </data>
   <data name="StartingSum" xml:space="preserve">
-    <value>Starting sum ($)</value>
+    <value>Somme initiale</value>
   </data>
   <data name="StockTicker" xml:space="preserve">
-    <value>Stock ticker</value>
+    <value>Code de l'action</value>
   </data>
   <data name="TooManyRequests" xml:space="preserve">
-    <value>Too Many Requests</value>
+    <value>Trop de demandes</value>
   </data>
   <data name="Update" xml:space="preserve">
-    <value>Update</value>
+    <value>Mettre à jour</value>
   </data>
   <data name="UpdateSharePrice" xml:space="preserve">
-    <value>Update share price</value>
+    <value>Mettre à jour les cours des actions</value>
   </data>
   <data name="UserAlreadyExists" xml:space="preserve">
-    <value>User already exists</value>
+    <value>Utilisateur déjà existe</value>
   </data>
   <data name="Username" xml:space="preserve">
-    <value>Username</value>
+    <value>Nom d'utilisateur</value>
   </data>
   <data name="Yes" xml:space="preserve">
-    <value>Yes</value>
+    <value>Oui</value>
   </data>
   <data name="YourPortfolio" xml:space="preserve">
-    <value>Your portfolio</value>
+    <value>Ta portefeuile</value>
   </data>
 </root>
