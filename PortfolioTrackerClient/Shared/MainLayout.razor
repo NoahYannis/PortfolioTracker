@@ -52,9 +52,11 @@
         authenticationState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
         IsAuthenticated = authenticationState.User.Identity.IsAuthenticated;
 
-        var userServiceResponse = await AuthService.GetUserFromDbByEmail(authenticationState.User.Claims.ElementAt(2).Value);
-        var userSettings = await SettingsService.GetUserSettings(userServiceResponse.Data.UserId);
-
-        sidebarcolor = userSettings.ColorScheme;
+        if (IsAuthenticated)
+        {
+            var userServiceResponse = await AuthService.GetUserFromDbByEmail(authenticationState.User.Claims.ElementAt(2).Value);
+            var userSettings = await SettingsService.GetUserSettings(userServiceResponse.Data.UserId);
+            sidebarcolor = userSettings.ColorScheme;
+        }
     }
 }

@@ -205,7 +205,7 @@
     <value>Anmelden</value>
   </data>
   <data name="LoginRequired" xml:space="preserve">
-    <value>Login notwendig für Zugriff</value>
+    <value>Bitte logge dich ein, um auf diese Seite zuzugreifen.</value>
   </data>
   <data name="Logout" xml:space="preserve">
     <value>Ausloggen</value>
