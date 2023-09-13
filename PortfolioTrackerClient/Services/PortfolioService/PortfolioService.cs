@@ -1,4 +1,5 @@
 ﻿using PortfolioTrackerShared.Models;
+using PortfolioTrackerShared.Models.UserModels;
 using System.Net.Http.Json;
 namespace PortfolioTrackerClient.Services.PortfolioService
 {
@@ -17,14 +18,15 @@ namespace PortfolioTrackerClient.Services.PortfolioService
 
 
         #region Stock-CRUD
+        public User PortfolioOwner { get; private set; } = new();
 
         public List<PortfolioStock> PortfolioStocks { get; set; }
 
         public event EventHandler<PortfolioChangedArgs>? PortfolioChanged;
 
-        public async Task InitializeAsync()
+        public async Task InitializePortfolioAsync(int userId)
         {
-            PortfolioStocks = await GetDatabaseStocks();
+            PortfolioStocks = await GetPortfolioStocks(userId);
         }
 
         public void OnPortfolioChanged(List<PortfolioStock> portfolioStocks, PortfolioStock? modifiedStock = null, PortfolioAction portfolioAction = 0)
@@ -36,7 +38,7 @@ namespace PortfolioTrackerClient.Services.PortfolioService
         {
             var response = await _httpClient.PostAsJsonAsync($"{serverBaseDomain}/api/portfolio", stock);
             var newStock = (await response.Content.ReadFromJsonAsync<ServiceResponse<PortfolioStock>>()).Data;
-            OnPortfolioChanged(PortfolioStocks = await GetDatabaseStocks(), PortfolioStocks.FirstOrDefault(s => s.Ticker == stock.Ticker), PortfolioAction.Added);
+            OnPortfolioChanged(PortfolioStocks = await GetPortfolioStocks(PortfolioOwner.UserId), PortfolioStocks.FirstOrDefault(s => s.Ticker == stock.Ticker), PortfolioAction.Added);
             return newStock;
         }
 
@@ -45,7 +47,7 @@ namespace PortfolioTrackerClient.Services.PortfolioService
             var response = await _httpClient.DeleteAsync($"{serverBaseDomain}/api/portfolio/{stockToDelete}");
 
             if (response.IsSuccessStatusCode)
-                OnPortfolioChanged(PortfolioStocks = await GetDatabaseStocks(), PortfolioStocks.FirstOrDefault(s => s.Ticker == stockToDelete), PortfolioAction.Deleted);
+                OnPortfolioChanged(PortfolioStocks = await GetPortfolioStocks(PortfolioOwner.UserId), PortfolioStocks.FirstOrDefault(s => s.Ticker == stockToDelete), PortfolioAction.Deleted);
 
             return response.IsSuccessStatusCode;
 
@@ -57,9 +59,9 @@ namespace PortfolioTrackerClient.Services.PortfolioService
             return response.Data;
         }
 
-        public async Task<List<PortfolioStock>> GetDatabaseStocks()
+        public async Task<List<PortfolioStock>> GetPortfolioStocks(int userId) 
         {
-            var response = await _httpClient.GetFromJsonAsync<ServiceResponse<List<PortfolioStock>>>($"{serverBaseDomain}/api/portfolio");
+            var response = await _httpClient.GetFromJsonAsync<ServiceResponse<List<PortfolioStock>>>($"{serverBaseDomain}/api/portfolio?userId={userId}");
             return response.Data;
         }
 

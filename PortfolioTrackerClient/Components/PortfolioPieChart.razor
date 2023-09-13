@@ -15,10 +15,13 @@
 <Chart Config="_config" />
 <br />
 <button @onclick="OpenModal">@Localizer["AddNewStock"]</button>
-<UpdateStockComponent StockToUpdate="@ClickedSegmentStock">
-</UpdateStockComponent>
+<UpdateStockComponent StockToUpdate="@ClickedSegmentStock"/>
 
 @code {
+
+
+    [Parameter]
+    public User PortfolioOwner { get; set; }
 
     private PieConfig _config = new();
     private List<string> BackgroundColors { get; set; } = new List<string>();
@@ -48,7 +51,8 @@
 
 
         PortfolioService.PortfolioChanged += UpdatePieChart;
-        await PortfolioService.InitializeAsync();
+
+        await PortfolioService.InitializePortfolioAsync(PortfolioOwner.UserId);
 
         // For each stock inside the portfolio display its ticker and set the background to a random color.
         foreach (PortfolioStock stock in PortfolioService.PortfolioStocks)

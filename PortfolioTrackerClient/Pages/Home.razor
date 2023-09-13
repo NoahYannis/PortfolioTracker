@@ -1,6 +1,16 @@
-﻿@using PortfolioTrackerClient.Components
+﻿@using Microsoft.AspNetCore.Components.Authorization
+@using PortfolioTrackerClient.Components
 @page "/"
 
-<PageTitle>Home</PageTitle>
+@inject AuthenticationStateProvider AuthProvider
 
-<Portfolio/>
+<CascadingAuthenticationState>
+    <AuthorizeView>
+        <Authorized>
+            <Portfolio />
+        </Authorized>
+        <NotAuthorized>
+            <Login/>
+        </NotAuthorized>
+    </AuthorizeView>
+</CascadingAuthenticationState>

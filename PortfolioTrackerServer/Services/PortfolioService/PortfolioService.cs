@@ -1,9 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PortfolioTrackerServer.Data;
-using PortfolioTrackerServer.Services.GetStockInfoService;
 using PortfolioTrackerShared.Models;
+using PortfolioTrackerShared.Models.UserModels;
 using PortfolioTrackerShared.Other;
-using System.Diagnostics;
 
 namespace PortfolioTrackerServer.Services.PortfolioService
 {
@@ -12,12 +11,13 @@ namespace PortfolioTrackerServer.Services.PortfolioService
         private readonly DataContext _dataContext;
         private readonly IHttpContextAccessor _httpContextAccessor;
 
-
         public PortfolioService(DataContext dataContext, IHttpContextAccessor httpContextAccessor)
         {
             _dataContext = dataContext;
             _httpContextAccessor = httpContextAccessor;
         }
+
+        public User PortfolioOwner { get; private set; } = new();
 
         private List<PortfolioStock> _portfolioStocks;
         public List<PortfolioStock> PortfolioStocks
@@ -26,8 +26,9 @@ namespace PortfolioTrackerServer.Services.PortfolioService
             {
                 if (_portfolioStocks == null)
                 {
-                    InitializeAsync().Wait();
+                    InitializePortfolioAsync(PortfolioOwner.UserId).Wait();
                 }
+
                 return _portfolioStocks;
             }
             set => _portfolioStocks = value;
@@ -37,10 +38,10 @@ namespace PortfolioTrackerServer.Services.PortfolioService
 
         #region Stock
 
-        public async Task InitializeAsync()
+        public async Task InitializePortfolioAsync(int userId)
         {
-            var response = await GetDatabaseStocks();
-            PortfolioStocks = response?.Data;
+            var response = await GetPortfolioStocks(userId);
+            PortfolioStocks = response?.Data ?? new();
         }
 
         public async Task<ServiceResponse<PortfolioStock>> GetStock(string ticker)
@@ -57,9 +58,12 @@ namespace PortfolioTrackerServer.Services.PortfolioService
         }
 
 
-        public async Task<ServiceResponse<List<PortfolioStock>>> GetDatabaseStocks()
+        public async Task<ServiceResponse<List<PortfolioStock>>> GetPortfolioStocks(int userId)
         {
-            return new ServiceResponse<List<PortfolioStock>> { Data = PortfolioStocks = await _dataContext.Stocks.ToListAsync() };
+            Portfolio userPortfolio = await _dataContext.Portfolios.FirstOrDefaultAsync(p => p.UserId == userId);
+
+            // Return the retrieved positions or if null an empty one.
+            return new ServiceResponse<List<PortfolioStock>> { Data = PortfolioStocks = userPortfolio?.Positions ?? new() };
         }
 
 

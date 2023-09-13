@@ -1,7 +1,13 @@
 ﻿@page "/portfolio"
 
 @using Microsoft.AspNetCore.Components.Authorization;
+@using Microsoft.AspNetCore.Authorization;
+@using PortfolioTrackerClient.Components
+@using PortfolioTrackerClient.Services.AuthService;
+@using PortfolioTrackerShared.Models.UserModels;
+
 @inject IAuthService AuthService
+@inject AuthenticationStateProvider AuthProvider
 @attribute [Authorize]
 
 <CascadingAuthenticationState>
@@ -10,16 +16,27 @@
     </AuthorizeView>
 </CascadingAuthenticationState>
 
-@using Microsoft.AspNetCore.Authorization;
-@using PortfolioTrackerClient.Components
-@using PortfolioTrackerClient.Services.AuthService;
-@using PortfolioTrackerShared.Models.UserModels;
 
 <h3>Portfolio</h3>
 
-<PortfolioPieChart />
-
+@* Ensure PortfolioOwner is initialized before rendering the pie chart *@
+@if (PortfolioOwner.UserId != 0)
+{
+    <PortfolioPieChart PortfolioOwner="@PortfolioOwner" />
+}
 
 @code {
 
+    private User PortfolioOwner { get; set; } = new();
+
+    protected async override Task OnInitializedAsync()
+    {
+        AuthenticationState authState = await AuthProvider.GetAuthenticationStateAsync();
+
+        if (await AuthService.IsUserAuthenticated())
+        {
+            var userServiceResponse = await AuthService.GetUserFromDbByEmail(authState.User.Claims.ElementAt(2).Value);
+            PortfolioOwner = userServiceResponse?.Data ?? new();
+        }
+    }
 }

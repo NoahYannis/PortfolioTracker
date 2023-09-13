@@ -11,7 +11,7 @@ namespace PortfolioTrackerServer.Services.PortfolioService
         #region Database Stocks 
 
         List<PortfolioStock> PortfolioStocks { get; set; }
-        Task<ServiceResponse<List<PortfolioStock>>> GetDatabaseStocks();
+        Task<ServiceResponse<List<PortfolioStock>>> GetPortfolioStocks(int userId);
         Task<ServiceResponse<PortfolioStock>> GetStock(string ticker);
         Task<ServiceResponse<bool>> DeleteStock(string ticker);
         Task<ServiceResponse<PortfolioStock>> AddStock(PortfolioStock stock);

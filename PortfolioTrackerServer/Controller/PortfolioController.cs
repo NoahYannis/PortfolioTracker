@@ -28,9 +28,9 @@ namespace PortfolioTrackerServer.Controller
         }
 
         [HttpGet]
-        public async Task<ActionResult<ServiceResponse<List<PortfolioStock>>>> GetStocks()
+        public async Task<ActionResult<ServiceResponse<List<PortfolioStock>>>> GetPortfolioStocks(int userId)
         {
-            var result = await _portfolioService.GetDatabaseStocks();
+            var result = await _portfolioService.GetPortfolioStocks(userId);
             return Ok(result);
         }
 
