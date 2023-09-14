@@ -42,10 +42,10 @@ namespace PortfolioTrackerServer.Controller
         }
 
 
-        [HttpPost]
-        public async Task<ActionResult<ServiceResponse<PortfolioStock>>> AddStock([FromBody] PortfolioStock portfolioStock)
+        [HttpPost("add")]
+        public async Task<ActionResult<ServiceResponse<PortfolioStock>>> AddStock([FromBody] PortfolioStock portfolioStock, int userId)
         {
-            var result = await _portfolioService.AddStock(portfolioStock);
+            var result = await _portfolioService.AddStock(portfolioStock, userId);
             return Ok(result);
         }
 

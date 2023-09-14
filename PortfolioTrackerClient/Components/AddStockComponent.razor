@@ -6,7 +6,7 @@
 @inject IStringLocalizer<Resource> Localizer
 
 <div>
-    <EditForm Model="@StockToAdd" OnValidSubmit='async() => await AddStock(StockToAdd)'>
+    <EditForm Model="@StockToAdd" OnValidSubmit='async() => await AddStock(StockToAdd, PortfolioOwner.UserId)'>
         <DataAnnotationsValidator />
 
         <label for="stockTicker">@Localizer["StockTicker"]:</label>
@@ -59,11 +59,14 @@
 
     [CascadingParameter] BlazoredModalInstance BlazoredModal { get; set; } = default!;
 
+    [Parameter]
+    public User PortfolioOwner { get; set; } = new();
+
     private PortfolioStock _stockToAdd = new PortfolioStock();
 
     private PortfolioStock StockToAdd
     {
-        get => _stockToAdd is not null ? _stockToAdd : new PortfolioStock();
+        get => _stockToAdd ?? new();
         set => _stockToAdd = value;
     }
 
@@ -85,9 +88,9 @@
         }
     }
 
-    public async Task AddStock(PortfolioStock stock)
+    public async Task AddStock(PortfolioStock stock, int userId)
     {
-        await PortfolioService.AddStock(stock);
+        await PortfolioService.AddStock(stock, userId);
         StockToAdd = new PortfolioStock();
         await BlazoredModal.CloseAsync(ModalResult.Ok());
     }

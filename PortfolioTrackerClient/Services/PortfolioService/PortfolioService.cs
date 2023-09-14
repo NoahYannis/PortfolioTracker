@@ -34,11 +34,11 @@ namespace PortfolioTrackerClient.Services.PortfolioService
             PortfolioChanged?.Invoke(this, new PortfolioChangedArgs(portfolioStocks, modifiedStock, portfolioAction));
         }
 
-        public async Task<PortfolioStock> AddStock(PortfolioStock stock)
+        public async Task<PortfolioStock> AddStock(PortfolioStock stock, int userId)
         {
-            var response = await _httpClient.PostAsJsonAsync($"{serverBaseDomain}/api/portfolio", stock);
+            var response = await _httpClient.PostAsJsonAsync($"{serverBaseDomain}/api/portfolio/add?userId={userId}", stock);
             var newStock = (await response.Content.ReadFromJsonAsync<ServiceResponse<PortfolioStock>>()).Data;
-            OnPortfolioChanged(PortfolioStocks = await GetPortfolioStocks(PortfolioOwner.UserId), PortfolioStocks.FirstOrDefault(s => s.Ticker == stock.Ticker), PortfolioAction.Added);
+            OnPortfolioChanged(PortfolioStocks = await GetPortfolioStocks(userId), PortfolioStocks.FirstOrDefault(s => s.Ticker == stock.Ticker), PortfolioAction.Added);
             return newStock;
         }
 

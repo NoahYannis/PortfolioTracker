@@ -60,22 +60,42 @@ namespace PortfolioTrackerServer.Services.PortfolioService
 
         public async Task<ServiceResponse<List<PortfolioStock>>> GetPortfolioStocks(int userId)
         {
+            var response = new ServiceResponse<List<PortfolioStock>>();
+
             Portfolio userPortfolio = await _dataContext.Portfolios.FirstOrDefaultAsync(p => p.UserId == userId);
 
-            // Return the retrieved positions or if null an empty one.
-            return new ServiceResponse<List<PortfolioStock>> { Data = PortfolioStocks = userPortfolio?.Positions ?? new() };
+            if(userPortfolio is null || userPortfolio.Positions.Count == 0)
+            {
+                response.Success = false;
+                response.Message = $"Failed to fetch portfolio stocks for user {userId}";
+                response.Data = new List<PortfolioStock>();
+            }
+            else
+                response.Data = PortfolioStocks = userPortfolio.Positions;
+
+            return response;
         }
 
 
-        public async Task<ServiceResponse<PortfolioStock>> AddStock(PortfolioStock stock)
+        public async Task<ServiceResponse<PortfolioStock>> AddStock(PortfolioStock stock, int userId)
         {
-            if (stock is not null && _dataContext.Stocks.Contains(stock) is false)
+            var response = new ServiceResponse<PortfolioStock>();
+            var portfolio = await _dataContext.Portfolios.FirstOrDefaultAsync(p => p.UserId == userId);
+
+            if (stock is not null && portfolio is not null && !portfolio.Positions.Contains(stock))
             {
-                _dataContext.Stocks.Add(stock);
+                portfolio.Positions.Add(stock);
+                _dataContext.Portfolios.Update(portfolio);
                 await _dataContext.SaveChangesAsync();
+                response.Data = stock;
+            }
+            else
+            {
+                response.Success = false;
+                response.Message = $"Failed to add {stock?.Ticker} to the portfolio (stock null or duplicate).";
             }
 
-            return new ServiceResponse<PortfolioStock> { Data = stock };
+            return response;
         }
 
         public async Task<ServiceResponse<PortfolioStock>> UpdateStock(PortfolioStock stock)
