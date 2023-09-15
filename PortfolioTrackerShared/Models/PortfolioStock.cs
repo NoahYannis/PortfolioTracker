@@ -1,7 +1,5 @@
-﻿
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Text.Json.Serialization;
 
 namespace PortfolioTrackerShared.Models
 {
@@ -9,6 +7,11 @@ namespace PortfolioTrackerShared.Models
     public class PortfolioStock
     {
         [Key]
+        public int Id { get; set; }
+
+        [ForeignKey(nameof(Portfolio.Id))]
+        public int PortfolioId { get; set; }
+
         [Required(ErrorMessage = "Ticker required."), StringLength(5, MinimumLength = 1, ErrorMessage = "Ticker Must Be Between 1 And 5 Characters")]
         public string Ticker { get; set; } = string.Empty;
 

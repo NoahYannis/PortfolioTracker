@@ -86,9 +86,11 @@ namespace PortfolioTrackerServer.Migrations
 
             modelBuilder.Entity("PortfolioTrackerShared.Models.PortfolioStock", b =>
                 {
-                    b.Property<string>("Ticker")
-                        .HasMaxLength(5)
-                        .HasColumnType("nvarchar(5)");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<decimal?>("AbsolutePerformance")
                         .HasColumnType("decimal(18,2)");
@@ -106,7 +108,7 @@ namespace PortfolioTrackerServer.Migrations
                     b.Property<int>("Industry")
                         .HasColumnType("int");
 
-                    b.Property<int?>("PortfolioId")
+                    b.Property<int>("PortfolioId")
                         .HasColumnType("int");
 
                     b.Property<decimal?>("PositionSize")
@@ -120,7 +122,12 @@ namespace PortfolioTrackerServer.Migrations
                         .IsRequired()
                         .HasColumnType("decimal(18,2)");
 
-                    b.HasKey("Ticker");
+                    b.Property<string>("Ticker")
+                        .IsRequired()
+                        .HasMaxLength(5)
+                        .HasColumnType("nvarchar(5)");
+
+                    b.HasKey("Id");
 
                     b.HasIndex("PortfolioId");
 
@@ -208,7 +215,9 @@ namespace PortfolioTrackerServer.Migrations
                 {
                     b.HasOne("PortfolioTrackerShared.Models.Portfolio", null)
                         .WithMany("Positions")
-                        .HasForeignKey("PortfolioId");
+                        .HasForeignKey("PortfolioId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("PortfolioTrackerShared.Models.UserModels.UserSettings", b =>

@@ -18,7 +18,7 @@ namespace PortfolioTrackerClient.Services.PortfolioService
         /// <returns></returns>
         Task<List<PortfolioStock>> GetPortfolioStocks(int userId);
         Task<PortfolioStock> GetDatabaseStock(string ticker);
-        Task<PortfolioStock> AddStock(PortfolioStock stockToAdd);
+        Task<PortfolioStock> AddStock(PortfolioStock stockToAdd, int userId);
         Task<ServiceResponse<PortfolioStock>> UpdateStock(PortfolioStock stockToUpdate);
         Task<bool> DeleteStock(string ticker);
 

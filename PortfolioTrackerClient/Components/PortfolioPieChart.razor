@@ -15,7 +15,11 @@
 <Chart Config="_config" />
 <br />
 <button @onclick="OpenModal">@Localizer["AddNewStock"]</button>
-<UpdateStockComponent StockToUpdate="@ClickedSegmentStock"/>
+
+@if (ClickedSegmentStock is not null)
+{
+    <UpdateStockComponent StockToUpdate="@ClickedSegmentStock" />
+}
 
 @code {
 
@@ -32,7 +36,7 @@
     // AddStock modal
     [CascadingParameter] IModalService Modal { get; set; } = default!;
 
-    private PortfolioStock ClickedSegmentStock { get; set; } = new();
+    private PortfolioStock ClickedSegmentStock { get; set; }
     private int clickedIndex;
 
 
@@ -45,7 +49,7 @@
                 {
                     OnClick = new DelegateHandler<ChartMouseEvent>(ChartClicked),
                     Responsive = true,
-                    Title = new OptionsTitle {Display = true},
+                    Title = new OptionsTitle { Display = true },
                 }
             };
 
@@ -167,7 +171,7 @@
     /// <returns>Whether a stock should be added or not</returns>
     private void OpenModal()
     {
-        var confirmDeleteModal = Modal.Show<AddStockComponent>(Localizer["AddNewStock"]);
+        var addStockModal = Modal.Show<AddStockComponent>(Localizer["AddNewStock"]);
     }
 
     public void Dispose()
