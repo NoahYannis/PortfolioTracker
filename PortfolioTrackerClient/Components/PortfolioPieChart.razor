@@ -16,9 +16,9 @@
 <br />
 <button @onclick="OpenModal">@Localizer["AddNewStock"]</button>
 
-@if (ClickedSegmentStock is not null)
+@if (ClickedSegmentStock is not null && PortfolioOwner.UserId != 0)
 {
-    <UpdateStockComponent StockToUpdate="@ClickedSegmentStock" />
+    <UpdateStockComponent StockToUpdate="@ClickedSegmentStock" PortfolioOwner="@PortfolioOwner"/>
 }
 
 @code {

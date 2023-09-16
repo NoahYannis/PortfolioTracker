@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PortfolioTrackerShared.Models.UserModels
 {
@@ -6,6 +7,9 @@ namespace PortfolioTrackerShared.Models.UserModels
     {
         [Key]
         public int UserId { get; set; }
+
+        //[ForeignKey("Id")]
+        //public int PortfolioId { get; set; }
 
         [Required(ErrorMessage = "User name required."), StringLength(50, ErrorMessage = "User name must be between 1 and 50 characters")]
         public string UserName { get; set; } = string.Empty;

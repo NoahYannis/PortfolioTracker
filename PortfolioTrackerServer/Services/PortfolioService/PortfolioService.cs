@@ -60,7 +60,7 @@ namespace PortfolioTrackerServer.Services.PortfolioService
 
         public async Task<ServiceResponse<List<PortfolioStock>>> GetPortfolioStocks(int userId)
         {
-            var response = new ServiceResponse<List<PortfolioStock>>() { Data = new()};
+            var response = new ServiceResponse<List<PortfolioStock>>();
 
             Portfolio userPortfolio = await _dataContext.Portfolios.FirstOrDefaultAsync(p => p.UserId == userId);
 
@@ -68,14 +68,16 @@ namespace PortfolioTrackerServer.Services.PortfolioService
             {
                 response.Success = false;
                 response.Message = $"Portfolio not found for user {userId}.";
+                return response;
             }
-            else if (userPortfolio.Positions.Count == 0)
+
+            response.Data = await _dataContext.Stocks.Where(s => s.PortfolioId == userPortfolio.Id).ToListAsync();
+
+            if (response.Data.Count == 0)
             {
                 response.Success = false;
                 response.Message = $"Portfolio is empty for user {userId}.";
             }
-            else
-                response.Data = userPortfolio.Positions;
 
             return response;
         }
@@ -90,11 +92,8 @@ namespace PortfolioTrackerServer.Services.PortfolioService
             if (stock is not null && portfolio is not null && !portfolio.Positions.Contains(stock))
             {
                 portfolio.Positions.Add(stock);
-                _dataContext.Portfolios.Update(portfolio);
                 await _dataContext.SaveChangesAsync();
                 response.Data = stock;
-
-                await Console.Out.WriteLineAsync("Addstock success");
             }
             else
             {
@@ -105,12 +104,13 @@ namespace PortfolioTrackerServer.Services.PortfolioService
             return response;
         }
 
-        public async Task<ServiceResponse<PortfolioStock>> UpdateStock(PortfolioStock stock)
+        public async Task<ServiceResponse<PortfolioStock>> UpdateStock(PortfolioStock stock, int userId)
         {
-            var dbStock = await _dataContext.Stocks.FirstOrDefaultAsync(s => s.Ticker == stock.Ticker);
+            var portfolio = await _dataContext.Portfolios.FirstOrDefaultAsync(p => p.UserId == userId) ?? new();
+            var dbStock = await _dataContext.Stocks.FirstOrDefaultAsync(s => s.Ticker == stock.Ticker && s.PortfolioId == portfolio.Id);
 
             if (dbStock is null)
-                return new ServiceResponse<PortfolioStock> { Data = null, Success = false, };
+                return new ServiceResponse<PortfolioStock> { Data = null, Success = false, Message = "Not found." };
 
             dbStock.Ticker = stock.Ticker;
             dbStock.BuyInPrice = stock.BuyInPrice;
@@ -119,7 +119,7 @@ namespace PortfolioTrackerServer.Services.PortfolioService
             dbStock.AbsolutePerformance = stock.AbsolutePerformance;
             dbStock.DividendYield = stock.DividendYield;
             dbStock.Industry = stock.Industry;
-            dbStock.PositionSize = stock.SharesOwned * stock.CurrentPrice;
+            dbStock.PositionSize = stock.SharesOwned * (stock.CurrentPrice ?? 10);
 
             await _dataContext.SaveChangesAsync();
 
@@ -127,16 +127,18 @@ namespace PortfolioTrackerServer.Services.PortfolioService
         }
 
 
-        public async Task<ServiceResponse<bool>> DeleteStock(string stockToDelete)
+        public async Task<ServiceResponse<bool>> DeleteStock(string stockToDelete, int userId)
         {
-            var dbStock = await _dataContext.Stocks.FirstOrDefaultAsync(s => s.Ticker == stockToDelete);
+            var portfolio = await _dataContext.Portfolios.FirstOrDefaultAsync(p => p.UserId == userId) ?? new();
+            var dbStock = await _dataContext.Stocks.FirstOrDefaultAsync(s => s.Ticker == stockToDelete && s.PortfolioId == portfolio.Id);
 
             if (dbStock is null)
             {
                 return new ServiceResponse<bool>
                 {
                     Data = false,
-                    Success = false
+                    Success = false,
+                    Message = $"Stock '{stockToDelete}' not found in Portfolio with user ID {userId}"
                 };
             }
 

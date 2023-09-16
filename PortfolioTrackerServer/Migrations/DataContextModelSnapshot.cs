@@ -56,7 +56,7 @@ namespace PortfolioTrackerServer.Migrations
 
                     b.HasIndex("PortfolioId");
 
-                    b.ToTable("Orders");
+                    b.ToTable("Orders", (string)null);
                 });
 
             modelBuilder.Entity("PortfolioTrackerShared.Models.Portfolio", b =>
@@ -81,7 +81,7 @@ namespace PortfolioTrackerServer.Migrations
                     b.HasIndex("UserId")
                         .IsUnique();
 
-                    b.ToTable("Portfolios");
+                    b.ToTable("Portfolios", (string)null);
                 });
 
             modelBuilder.Entity("PortfolioTrackerShared.Models.PortfolioStock", b =>
@@ -131,7 +131,7 @@ namespace PortfolioTrackerServer.Migrations
 
                     b.HasIndex("PortfolioId");
 
-                    b.ToTable("Stocks");
+                    b.ToTable("Stocks", (string)null);
                 });
 
             modelBuilder.Entity("PortfolioTrackerShared.Models.UserModels.User", b =>
@@ -165,7 +165,7 @@ namespace PortfolioTrackerServer.Migrations
 
                     b.HasKey("UserId");
 
-                    b.ToTable("Users");
+                    b.ToTable("Users", (string)null);
                 });
 
             modelBuilder.Entity("PortfolioTrackerShared.Models.UserModels.UserSettings", b =>
@@ -192,7 +192,7 @@ namespace PortfolioTrackerServer.Migrations
                     b.HasIndex("UserId")
                         .IsUnique();
 
-                    b.ToTable("UserSettings");
+                    b.ToTable("UserSettings", (string)null);
                 });
 
             modelBuilder.Entity("PortfolioTrackerShared.Models.Order", b =>

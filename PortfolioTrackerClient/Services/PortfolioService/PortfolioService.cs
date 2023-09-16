@@ -31,7 +31,7 @@ namespace PortfolioTrackerClient.Services.PortfolioService
 
         public void OnPortfolioChanged(List<PortfolioStock> portfolioStocks, PortfolioStock? modifiedStock = null, PortfolioAction portfolioAction = 0)
         {
-            PortfolioChanged?.Invoke(this, new PortfolioChangedArgs(portfolioStocks, modifiedStock, portfolioAction));
+            PortfolioChanged?.Invoke(this, new PortfolioChangedArgs(portfolioStocks, modifiedStock));
         }
 
         public async Task<PortfolioStock> AddStock(PortfolioStock stock, int userId)
@@ -42,12 +42,12 @@ namespace PortfolioTrackerClient.Services.PortfolioService
             return newStock;
         }
 
-        public async Task<bool> DeleteStock(string stockToDelete)
+        public async Task<bool> DeleteStock(string stockToDelete, int userId)
         {
-            var response = await _httpClient.DeleteAsync($"{serverBaseDomain}/api/portfolio/{stockToDelete}");
+            var response = await _httpClient.DeleteAsync($"{serverBaseDomain}/api/portfolio/{stockToDelete}?userId={userId}");
 
             if (response.IsSuccessStatusCode)
-                OnPortfolioChanged(PortfolioStocks = await GetPortfolioStocks(PortfolioOwner.UserId), PortfolioStocks.FirstOrDefault(s => s.Ticker == stockToDelete), PortfolioAction.Deleted);
+                OnPortfolioChanged(PortfolioStocks = await GetPortfolioStocks(PortfolioOwner.UserId), PortfolioStocks.FirstOrDefault(s => s.Ticker == stockToDelete) ?? new(), PortfolioAction.Deleted);
 
             return response.IsSuccessStatusCode;
 
@@ -70,9 +70,9 @@ namespace PortfolioTrackerClient.Services.PortfolioService
         /// </summary>
         /// <param name="stock"></param>
         /// <returns>Update success</returns>
-        public async Task<ServiceResponse<PortfolioStock>> UpdateStock(PortfolioStock stock)
+        public async Task<ServiceResponse<PortfolioStock>> UpdateStock(PortfolioStock stock, int userId)
         {
-            var response = await _httpClient.PutAsJsonAsync($"{serverBaseDomain}/api/portfolio", stock);
+            var response = await _httpClient.PutAsJsonAsync($"{serverBaseDomain}/api/portfolio?userId={userId}", stock);
 
             if (response.IsSuccessStatusCode)
                 OnPortfolioChanged(PortfolioStocks, stock, PortfolioAction.Modified);
