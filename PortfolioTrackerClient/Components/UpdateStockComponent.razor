@@ -81,7 +81,7 @@
 
     [CascadingParameter] IModalService Modal { get; set; } = default!;
 
-    private PortfolioStock _stockToUpdate;
+    private PortfolioStock _stockToUpdate = new();
 
     [Parameter]
     public PortfolioStock StockToUpdate
@@ -123,16 +123,14 @@
         return await ShowModal() ? true : false;
     }
 
-    private async Task DeleteStock(string ticker, int userId)
+    private async Task DeleteStock(string stockToDelete, int userId)
     {
         if(await ConfirmDelete())
         {
-            UpdateResultMessage = await PortfolioService.DeleteStock(ticker, PortfolioOwner.UserId)
+            UpdateResultMessage = await PortfolioService.DeleteStock(stockToDelete, PortfolioOwner.UserId)
             ? $" Deleted {StockToUpdate.Ticker}" : "Deletion failed.";
             await DisplayResultMessage();
             StockToUpdate = new PortfolioStock();
-            await Task.Delay(100);
-            StateHasChanged();
         }
     }
 

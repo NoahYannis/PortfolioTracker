@@ -129,8 +129,8 @@ namespace PortfolioTrackerServer.Services.PortfolioService
 
         public async Task<ServiceResponse<bool>> DeleteStock(string stockToDelete, int userId)
         {
-            var portfolio = await _dataContext.Portfolios.FirstOrDefaultAsync(p => p.UserId == userId) ?? new();
-            var dbStock = await _dataContext.Stocks.FirstOrDefaultAsync(s => s.Ticker == stockToDelete && s.PortfolioId == portfolio.Id);
+            var portfolio = await _dataContext.Portfolios.SingleOrDefaultAsync(p => p.UserId == userId) ?? new();
+            var dbStock = await _dataContext.Stocks.SingleOrDefaultAsync(s => s.Ticker == stockToDelete && s.PortfolioId == portfolio.Id);
 
             if (dbStock is null)
             {

@@ -1,6 +1,8 @@
-﻿using PortfolioTrackerShared.Models;
-using PortfolioTrackerShared.Models.UserModels;
+﻿using Newtonsoft.Json;
+using PortfolioTrackerShared.Models;
 using System.Net.Http.Json;
+using System.Text;
+
 namespace PortfolioTrackerClient.Services.PortfolioService
 {
 	public class PortfolioService : IPortfolioService
@@ -18,7 +20,8 @@ namespace PortfolioTrackerClient.Services.PortfolioService
 
 
         #region Stock-CRUD
-        public User PortfolioOwner { get; private set; } = new();
+
+        public User PortfolioOwner { get; set; } = new();
 
         public List<PortfolioStock> PortfolioStocks { get; set; }
 
@@ -44,10 +47,10 @@ namespace PortfolioTrackerClient.Services.PortfolioService
 
         public async Task<bool> DeleteStock(string stockToDelete, int userId)
         {
-            var response = await _httpClient.DeleteAsync($"{serverBaseDomain}/api/portfolio/{stockToDelete}?userId={userId}");
+            var response = await _httpClient.DeleteAsync($"{serverBaseDomain}/api/portfolio/delete/{stockToDelete}?userId={userId}");
 
             if (response.IsSuccessStatusCode)
-                OnPortfolioChanged(PortfolioStocks = await GetPortfolioStocks(PortfolioOwner.UserId), PortfolioStocks.FirstOrDefault(s => s.Ticker == stockToDelete) ?? new(), PortfolioAction.Deleted);
+                OnPortfolioChanged(PortfolioStocks = await GetPortfolioStocks(userId), null, PortfolioAction.Deleted);
 
             return response.IsSuccessStatusCode;
 
