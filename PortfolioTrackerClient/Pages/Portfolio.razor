@@ -8,6 +8,7 @@
 
 @inject IAuthService AuthService
 @inject AuthenticationStateProvider AuthProvider
+@inject IPortfolioService PortfolioService
 @attribute [Authorize]
 
 <CascadingAuthenticationState>
@@ -38,6 +39,7 @@
         {
             var userServiceResponse = await AuthService.GetUserFromDbByEmail(authState.User.Claims.ElementAt(2).Value);
             PortfolioOwner = userServiceResponse?.Data ?? new();
+            await PortfolioService.InitializePortfolioAsync(PortfolioOwner.UserId);
         }
     }
 }

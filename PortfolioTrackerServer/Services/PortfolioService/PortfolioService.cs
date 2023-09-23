@@ -9,44 +9,26 @@ namespace PortfolioTrackerServer.Services.PortfolioService
     public class PortfolioService : IPortfolioService
     {
         private readonly DataContext _dataContext;
-        private readonly IHttpContextAccessor _httpContextAccessor;
 
-        public PortfolioService(DataContext dataContext, IHttpContextAccessor httpContextAccessor)
+        public PortfolioService(DataContext dataContext)
         {
             _dataContext = dataContext;
-            _httpContextAccessor = httpContextAccessor;
         }
 
-        public User PortfolioOwner { get; private set; } = new();
+        private User PortfolioOwner { get; set; } = new();
 
-        private List<PortfolioStock> _portfolioStocks;
-        public List<PortfolioStock> PortfolioStocks
-        {
-            get
-            {
-                if (_portfolioStocks == null)
-                {
-                    InitializePortfolioAsync(PortfolioOwner.UserId).Wait();
-                }
-
-                return _portfolioStocks;
-            }
-            set => _portfolioStocks = value;
-        }
+        public List<PortfolioStock> PortfolioStocks { get; set; } = new();
 
         public List<Order> Orders { get; set; } = new();
 
         #region Stock
 
-        public async Task InitializePortfolioAsync(int userId)
-        {
-            var response = await GetPortfolioStocks(userId);
-            PortfolioStocks = response?.Data ?? new();
-        }
 
-        public async Task<ServiceResponse<PortfolioStock>> GetStock(string ticker)
+        public async Task<ServiceResponse<PortfolioStock>> GetStock(string ticker, int userId)
         {
-            var stock = await _dataContext.Stocks.FirstOrDefaultAsync(s => s.Ticker == ticker);
+            PortfolioOwner = await GetUserPortfolio(userId);
+
+            var stock = PortfolioOwner.Portfolio.Positions.FirstOrDefault(s => s.Ticker == ticker) ?? new();
 
             var result = new ServiceResponse<PortfolioStock>()
             {
@@ -61,17 +43,16 @@ namespace PortfolioTrackerServer.Services.PortfolioService
         public async Task<ServiceResponse<List<PortfolioStock>>> GetPortfolioStocks(int userId)
         {
             var response = new ServiceResponse<List<PortfolioStock>>();
+            PortfolioOwner = await GetUserPortfolio(userId);
 
-            Portfolio userPortfolio = await _dataContext.Portfolios.FirstOrDefaultAsync(p => p.UserId == userId);
-
-            if (userPortfolio is null)
+            if (PortfolioOwner.UserId is 0)
             {
                 response.Success = false;
                 response.Message = $"Portfolio not found for user {userId}.";
                 return response;
             }
 
-            response.Data = await _dataContext.Stocks.Where(s => s.PortfolioId == userPortfolio.Id).ToListAsync();
+            response.Data = PortfolioOwner.Portfolio.Positions;
 
             if (response.Data.Count == 0)
             {
@@ -83,15 +64,47 @@ namespace PortfolioTrackerServer.Services.PortfolioService
         }
 
 
+        /// <summary>
+        /// Initializes the portfolio user and portfolio.
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <returns></returns>
+        private async Task<User> GetUserPortfolio(int userId)
+        {
+            PortfolioOwner = await _dataContext.Users.SingleOrDefaultAsync(po => po.UserId == userId);
+
+            if (PortfolioOwner is not null)
+            {
+                PortfolioOwner.Portfolio = await _dataContext.Portfolios.SingleOrDefaultAsync(po => po.UserId == PortfolioOwner.UserId);
+                PortfolioOwner.Portfolio.Positions = await _dataContext.Stocks.Where(s => s.PortfolioId == PortfolioOwner.Portfolio.Id).ToListAsync();
+            }
+
+            return PortfolioOwner ?? new();
+        }
+
+        /// <summary>
+        /// Avoid duplicate stocks inside portfolios.
+        /// </summary>
+        /// <param name="portfolioStock"></param>
+        /// <param name="userId"></param>
+        /// <returns>Whether a portfolio contains that particular stock</returns>
+        public bool ContainsStock(PortfolioStock portfolioStock)
+        {
+            // Check if any stock in Positions has the same Ticker
+            return PortfolioOwner.Portfolio.Positions.Any(stock => stock.Ticker == portfolioStock.Ticker);
+        }
+
+
+
 
         public async Task<ServiceResponse<PortfolioStock>> AddStock(PortfolioStock stock, int userId)
         {
             var response = new ServiceResponse<PortfolioStock>();
-            var portfolio = await _dataContext.Portfolios.FirstOrDefaultAsync(p => p.UserId == userId);
+            PortfolioOwner = await GetUserPortfolio(userId);
 
-            if (stock is not null && portfolio is not null && !portfolio.Positions.Contains(stock))
+            if (stock is not null && PortfolioOwner.Portfolio is not null && !ContainsStock(stock))
             {
-                portfolio.Positions.Add(stock);
+                PortfolioOwner.Portfolio.Positions.Add(stock);
                 await _dataContext.SaveChangesAsync();
                 response.Data = stock;
             }
@@ -104,33 +117,32 @@ namespace PortfolioTrackerServer.Services.PortfolioService
             return response;
         }
 
-        public async Task<ServiceResponse<PortfolioStock>> UpdateStock(PortfolioStock stock, int userId)
+        public async Task<ServiceResponse<PortfolioStock>> UpdateStock(PortfolioStock updatedStock, int userId)
         {
-            var portfolio = await _dataContext.Portfolios.FirstOrDefaultAsync(p => p.UserId == userId) ?? new();
-            var dbStock = await _dataContext.Stocks.FirstOrDefaultAsync(s => s.Ticker == stock.Ticker && s.PortfolioId == portfolio.Id);
+            PortfolioOwner = await GetUserPortfolio(userId);
+            var stock = PortfolioOwner.Portfolio.Positions.FirstOrDefault(s => s.Ticker == updatedStock.Ticker) ?? new();
 
-            if (dbStock is null)
+            if (!ContainsStock(stock))
                 return new ServiceResponse<PortfolioStock> { Data = null, Success = false, Message = "Not found." };
 
-            dbStock.Ticker = stock.Ticker;
-            dbStock.BuyInPrice = stock.BuyInPrice;
-            dbStock.SharesOwned = stock.SharesOwned;
-            dbStock.RelativePerformance = stock.RelativePerformance;
-            dbStock.AbsolutePerformance = stock.AbsolutePerformance;
-            dbStock.DividendYield = stock.DividendYield;
-            dbStock.Industry = stock.Industry;
-            dbStock.PositionSize = stock.SharesOwned * (stock.CurrentPrice ?? 10);
+            stock.BuyInPrice = updatedStock.BuyInPrice;
+            stock.SharesOwned = updatedStock.SharesOwned;
+            stock.RelativePerformance = updatedStock.RelativePerformance;
+            stock.AbsolutePerformance = updatedStock.AbsolutePerformance;
+            stock.DividendYield = updatedStock.DividendYield;
+            stock.Industry = updatedStock.Industry;
+            stock.PositionSize = updatedStock.SharesOwned * (updatedStock.CurrentPrice ?? 10); // TODO
 
             await _dataContext.SaveChangesAsync();
 
-            return new ServiceResponse<PortfolioStock> { Data = dbStock };
+            return new ServiceResponse<PortfolioStock> { Data = stock };
         }
 
 
         public async Task<ServiceResponse<bool>> DeleteStock(string stockToDelete, int userId)
         {
-            var portfolio = await _dataContext.Portfolios.SingleOrDefaultAsync(p => p.UserId == userId) ?? new();
-            var dbStock = await _dataContext.Stocks.SingleOrDefaultAsync(s => s.Ticker == stockToDelete && s.PortfolioId == portfolio.Id);
+            PortfolioOwner = await GetUserPortfolio(userId);
+            var dbStock = await _dataContext.Stocks.SingleOrDefaultAsync(s => s.Ticker == stockToDelete && s.PortfolioId == PortfolioOwner.Portfolio.Id);
 
             if (dbStock is null)
             {
@@ -145,7 +157,7 @@ namespace PortfolioTrackerServer.Services.PortfolioService
             _dataContext.Stocks.Remove(dbStock);
             await _dataContext.SaveChangesAsync();
 
-            return new ServiceResponse<bool> { Data = true };
+            return new ServiceResponse<bool> { Data = true, Message = "Stock was deleted." };
         }
 
 

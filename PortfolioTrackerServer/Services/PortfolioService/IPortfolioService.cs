@@ -12,7 +12,7 @@ namespace PortfolioTrackerServer.Services.PortfolioService
 
         List<PortfolioStock> PortfolioStocks { get; set; }
         Task<ServiceResponse<List<PortfolioStock>>> GetPortfolioStocks(int userId);
-        Task<ServiceResponse<PortfolioStock>> GetStock(string ticker);
+        Task<ServiceResponse<PortfolioStock>> GetStock(string ticker, int userId);
         Task<ServiceResponse<bool>> DeleteStock(string stockToDelete, int userId);
         Task<ServiceResponse<PortfolioStock>> AddStock(PortfolioStock stock, int userId);
         Task<ServiceResponse<PortfolioStock>> UpdateStock(PortfolioStock stock, int userId);

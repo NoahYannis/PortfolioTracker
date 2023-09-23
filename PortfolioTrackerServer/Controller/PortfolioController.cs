@@ -3,6 +3,7 @@ using PortfolioTrackerServer.Services.PortfolioService;
 using PortfolioTrackerShared.Models;
 using PortfolioTrackerShared.Other;
 using PortfolioTrackerServer.Services.GetStockInfoService;
+using Microsoft.AspNetCore.Http;
 
 namespace PortfolioTrackerServer.Controller
 {
@@ -21,9 +22,9 @@ namespace PortfolioTrackerServer.Controller
         }
 
         [HttpGet("{ticker}")]
-        public async Task<ActionResult<ServiceResponse<PortfolioStock>>> GetStock(string ticker)
+        public async Task<ActionResult<ServiceResponse<PortfolioStock>>> GetStock(string ticker, int userId)
         {
-            var result = await _portfolioService.GetStock(ticker);
+            var result = await _portfolioService.GetStock(ticker, userId);
             return Ok(result);
         }
 

@@ -1,6 +1,5 @@
-using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Blazored.SessionStorage;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.IdentityModel.Tokens;
 using PortfolioTrackerServer.Data;
 using PortfolioTrackerServer.Services.AuthService;
 using PortfolioTrackerServer.Services.FetchAndUpdateStockPriceService;
