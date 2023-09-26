@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\PortfolioTrackerClient\\PortfolioTrackerClient.csproj": {}
+    "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerClient\\PortfolioTrackerClient.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\PortfolioTrackerClient\\PortfolioTrackerClient.csproj": {
+    "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerClient\\PortfolioTrackerClient.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\PortfolioTrackerClient\\PortfolioTrackerClient.csproj",
+        "projectUniqueName": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerClient\\PortfolioTrackerClient.csproj",
         "projectName": "PortfolioTrackerClient",
-        "projectPath": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\PortfolioTrackerClient\\PortfolioTrackerClient.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\PortfolioTrackerClient\\obj\\",
+        "projectPath": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerClient\\PortfolioTrackerClient.csproj",
+        "packagesPath": "C:\\Users\\Noah\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerClient\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Noah\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -33,8 +33,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\PortfolioTrackerShared\\PortfolioTrackerShared.csproj": {
-                "projectPath": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\PortfolioTrackerShared\\PortfolioTrackerShared.csproj"
+              "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerShared\\PortfolioTrackerShared.csproj": {
+                "projectPath": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerShared\\PortfolioTrackerShared.csproj"
               }
             }
           }
@@ -125,7 +125,7 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
-              "version": "[7.0.7, 7.0.7]"
+              "version": "[7.0.10, 7.0.10]"
             }
           ],
           "frameworkReferences": {
@@ -133,7 +133,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
@@ -142,20 +142,20 @@
         }
       }
     },
-    "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\PortfolioTrackerShared\\PortfolioTrackerShared.csproj": {
+    "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerShared\\PortfolioTrackerShared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\PortfolioTrackerShared\\PortfolioTrackerShared.csproj",
+        "projectUniqueName": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerShared\\PortfolioTrackerShared.csproj",
         "projectName": "PortfolioTrackerShared",
-        "projectPath": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\PortfolioTrackerShared\\PortfolioTrackerShared.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\PortfolioTrackerShared\\obj\\",
+        "projectPath": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerShared\\PortfolioTrackerShared.csproj",
+        "packagesPath": "C:\\Users\\Noah\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerShared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Noah\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -198,7 +198,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

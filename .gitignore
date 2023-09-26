@@ -16,3 +16,6 @@ obj/Debug/net7.0/ref/PortfolioTracker.dll
 *.dll
 *.dll
 *.dll
+*.json
+*.dll.gz
+*.suo
