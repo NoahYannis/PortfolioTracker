@@ -77,7 +77,7 @@ else
     <div>
         <label for="ColorScheme">@Localizer["ColorScheme"]</label>
         <ColorPicker IsOpened="@colorPickerOpen" Closed="CloseColorPicker" MyColor="UserSettings.ColorScheme" />
-        <button class="btn btn-primary" @onclick="OpenModal">
+        <button class="btn btn-primary" @onclick="OpenModal" disabled="!@editing"> @* Disable color selection if the user is not editing *@
             <div style="background-color: @UserSettings.ColorScheme" class="buttonColor"></div>
             @Localizer["SelectColor"]
         </button>
