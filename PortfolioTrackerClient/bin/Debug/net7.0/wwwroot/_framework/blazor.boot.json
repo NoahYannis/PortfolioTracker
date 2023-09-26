@@ -388,6 +388,9 @@
       "System.Private.CoreLib.dll": "sha256-\/7uQ+eNo9u3H1mpgMko4D3tKZHeGRfsRjna0Dqsu62k=",
       "PortfolioTrackerShared.dll": "sha256-f7Ow9T20mxtRokRC0ygbR2AcXNcBAP1HD0AiOU0\/fy0=",
       "PortfolioTrackerClient.dll": "sha256-l67Y7rGnAto5hkFSHR9ZsRMGkWWOFEBnjZEj+3pNl3k="
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     },
     "extensions": null,
@@ -400,6 +403,9 @@
 =======
       "PortfolioTrackerShared.pdb": "sha256-cDovPZchWOFsZrqh5K8Mdl3SVIgPwG4i0vMf5K95JpE=",
       "PortfolioTrackerClient.pdb": "sha256-i6S4qipEQwSergaIQa5vHE5bnRWiLEDXa7U9RWBBlE0="
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     },
     "runtime": {
@@ -420,6 +426,7 @@
     "satelliteResources": {
       "de": {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         "de\/PortfolioTrackerClient.resources.dll": "sha256-qE5wfFNoqR9WOjLnQJcj\/Ll02WEw\/wNZkF5BSA3zhdY="
       },
       "es": {
@@ -430,6 +437,18 @@
       },
       "ru": {
         "ru\/PortfolioTrackerClient.resources.dll": "sha256-jZ0d0MuZJV05pAxKpVQ9VIYlB+dDk1VD4WjWJbkkOSk="
+=======
+        "de\/PortfolioTrackerClient.resources.dll": "sha256-vYutd1TQOSSi20uXlHQcCsgxNGNHE1VY0BLS9ULwxao="
+      },
+      "es": {
+        "es\/PortfolioTrackerClient.resources.dll": "sha256-7MjTO3n0AyNsnlGVehWO3zreFpO4PIefC\/ct7OuK\/Ww="
+      },
+      "fr": {
+        "fr\/PortfolioTrackerClient.resources.dll": "sha256-TdlaLhFJgviHAxxex68K5OKk2+\/Tz2fe6jKYXhnRmZk="
+      },
+      "ru": {
+        "ru\/PortfolioTrackerClient.resources.dll": "sha256-hNEFUsOiI7XSOiCkZlXuro1KpGuOQDyI5Cvi1F5KHqY="
+>>>>>>> Stashed changes
 =======
         "de\/PortfolioTrackerClient.resources.dll": "sha256-vYutd1TQOSSi20uXlHQcCsgxNGNHE1VY0BLS9ULwxao="
       },
