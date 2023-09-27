@@ -9,6 +9,7 @@
 @inject IAuthService AuthService
 @inject AuthenticationStateProvider AuthProvider
 @inject IPortfolioService PortfolioService
+@inject IStringLocalizer<Resource> Localizer
 @attribute [Authorize]
 
 <CascadingAuthenticationState>
@@ -24,11 +25,15 @@
 @if (PortfolioOwner.UserId != 0)
 {
     <PortfolioPieChart PortfolioOwner="@PortfolioOwner" />
+    <button @onclick="OpenModal">@Localizer["AddNewStock"]</button>
 }
 
 @code {
 
     private User PortfolioOwner { get; set; } = new();
+
+     // AddStock modal
+    [CascadingParameter] IModalService Modal { get; set; } = default!;
 
     protected async override Task OnInitializedAsync()
     {
@@ -40,5 +45,14 @@
             PortfolioOwner = userServiceResponse?.Data ?? new();
             await PortfolioService.InitializePortfolioAsync(PortfolioOwner.UserId);
         }
+    }
+
+    /// <summary>
+    /// Shows the AddStock modal
+    /// </summary>
+    /// <returns>Whether a stock should be added or not</returns>
+    private void OpenModal()
+    {
+        Modal.Show<AddStockComponent>(Localizer["AddNewStock"], new ModalParameters { { "PortfolioOwner", PortfolioOwner } });
     }
 }
