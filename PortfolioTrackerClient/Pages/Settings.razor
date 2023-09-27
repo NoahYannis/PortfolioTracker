@@ -49,13 +49,12 @@
     <hr /> <!-- Separator -->
 
     <BlazoredTextEditor @ref="@richEditor" Placeholder="@Localizer["InvestingGoalsPlaceholder"]">
-        <EditorContent>
+        <EditorContent @onchange="(() => await @SaveInvestingGoals()">
             @UserSettings.InvestingGoals
         </EditorContent>
     </BlazoredTextEditor>
 
     <hr /> <!-- Separator -->
-    <button class="btn btn-primary" @onclick="SaveInvestingGoals">@Localizer["SaveGoals"]</button>
 
     <button class="btn btn-primary" @onclick="SaveProfile">@Localizer["Save"]</button>
 }
@@ -77,7 +76,7 @@ else
     <div>
         <label for="ColorScheme">@Localizer["ColorScheme"]</label>
         <ColorPicker IsOpened="@colorPickerOpen" Closed="CloseColorPicker" MyColor="UserSettings.ColorScheme" />
-        <button class="btn btn-primary" @onclick="OpenModal">
+        <button class="btn btn-primary" @onclick="OpenModal" disabled="!@editing"> @* Disable color selection if the user is not editing *@
             <div style="background-color: @UserSettings.ColorScheme" class="buttonColor"></div>
             @Localizer["SelectColor"]
         </button>
@@ -121,6 +120,7 @@ else
     private async void SaveProfile()
     {
         editing = false;
+        UserSettings.InvestingGoals = await richEditor.GetText();
         await SettingsService.UpdateUserSettings(UserSettings);
 
         // Reload page to apply changes. StateHasChanged() doesnt seem to work here.
@@ -133,11 +133,6 @@ else
     {
         UserSettings.ColorScheme = chosenColor;
         colorPickerOpen = false;
-    }
-
-    private async void SaveInvestingGoals()
-    {
-        UserSettings.InvestingGoals = await richEditor.GetText();
     }
 }
 

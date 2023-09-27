@@ -5,33 +5,36 @@
 
 @inject IAuthService AuthService
 @inject IStringLocalizer<Resource> Localizer
+@inject ILocalStorageService LocalStorage
+@inject AuthenticationStateProvider AuthStateProvider
+@inject NavigationManager NavManager
 
 <PageTitle>@Localizer["Register"]</PageTitle>
 
 <h3>@Localizer["Register"]</h3>
 
-<EditForm Model="user" OnValidSubmit="HandleRegistration">
+<EditForm Model="userRegister" OnValidSubmit="HandleRegistration">
     <DataAnnotationsValidator />
 
     <div class="mb-3">
         <label for="name">@Localizer["Username"]:</label>
-        <InputText id="name" @bind-Value="user.Name" class="form-control"></InputText>
-        <ValidationMessage For="@(() => user.Name)" />
+        <InputText id="name" @bind-Value="userRegister.Name" class="form-control"></InputText>
+        <ValidationMessage For="@(() => userRegister.Name)" />
     </div>
     <div class="mb-3">
         <label for="email">@Localizer["Email"]:</label>
-        <InputText id="email" @bind-Value="user.Email" class="form-control"></InputText>
-        <ValidationMessage For="@(() => user.Email)" />
+        <InputText id="email" @bind-Value="userRegister.Email" class="form-control"></InputText>
+        <ValidationMessage For="@(() => userRegister.Email)" />
     </div>
     <div class="mb-3">
         <label for="password">@Localizer["Password"]</label>
-        <InputText id="password" @bind-Value="user.Password" type="password" class="form-control"></InputText>
-        <ValidationMessage For="@(() => user.Password)" />
+        <InputText id="password" @bind-Value="userRegister.Password" type="password" class="form-control"></InputText>
+        <ValidationMessage For="@(() => userRegister.Password)" />
     </div>
     <div class="mb-3">
         <label for="confirmPassord">@Localizer["ConfirmPassword"]</label>
-        <InputText id="confirmPassord" @bind-Value="user.ConfirmPassword" type="password" class="form-control"></InputText>
-        <ValidationMessage For="@(() => user.ConfirmPassword)" />
+        <InputText id="confirmPassord" @bind-Value="userRegister.ConfirmPassword" type="password" class="form-control"></InputText>
+        <ValidationMessage For="@(() => userRegister.ConfirmPassword)" />
     </div>
     <button type="submit" class="btn btn-primary">@Localizer["Register"]</button>
     <a style="margin-left: 10px;" href="/login">Login</a>
@@ -42,16 +45,20 @@
 
 @code {
 
-    UserRegister user = new();
+    UserRegister userRegister = new();
 
     string message = string.Empty;
     string messageCssClass = string.Empty;
 
     async Task HandleRegistration()
     {
-        var result = await AuthService.Register(user);
+        var result = await AuthService.Register(userRegister);
 
-        message = result.Message;
-        messageCssClass = result.Success ? "text-success" : "text-danger";
+        if (result.Success)
+        {
+            var loginAuthToken = await AuthService.Login(new UserLogin { Email = userRegister.Email, Password = userRegister.Password });
+            await LocalStorage.SetItemAsync("authToken", loginAuthToken.Data);
+            NavManager.NavigateTo("/portfolio", true);
+        }
     }
 }

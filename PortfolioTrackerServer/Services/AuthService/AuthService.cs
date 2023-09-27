@@ -26,21 +26,20 @@ namespace PortfolioTrackerServer.Services.AuthService
 
         public async Task<ServiceResponse<string>> Login(string email, string password)
         {
-            var response = new ServiceResponse<string>();
+            var response = new ServiceResponse<string>() { Success = false};
             var user = await _dataContext.Users.FirstOrDefaultAsync(x => x.Email.ToLower().Equals(email.ToLower()));
 
             if (user is null)
             {
-                response.Success = false;
                 response.Message = "User not found.";
             }
             else if (VerifyPasswordHash(password, user.PasswordHash, user.PasswordSalt) is false)
             {
-                response.Success = false;
                 response.Message = "Wrong password.";
             }
             else
             {
+                response.Success = true;
                 response.Data = CreateToken(user);
             }
 
