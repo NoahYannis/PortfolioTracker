@@ -14,12 +14,17 @@
 
 <Chart Config="_config" />
 <br />
-<button @onclick="OpenModal">@Localizer["AddNewStock"]</button>
 
-@if (ClickedSegmentStock is not null && PortfolioOwner.UserId != 0)
+@if (PortfolioOwner.UserId is not 0)
 {
-    <UpdateStockComponent StockToUpdate="@ClickedSegmentStock" PortfolioOwner="@PortfolioOwner"/>
+    <button @onclick="OpenModal">@Localizer["AddNewStock"]</button>
+
+    @if (ClickedSegmentStock is not null)
+    {
+        <UpdateStockComponent StockToUpdate="@ClickedSegmentStock" PortfolioOwner="@PortfolioOwner" />
+    }
 }
+
 
 @code {
 
@@ -171,8 +176,10 @@
     /// <returns>Whether a stock should be added or not</returns>
     private void OpenModal()
     {
-        var addStockModal = Modal.Show<AddStockComponent>(Localizer["AddNewStock"]);
+        Modal.Show<AddStockComponent>(Localizer["AddNewStock"], new ModalParameters { { "PortfolioOwner", PortfolioOwner } });
     }
+
+
 
     public void Dispose()
     {

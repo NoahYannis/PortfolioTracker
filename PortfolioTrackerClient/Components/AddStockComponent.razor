@@ -92,7 +92,7 @@
     {
         await PortfolioService.AddStock(stock, userId);
         StockToAdd = new PortfolioStock();
-        // await BlazoredModal.CloseAsync(ModalResult.Ok());
+        await BlazoredModal.CloseAsync(ModalResult.Ok());
     }
 
     private async Task DisplayResultMessage()
