@@ -14,11 +14,22 @@
 
 <Chart Config="_config" />
 <br />
-<button @onclick="OpenModal">@Localizer["AddNewStock"]</button>
-<UpdateStockComponent StockToUpdate="@ClickedSegmentStock">
-</UpdateStockComponent>
+
+@if (PortfolioOwner.UserId is not 0)
+{
+
+    @if (ClickedSegmentStock is not null)
+    {
+        <UpdateStockComponent StockToUpdate="@ClickedSegmentStock" PortfolioOwner="@PortfolioOwner" />
+    }
+}
+
 
 @code {
+
+
+    [Parameter]
+    public User PortfolioOwner { get; set; }
 
     private PieConfig _config = new();
     private List<string> BackgroundColors { get; set; } = new List<string>();
@@ -29,7 +40,7 @@
     // AddStock modal
     [CascadingParameter] IModalService Modal { get; set; } = default!;
 
-    private PortfolioStock ClickedSegmentStock { get; set; } = new();
+    private PortfolioStock ClickedSegmentStock { get; set; }
     private int clickedIndex;
 
 
@@ -42,13 +53,14 @@
                 {
                     OnClick = new DelegateHandler<ChartMouseEvent>(ChartClicked),
                     Responsive = true,
-                    Title = new OptionsTitle {Display = true},
+                    Title = new OptionsTitle { Display = true },
                 }
             };
 
 
         PortfolioService.PortfolioChanged += UpdatePieChart;
-        await PortfolioService.InitializeAsync();
+
+        await PortfolioService.InitializePortfolioAsync(PortfolioOwner.UserId);
 
         // For each stock inside the portfolio display its ticker and set the background to a random color.
         foreach (PortfolioStock stock in PortfolioService.PortfolioStocks)
@@ -163,8 +175,10 @@
     /// <returns>Whether a stock should be added or not</returns>
     private void OpenModal()
     {
-        var confirmDeleteModal = Modal.Show<AddStockComponent>(Localizer["AddNewStock"]);
+        Modal.Show<AddStockComponent>(Localizer["AddNewStock"], new ModalParameters { { "PortfolioOwner", PortfolioOwner } });
     }
+
+
 
     public void Dispose()
     {

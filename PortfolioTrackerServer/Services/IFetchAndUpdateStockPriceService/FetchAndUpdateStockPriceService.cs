@@ -21,15 +21,14 @@ namespace PortfolioTrackerServer.Services.FetchAndUpdateStockPriceService
 
         public async Task<ServiceResponse<List<ApiQueryStock>>> FetchCurrentStockPrices()
         {
+            var portfolioStocks = _portfolioService.PortfolioStocks;
 
-            var portfolioStocks = await _portfolioService.GetDatabaseStocks();
-
-            if (portfolioStocks.Data is null || portfolioStocks.Data.Count is 0)
+            if (portfolioStocks.Count is 0)
                 return new ServiceResponse<List<ApiQueryStock>>() { Data = null, Success = false, Message = "Couldn't fetch database stocks" };
 
             var serviceResponse = new ServiceResponse<List<ApiQueryStock>>() { Data = new List<ApiQueryStock>() };
 
-            foreach (PortfolioStock stock in portfolioStocks.Data)
+            foreach (PortfolioStock stock in portfolioStocks)
             {
                 var response = await _getStockInfoService.GetStockData(stock?.Ticker);
 

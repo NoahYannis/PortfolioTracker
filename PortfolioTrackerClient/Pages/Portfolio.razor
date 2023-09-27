@@ -1,7 +1,15 @@
 ﻿@page "/portfolio"
 
 @using Microsoft.AspNetCore.Components.Authorization;
+@using Microsoft.AspNetCore.Authorization;
+@using PortfolioTrackerClient.Components
+@using PortfolioTrackerClient.Services.AuthService;
+@using PortfolioTrackerShared.Models.UserModels;
+
 @inject IAuthService AuthService
+@inject AuthenticationStateProvider AuthProvider
+@inject IPortfolioService PortfolioService
+@inject IStringLocalizer<Resource> Localizer
 @attribute [Authorize]
 
 <CascadingAuthenticationState>
@@ -10,16 +18,41 @@
     </AuthorizeView>
 </CascadingAuthenticationState>
 
-@using Microsoft.AspNetCore.Authorization;
-@using PortfolioTrackerClient.Components
-@using PortfolioTrackerClient.Services.AuthService;
-@using PortfolioTrackerShared.Models.UserModels;
 
 <h3>Portfolio</h3>
 
-<PortfolioPieChart />
-
+@* Ensure PortfolioOwner is initialized before rendering the pie chart *@
+@if (PortfolioOwner.UserId != 0)
+{
+    <PortfolioPieChart PortfolioOwner="@PortfolioOwner" />
+    <button @onclick="OpenModal">@Localizer["AddNewStock"]</button>
+}
 
 @code {
 
+    private User PortfolioOwner { get; set; } = new();
+
+     // AddStock modal
+    [CascadingParameter] IModalService Modal { get; set; } = default!;
+
+    protected async override Task OnInitializedAsync()
+    {
+        AuthenticationState authState = await AuthProvider.GetAuthenticationStateAsync();
+
+        if (await AuthService.IsUserAuthenticated())
+        {
+            var userServiceResponse = await AuthService.GetUserFromDbByEmail(authState.User.Claims.ElementAt(2).Value);
+            PortfolioOwner = userServiceResponse?.Data ?? new();
+            await PortfolioService.InitializePortfolioAsync(PortfolioOwner.UserId);
+        }
+    }
+
+    /// <summary>
+    /// Shows the AddStock modal
+    /// </summary>
+    /// <returns>Whether a stock should be added or not</returns>
+    private void OpenModal()
+    {
+        Modal.Show<AddStockComponent>(Localizer["AddNewStock"], new ModalParameters { { "PortfolioOwner", PortfolioOwner } });
+    }
 }

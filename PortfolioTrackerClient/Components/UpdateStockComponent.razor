@@ -11,7 +11,7 @@
 @inject IStringLocalizer<Resource> Localizer
 
 <div>
-    <EditForm Model="@StockToUpdate" OnValidSubmit='async() => await UpdateStock(StockToUpdate)'>
+    <EditForm Model="@StockToUpdate" OnValidSubmit='async() => await UpdateStock(StockToUpdate, PortfolioOwner.UserId)'>
         <DataAnnotationsValidator />
 
         <label for="stockTicker">@Localizer["StockTicker"]: </label>
@@ -62,7 +62,7 @@
         <br /><br />
 
         <button class="btn-primary" type="submit">@Localizer["Update"]</button>
-        <button class="btn-danger" type="button" style="margin-left: 10px" @onclick="async() => await DeleteStock(StockToUpdate.Ticker)">@Localizer["Delete"]</button>
+        <button class="btn-danger" type="button" style="margin-left: 10px" @onclick="async() => await DeleteStock(StockToUpdate.Ticker, PortfolioOwner.UserId)">@Localizer["Delete"]</button>
         <button style="margin-left: 10px" @onclick="async() => await UpdatePriceAndPositionSize() ">@Localizer["UpdateSharePrice"]</button>
 
         <br /><br />
@@ -81,7 +81,7 @@
 
     [CascadingParameter] IModalService Modal { get; set; } = default!;
 
-    private PortfolioStock _stockToUpdate;
+    private PortfolioStock _stockToUpdate = new();
 
     [Parameter]
     public PortfolioStock StockToUpdate
@@ -89,6 +89,9 @@
         get => _stockToUpdate ?? new PortfolioStock();
         set => _stockToUpdate = value;
     }
+
+    [Parameter]
+    public User PortfolioOwner { get; set; }
 
     private string UpdateResultMessage { get; set; } = string.Empty;
 
@@ -108,9 +111,9 @@
     }
 
 
-    private async Task UpdateStock(PortfolioStock stock)
+    private async Task UpdateStock(PortfolioStock stock, int userId)
     {
-        var response = await PortfolioService.UpdateStock(stock);
+        var response = await PortfolioService.UpdateStock(stock, userId);
         UpdateResultMessage = response.Success ? "Update successful" : "Update failed";
         await DisplayResultMessage();
     }
@@ -120,11 +123,11 @@
         return await ShowModal() ? true : false;
     }
 
-    private async Task DeleteStock(string ticker)
+    private async Task DeleteStock(string stockToDelete, int userId)
     {
         if(await ConfirmDelete())
         {
-            UpdateResultMessage = await PortfolioService.DeleteStock(ticker)
+            UpdateResultMessage = await PortfolioService.DeleteStock(stockToDelete, PortfolioOwner.UserId)
             ? $" Deleted {StockToUpdate.Ticker}" : "Deletion failed.";
             await DisplayResultMessage();
             StockToUpdate = new PortfolioStock();
@@ -175,7 +178,6 @@
      public async Task UpdatePriceAndPositionSize()
     {
         await PortfolioService.UpdatePriceAndPositionSize();
-        StateHasChanged();
     }
 
 }

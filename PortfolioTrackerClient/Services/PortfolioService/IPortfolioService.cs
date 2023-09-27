@@ -11,17 +11,22 @@ namespace PortfolioTrackerClient.Services.PortfolioService
         #region Stocks 
 
         List<PortfolioStock> PortfolioStocks { get; set; }
-        Task<List<PortfolioStock>> GetDatabaseStocks();
+
+        /// <summary>
+        /// Gets all stocks inside a user's portfolio
+        /// </summary>
+        /// <returns></returns>
+        Task<List<PortfolioStock>> GetPortfolioStocks(int userId);
         Task<PortfolioStock> GetDatabaseStock(string ticker);
-        Task<PortfolioStock> AddStock(PortfolioStock stockToAdd);
-        Task<ServiceResponse<PortfolioStock>> UpdateStock(PortfolioStock stockToUpdate);
-        Task<bool> DeleteStock(string ticker);
+        Task<PortfolioStock> AddStock(PortfolioStock stockToAdd, int userId);
+        Task<ServiceResponse<PortfolioStock>> UpdateStock(PortfolioStock stockToUpdate, int userId);
+        Task<bool> DeleteStock(string stockToDelete, int userId);
 
         /// <summary>
         /// Fetches Database stocks and sets PortfolioStocks on startup
         /// </summary>
         /// <returns></returns>
-        Task InitializeAsync();
+        Task InitializePortfolioAsync(int userId);
 
         /// <summary>
         /// Fetches and updates the current share price and position size of all portfolio stocks

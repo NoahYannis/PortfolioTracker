@@ -123,6 +123,7 @@ namespace PortfolioTrackerServer.Services.AuthService
 
             _dataContext.Users.Add(user);
             _dataContext.UserSettings.Add(user.Settings);
+            _dataContext.Portfolios.Add(user.Portfolio);
 
             await _dataContext.SaveChangesAsync();
 
