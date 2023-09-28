@@ -14,8 +14,6 @@
 @inject ISettingsService SettingsService
 @inject IStringLocalizer<Resource> Localizer
 
- @*Test*@
-<h3>@Localizer["HelloWorld"]</h3>
 
 @if (editing)
 {
@@ -81,6 +79,14 @@ else
             @Localizer["SelectColor"]
         </button>
     </div>
+
+    <hr /> <!-- Separator -->
+
+    <BlazoredTextEditor @ref="@richEditor" Placeholder="@Localizer["InvestingGoalsPlaceholder"]" ReadOnly="true">
+        <EditorContent>
+            @UserSettings.InvestingGoals
+        </EditorContent>
+    </BlazoredTextEditor>
 
     <hr /> <!-- Separator -->
 
