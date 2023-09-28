@@ -63,7 +63,7 @@
 
         <button class="btn-primary" type="submit">@Localizer["Update"]</button>
         <button class="btn-danger" type="button" style="margin-left: 10px" @onclick="async() => await DeleteStock(StockToUpdate.Ticker, PortfolioOwner.UserId)">@Localizer["Delete"]</button>
-        <button style="margin-left: 10px" @onclick="async() => await UpdatePriceAndPositionSize() ">@Localizer["UpdateSharePrice"]</button>
+        <button style="margin-left: 10px" @onclick="async() => await UpdatePriceAndPositionSize(PortfolioOwner.UserId) ">@Localizer["UpdateSharePrice"]</button>
 
         <br /><br />
     </EditForm>
@@ -114,6 +114,11 @@
     private async Task UpdateStock(PortfolioStock stock, int userId)
     {
         var response = await PortfolioService.UpdateStock(stock, userId);
+
+        if (response.Success)
+        {
+            
+        }
         UpdateResultMessage = response.Success ? "Update successful" : "Update failed";
         await DisplayResultMessage();
     }
@@ -170,15 +175,15 @@
     private string DeterminePerformanceColor(decimal? performance)
     {
         if (performance is not null)
-             return performance > 0 ? "color: green" : "color: red";
+            return performance > 0 ? "color: green" : "color: red";
 
         return string.Empty;
     }
 
-     public async Task UpdatePriceAndPositionSize()
+    public async Task UpdatePriceAndPositionSize(int userId)
     {
-        await PortfolioService.UpdatePriceAndPositionSize();
+        // Update the piechart if the update was successful
+        if (await PortfolioService.UpdatePriceAndPositionSize(userId))
+            PortfolioService.OnPortfolioChanged(await PortfolioService.GetPortfolioStocks(userId));
     }
-
 }
-

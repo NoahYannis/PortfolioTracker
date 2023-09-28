@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PortfolioTrackerServer.Data;
+using PortfolioTrackerServer.Services.GetStockInfoService;
 using PortfolioTrackerShared.Models;
 using PortfolioTrackerShared.Models.UserModels;
 using PortfolioTrackerShared.Other;
@@ -16,8 +17,6 @@ namespace PortfolioTrackerServer.Services.PortfolioService
         }
 
         private User PortfolioOwner { get; set; } = new();
-
-        public List<PortfolioStock> PortfolioStocks { get; set; } = new();
 
         public List<Order> Orders { get; set; } = new();
 
@@ -127,11 +126,11 @@ namespace PortfolioTrackerServer.Services.PortfolioService
 
             stock.BuyInPrice = updatedStock.BuyInPrice;
             stock.SharesOwned = updatedStock.SharesOwned;
-            stock.RelativePerformance = updatedStock.RelativePerformance;
-            stock.AbsolutePerformance = updatedStock.AbsolutePerformance;
             stock.DividendYield = updatedStock.DividendYield;
             stock.Industry = updatedStock.Industry;
-            stock.PositionSize = updatedStock.SharesOwned * (updatedStock.CurrentPrice ?? 10); // TODO
+            stock.PositionSize = updatedStock.SharesOwned * (updatedStock.CurrentPrice ?? 0);
+            stock.AbsolutePerformance = updatedStock.AbsolutePerformance;
+            stock.RelativePerformance = updatedStock.RelativePerformance;
 
             await _dataContext.SaveChangesAsync();
 

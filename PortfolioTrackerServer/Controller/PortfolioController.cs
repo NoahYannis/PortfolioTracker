@@ -36,9 +36,9 @@ namespace PortfolioTrackerServer.Controller
         }
 
         [HttpGet("update")]
-        public async Task<ActionResult<ServiceResponse<List<PortfolioStock>>>> UpdatePriceAndPositionSize()
+        public async Task<ActionResult<ServiceResponse<List<PortfolioStock>>>> UpdatePriceAndPositionSize(int userId)
         {
-            var result = await _fetchAndUpdate.UpdatePriceAndPositionSize();
+            var result = await _fetchAndUpdate.UpdatePriceAndPositionSize(userId);
             return Ok(result);
         }
 

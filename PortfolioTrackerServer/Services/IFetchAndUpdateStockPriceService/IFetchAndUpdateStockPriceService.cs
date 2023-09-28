@@ -9,8 +9,8 @@ namespace PortfolioTrackerServer.Services.GetStockInfoService
     /// </summary>
     public interface IFetchAndUpdateStockPriceService
     {
-        Task<ServiceResponse<List<ApiQueryStock>>> FetchCurrentStockPrices();
-        Task<ServiceResponse<List<PortfolioStock>>> UpdatePriceAndPositionSize();
+        Task<ServiceResponse<List<ApiQueryStock>>> FetchCurrentStockPrices(int userId);
+        Task<ServiceResponse<List<PortfolioStock>>> UpdatePriceAndPositionSize(int userId);
 
     }
 }

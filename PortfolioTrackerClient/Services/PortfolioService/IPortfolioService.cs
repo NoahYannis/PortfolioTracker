@@ -32,7 +32,7 @@ namespace PortfolioTrackerClient.Services.PortfolioService
         /// Fetches and updates the current share price and position size of all portfolio stocks
         /// </summary>
         /// <returns></returns>
-        Task<bool> UpdatePriceAndPositionSize();
+        Task<bool> UpdatePriceAndPositionSize(int userId);
 
 
         event EventHandler<PortfolioChangedArgs> PortfolioChanged;

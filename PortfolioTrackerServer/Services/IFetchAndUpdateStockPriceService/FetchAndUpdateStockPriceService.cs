@@ -11,6 +11,7 @@ namespace PortfolioTrackerServer.Services.FetchAndUpdateStockPriceService
         private readonly DataContext _dataContext;
         private readonly IPortfolioService _portfolioService;
         private readonly IGetStockInfoService _getStockInfoService;
+        private List<PortfolioStock> PortfolioStocks = new List<PortfolioStock>();
 
         public FetchAndUpdateStockPriceService(DataContext datacontext, IPortfolioService portfolioService, IGetStockInfoService getStockInfoService)
         {
@@ -19,16 +20,17 @@ namespace PortfolioTrackerServer.Services.FetchAndUpdateStockPriceService
             _getStockInfoService = getStockInfoService;
         }
 
-        public async Task<ServiceResponse<List<ApiQueryStock>>> FetchCurrentStockPrices()
+        public async Task<ServiceResponse<List<ApiQueryStock>>> FetchCurrentStockPrices(int userId)
         {
-            var portfolioStocks = _portfolioService.PortfolioStocks;
+            var portfolioStocks = await _portfolioService.GetPortfolioStocks(userId);
+            PortfolioStocks = portfolioStocks.Data;
 
-            if (portfolioStocks.Count is 0)
+            if (portfolioStocks.Data is null || portfolioStocks.Data.Count is 0)
                 return new ServiceResponse<List<ApiQueryStock>>() { Data = null, Success = false, Message = "Couldn't fetch database stocks" };
 
-            var serviceResponse = new ServiceResponse<List<ApiQueryStock>>() { Data = new List<ApiQueryStock>() };
+            var serviceResponse = new ServiceResponse<List<ApiQueryStock>>() { Data = new()};
 
-            foreach (PortfolioStock stock in portfolioStocks)
+            foreach (PortfolioStock stock in PortfolioStocks)
             {
                 var response = await _getStockInfoService.GetStockData(stock?.Ticker);
 
@@ -46,21 +48,23 @@ namespace PortfolioTrackerServer.Services.FetchAndUpdateStockPriceService
             return serviceResponse;
         }
 
-        public async Task<ServiceResponse<List<PortfolioStock>>> UpdatePriceAndPositionSize()
+        public async Task<ServiceResponse<List<PortfolioStock>>> UpdatePriceAndPositionSize(int userId)
         {
-            var result = await FetchCurrentStockPrices();
+            var result = await FetchCurrentStockPrices(userId);
 
             if (result.Success)
             {
-                // Update share price
-                _portfolioService.PortfolioStocks.ForEach(s => s.CurrentPrice = result.Data?[_portfolioService.PortfolioStocks.IndexOf(s)].Close);
+                // Update share price and position size
+                PortfolioStocks.ForEach(s =>
+                {
+                    s.CurrentPrice = result.Data?[PortfolioStocks.IndexOf(s)].Close;
+                    s.PositionSize = s.CurrentPrice * s.SharesOwned;
+                });
 
-                // Update position size
-                _portfolioService.PortfolioStocks.ForEach(s => s.PositionSize = s.CurrentPrice * s.SharesOwned);
 
-                await  _dataContext.SaveChangesAsync();
+                await _dataContext.SaveChangesAsync();
 
-                return new ServiceResponse<List<PortfolioStock>> { Data = _portfolioService.PortfolioStocks };
+                return new ServiceResponse<List<PortfolioStock>> { Data = PortfolioStocks };
             }
 
             return new ServiceResponse<List<PortfolioStock>> { Success = false, Message = result.Message };

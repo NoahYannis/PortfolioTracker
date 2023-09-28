@@ -1,5 +1,4 @@
 ﻿using PortfolioTrackerShared.Models;
-using PortfolioTrackerShared.Other;
 using System.Net.Http.Json;
 
 namespace PortfolioTrackerClient.Services.GetStockInfoService
@@ -25,10 +24,9 @@ namespace PortfolioTrackerClient.Services.GetStockInfoService
             return await _httpClient.GetFromJsonAsync<ServiceResponse<ApiQueryStock>>($"https://localhost:7207/api/polygon/{tickerSymbol}");
         }
 
-        public async Task<ServiceResponse<List<ApiQueryStock>>> GetAllStockData()
+        public async Task<ServiceResponse<List<ApiQueryStock>>> GetAllStockData(int userId)
         {
-            return await _httpClient.GetFromJsonAsync<ServiceResponse<List<ApiQueryStock>>>($"https://localhost:7207/api/polygon");
+            return await _httpClient.GetFromJsonAsync<ServiceResponse<List<ApiQueryStock>>>($"https://localhost:7207/api/polygon?userId={userId}");
         }
-
     }
 }

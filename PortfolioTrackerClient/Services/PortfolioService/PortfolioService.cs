@@ -77,8 +77,12 @@ namespace PortfolioTrackerClient.Services.PortfolioService
         {
             var response = await _httpClient.PutAsJsonAsync($"{serverBaseDomain}/api/portfolio?userId={userId}", stock);
 
+            Console.Write($"relperf bef: {stock.RelativePerformance}");
+
             if (response.IsSuccessStatusCode)
                 OnPortfolioChanged(PortfolioStocks, stock, PortfolioAction.Modified);
+
+            Console.Write($"relperf aft: {stock.RelativePerformance}");
 
             return (await response.Content.ReadFromJsonAsync<ServiceResponse<PortfolioStock>>());
         }
@@ -88,9 +92,9 @@ namespace PortfolioTrackerClient.Services.PortfolioService
         /// Fetches the current stock price for each stock inside the portfolio
         /// </summary>
         /// <returns></returns>
-        public async Task<bool> UpdatePriceAndPositionSize()
+        public async Task<bool> UpdatePriceAndPositionSize(int userId)
         {
-            var response = await _httpClient.GetFromJsonAsync<ServiceResponse<List<PortfolioStock>>>($"{serverBaseDomain}/api/portfolio/update");
+            var response = await _httpClient.GetFromJsonAsync<ServiceResponse<List<PortfolioStock>>>($"{serverBaseDomain}/api/portfolio/update?userId={userId}");
 
             if (response.Success)
             {
