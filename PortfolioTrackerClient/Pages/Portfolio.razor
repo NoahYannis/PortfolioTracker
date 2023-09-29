@@ -7,9 +7,9 @@
 @using PortfolioTrackerShared.Models.UserModels;
 
 @inject IAuthService AuthService
-@inject AuthenticationStateProvider AuthProvider
 @inject IPortfolioService PortfolioService
 @inject IStringLocalizer<Resource> Localizer
+@inject AuthenticationStateProvider AuthProvider
 @attribute [Authorize]
 
 <CascadingAuthenticationState>
@@ -32,7 +32,7 @@
 
     private User PortfolioOwner { get; set; } = new();
 
-     // AddStock modal
+    // AddStock modal
     [CascadingParameter] IModalService Modal { get; set; } = default!;
 
     protected async override Task OnInitializedAsync()

@@ -114,19 +114,12 @@
     private async Task UpdateStock(PortfolioStock stock, int userId)
     {
         var response = await PortfolioService.UpdateStock(stock, userId);
-
-        if (response.Success)
-        {
-            
-        }
         UpdateResultMessage = response.Success ? "Update successful" : "Update failed";
         await DisplayResultMessage();
     }
 
-    private async Task<bool> ConfirmDelete()
-    {
-        return await ShowModal() ? true : false;
-    }
+    private async Task<bool> ConfirmDelete() => await ShowModal() ? true : false;
+    
 
     private async Task DeleteStock(string stockToDelete, int userId)
     {
@@ -182,7 +175,7 @@
 
     public async Task UpdatePriceAndPositionSize(int userId)
     {
-        // Update the piechart if the update was successful
+        // Rerender piechart if update was successful
         if (await PortfolioService.UpdatePriceAndPositionSize(userId))
             PortfolioService.OnPortfolioChanged(await PortfolioService.GetPortfolioStocks(userId));
     }
