@@ -106,6 +106,15 @@ namespace PortfolioTrackerClient.Resources {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Change password ähnelt.
+        /// </summary>
+        public static string ChangePassword {
+            get {
+                return ResourceManager.GetString("ChangePassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Color scheme ähnelt.
         /// </summary>
         public static string ColorScheme {

@@ -31,6 +31,13 @@
     <button type="submit" class="btn btn-primary">@Localizer["Login"]</button>
     <a style="margin-left: 10px;" href="/register">@Localizer["SignUp"]</a>
 
+    <br />
+
+    @if (displayChangePasswordButton)
+    {
+        <button type="button" style="margin-top: 20px;" class="btn btn-danger" @onclick="ChangePassword">@Localizer["ChangePassword"]</button>
+    }
+
 </EditForm>
 <div class="text-danger" style="margin-top: 10px;">
     <span>@errorMessage</span>
@@ -40,6 +47,8 @@
 @code {
 
     private UserLogin user = new();
+
+    private bool displayChangePasswordButton;
 
     private string errorMessage = string.Empty;
 
@@ -51,7 +60,7 @@
 
         if (QueryHelpers.ParseQuery(uri.Query).TryGetValue("returnUrl", out var url))
         {
-            returnUrl = url;        
+            returnUrl = url;
         }
     }
 
@@ -69,6 +78,12 @@
         else
         {
             errorMessage = result.Message;
+
+            // Offer password change if needed.
+            displayChangePasswordButton = true;
         }
     }
+
+    private void ChangePassword() => NavManager.NavigateTo("/change-password", true);
+
 }

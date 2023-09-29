@@ -32,6 +32,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xVcGRhdGVTdG9ja0NvbXBvbmVudC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Noah/source/repos/PortfolioTracker/PortfolioTrackerClient/Pages/ChangePassword.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2hhbmdlUGFzc3dvcmQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Noah/source/repos/PortfolioTracker/PortfolioTrackerClient/Pages/ConfirmAction.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29uZmlybUFjdGlvbi5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 

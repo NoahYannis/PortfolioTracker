@@ -132,6 +132,9 @@
   <data name="Calculate" xml:space="preserve">
     <value>Berechnen</value>
   </data>
+  <data name="ChangePassword" xml:space="preserve">
+    <value>Passwort ändern</value>
+  </data>
   <data name="ColorScheme" xml:space="preserve">
     <value>Farbschema</value>
   </data>
