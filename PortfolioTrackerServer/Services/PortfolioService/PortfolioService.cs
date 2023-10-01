@@ -128,7 +128,7 @@ namespace PortfolioTrackerServer.Services.PortfolioService
             stock.SharesOwned = updatedStock.SharesOwned;
             stock.DividendYield = updatedStock.DividendYield;
             stock.Industry = updatedStock.Industry;
-            stock.PositionSize = updatedStock.SharesOwned * (updatedStock.CurrentPrice ?? 0);
+            stock.PositionSize = updatedStock.SharesOwned * updatedStock.CurrentPrice ?? stock.PositionSize;
             stock.AbsolutePerformance = updatedStock.AbsolutePerformance;
             stock.RelativePerformance = updatedStock.RelativePerformance;
 
