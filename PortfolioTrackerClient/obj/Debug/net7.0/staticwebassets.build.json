@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "QMofSfVe+RPUCRiv/k2tb9ucEgWzvvXbXXfXeo+tkx0=",
+  "Hash": "cLIkDRKpmZ/VFnenNJX5wZnsu1qBqFcNhoMYSNll0hU=",
   "Source": "PortfolioTrackerClient",
   "BasePath": "/",
   "Mode": "Root",
@@ -442,6 +442,23 @@
       "OriginalItemSpec": "C:\\Users\\Noah\\.nuget\\packages\\blazored.texteditor\\1.1.0\\lib\\netstandard2.0\\Blazored.TextEditor.dll"
     },
     {
+      "Identity": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerClient\\bin\\Debug\\net7.0\\wwwroot\\_framework\\BouncyCastle.Cryptography.dll",
+      "SourceId": "PortfolioTrackerClient",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerClient\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/BouncyCastle.Cryptography.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Noah\\.nuget\\packages\\bouncycastle.cryptography\\2.2.1\\lib\\net6.0\\BouncyCastle.Cryptography.dll"
+    },
+    {
       "Identity": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerClient\\bin\\Debug\\net7.0\\wwwroot\\_framework\\ChartJs.Blazor.dll",
       "SourceId": "PortfolioTrackerClient",
       "SourceType": "Computed",
@@ -627,6 +644,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Noah\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\7.0.10\\runtimes\\browser-wasm\\native\\icudt_no_CJK.dat"
+    },
+    {
+      "Identity": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerClient\\bin\\Debug\\net7.0\\wwwroot\\_framework\\MailKit.dll",
+      "SourceId": "PortfolioTrackerClient",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerClient\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/MailKit.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Noah\\.nuget\\packages\\mailkit\\4.2.0\\lib\\net6.0\\MailKit.dll"
     },
     {
       "Identity": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerClient\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Authorization.dll",
@@ -1239,6 +1273,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Noah\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\7.0.10\\runtimes\\browser-wasm\\lib\\net7.0\\Microsoft.Win32.Registry.dll"
+    },
+    {
+      "Identity": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerClient\\bin\\Debug\\net7.0\\wwwroot\\_framework\\MimeKit.dll",
+      "SourceId": "PortfolioTrackerClient",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerClient\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/MimeKit.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Noah\\.nuget\\packages\\mimekit\\4.2.0\\lib\\net6.0\\MimeKit.dll"
     },
     {
       "Identity": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerClient\\bin\\Debug\\net7.0\\wwwroot\\_framework\\mscorlib.dll",
@@ -3468,6 +3519,23 @@
       "OriginalItemSpec": "C:\\Users\\Noah\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\7.0.10\\runtimes\\browser-wasm\\lib\\net7.0\\System.Security.Cryptography.OpenSsl.dll"
     },
     {
+      "Identity": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerClient\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Security.Cryptography.Pkcs.dll",
+      "SourceId": "PortfolioTrackerClient",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerClient\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/System.Security.Cryptography.Pkcs.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Noah\\.nuget\\packages\\system.security.cryptography.pkcs\\7.0.2\\lib\\net7.0\\System.Security.Cryptography.Pkcs.dll"
+    },
+    {
       "Identity": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerClient\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Security.Cryptography.Primitives.dll",
       "SourceId": "PortfolioTrackerClient",
       "SourceType": "Computed",
@@ -4231,6 +4299,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerClient\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.ComponentModel.Annotations.dll"
+    },
+    {
+      "Identity": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerClient\\obj\\Debug\\net7.0\\build-gz\\+wJfGxx1.gz",
+      "SourceId": "PortfolioTrackerClient",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerClient\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/BouncyCastle.Cryptography.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerClient\\bin\\Debug\\net7.0\\wwwroot\\_framework\\BouncyCastle.Cryptography.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerClient\\bin\\Debug\\net7.0\\wwwroot\\_framework\\BouncyCastle.Cryptography.dll"
     },
     {
       "Identity": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerClient\\obj\\Debug\\net7.0\\build-gz\\+XLTVTC2.gz",
@@ -5506,6 +5591,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerClient\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Runtime.Loader.dll"
+    },
+    {
+      "Identity": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerClient\\obj\\Debug\\net7.0\\build-gz\\EXH6iZxF.gz",
+      "SourceId": "PortfolioTrackerClient",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerClient\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/MimeKit.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerClient\\bin\\Debug\\net7.0\\wwwroot\\_framework\\MimeKit.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerClient\\bin\\Debug\\net7.0\\wwwroot\\_framework\\MimeKit.dll"
     },
     {
       "Identity": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerClient\\obj\\Debug\\net7.0\\build-gz\\FnBkhnuG.gz",
@@ -7089,6 +7191,23 @@
       "OriginalItemSpec": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerClient\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.ServiceModel.Web.dll"
     },
     {
+      "Identity": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerClient\\obj\\Debug\\net7.0\\build-gz\\RZ7TgBnT.gz",
+      "SourceId": "PortfolioTrackerClient",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerClient\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/System.Security.Cryptography.Pkcs.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerClient\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Security.Cryptography.Pkcs.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerClient\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Security.Cryptography.Pkcs.dll"
+    },
+    {
       "Identity": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerClient\\obj\\Debug\\net7.0\\build-gz\\SBU2S784.gz",
       "SourceId": "PortfolioTrackerClient",
       "SourceType": "Computed",
@@ -7716,6 +7835,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerClient\\bin\\Debug\\net7.0\\wwwroot\\_framework\\PortfolioTrackerClient.pdb"
+    },
+    {
+      "Identity": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerClient\\obj\\Debug\\net7.0\\build-gz\\X6E4Mxeh.gz",
+      "SourceId": "PortfolioTrackerClient",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerClient\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/MailKit.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerClient\\bin\\Debug\\net7.0\\wwwroot\\_framework\\MailKit.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerClient\\bin\\Debug\\net7.0\\wwwroot\\_framework\\MailKit.dll"
     },
     {
       "Identity": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerClient\\obj\\Debug\\net7.0\\build-gz\\xALpY4dd.gz",

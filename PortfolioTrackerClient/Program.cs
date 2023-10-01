@@ -12,6 +12,7 @@ global using PortfolioTrackerShared.Other;
 global using Microsoft.Extensions.Localization;
 global using PortfolioTrackerClient.Resources;
 using PortfolioTrackerClient.Services.SettingsService;
+using PortfolioTrackerClient.Services.EmailService;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
@@ -24,6 +25,7 @@ builder.Services.AddScoped<IGetStockInfoService, GetStockInfoServiceBlazor>();
 builder.Services.AddScoped<IPortfolioService, PortfolioService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<ISettingsService, SettingsService>();
+builder.Services.AddScoped<IEmailService, EmailService>();
 
 builder.Services.AddBlazoredModal();
 builder.Services.AddOptions();

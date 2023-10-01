@@ -11,7 +11,9 @@
       "Blazored.LocalStorage.dll": "sha256-5V8ovY1srbIIz7lzzMhLd3nNJ9LJ6bHoBOnLJahv8Go=",
       "Blazored.Modal.dll": "sha256-Sr30UiM7JErBe8hojY6HAgaOOgfQE5zHijI0uVypmkM=",
       "Blazored.TextEditor.dll": "sha256-6o6WOuk4mnjpW8SpSUUlvO2Fv+LMQTgHlBwaZhDcwDE=",
+      "BouncyCastle.Cryptography.dll": "sha256-ghU8DmiDSg9A4gA4QlQpo+P5z02rvJGRtHbP5WGKFB0=",
       "ChartJs.Blazor.dll": "sha256-0ciRJps8EWsbo3zIh4fYA2+QBnZIl1lSu4aydLaQDEo=",
+      "MailKit.dll": "sha256-j1klNoeXxJmIPgL\/KLEYLhrWiWogNaOpKlE4DWy2pJg=",
       "Microsoft.AspNetCore.Authorization.dll": "sha256-t7KDwXpfEy\/UbmAIpuMJI0h+MMOTr8jLi1ei0lP44QI=",
       "Microsoft.AspNetCore.Components.dll": "sha256-CCnE1pQ8XDRrJWlqnelqinQo1pisIEK3lPSLNsOThy8=",
       "Microsoft.AspNetCore.Components.Authorization.dll": "sha256-K4i5UqLQl44BaadmwA1ivTJPEy3po65hcLLNnqyELrY=",
@@ -43,9 +45,11 @@
       "Microsoft.JSInterop.dll": "sha256-ZglXsTJFg7gIPbFdWyqdUxrG4L+2H\/eEGtGJgrf3mls=",
       "Microsoft.JSInterop.WebAssembly.dll": "sha256-uXNdaB5ieiQN17JUqeAopa3nh1z3wh+cyXpIYXeILzo=",
       "Microsoft.Net.Http.Headers.dll": "sha256-P66ftDrXwc6ayND8uYzIk0CPQy1GjNZAPHx9RMhi3V4=",
+      "MimeKit.dll": "sha256-dch3l44W7QaGPlm590860vo\/fDFamZjI5e89A3Mc2E0=",
       "Newtonsoft.Json.dll": "sha256-mRd6TL4DYldo1ko9czkjEDcoiPdMPrJxz3dekwV6OOY=",
       "RestSharp.dll": "sha256-wmgBxj\/hw1u0mbIuby3P0+JiB4bnpdvsqn7n29ohgMk=",
       "System.IO.Pipelines.dll": "sha256-P\/MqD0fCBd5bgTM16JC1QC\/Zz7s+CwViyzmDFkBG4\/c=",
+      "System.Security.Cryptography.Pkcs.dll": "sha256-xyy6snHL0b+IhIYXasRJQYbaGw8LNimr5WZNqTDSqYw=",
       "Microsoft.CSharp.dll": "sha256-X69dv0Kcp5aCpsjyp0kh0E28KK1Z47p8anZQiQU8Irc=",
       "Microsoft.VisualBasic.Core.dll": "sha256-gqaDZ2GcFZADYOQ\/y+hWgkBU2p6w7DvAVQkHGZQAK44=",
       "Microsoft.VisualBasic.dll": "sha256-VYg98zaNa2dh6k4p\/0zRnCqPdp1qtrJ\/Hl\/7CVfsMDc=",
@@ -214,15 +218,15 @@
       "mscorlib.dll": "sha256-Xo3wdLenBZ41X73hGjkWTbEQZDKcQsnPFtlkePUxLY0=",
       "netstandard.dll": "sha256-qjqaAEP3hdLnU\/TnoCd8HaSa+0ruV1TpdaB2GUujGMw=",
       "System.Private.CoreLib.dll": "sha256-\/7uQ+eNo9u3H1mpgMko4D3tKZHeGRfsRjna0Dqsu62k=",
-      "PortfolioTrackerShared.dll": "sha256-f7Ow9T20mxtRokRC0ygbR2AcXNcBAP1HD0AiOU0\/fy0=",
-      "PortfolioTrackerClient.dll": "sha256-LwfIbwws8gvk07VENiEeSuLCw9vUIk2uF7YCJrg\/qkU="
+      "PortfolioTrackerShared.dll": "sha256-\/1jJSV0Nsw+nBhgUamhoUnPPq9xdpxAdT6B8tj0V51g=",
+      "PortfolioTrackerClient.dll": "sha256-FUs1CO+lwW1Db39qumWqjWKu4DFbvZrl1EUUY4neNjE="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "PortfolioTrackerShared.pdb": "sha256-cDovPZchWOFsZrqh5K8Mdl3SVIgPwG4i0vMf5K95JpE=",
-      "PortfolioTrackerClient.pdb": "sha256-aji1QylVDcBIcU+3r7WmbvyEI2HpS1ntArNwqAX0mUU="
+      "PortfolioTrackerShared.pdb": "sha256-\/zd8ejN8Ue5FKWBlzDrW5txXlPyeqlaInPfwouAwddk=",
+      "PortfolioTrackerClient.pdb": "sha256-unr\/dCzGb5GjXiyfZxt593mdMJqg6CsqXozjUrCeseE="
     },
     "runtime": {
       "dotnet.7.0.10.kusp2eu64g.js": "sha256-qJB30QURoyH3y3WyayHu6nMFIx2XNOkXCez7tagGpvE=",
@@ -241,16 +245,16 @@
     },
     "satelliteResources": {
       "de": {
-        "de\/PortfolioTrackerClient.resources.dll": "sha256-MEDPNl4Ya9ec8MGHm4c1k7zjM4o3eNGX8IUQCH2tr1w="
+        "de\/PortfolioTrackerClient.resources.dll": "sha256-TQdlC8doN8DUwT8x3v+8uXaiyXMnP25td62EjmjjZCc="
       },
       "es": {
-        "es\/PortfolioTrackerClient.resources.dll": "sha256-Soi9Axijxcti7VtsE+rni6TAOrsGbP8QYVAXQGNxIH8="
+        "es\/PortfolioTrackerClient.resources.dll": "sha256-9iKQ57OkFFUMEX2SCVOczcX63WlxVpSoWO6wiL\/ld8g="
       },
       "fr": {
-        "fr\/PortfolioTrackerClient.resources.dll": "sha256-efsIsciUpv2tH5pemxGVYKrqb9JWqdsYhqGQF8m8plc="
+        "fr\/PortfolioTrackerClient.resources.dll": "sha256-Q25xh0e4SKs5BYkZgG1VNjHi2MI2o5tt7KJMzdq39cM="
       },
       "ru": {
-        "ru\/PortfolioTrackerClient.resources.dll": "sha256-XP7F9GUOpJSP+OLWdytNGA5BPpyRnRFeMKuRo4rRLwg="
+        "ru\/PortfolioTrackerClient.resources.dll": "sha256-vIDZT+R6+L2xQy+WIIyaFgNtzhATQogOL63cXZaW6oA="
       }
     }
   }

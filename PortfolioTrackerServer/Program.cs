@@ -2,6 +2,7 @@ using Blazored.SessionStorage;
 using Microsoft.EntityFrameworkCore;
 using PortfolioTrackerServer.Data;
 using PortfolioTrackerServer.Services.AuthService;
+using PortfolioTrackerServer.Services.EmailService;
 using PortfolioTrackerServer.Services.FetchAndUpdateStockPriceService;
 using PortfolioTrackerServer.Services.GetStockInfoService;
 using PortfolioTrackerServer.Services.PortfolioService;
@@ -43,6 +44,7 @@ builder.Services.AddScoped<IPortfolioService, PortfolioService>();
 builder.Services.AddScoped<IFetchAndUpdateStockPriceService, FetchAndUpdateStockPriceService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<ISettingsService, SettingsService>();
+builder.Services.AddScoped<IEmailService, EmailService>();
 
 // Consider changing this once application is fully developed for additional security.
 
