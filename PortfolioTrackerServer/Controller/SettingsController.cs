@@ -16,7 +16,7 @@ namespace PortfolioTrackerServer.Controller
             _settingsService = settingsService;
         }
 
-        [HttpGet()]
+        [HttpGet]
         public async Task<ActionResult<UserSettings>> GetUserSettings(int userId)
         {
             var result = await _settingsService.GetUserSettings(userId);

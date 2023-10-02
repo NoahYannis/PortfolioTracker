@@ -1,8 +1,5 @@
-﻿using MailKit.Net.Smtp;
-using MailKit.Security;
-using Microsoft.AspNetCore.Mvc;
-using MimeKit;
-using MimeKit.Text;
+﻿using Microsoft.AspNetCore.Mvc;
+using PortfolioTrackerServer.Services.EmailService;
 
 namespace PortfolioTrackerServer.Controller
 {
@@ -10,22 +7,18 @@ namespace PortfolioTrackerServer.Controller
     [ApiController]
     public class EmailController : ControllerBase
     {
-        [HttpPost]
-        public IActionResult SendEmail(string body)
+        private readonly IEmailService _emailService;
+
+        public EmailController(IEmailService emailService)
         {
-            var email = new MimeMessage();
-            email.From.Add(MailboxAddress.Parse("eda.hand12@ethereal.email"));
-            email.To.Add(MailboxAddress.Parse("eda.hand12@ethereal.email"));
-            email.Subject = "My test email :)";
-            email.Body = new TextPart(TextFormat.Plain) { Text = body };
+            _emailService = emailService;
+        }
 
-            using var smtp = new SmtpClient();
-            smtp.Connect("smtp.ethereal.email", 587, SecureSocketOptions.StartTls);
-            smtp.Authenticate("eda.hand12@ethereal.email", "v9AhEkDRBEtjkc4RN1");
-            smtp.Send(email);
-            smtp.Disconnect(true);
-
-            return Ok();
+        [HttpPost]
+        public async Task<ActionResult<bool>> SendEmail(string body)
+        {
+            var result = await _emailService.SendEmail(body);
+            return Ok(result);
         }
     }
 }
