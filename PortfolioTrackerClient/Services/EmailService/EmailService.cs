@@ -18,5 +18,11 @@ namespace PortfolioTrackerClient.Services.EmailService
             var response = await _http.PostAsJsonAsync($"{serverBaseDomain}/api/email", body);
             return await response.Content.ReadFromJsonAsync<bool>();
         }
+
+        public async Task<bool> SendPasswordResetEmail(string userEmail)
+        {
+            var response = await _http.PostAsJsonAsync($"{serverBaseDomain}/api/email/reset-password", userEmail);
+            return await response.Content.ReadFromJsonAsync<bool>();
+        }
     }
 }

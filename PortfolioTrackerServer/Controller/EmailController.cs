@@ -20,5 +20,12 @@ namespace PortfolioTrackerServer.Controller
             var result = await _emailService.SendEmail(body);
             return Ok(result);
         }
+
+        [HttpPost("reset-password")]
+        public async Task<ActionResult<bool>> SendPasswordResetEmail(string userEmail)
+        {
+            var result = await _emailService.SendPasswordResetEmail(userEmail);
+            return Ok(result);
+        }
     }
 }

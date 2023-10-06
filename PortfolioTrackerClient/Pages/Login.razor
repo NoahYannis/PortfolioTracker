@@ -2,16 +2,18 @@
 
 @inject IAuthService AuthService
 @inject ILocalStorageService LocalStorage
+@inject IStringLocalizer<Resource> Localizer
+@inject IEmailService EmailService
 @inject NavigationManager NavManager
 @inject AuthenticationStateProvider AuthenticationStateProvider
 
 @using Blazored.LocalStorage;
 @using Microsoft.AspNetCore.Components.Authorization;
 @using PortfolioTrackerClient.Services.AuthService;
+@using PortfolioTrackerClient.Services.EmailService;
 @using PortfolioTrackerShared.Models.UserModels;
 @using Microsoft.AspNetCore.WebUtilities
 
-@inject IStringLocalizer<Resource> Localizer
 
 
 <PageTitle>Login</PageTitle>
@@ -35,7 +37,11 @@
 
     @if (displayChangePasswordButton)
     {
-        <button type="button" style="margin-top: 20px;" class="btn btn-danger" @onclick="ChangePassword">@Localizer["ChangePassword"]</button>
+        <div class="mb-3">
+            <label for="email">@Localizer["Email"]:</label>
+            <input type="email" id="email" @bind="passwordResetEmail" class="form-control"></input>
+        </div>
+        <button type="button" style="margin-top: 20px;" class="btn btn-danger" @onclick="SendPasswordResetEmail">@Localizer["ChangePassword"]</button>
     }
 
 </EditForm>
@@ -47,12 +53,11 @@
 @code {
 
     private UserLogin user = new();
+    private string returnUrl = string.Empty;
 
     private bool displayChangePasswordButton;
-
-    private string errorMessage = string.Empty;
-
-    private string returnUrl = string.Empty;
+    private string errorMessage { get; set; } = string.Empty;
+    private string passwordResetEmail { get; set; } = string.Empty;
 
     protected override void OnInitialized()
     {
@@ -81,9 +86,20 @@
 
             // Offer password change if needed.
             displayChangePasswordButton = true;
+            string passwordResetEmail = string.Empty;
         }
     }
 
-    private void ChangePassword() => NavManager.NavigateTo("/change-password", true);
+
+    /// <summary>
+    /// Sends a password reset email to the specified email
+    /// </summary>
+    private async Task SendPasswordResetEmail()
+    {
+        if (await EmailService.SendPasswordResetEmail(passwordResetEmail))
+            NavManager.NavigateTo("/change-password", true);
+        else
+            errorMessage = "Could not verify the specified email";
+    }
 
 }
