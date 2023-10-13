@@ -7,18 +7,29 @@ namespace PortfolioTrackerServer.Services.EmailService
 {
     public class EmailService : IEmailService
     {
-        public Task<bool> SendEmail(string body)
+        private readonly IConfiguration config;
+
+        public EmailService(IConfiguration _config)
+        {
+            config = _config;
+        }
+
+        public Task<bool> SendEmail(string body, string recipientAddress)
         {
             var email = new MimeMessage();
-            email.From.Add(MailboxAddress.Parse("hadley.ullrich37@ethereal.email"));
-            email.To.Add(MailboxAddress.Parse("hadley.ullrich37@ethereal.email"));
+
+            email.From.Add(MailboxAddress.Parse(config.GetSection("Email:AppMail").Value));
+            email.To.Add(MailboxAddress.Parse(recipientAddress));
             email.Subject = "My test email :)";
             email.Body = new TextPart(TextFormat.Plain) { Text = body };
+
             using var smtp = new SmtpClient();
-            smtp.Connect("smtp.ethereal.email", 587, SecureSocketOptions.StartTls);
-            smtp.Authenticate("hadley.ullrich37@ethereal.email", "qT3K7TEMFswEV7pp87");
+
+            smtp.Connect(config.GetSection("Email:Host").Value, 587, SecureSocketOptions.StartTls);
+            smtp.Authenticate(config.GetSection("Email:AppMail").Value, config.GetSection("Email:Password").Value);
             smtp.Send(email);
             smtp.Disconnect(true);
+
             return Task.FromResult(true);
         }
 

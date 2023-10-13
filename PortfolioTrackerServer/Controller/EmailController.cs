@@ -15,9 +15,9 @@ namespace PortfolioTrackerServer.Controller
         }
 
         [HttpPost]
-        public async Task<ActionResult<bool>> SendEmail(string body)
+        public async Task<ActionResult<bool>> SendEmail(string body, string recipientAddress)
         {
-            var result = await _emailService.SendEmail(body);
+            var result = await _emailService.SendEmail(body, recipientAddress);
             return Ok(result);
         }
 

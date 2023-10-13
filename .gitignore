@@ -19,3 +19,9 @@ obj/Debug/net7.0/ref/PortfolioTracker.dll
 *.json
 *.dll.gz
 *.suo
+*.json
+PortfolioTrackerServer/bin/Debug/net7.0/appsettings.json
+*.json
+*.json
+PortfolioTrackerServer/appsettings.json
+PortfolioTrackerServer/bin/Debug/net7.0/appsettings.json
