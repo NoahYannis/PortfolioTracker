@@ -219,14 +219,14 @@
       "netstandard.dll": "sha256-qjqaAEP3hdLnU\/TnoCd8HaSa+0ruV1TpdaB2GUujGMw=",
       "System.Private.CoreLib.dll": "sha256-\/7uQ+eNo9u3H1mpgMko4D3tKZHeGRfsRjna0Dqsu62k=",
       "PortfolioTrackerShared.dll": "sha256-\/1jJSV0Nsw+nBhgUamhoUnPPq9xdpxAdT6B8tj0V51g=",
-      "PortfolioTrackerClient.dll": "sha256-66AUm2EMau+PAobx17q0aJN3HrhWebga4nP5mr41hZo="
+      "PortfolioTrackerClient.dll": "sha256-FPibRRHQhQN5FEMKTDmUr7iKLjGtNCmykpFisHqEaTo="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
       "PortfolioTrackerShared.pdb": "sha256-\/zd8ejN8Ue5FKWBlzDrW5txXlPyeqlaInPfwouAwddk=",
-      "PortfolioTrackerClient.pdb": "sha256-Ig5HY5lx6j4hGoEkZaekgINV3zozmah2X9+nT49VjZA="
+      "PortfolioTrackerClient.pdb": "sha256-TzWKEbhGd431uPVy+dGzq7TLfjhLSiFSFv3nk677Qls="
     },
     "runtime": {
       "dotnet.7.0.10.kusp2eu64g.js": "sha256-qJB30QURoyH3y3WyayHu6nMFIx2XNOkXCez7tagGpvE=",
@@ -245,16 +245,16 @@
     },
     "satelliteResources": {
       "de": {
-        "de\/PortfolioTrackerClient.resources.dll": "sha256-MPr\/5KS5ccna+ce\/F\/wIhCmRwtjT+9jNv\/BD3SdyNZg="
+        "de\/PortfolioTrackerClient.resources.dll": "sha256-I5jQqcMFHfYv0aC9FoIau2s67tRmDCCtP0qbNiIt8Uw="
       },
       "es": {
-        "es\/PortfolioTrackerClient.resources.dll": "sha256-\/PICd6X4KQFZjy3kle6rfV7yq4CEmVgDAhwu7Y2y9+Q="
+        "es\/PortfolioTrackerClient.resources.dll": "sha256-6QRvJGf4PVedp+As\/nzY57SkiIxbPcIp9HNqguIK4Sw="
       },
       "fr": {
-        "fr\/PortfolioTrackerClient.resources.dll": "sha256-PLLBUZGEiDPUNI94c03kWaebxzOH1bx\/tmK5mz43QXA="
+        "fr\/PortfolioTrackerClient.resources.dll": "sha256-b9Ae2TloirG4T5MdMmQwGlshcRDZN9bh23Lsh4pk29k="
       },
       "ru": {
-        "ru\/PortfolioTrackerClient.resources.dll": "sha256-gbKd+kYyPa3ectz+qDgAjusAxnaIJCZPAfH8JerrUJQ="
+        "ru\/PortfolioTrackerClient.resources.dll": "sha256-spyYfTSAjiYF4Vvy4AA499DyXBNyC6RCYrS29UQXD7E="
       }
     }
   }

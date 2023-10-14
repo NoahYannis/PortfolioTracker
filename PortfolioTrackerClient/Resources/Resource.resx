@@ -252,6 +252,9 @@
   <data name="Reset" xml:space="preserve">
     <value>Reset</value>
   </data>
+  <data name="ResetEmail" xml:space="preserve">
+    <value>Reset email</value>
+  </data>
   <data name="Result" xml:space="preserve">
     <value>Result ($)</value>
   </data>

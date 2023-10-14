@@ -37,8 +37,9 @@
 
     @if (displayChangePasswordButton)
     {
+        <br />
         <div class="mb-3">
-            <label for="email">@Localizer["Email"]:</label>
+            <label for="email">@Localizer["ResetEmail"]:</label>
             <input type="email" id="email" @bind="passwordResetEmail" class="form-control"></input>
         </div>
         <button type="button" style="margin-top: 20px;" class="btn btn-danger" @onclick="SendPasswordResetEmail">@Localizer["ChangePassword"]</button>
@@ -86,7 +87,6 @@
 
             // Offer password change if needed.
             displayChangePasswordButton = true;
-            string passwordResetEmail = string.Empty;
         }
     }
 
@@ -96,10 +96,8 @@
     /// </summary>
     private async Task SendPasswordResetEmail()
     {
-        if (await EmailService.SendPasswordResetEmail(passwordResetEmail))
-            NavManager.NavigateTo("/change-password", true);
-        else
-            errorMessage = "Could not verify the specified email";
+        await EmailService.SendEmail("My very important C# email", passwordResetEmail);
+        NavManager.NavigateTo("/change-password", true);
     }
 
 }

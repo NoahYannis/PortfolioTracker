@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using PortfolioTrackerServer.Services.SettingsService;
 using PortfolioTrackerShared.Models.UserModels;
-using PortfolioTrackerShared.Other;
 
 namespace PortfolioTrackerServer.Controller
 {

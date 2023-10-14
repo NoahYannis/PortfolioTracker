@@ -466,6 +466,15 @@ namespace PortfolioTrackerClient.Resources {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Reset email ähnelt.
+        /// </summary>
+        public static string ResetEmail {
+            get {
+                return ResourceManager.GetString("ResetEmail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Result ($) ähnelt.
         /// </summary>
         public static string Result {
