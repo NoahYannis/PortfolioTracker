@@ -355,3 +355,4 @@ C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerServer\bin\Debug\net
 C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerServer\bin\Debug\net7.0\MimeKit.dll
 C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerServer\bin\Debug\net7.0\System.Security.Cryptography.Pkcs.dll
 C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerServer\bin\Debug\net7.0\runtimes\win\lib\net7.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerServer\bin\Debug\net7.0\OpenAI_API.dll

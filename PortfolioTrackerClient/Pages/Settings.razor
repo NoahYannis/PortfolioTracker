@@ -10,7 +10,6 @@
 
 @inject NavigationManager NavManager
 @inject IAuthService AuthService
-@inject AuthenticationStateProvider AuthStateProvider
 @inject ISettingsService SettingsService
 @inject IStringLocalizer<Resource> Localizer
 
@@ -111,14 +110,8 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        // Get the email of the currently authenticated user.
-        AuthenticationState authState = await AuthStateProvider.GetAuthenticationStateAsync();
-        string email = authState.User.Claims.ElementAt(2).Value;
-
-        // Get the user from the database.
-        var userServiceResponse = await AuthService.GetUserFromDbByEmail(email);
-        User = userServiceResponse.Data;
-
+        var serviceResponse = await AuthService.GetPortfolioOwner();
+        User = serviceResponse?.Data ?? new();
         UserSettings = await SettingsService.GetUserSettings(User.UserId);
     }
 

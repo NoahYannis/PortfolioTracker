@@ -1,7 +1,6 @@
 ﻿@using PortfolioTrackerClient.Services.SettingsService;
 @inherits LayoutComponentBase
 
-@inject AuthenticationStateProvider AuthenticationStateProvider
 @inject ILocalStorageService LocalStorage
 @inject NavigationManager NavigationManager
 @inject ISettingsService SettingsService
@@ -49,12 +48,10 @@
 
     protected override async Task OnInitializedAsync()
     {
-        authenticationState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
-        IsAuthenticated = authenticationState.User.Identity.IsAuthenticated;
-
-        if (IsAuthenticated)
+        if (await AuthService.IsUserAuthenticated())
         {
-            var userServiceResponse = await AuthService.GetUserFromDbByEmail(authenticationState.User.Claims.ElementAt(2).Value);
+            IsAuthenticated = true;
+            var userServiceResponse = await AuthService.GetPortfolioOwner();
             var userSettings = await SettingsService.GetUserSettings(userServiceResponse.Data.UserId);
             sidebarcolor = userSettings.ColorScheme;
         }

@@ -10,5 +10,6 @@
         Task<ServiceResponse<User>> GetUserFromDbByEmail(string email);
         Task<ServiceResponse<bool>> ChangePassword(UserChangePassword request);
         Task<bool> IsUserAuthenticated();
+        Task<ServiceResponse<User>> GetPortfolioOwner();
     }
 }

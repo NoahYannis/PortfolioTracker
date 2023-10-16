@@ -9,7 +9,6 @@
 @inject IAuthService AuthService
 @inject IPortfolioService PortfolioService
 @inject IStringLocalizer<Resource> Localizer
-@inject AuthenticationStateProvider AuthProvider
 @attribute [Authorize]
 
 <CascadingAuthenticationState>
@@ -37,14 +36,9 @@
 
     protected async override Task OnInitializedAsync()
     {
-        AuthenticationState authState = await AuthProvider.GetAuthenticationStateAsync();
-
-        if (await AuthService.IsUserAuthenticated())
-        {
-            var userServiceResponse = await AuthService.GetUserFromDbByEmail(authState.User.Claims.ElementAt(2).Value);
-            PortfolioOwner = userServiceResponse?.Data ?? new();
-            await PortfolioService.InitializePortfolioAsync(PortfolioOwner.UserId);
-        }
+        var serviceResponse = await AuthService.GetPortfolioOwner();
+        PortfolioOwner = serviceResponse?.Data ?? new();
+        await PortfolioService.InitializePortfolioAsync(PortfolioOwner.UserId);
     }
 
     /// <summary>

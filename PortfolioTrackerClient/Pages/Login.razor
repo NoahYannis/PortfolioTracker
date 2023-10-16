@@ -5,7 +5,6 @@
 @inject IStringLocalizer<Resource> Localizer
 @inject IEmailService EmailService
 @inject NavigationManager NavManager
-@inject AuthenticationStateProvider AuthenticationStateProvider
 
 @using Blazored.LocalStorage;
 @using Microsoft.AspNetCore.Components.Authorization;
@@ -78,7 +77,6 @@
         {
             errorMessage = string.Empty;
             await LocalStorage.SetItemAsync("authToken", result.Data);
-            await AuthenticationStateProvider.GetAuthenticationStateAsync();
             NavManager.NavigateTo("/portfolio", true);
         }
         else
