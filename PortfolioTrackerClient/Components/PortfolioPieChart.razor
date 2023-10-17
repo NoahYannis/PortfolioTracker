@@ -16,7 +16,7 @@
 
 @if (PortfolioOwner.UserId is not 0)
 {
-    @if (PortfolioService.PortfolioStocks.Count is 0)
+    @if (PortfolioService.PortfolioStocks?.Count is 0)
     {
         <p>Your portfolio doesn't contain any stocks. You should add some!</p>
     }

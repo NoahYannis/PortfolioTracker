@@ -6,17 +6,16 @@
 
 @if (PortfolioOwner.UserId != 0)
 {
-    <PortfolioPieChart PortfolioOwner="PortfolioOwner" />
+    <PortfolioPieChart PortfolioOwner="@PortfolioOwner" />
 }
 
 @code {
 
-    private User PortfolioOwner = new();
+    private User PortfolioOwner { get; set; } = new();
 
     protected override async Task OnInitializedAsync()
     {
-        var serviceResponse = await AuthService.GetPortfolioOwner();
-        PortfolioOwner = serviceResponse?.Data ?? new();
+        PortfolioOwner = await AuthService.GetPortfolioOwner();
     }
 
 }

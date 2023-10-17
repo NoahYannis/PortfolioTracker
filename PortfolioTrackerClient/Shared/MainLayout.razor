@@ -34,14 +34,13 @@
 </div>
 
 @code {
-    private AuthenticationState authenticationState;
+
     private bool IsAuthenticated;
     private string sidebarcolor = string.Empty;
 
     private async Task Logout()
     {
         await LocalStorage.RemoveItemAsync("authToken");
-        StateHasChanged();
         NavigationManager.NavigateTo("/", forceLoad: true);
     }
 
@@ -51,8 +50,8 @@
         if (await AuthService.IsUserAuthenticated())
         {
             IsAuthenticated = true;
-            var userServiceResponse = await AuthService.GetPortfolioOwner();
-            var userSettings = await SettingsService.GetUserSettings(userServiceResponse.Data.UserId);
+            User user = await AuthService.GetPortfolioOwner();
+            var userSettings = await SettingsService.GetUserSettings(user.UserId);
             sidebarcolor = userSettings.ColorScheme;
         }
     }

@@ -36,8 +36,7 @@
 
     protected async override Task OnInitializedAsync()
     {
-        var serviceResponse = await AuthService.GetPortfolioOwner();
-        PortfolioOwner = serviceResponse?.Data ?? new();
+        PortfolioOwner = await AuthService.GetPortfolioOwner();
         await PortfolioService.InitializePortfolioAsync(PortfolioOwner.UserId);
     }
 

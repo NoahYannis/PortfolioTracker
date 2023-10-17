@@ -8,10 +8,10 @@
 
 @attribute [Authorize]
 
-@inject NavigationManager NavManager
 @inject IAuthService AuthService
 @inject ISettingsService SettingsService
 @inject IStringLocalizer<Resource> Localizer
+@inject NavigationManager NavManager
 
 
 @if (editing)
@@ -20,11 +20,11 @@
 
     <div>
         <label for="Name">@Localizer["Username"]:</label>
-        <span id="Name">@User.UserName</span>
+        <span id="Name">@PortfolioOwner.UserName</span>
     </div>
     <div>
         <label for="Email">@Localizer["Email"]:</label>
-        <span id="Email">@User.Email</span>
+        <span id="Email">@PortfolioOwner.Email</span>
     </div>
     <hr /> <!-- Separator -->
 
@@ -59,11 +59,11 @@ else
 {
     <div>
         <label for="Name">@Localizer["Username"]:</label>
-        <span id="Name">@User.UserName</span>
+        <span id="Name">@PortfolioOwner.UserName</span>
     </div>
     <div>
         <label for="Email">@Localizer["Email"]:</label>
-        <span id="Email">@User.Email</span>
+        <span id="Email">@PortfolioOwner.Email</span>
     </div>
 
     <hr /> <!-- Separator -->
@@ -94,7 +94,7 @@ else
 
 @code {
 
-    private User User { get; set; } = new();
+    private User PortfolioOwner { get; set; } = new();
 
     private UserSettings UserSettings { get; set; } = new();
 
@@ -110,9 +110,8 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        var serviceResponse = await AuthService.GetPortfolioOwner();
-        User = serviceResponse?.Data ?? new();
-        UserSettings = await SettingsService.GetUserSettings(User.UserId);
+        PortfolioOwner = await AuthService.GetPortfolioOwner();
+        UserSettings = await SettingsService.GetUserSettings(PortfolioOwner.UserId);
     }
 
 

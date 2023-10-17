@@ -9,6 +9,8 @@ namespace PortfolioTrackerClient.Services.AuthService
         private readonly HttpClient _http;
         private readonly AuthenticationStateProvider _authenticationStateProvider;
 
+        public User PortfolioOwner { get; set; } = new();
+
         public AuthService(HttpClient http, AuthenticationStateProvider authenticationStateProvider)
         {
             _http = http;
@@ -45,23 +47,18 @@ namespace PortfolioTrackerClient.Services.AuthService
         }
 
 
-        public async Task<ServiceResponse<User>> GetPortfolioOwner()
+        public async Task<User> GetPortfolioOwner()
         {
-            ServiceResponse<User> response = new() { Data = new User() };
             AuthenticationState authState = await _authenticationStateProvider.GetAuthenticationStateAsync();
 
             if (await IsUserAuthenticated())
             {
                 var userServiceResponse = await GetUserFromDbByEmail(authState.User.Claims.ElementAt(2).Value);
-                response.Data = userServiceResponse?.Data ?? new();
-            }
-            else
-            {
-                response.Success = false;
-                response.Message = "User not found or authenticated";
+                PortfolioOwner = userServiceResponse?.Data ?? new();
             }
 
-            return response;
+            return PortfolioOwner;
         }
+
     }
 }
