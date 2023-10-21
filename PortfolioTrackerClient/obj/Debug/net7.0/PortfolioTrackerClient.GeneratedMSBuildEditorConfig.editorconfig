@@ -28,6 +28,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQb3J0Zm9saW9QaWVDaGFydC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Noah/source/repos/PortfolioTracker/PortfolioTrackerClient/Components/SectorAllocationPieChart.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xTZWN0b3JBbGxvY2F0aW9uUGllQ2hhcnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Noah/source/repos/PortfolioTracker/PortfolioTrackerClient/Components/UpdateStockComponent.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xVcGRhdGVTdG9ja0NvbXBvbmVudC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 

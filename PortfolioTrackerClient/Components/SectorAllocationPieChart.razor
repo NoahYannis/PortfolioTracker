@@ -1,0 +1,76 @@
+﻿@using ChartJs.Blazor.PieChart;
+@using System.Drawing;
+
+@inject IPortfolioService PortfolioService
+@inject IStringLocalizer<Resource> Localizer
+
+<Chart Config="_config" />
+<br />
+
+    @if (PortfolioService.PortfolioStocks?.Count is 0)
+    {
+        <p>Your portfolio doesn't contain any stocks. You should <a href="portfolio">add some!</a></p>
+    }
+
+@code {
+
+    [Parameter]
+    public User PortfolioOwner { get; set; }
+
+
+    private PieConfig _config = new();
+    private List<string> BackgroundColors { get; set; } = new List<string>();
+    private PieDataset<decimal?> Dataset { get; set; } = new PieDataset<decimal?>();
+    private Random random = new Random();
+    private decimal? Performance { get; set; }
+
+    protected override async void OnInitialized()
+    {
+        await PortfolioService.InitializePortfolioAsync(PortfolioOwner.UserId);
+
+        foreach (PortfolioStock stock in PortfolioService.PortfolioStocks)
+        {
+            _config.Data.Labels.Add(stock.Ticker);
+            Dataset.Add(stock.PositionSize);
+            Color sliceColor = GetColorFromIndustry(stock);
+            string colorHex = ColorUtil.ColorHexString(sliceColor.R, sliceColor.G, sliceColor.B);
+            BackgroundColors.Add(colorHex);
+        }
+
+        Dataset.BackgroundColor = BackgroundColors.ToArray();
+        _config.Data.Datasets.Add(Dataset);
+
+        StateHasChanged();
+    }
+
+
+    private Color GetColorFromIndustry(PortfolioStock stock)
+    {
+        switch (stock.Industry)
+        {
+            case Industry.Technology:
+                return Color.Blue;
+            case Industry.Healthcare:
+                return Color.Green;
+            case Industry.Financial:
+                return Color.Gold;
+            case Industry.Energy:
+                return Color.Orange;
+            case Industry.Materials:
+                return Color.Gray;
+            case Industry.Real_Estate:
+                return Color.Purple;
+            case Industry.Consumer_Staples:
+                return Color.Pink;
+            case Industry.Consumer_Discretionary:
+                return Color.Red;
+            case Industry.Utilities:
+                return Color.Cyan;
+            case Industry.Industrials:
+                return Color.Navy;
+            default:
+                return Color.Black;
+        }
+    }
+
+}

@@ -2,11 +2,9 @@
 @using PortfolioTrackerClient.Components
 @inject IAuthService AuthService
 
-<h3>Analyzer</h3>
-
 @if (PortfolioOwner.UserId != 0)
 {
-    <PortfolioPieChart PortfolioOwner="@PortfolioOwner" />
+    <SectorAllocationPieChart PortfolioOwner="@PortfolioOwner" />
 }
 
 @code {

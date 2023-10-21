@@ -88,6 +88,15 @@ namespace PortfolioTrackerClient.Resources {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Analyzer ähnelt.
+        /// </summary>
+        public static string Analyzer {
+            get {
+                return ResourceManager.GetString("Analyzer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Buy in price ($) ähnelt.
         /// </summary>
         public static string BuyInPrice {

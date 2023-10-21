@@ -126,6 +126,9 @@
   <data name="AddNewStock" xml:space="preserve">
     <value>Neue Aktie hinzufügen</value>
   </data>
+  <data name="Analyzer" xml:space="preserve">
+    <value>Analysator</value>
+  </data>
   <data name="BuyInPrice" xml:space="preserve">
     <value>Kaufpreis ($)</value>
   </data>
