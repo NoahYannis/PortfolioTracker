@@ -1,0 +1,113 @@
+﻿@using ChartJs.Blazor.PieChart;
+@using System.Drawing;
+@using PortfolioTrackerClient.Other.PieChartStrategies;
+
+@inject IPortfolioService PortfolioService
+@inject IStringLocalizer<Resource> Localizer
+
+@if (PortfolioService.PortfolioStocks?.Count is 0)
+{
+    <p>Your portfolio doesn't contain any stocks. You should <a href="portfolio">add some!</a></p>
+}
+else
+{
+    <p>Portfolio value: $@PortfolioService.GetTotalValue()</p>
+    <p style="@DeterminePerformanceColor(PortfolioService.GetTotalAbsolutePerformance())">Absolute Performance: $@PortfolioService.GetTotalAbsolutePerformance()</p>
+    <p style="@DeterminePerformanceColor(PortfolioService.GetTotalRelativePerformance())">Relative Performance: @PortfolioService.GetTotalRelativePerformance()%</p>
+    <br />
+
+    <p>Filter by:</p>
+    <hr /> <!-- Separator -->
+
+    <select @onchange="ChangeFilter">
+        <option value="positionSize">Position size</option>
+        <option value="industry">Industry</option>
+        <option value="absPerf">Performance ($)</option>
+        <option value="relPerf">Performance (%)</option>
+    </select>
+
+    <Chart Config="_config" />
+}
+
+@code {
+
+    [Parameter]
+    public User PortfolioOwner { get; set; }
+
+    private IPieChartStrategy _pieChartStrategy;
+
+    private PieConfig _config = new();
+    private List<string> BackgroundColors { get; set; } = new List<string>();
+    private PieDataset<decimal?> Dataset { get; set; } = new PieDataset<decimal?>();
+    private decimal? Performance { get; set; }
+
+    protected override async void OnInitialized()
+    {
+        await PortfolioService.InitializePortfolioAsync(PortfolioOwner.UserId);
+        _pieChartStrategy = new FilterByPositionSize(PortfolioService.PortfolioStocks);
+        _pieChartStrategy.GeneratePieChart();
+        DisplayPieChart();
+    }
+
+    private string DeterminePerformanceColor(decimal? performance)
+    {
+        if (performance is not null)
+            return performance >= 0 ? "color: green" : "color: red";
+
+        return string.Empty;
+    }
+
+
+    /// <summary>
+    /// Changes the filter and rerenders the pie chart
+    /// </summary>
+    /// <param name="e"></param>
+    private void ChangeFilter(ChangeEventArgs e)
+    {
+        _pieChartStrategy = SelectPieChartStrategy(e?.Value?.ToString() ?? string.Empty);
+        _pieChartStrategy.GeneratePieChart();
+        DisplayPieChart();
+    }
+
+
+    /// <summary>
+    /// Sets the filter strategy based on the selected dropwdown value
+    /// </summary>
+    /// <param name="selectedDropwdownValue"></param>
+    /// <returns></returns>
+    private IPieChartStrategy SelectPieChartStrategy(string selectedDropwdownValue)
+    {
+        switch (selectedDropwdownValue)
+        {
+            case "positionSize": return new FilterByPositionSize(PortfolioService.PortfolioStocks);
+            case "industry": return new FilterByIndustry(PortfolioService.PortfolioStocks);
+            case "absPerf": return new FilterByAbsolutePerformance();
+            case "relPerf": return new FilterByRelativePerformance();
+            default: return new FilterByPositionSize(PortfolioService.PortfolioStocks);
+        }
+    }
+
+    private void DisplayPieChart()
+    {
+        // Clear previous data 
+
+        _config.Data.Labels.Clear();
+        _config.Data.Datasets.Clear();
+        Dataset.Clear();
+
+        foreach (var item in _pieChartStrategy.Labels)
+        {
+            _config.Data.Labels.Add(item);
+        }
+
+        foreach (var item in _pieChartStrategy.SliceValues)
+        {
+            Dataset.Add(item);
+        }
+
+        Dataset.BackgroundColor = _pieChartStrategy.SliceColors.ToArray();
+        _config.Data.Datasets.Add(Dataset);
+        StateHasChanged();
+    }
+
+}
