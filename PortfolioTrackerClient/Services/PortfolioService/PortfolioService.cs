@@ -1,21 +1,17 @@
-﻿using Newtonsoft.Json;
-using PortfolioTrackerShared.Models;
+﻿using PortfolioTrackerShared.Models;
 using System.Net.Http.Json;
-using System.Text;
 
 namespace PortfolioTrackerClient.Services.PortfolioService
 {
-	public class PortfolioService : IPortfolioService
+    public class PortfolioService : IPortfolioService
     {
         private string serverBaseDomain = "https://localhost:7207";
 
         private readonly HttpClient _httpClient;
-        private readonly IGetStockInfoService _stockInfoService;
 
-        public PortfolioService(HttpClient httpClient, IGetStockInfoService stockInfoService)
+        public PortfolioService(HttpClient httpClient)
         {
             _httpClient = httpClient;
-            _stockInfoService = stockInfoService;
         }
 
 
@@ -110,6 +106,21 @@ namespace PortfolioTrackerClient.Services.PortfolioService
         }
 
         #endregion
+
+        public decimal GetTotalValue()
+        {
+            return PortfolioStocks.Sum(s => s.PositionSize) ?? 0;
+        }
+
+        public decimal GetTotalAbsolutePerformance()
+        {
+            return PortfolioStocks.Sum(s => s.AbsolutePerformance) ?? 0;
+        }
+
+        public decimal GetTotalRelativePerformance()
+        {
+            return PortfolioStocks.Sum(s => s.RelativePerformance) ?? 0;
+        }
 
         #region Order-CRUD
 

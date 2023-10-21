@@ -33,6 +33,9 @@ namespace PortfolioTrackerClient.Services.PortfolioService
         /// </summary>
         /// <returns></returns>
         Task<bool> UpdatePriceAndPositionSize(int userId);
+        decimal GetTotalValue();
+        decimal GetTotalAbsolutePerformance();
+        decimal GetTotalRelativePerformance();
 
 
         event EventHandler<PortfolioChangedArgs> PortfolioChanged;

@@ -4,19 +4,34 @@
 @inject IPortfolioService PortfolioService
 @inject IStringLocalizer<Resource> Localizer
 
-<Chart Config="_config" />
-<br />
+@if (PortfolioService.PortfolioStocks?.Count is 0)
+{
+    <p>Your portfolio doesn't contain any stocks. You should <a href="portfolio">add some!</a></p>
+}
+else
+{
+    <p>Portfolio value: $@PortfolioService.GetTotalValue()</p>
+    <p style="@DeterminePerformanceColor(PortfolioService.GetTotalAbsolutePerformance())">Absolute Performance: $@PortfolioService.GetTotalAbsolutePerformance()</p>
+    <p style="@DeterminePerformanceColor(PortfolioService.GetTotalRelativePerformance())">Relative Performance: @PortfolioService.GetTotalRelativePerformance()%</p>
+    <br />
 
-    @if (PortfolioService.PortfolioStocks?.Count is 0)
-    {
-        <p>Your portfolio doesn't contain any stocks. You should <a href="portfolio">add some!</a></p>
-    }
+    <p>Filter by:</p>
+    <hr /> <!-- Separator -->
+
+    <select @onchange="DisplayFilter">
+        <option value="positionSize">Position size</option>
+        <option value="industry">Industry</option>
+        <option value="absPerf">Performance ($)</option>
+        <option value="relPerf">Performance (%)</option>
+    </select>
+
+    <Chart Config="_config" />
+}
 
 @code {
 
     [Parameter]
     public User PortfolioOwner { get; set; }
-
 
     private PieConfig _config = new();
     private List<string> BackgroundColors { get; set; } = new List<string>();
@@ -71,6 +86,19 @@
             default:
                 return Color.Black;
         }
+    }
+
+    private string DeterminePerformanceColor(decimal? performance)
+    {
+        if (performance is not null)
+            return performance >= 0 ? "color: green" : "color: red";
+
+        return string.Empty;
+    }
+
+    private void DisplayFilter()
+    {
+        
     }
 
 }
