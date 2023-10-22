@@ -19,7 +19,7 @@ else
     <p>Filter by:</p>
     <hr /> <!-- Separator -->
 
-    <select @onchange="ChangeFilter">
+    <select @onchange="ChangeFilterStrategy">
         <option value="positionSize">Position size</option>
         <option value="industry">Industry</option>
         <option value="absPerf">Performance ($)</option>
@@ -62,7 +62,7 @@ else
     /// Changes the filter and rerenders the pie chart
     /// </summary>
     /// <param name="e"></param>
-    private void ChangeFilter(ChangeEventArgs e)
+    private void ChangeFilterStrategy(ChangeEventArgs e)
     {
         _pieChartStrategy = SelectPieChartStrategy(e?.Value?.ToString() ?? string.Empty);
         _pieChartStrategy.GeneratePieChart();
@@ -81,8 +81,8 @@ else
         {
             case "positionSize": return new FilterByPositionSize(PortfolioService.PortfolioStocks);
             case "industry": return new FilterByIndustry(PortfolioService.PortfolioStocks);
-            case "absPerf": return new FilterByAbsolutePerformance();
-            case "relPerf": return new FilterByRelativePerformance();
+            case "absPerf": return new FilterByAbsolutePerformance(PortfolioService.PortfolioStocks);
+            case "relPerf": return new FilterByRelativePerformance(PortfolioService.PortfolioStocks);
             default: return new FilterByPositionSize(PortfolioService.PortfolioStocks);
         }
     }

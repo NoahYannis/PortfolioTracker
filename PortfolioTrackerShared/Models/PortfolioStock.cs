@@ -32,7 +32,16 @@ namespace PortfolioTrackerShared.Models
 
 
         [Column(TypeName = "decimal(8,2)")]
-        public decimal? CurrentPrice { get; set; }
+        private decimal? _currentPrice;
+        public decimal? CurrentPrice
+        {
+            get => PositionSize / SharesOwned;
+            set
+            {
+                if (value is not null && value is not 0)
+                    _currentPrice = value;
+            }
+        }
 
 
         [Range(0, 200, ErrorMessage = "Dividend yield must be between 0 and 200%.")]
@@ -47,7 +56,7 @@ namespace PortfolioTrackerShared.Models
             set
             {
                 if (CurrentPrice.HasValue && BuyInPrice.HasValue && SharesOwned.HasValue)
-                    _absolutePerformance = Math.Round(((CurrentPrice - BuyInPrice) * SharesOwned).Value, 2 );
+                    _absolutePerformance = Math.Round(((CurrentPrice - BuyInPrice) * SharesOwned).Value, 2);
             }
             // Calculates absolute performance and rounds to 2 decimal places
         }
@@ -61,7 +70,7 @@ namespace PortfolioTrackerShared.Models
             set
             {
                 if (CurrentPrice.HasValue && BuyInPrice.HasValue)
-                _relativePerformance = Math.Round((((CurrentPrice - BuyInPrice) / BuyInPrice) * 100).Value, 2);
+                    _relativePerformance = Math.Round((((CurrentPrice - BuyInPrice) / BuyInPrice) * 100).Value, 2);
             }
             // Calculates relative performance and rounds to 2 decimal places
         }

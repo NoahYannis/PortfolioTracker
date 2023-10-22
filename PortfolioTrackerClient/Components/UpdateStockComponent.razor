@@ -27,7 +27,7 @@
         <ValidationMessage For="() => StockToUpdate.SharesOwned" />
         <br /><br />
 
-        <label for="positionSize">@Localizer["PositionSize"]: </label>
+        <label for="positionSize">@Localizer["PositionSize"] ($): </label>
         <InputNumber id="positionSize" @bind-Value="StockToUpdate.PositionSize" min="0" />
         <ValidationMessage For="() => StockToUpdate.PositionSize" />
         <br /><br />
