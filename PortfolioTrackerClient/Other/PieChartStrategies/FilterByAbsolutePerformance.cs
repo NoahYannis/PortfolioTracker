@@ -24,7 +24,6 @@ namespace PortfolioTrackerClient.Other.PieChartStrategies
 
             foreach (PortfolioStock stock in sortedPortfolio)
             {
-                Console.WriteLine(stock.Ticker + " " + stock.AbsolutePerformance);
                 Labels.Add(stock.Ticker);
                 SliceValues.Add(Math.Abs(stock.AbsolutePerformance ?? 0));
                 Color randomColor = stock.AbsolutePerformance > 0 ? Color.Green : Color.Red;

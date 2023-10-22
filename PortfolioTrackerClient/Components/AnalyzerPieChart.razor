@@ -39,7 +39,6 @@ else
     private PieConfig _config = new();
     private List<string> BackgroundColors { get; set; } = new List<string>();
     private PieDataset<decimal?> Dataset { get; set; } = new PieDataset<decimal?>();
-    private decimal? Performance { get; set; }
 
     protected override async void OnInitialized()
     {
@@ -71,7 +70,7 @@ else
 
 
     /// <summary>
-    /// Sets the filter strategy based on the selected dropwdown value
+    /// Set filter strategy based on the selected dropwdown value
     /// </summary>
     /// <param name="selectedDropwdownValue"></param>
     /// <returns></returns>

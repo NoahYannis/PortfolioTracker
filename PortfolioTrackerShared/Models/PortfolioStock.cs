@@ -40,6 +40,7 @@ namespace PortfolioTrackerShared.Models
             {
                 if (value is not null && value is not 0)
                     _currentPrice = value;
+                }
             }
         }
 

@@ -57,7 +57,7 @@ namespace PortfolioTrackerServer.Services.FetchAndUpdateStockPriceService
                 // Update share price and position size
                 PortfolioStocks.ForEach(s =>
                 {
-                    s.CurrentPrice = result.Data?[PortfolioStocks.IndexOf(s)].Close;
+                    s.CurrentPrice = result.Data?[PortfolioStocks.IndexOf(s)].Close ?? 0;
                     s.PositionSize = s.CurrentPrice * s.SharesOwned;
                 });
 

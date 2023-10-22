@@ -119,7 +119,7 @@ namespace PortfolioTrackerClient.Services.PortfolioService
 
         public decimal GetTotalRelativePerformance()
         {
-            return PortfolioStocks.Sum(s => s.RelativePerformance) ?? 0;
+            return Math.Round(PortfolioStocks.Average(s => s.RelativePerformance ?? 0), 2);
         }
 
         #region Order-CRUD

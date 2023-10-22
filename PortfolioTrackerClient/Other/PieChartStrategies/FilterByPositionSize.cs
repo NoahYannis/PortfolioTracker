@@ -20,9 +20,13 @@ namespace PortfolioTrackerClient.Other.PieChartStrategies
 
         public void GeneratePieChart()
         {
-            foreach (PortfolioStock stock in _portfolioStocks)
+            decimal totalValue = _portfolioStocks.Sum(s => s.PositionSize ?? 0);
+            var sortedPortfolio = _portfolioStocks.OrderByDescending(s => s.PositionSize).ToList();
+
+            foreach (PortfolioStock stock in sortedPortfolio)
             {
-                Labels.Add(stock.Ticker);
+                decimal relativeShare = (stock.PositionSize / totalValue) * 100 ?? 0;
+                Labels.Add($"{stock.Ticker} ({Math.Round(relativeShare, 2)}%)");
                 SliceValues.Add(stock.PositionSize);
                 Color randomColor = Color.FromArgb(_random.Next(256), _random.Next(256), _random.Next(256));
                 string colorHex = ColorUtil.ColorHexString(randomColor.R, randomColor.G, randomColor.B);
