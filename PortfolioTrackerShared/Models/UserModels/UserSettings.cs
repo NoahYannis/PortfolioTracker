@@ -13,7 +13,7 @@ namespace PortfolioTrackerShared.Models.UserModels
 
 		[ForeignKey("UserId")]
 		public int UserId { get; set; }
-		public string ColorScheme { get; set; } = "#551A8B"; // Default value purple
+		public string ColorScheme { get; set; } = "#013220";
 
 		/// <summary>
 		/// Investing goals (portfolio value, dividend income per month...)

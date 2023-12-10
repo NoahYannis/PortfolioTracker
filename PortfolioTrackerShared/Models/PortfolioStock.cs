@@ -40,7 +40,6 @@ namespace PortfolioTrackerShared.Models
             {
                 if (value is not null && value is not 0)
                     _currentPrice = value;
-                }
             }
         }
 
@@ -75,7 +74,6 @@ namespace PortfolioTrackerShared.Models
             }
             // Calculates relative performance and rounds to 2 decimal places
         }
-
 
         public Industry Industry { get; set; }
 

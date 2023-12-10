@@ -356,3 +356,4 @@ C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerServer\obj\Debug\net
 C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerServer\obj\Debug\net7.0\PortfolioTrackerServer.pdb
 C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerServer\obj\Debug\net7.0\PortfolioTrackerServer.genruntimeconfig.cache
 C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerServer\obj\Debug\net7.0\ref\PortfolioTrackerServer.dll
+C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerServer\obj\Debug\net7.0\PortfolioTrackerServer.sourcelink.json
