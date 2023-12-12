@@ -18,7 +18,9 @@
 {
     @if (PortfolioService.PortfolioStocks?.Count is 0)
     {
-        <p>Your portfolio doesn't contain any stocks. You should add some!</p>
+        <div>
+            <p class="empty">Your portfolio doesn't contain any stocks. You should add some!</p>
+        </div>
     }
 
     @if (ClickedSegmentStock is not null)

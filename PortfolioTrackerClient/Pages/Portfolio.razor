@@ -11,20 +11,11 @@
 @inject IStringLocalizer<Resource> Localizer
 @attribute [Authorize]
 
-<CascadingAuthenticationState>
-    <AuthorizeView>
-        <h3>Hi @context.User.Identity.Name. You're logged in with <i>@context.User.Claims.ElementAt(2).Value</i></h3>
-    </AuthorizeView>
-</CascadingAuthenticationState>
-
-
-<h3>Portfolio</h3>
-
-@* Ensure PortfolioOwner is initialized before rendering the pie chart *@
+@* Ensure PortfolioOwner is initialized before rendering the piechart *@
 @if (PortfolioOwner.UserId != 0)
 {
     <PortfolioPieChart PortfolioOwner="@PortfolioOwner" />
-    <button @onclick="OpenModal">@Localizer["AddNewStock"]</button>
+    <button @onclick="OpenAddStockModal">@Localizer["AddNewStock"]</button>
 }
 
 @code {
@@ -40,12 +31,9 @@
         await PortfolioService.InitializePortfolioAsync(PortfolioOwner.UserId);
     }
 
-    /// <summary>
-    /// Shows the AddStock modal
-    /// </summary>
-    /// <returns>Whether a stock should be added or not</returns>
-    private void OpenModal()
+    private void OpenAddStockModal()
     {
-        Modal.Show<AddStockComponent>(Localizer["AddNewStock"], new ModalParameters { { "PortfolioOwner", PortfolioOwner } });
+        Modal.Show<AddStockComponent>(Localizer["AddNewStock"], 
+        new ModalParameters { { "PortfolioOwner", PortfolioOwner } });
     }
 }

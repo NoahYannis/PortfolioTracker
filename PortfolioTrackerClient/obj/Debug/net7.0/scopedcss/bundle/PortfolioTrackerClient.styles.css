@@ -1,6 +1,12 @@
 @import '_content/BlazorColorPicker/BlazorColorPicker.bundle.scp.css';
 @import '_content/Blazored.Modal/Blazored.Modal.bundle.scp.css';
 
+/* /Components/PortfolioPieChart.razor.rz.scp.css */
+.empty[b-12701w2o6m] {
+    position: absolute;
+    top: 80px;
+    left: 200px;
+}
 /* /Pages/CompoundInterestCalculator.razor.rz.scp.css */
 .input-element[b-re5p8nnu7y] {
     margin-bottom: 10px

@@ -34,10 +34,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBbmFseXplclBpZUNoYXJ0LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Noah/source/repos/PortfolioTracker/PortfolioTrackerClient/Components/PortfolioPieChart.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQb3J0Zm9saW9QaWVDaGFydC5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/Noah/source/repos/PortfolioTracker/PortfolioTrackerClient/Components/UpdateStockComponent.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xVcGRhdGVTdG9ja0NvbXBvbmVudC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
@@ -81,6 +77,10 @@ build_metadata.AdditionalFiles.CssScope =
 [C:/Users/Noah/source/repos/PortfolioTracker/PortfolioTrackerClient/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Noah/source/repos/PortfolioTracker/PortfolioTrackerClient/Components/PortfolioPieChart.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQb3J0Zm9saW9QaWVDaGFydC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-12701w2o6m
 
 [C:/Users/Noah/source/repos/PortfolioTracker/PortfolioTrackerClient/Pages/CompoundInterestCalculator.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcG91bmRJbnRlcmVzdENhbGN1bGF0b3IucmF6b3I=
