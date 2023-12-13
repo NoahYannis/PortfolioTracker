@@ -25,3 +25,9 @@ PortfolioTrackerServer/bin/Debug/net7.0/appsettings.json
 *.json
 PortfolioTrackerServer/appsettings.json
 PortfolioTrackerServer/bin/Debug/net7.0/appsettings.json
+*.gz
+*.gz
+*.txt
+*.bin
+PortfolioTrackerClient/bin/Debug/net7.0/wwwroot/_framework/blazor.boot.json.gz
+PortfolioTrackerClient/bin/Debug/net7.0/wwwroot/_framework/de/PortfolioTrackerClient.resources.dll.gz

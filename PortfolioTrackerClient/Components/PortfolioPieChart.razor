@@ -11,16 +11,19 @@
 @inject IModalService ModalService
 @inject IStringLocalizer<Resource> Localizer
 
-<Chart Config="_config" />
-<br />
 
 @if (PortfolioOwner.UserId is not 0)
 {
     @if (PortfolioService.PortfolioStocks?.Count is 0)
     {
         <div>
-            <p class="empty">Your portfolio doesn't contain any stocks. You should add some!</p>
+            <p class="empty-text">@Localizer["EmptyPortfolio"]</p>
         </div>
+    }
+    else
+    {
+        <Chart Config="_config" />
+        <br />
     }
 
     @if (ClickedSegmentStock is not null)

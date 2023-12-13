@@ -232,6 +232,15 @@ namespace PortfolioTrackerClient.Resources {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Your portfolio doesn&apos;t contain any stocks. You should add some! ähnelt.
+        /// </summary>
+        public static string EmptyPortfolio {
+            get {
+                return ResourceManager.GetString("EmptyPortfolio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Enter a stock ticker ähnelt.
         /// </summary>
         public static string EnterStockTicker {
