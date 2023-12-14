@@ -2754,3 +2754,4 @@ C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerClient\obj\Debug\net
 C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerClient\obj\Debug\net7.0\compressed\lwckrvrjzz.gz
 C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerClient\obj\Debug\net7.0\compressed\v5xmy37558.gz
 C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerClient\obj\Debug\net7.0\scopedcss\Components\PortfolioPieChart.razor.rz.scp.css
+C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerClient\obj\Debug\net7.0\scopedcss\Components\AddStockComponent.razor.rz.scp.css
