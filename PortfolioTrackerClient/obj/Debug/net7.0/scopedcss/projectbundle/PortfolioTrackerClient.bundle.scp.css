@@ -14,8 +14,6 @@
     font-family: Arial, Helvetica, sans-serif;
     margin-right: 10px;
 }
-
-
 /* /Components/PortfolioPieChart.razor.rz.scp.css */
 .empty-text[b-12701w2o6m] {
     width: auto;
@@ -26,6 +24,32 @@
 /* /Pages/CompoundInterestCalculator.razor.rz.scp.css */
 .input-element[b-re5p8nnu7y] {
     margin-bottom: 10px
+}
+/* /Pages/PolygonApi.razor.rz.scp.css */
+.flexbox[b-6xln6dm12x] {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.polygon[b-6xln6dm12x] {
+    text-align: center;
+    margin: 20px;
+}
+
+.result[b-6xln6dm12x] {
+    margin: 0 auto;
+    border: 5px inset #013220;
+    font-size: 20px;
+    width: fit-content;
+    padding: 20px;
+}
+
+.enter-ticker[b-6xln6dm12x] {
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-right: 30px;
 }
 /* /Shared/MainLayout.razor.rz.scp.css */
 .page[b-yad0rt9llc] {

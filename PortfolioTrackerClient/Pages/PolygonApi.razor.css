@@ -1,0 +1,25 @@
+﻿.flexbox {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.polygon {
+    text-align: center;
+    margin: 20px;
+}
+
+.result {
+    margin: 0 auto;
+    border: 5px inset #013220;
+    font-size: 20px;
+    width: fit-content;
+    padding: 20px;
+}
+
+.enter-ticker {
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-right: 30px;
+}

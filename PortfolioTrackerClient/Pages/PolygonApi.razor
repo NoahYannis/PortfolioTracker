@@ -6,35 +6,36 @@
 @inject IGetStockInfoService GetStockInfoService
 @inject IStringLocalizer<Resource> Localizer
 
-<div>
-    <label for="stockTicker">@Localizer["EnterStockTicker"]: </label>
-    <InputText id="stockTicker" @bind-Value="Ticker" />
-</div>
-<div>
-    <button @onclick='async () => CurrentStock = await ReturnStockFromApiCall(Ticker)'>
-        @Localizer["Confirm"]
-    </button>
+<div class="flexbox">
+    <div class="polygon">
+        <label class="enter-ticker" for="stockTicker">@Localizer["EnterStockTicker"]: </label>
+        <InputText id="stockTicker" @bind-Value="Ticker" />
+    </div>
+    <div class="polygon">
+        <button class="btn-secondary" style="margin-bottom: 40px;" @onclick='async () => CurrentStock = await ReturnStockFromApiCall(Ticker)'>
+            @Localizer["Confirm"]
+        </button>
 
-    <!-- Display stock data if a ticker was specified and no error occured-->
-    @if (!string.IsNullOrEmpty(CurrentStock.Ticker) && string.IsNullOrEmpty(ErrorMessage))
-    {
-        <br />
-        <br />
-        <p>Pre Market: $@CurrentStock.PreMarket </p>
-        <p>After Hours: $@CurrentStock.AfterHours</p>
-        <p>Open: $@CurrentStock.Open</p>
-        <p>Close: $@CurrentStock.Close</p>
-        <p>Low: $@CurrentStock.Low</p>
-        <p>High: $@CurrentStock.High</p>
-    }
-    else
-    {
-        <p>
-            <br>
-            @(ErrorMessage)
-        </p>
-    }
-
+        <!-- Display stock data if a ticker was specified and no error occured-->
+        @if (!string.IsNullOrEmpty(CurrentStock.Ticker) && string.IsNullOrEmpty(ErrorMessage))
+        {
+            <div class="result">
+                <p>Pre Market: $@CurrentStock.PreMarket </p>
+                <p>After Hours: $@CurrentStock.AfterHours</p>
+                <p>Open: $@CurrentStock.Open</p>
+                <p>Close: $@CurrentStock.Close</p>
+                <p>Low: $@CurrentStock.Low</p>
+                <p>High: $@CurrentStock.High</p>
+            </div>
+        }
+        else
+        {
+            <p>
+                <br>
+                @(ErrorMessage)
+            </p>
+        }
+    </div>
 </div>
 
 
@@ -59,7 +60,7 @@
 
 
     /// <summary>
-    /// Returns stock data from api call and sets the error message 
+    /// Returns stock data from api call and sets the error message
     /// </summary>
     public async Task<ApiQueryStock> ReturnStockFromApiCall(string tickerSymbol)
     {
