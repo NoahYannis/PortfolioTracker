@@ -22,8 +22,20 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 /* /Pages/CompoundInterestCalculator.razor.rz.scp.css */
-.input-element[b-re5p8nnu7y] {
-    margin-bottom: 10px
+.flexbox[b-re5p8nnu7y] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flexbox-item[b-re5p8nnu7y] {
+    margin-bottom: 15px;
+}
+
+.label[b-re5p8nnu7y] {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-right: 10px;
 }
 /* /Pages/PolygonApi.razor.rz.scp.css */
 .flexbox[b-6xln6dm12x] {
@@ -41,6 +53,7 @@
 .result[b-6xln6dm12x] {
     margin: 0 auto;
     border: 5px inset #013220;
+    margin-top: 16px;
     font-size: 20px;
     width: fit-content;
     padding: 20px;
