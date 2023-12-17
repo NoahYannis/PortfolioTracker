@@ -339,13 +339,14 @@ C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerServer\obj\Debug\net
 C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerServer\obj\Debug\net7.0\PortfolioTrackerServer.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerServer\obj\Debug\net7.0\PortfolioTrackerServer.RazorAssemblyInfo.cache
 C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerServer\obj\Debug\net7.0\PortfolioTrackerServer.RazorAssemblyInfo.cs
+C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerServer\obj\Debug\net7.0\PortfolioTrackerServer.sourcelink.json
+C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerServer\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerServer\obj\Debug\net7.0\staticwebassets.development.json
 C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerServer\obj\Debug\net7.0\staticwebassets\msbuild.PortfolioTrackerServer.Microsoft.AspNetCore.StaticWebAssets.props
 C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerServer\obj\Debug\net7.0\staticwebassets\msbuild.build.PortfolioTrackerServer.props
 C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerServer\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.PortfolioTrackerServer.props
 C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerServer\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.PortfolioTrackerServer.props
 C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerServer\obj\Debug\net7.0\staticwebassets.pack.json
-C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerServer\obj\Debug\net7.0\staticwebassets.build.json
-C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerServer\obj\Debug\net7.0\staticwebassets.development.json
 C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerServer\obj\Debug\net7.0\scopedcss\Shared\MainLayout.razor.rz.scp.css
 C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerServer\obj\Debug\net7.0\scopedcss\Shared\NavMenu.razor.rz.scp.css
 C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerServer\obj\Debug\net7.0\scopedcss\bundle\PortfolioTrackerServer.styles.css
@@ -356,4 +357,3 @@ C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerServer\obj\Debug\net
 C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerServer\obj\Debug\net7.0\PortfolioTrackerServer.pdb
 C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerServer\obj\Debug\net7.0\PortfolioTrackerServer.genruntimeconfig.cache
 C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerServer\obj\Debug\net7.0\ref\PortfolioTrackerServer.dll
-C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerServer\obj\Debug\net7.0\PortfolioTrackerServer.sourcelink.json

@@ -29,13 +29,19 @@
 }
 
 .flexbox-item[b-re5p8nnu7y] {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.flex-container[b-re5p8nnu7y] {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .label[b-re5p8nnu7y] {
-    font-size: 20px;
+    margin-right: 80px;
     font-family: Arial, Helvetica, sans-serif;
-    margin-right: 10px;
+    font-size: 20px;
 }
 /* /Pages/PolygonApi.razor.rz.scp.css */
 .flexbox[b-6xln6dm12x] {

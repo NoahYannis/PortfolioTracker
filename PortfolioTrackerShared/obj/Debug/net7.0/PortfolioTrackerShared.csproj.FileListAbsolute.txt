@@ -29,8 +29,8 @@ C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerShared\obj\Debug\net
 C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerShared\obj\Debug\net7.0\PortfolioTrackerShared.AssemblyInfoInputs.cache
 C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerShared\obj\Debug\net7.0\PortfolioTrackerShared.AssemblyInfo.cs
 C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerShared\obj\Debug\net7.0\PortfolioTrackerShared.csproj.CoreCompileInputs.cache
+C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerShared\obj\Debug\net7.0\PortfolioTrackerShared.sourcelink.json
 C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerShared\obj\Debug\net7.0\PortfolioTrackerShared.dll
 C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerShared\obj\Debug\net7.0\refint\PortfolioTrackerShared.dll
 C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerShared\obj\Debug\net7.0\PortfolioTrackerShared.pdb
 C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerShared\obj\Debug\net7.0\ref\PortfolioTrackerShared.dll
-C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerShared\obj\Debug\net7.0\PortfolioTrackerShared.sourcelink.json

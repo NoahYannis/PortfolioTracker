@@ -5,11 +5,17 @@
 }
 
 .flexbox-item {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .label {
-    font-size: 20px;
+    margin-right: 80px;
     font-family: Arial, Helvetica, sans-serif;
-    margin-right: 10px;
+    font-size: 20px;
 }
