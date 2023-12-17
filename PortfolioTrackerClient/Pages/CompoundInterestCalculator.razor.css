@@ -15,7 +15,7 @@
 }
 
 .label {
-    margin-right: 80px;
+    margin-right: clamp(20px, 5vw, 80px);
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
+    font-size: clamp(14px, 3vw, 20px);
 }

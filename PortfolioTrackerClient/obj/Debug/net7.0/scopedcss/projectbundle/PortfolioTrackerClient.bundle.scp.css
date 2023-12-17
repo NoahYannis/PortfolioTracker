@@ -39,9 +39,9 @@
 }
 
 .label[b-re5p8nnu7y] {
-    margin-right: 80px;
+    margin-right: clamp(20px, 5vw, 80px); /* Beispiel: Min 20px, bevorzugt 5% der Viewport-Breite, max 80px */
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
+    font-size: clamp(14px, 3vw, 20px); /* Beispiel: Min 16px, bevorzugt 3% der Viewport-Breite, max 20px */
 }
 /* /Pages/PolygonApi.razor.rz.scp.css */
 .flexbox[b-6xln6dm12x] {

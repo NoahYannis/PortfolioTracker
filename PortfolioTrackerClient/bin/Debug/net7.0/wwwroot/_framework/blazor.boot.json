@@ -1,7 +1,7 @@
 {
   "entryAssembly": "PortfolioTrackerClient",
   "resources": {
-    "hash": "sha256-KJ5TVhWt+W/HuWwtwau4rKIkUdI+/OtpLbK8g6IWTRk=",
+    "hash": "sha256-RZwQRbWj3rSJKRNi0/p6dDBVEUJuM10YsBb/rWMsUcM=",
     "runtime": {
       "dotnet.7.0.14.gt8ihsg6h7.js": "sha256-YWGUknGRzP/fgO6YjvCJKPVQNZAPEd6ll+rHfQEIW+I=",
       "dotnet.timezones.blat": "sha256-t5xviiOQTfAsF0UDhmcyalKiaehUmf/sqJl97tmPM0M=",
@@ -221,24 +221,24 @@
       "netstandard.dll": "sha256-TztlSRjADgiEABbiAMdWZpHrUVd8wnRtQRAvlwmRP/4=",
       "System.Private.CoreLib.dll": "sha256-BAhrZ8Zg3cJKQipxdzqQo+9jtPkOkRx1ou3oIhDohtk=",
       "PortfolioTrackerShared.dll": "sha256-QfJ9Q5mHyUYmMImYx2ytq/WuGkTW2ed6zlkOTW3c9I0=",
-      "PortfolioTrackerClient.dll": "sha256-AbBwu93b3j439BQ+2jVIHWOOVAKssZJPbSo5a3oTbR0="
+      "PortfolioTrackerClient.dll": "sha256-LgptKftlYN5Yg/kZ8G4LjIrPnf6pjt26H8uK56iC0bM="
     },
     "pdb": {
       "PortfolioTrackerShared.pdb": "sha256-vLvmy/Rg92M2O1Z67ou8LAOMcL+Zci4tag965ZToHvg=",
-      "PortfolioTrackerClient.pdb": "sha256-tR9RyR+9hkBM0gKYv1ORAlujE2B+gO4hQ8y+8YEjKVc="
+      "PortfolioTrackerClient.pdb": "sha256-Kn7ea09kgBBGbeZtPsXbIoGaDDFSsc/dr4RWTWAyR0M="
     },
     "satelliteResources": {
       "de": {
-        "de/PortfolioTrackerClient.resources.dll": "sha256-w2kFgpDjKpHK2VWR6lyhsoB7qbJ0ERIWB8dbm6on2Pk="
+        "de/PortfolioTrackerClient.resources.dll": "sha256-55KIaxydeyYsECjt9FFcbllPo1ZMSdE+isFew0pJO8U="
       },
       "es": {
-        "es/PortfolioTrackerClient.resources.dll": "sha256-NxOxSN13sYtEEyB2RIb3YQjR73/n7UlemNvJi7BwBfk="
+        "es/PortfolioTrackerClient.resources.dll": "sha256-BEqrho4G+pDwGiM7PkZ/aW7GStr7flEhE1ECPIHMhsg="
       },
       "fr": {
-        "fr/PortfolioTrackerClient.resources.dll": "sha256-zOz4O3ReIiqyLpFKtyn4zrddNXcXcEJs7NGJlkfUxJI="
+        "fr/PortfolioTrackerClient.resources.dll": "sha256-4uJ08eIKvVHhDGsIkvJ2Juns7bNwnDUJeT8BCsnXJdA="
       },
       "ru": {
-        "ru/PortfolioTrackerClient.resources.dll": "sha256-k/+hVUOQhsFPQ3AVQ6MQxBSdoxBlvb+K3rtZk5BNJ9c="
+        "ru/PortfolioTrackerClient.resources.dll": "sha256-nfWoQRtrbYQp1DM3npf4x7pLWVsXY33dm8sxhelEsyM="
       }
     },
     "runtimeAssets": {
