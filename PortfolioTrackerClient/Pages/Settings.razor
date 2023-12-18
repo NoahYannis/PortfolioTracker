@@ -12,6 +12,7 @@
 @inject ISettingsService SettingsService
 @inject IStringLocalizer<Resource> Localizer
 @inject NavigationManager NavManager
+@inject IJSRuntime JsRuntime
 
 
 @if (editing)
@@ -33,6 +34,7 @@
     <div>
         <label for="ColorScheme">@Localizer["ColorScheme"]</label>
         <ColorPicker IsOpened="@colorPickerOpen" Closed="CloseColorPicker" MyColor="UserSettings.ColorScheme"/>
+        <button class="btn btn-secondary" @onclick="OpenModal">
             <div style="background-color: @UserSettings.ColorScheme" class="buttonColor"></div>
             @Localizer["SelectColor"]
         </button>
