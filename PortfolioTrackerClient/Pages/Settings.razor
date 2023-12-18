@@ -33,7 +33,6 @@
     <div>
         <label for="ColorScheme">@Localizer["ColorScheme"]</label>
         <ColorPicker IsOpened="@colorPickerOpen" Closed="CloseColorPicker" MyColor="UserSettings.ColorScheme"/>
-        <button class="btn btn-primary" @onclick="OpenModal">
             <div style="background-color: @UserSettings.ColorScheme" class="buttonColor"></div>
             @Localizer["SelectColor"]
         </button>
@@ -53,7 +52,7 @@
 
     <hr /> <!-- Separator -->
 
-    <button class="btn btn-primary" @onclick="SaveProfile">@Localizer["Save"]</button>
+    <button class="btn btn-secondary" @onclick="SaveProfile">@Localizer["Save"]</button>
 }
 else
 {
@@ -73,7 +72,7 @@ else
     <div>
         <label for="ColorScheme">@Localizer["ColorScheme"]</label>
         <ColorPicker IsOpened="@colorPickerOpen" Closed="CloseColorPicker" MyColor="UserSettings.ColorScheme" />
-        <button class="btn btn-primary" @onclick="OpenModal" disabled="!@editing"> @* Disable color selection if the user is not editing *@
+        <button class="btn btn-secondary" @onclick="OpenModal" disabled="!@editing"> @* Disable color selection if the user is not editing *@
             <div style="background-color: @UserSettings.ColorScheme" class="buttonColor"></div>
             @Localizer["SelectColor"]
         </button>
@@ -89,7 +88,7 @@ else
 
     <hr /> <!-- Separator -->
 
-    <button class="btn btn-primary" @onclick="EditProfile">@Localizer["Edit"]</button>
+    <button class="btn btn-secondary" @onclick="EditProfile">@Localizer["Edit"]</button>
 }
 
 @code {
@@ -130,6 +129,7 @@ else
     private void CloseColorPicker(string chosenColor)
     {
         UserSettings.ColorScheme = chosenColor;
+        JsRuntime.InvokeVoidAsync("localStorage.setItem", "customColor", UserSettings.ColorScheme);
         colorPickerOpen = false;
     }
 }

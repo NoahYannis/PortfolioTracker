@@ -6,6 +6,7 @@
 @inject ISettingsService SettingsService
 @inject IAuthService AuthService
 @inject IStringLocalizer<Resource> Localizer
+@inject IJSRuntime JsRuntime
 
 
 <div class="page">
@@ -53,6 +54,7 @@
             User user = await AuthService.GetPortfolioOwner();
             var userSettings = await SettingsService.GetUserSettings(user.UserId);
             sidebarcolor = userSettings.ColorScheme;
+            await JsRuntime.InvokeVoidAsync("localStorage.setItem", "customColor", sidebarcolor);
         }
     }
 }
