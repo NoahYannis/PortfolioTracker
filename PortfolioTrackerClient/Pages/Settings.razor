@@ -19,22 +19,28 @@
 {
     <h3>@Localizer["ContactData"]</h3>
 
-    <div>
-        <label for="Name">@Localizer["Username"]:</label>
-        <span id="Name">@PortfolioOwner.UserName</span>
-    </div>
-    <div>
-        <label for="Email">@Localizer["Email"]:</label>
-        <span id="Email">@PortfolioOwner.Email</span>
-    </div>
     <hr /> <!-- Separator -->
 
-    <h3>@Localizer["Preferences"]</h3>
+    <div class="flexbox">
+        <div class="flexbox-item">
+            <label class="label" for="Name">@Localizer["Username"]:</label>
+            <span class="label" id="Name">@PortfolioOwner.UserName</span>
+        </div>
+        <div class="flexbox-item">
+            <label class="label" for="Email">@Localizer["Email"]:</label>
+            <span class="label" id="Email">@PortfolioOwner.Email</span>
+        </div>
+    </div>
+
+    <hr /> <!-- Separator -->
+
+    <h3 class="section">@Localizer["Preferences"]</h3>
+
+    <hr /> <!-- Separator -->
 
     <div>
-        <label for="ColorScheme">@Localizer["ColorScheme"]</label>
-        <ColorPicker IsOpened="@colorPickerOpen" Closed="CloseColorPicker" MyColor="UserSettings.ColorScheme"/>
-        <button class="btn btn-secondary" @onclick="OpenModal">
+        <ColorPicker IsOpened="@colorPickerOpen" Closed="CloseColorPicker" MyColor="UserSettings.ColorScheme" />
+        <button class="btn btn-secondary" style="margin: 20px 20px 20px 0;" @onclick="OpenModal">
             <div style="background-color: @UserSettings.ColorScheme" class="buttonColor"></div>
             @Localizer["SelectColor"]
         </button>
@@ -42,9 +48,9 @@
 
     <hr /> <!-- Separator -->
 
-    <h3>@Localizer["InvestingGoals"]</h3>
+    <h3 class="section">@Localizer["InvestingGoals"]</h3>
 
-    <hr /> <!-- Separator -->
+    <hr style="margin-bottom: 50px;" /> <!-- Separator -->
 
     <BlazoredTextEditor @ref="@richEditor" Placeholder="@Localizer["InvestingGoalsPlaceholder"]">
         <EditorContent @onchange="(() => await @SaveInvestingGoals()">
@@ -52,29 +58,37 @@
         </EditorContent>
     </BlazoredTextEditor>
 
-    <hr /> <!-- Separator -->
+    <hr style="margin-top: 50px;" /> <!-- Separator -->
 
     <button class="btn btn-secondary" @onclick="SaveProfile">@Localizer["Save"]</button>
 }
 else
 {
-    <div>
-        <label for="Name">@Localizer["Username"]:</label>
-        <span id="Name">@PortfolioOwner.UserName</span>
-    </div>
-    <div>
-        <label for="Email">@Localizer["Email"]:</label>
-        <span id="Email">@PortfolioOwner.Email</span>
+    <h3>@Localizer["ContactData"]</h3>
+
+    <hr /> <!-- Separator -->
+
+    <div class="flexbox">
+        <div class="flexbox-item">
+            <label class="label" for="Name">@Localizer["Username"]:</label>
+            <span class="label" id="Name">@PortfolioOwner.UserName</span>
+        </div>
+        <div class="flexbox-item">
+            <label class="label" for="Email">@Localizer["Email"]:</label>
+            <span class="label" id="Email">@PortfolioOwner.Email</span>
+        </div>
     </div>
 
     <hr /> <!-- Separator -->
 
-    <h3>@Localizer["Preferences"]</h3>
+    <h3 class="section">@Localizer["Preferences"]</h3>
+
+    <hr /> <!-- Separator -->
 
     <div>
-        <label for="ColorScheme">@Localizer["ColorScheme"]</label>
         <ColorPicker IsOpened="@colorPickerOpen" Closed="CloseColorPicker" MyColor="UserSettings.ColorScheme" />
-        <button class="btn btn-secondary" @onclick="OpenModal" disabled="!@editing"> @* Disable color selection if the user is not editing *@
+        <button class="btn btn-secondary" style="margin: 20px 20px 20px 0;" @onclick="OpenModal" disabled="!@editing">
+            @* Disable color selection if the user is not editing *@
             <div style="background-color: @UserSettings.ColorScheme" class="buttonColor"></div>
             @Localizer["SelectColor"]
         </button>
@@ -82,13 +96,17 @@ else
 
     <hr /> <!-- Separator -->
 
-    <BlazoredTextEditor @ref="@richEditor" Placeholder="@Localizer["InvestingGoalsPlaceholder"]" ReadOnly="true">
+    <h3 class="section">@Localizer["InvestingGoals"]</h3>
+
+    <hr style="margin-bottom: 50px;" /> <!-- Separator -->
+
+    <BlazoredTextEditor  @ref="@richEditor" Placeholder="@Localizer["InvestingGoalsPlaceholder"]" ReadOnly="true">
         <EditorContent>
             @UserSettings.InvestingGoals
         </EditorContent>
     </BlazoredTextEditor>
 
-    <hr /> <!-- Separator -->
+    <hr style="margin-top: 50px;" /> <!-- Separator -->
 
     <button class="btn btn-secondary" @onclick="EditProfile">@Localizer["Edit"]</button>
 }
@@ -115,7 +133,6 @@ else
         UserSettings = await SettingsService.GetUserSettings(PortfolioOwner.UserId);
     }
 
-
     private async void SaveProfile()
     {
         editing = false;
@@ -123,7 +140,7 @@ else
         await SettingsService.UpdateUserSettings(UserSettings);
 
         // Reload page to apply changes. StateHasChanged() doesnt seem to work here.
-        NavManager.NavigateTo(NavManager.Uri, forceLoad: true); 
+        NavManager.NavigateTo(NavManager.Uri, forceLoad: true);
     }
 
     private void OpenModal() => colorPickerOpen = true;

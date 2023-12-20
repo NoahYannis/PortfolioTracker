@@ -70,6 +70,33 @@
     font-family: Arial, Helvetica, sans-serif;
     margin-right: 30px;
 }
+/* /Pages/Settings.razor.rz.scp.css */
+.flexbox[b-fkwvgo8jsw] {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.flexbox-item[b-fkwvgo8jsw] {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin: 10px 10px;
+}
+
+
+.label[b-fkwvgo8jsw] {
+    margin-right: clamp(10px, 5vw, 80px);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(14px, 1vw, 20px);
+    align-content: flex-start;
+}
+
+.section[b-fkwvgo8jsw] {
+    margin-top: 50px;
+}
+
 /* /Shared/MainLayout.razor.rz.scp.css */
 .page[b-yad0rt9llc] {
     position: relative;

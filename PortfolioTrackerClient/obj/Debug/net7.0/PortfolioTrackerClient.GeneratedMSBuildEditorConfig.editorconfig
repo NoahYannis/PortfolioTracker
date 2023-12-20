@@ -62,10 +62,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0ZXIucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Noah/source/repos/PortfolioTracker/PortfolioTrackerClient/Pages/Settings.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2V0dGluZ3MucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/Noah/source/repos/PortfolioTracker/PortfolioTrackerClient/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
@@ -85,6 +81,10 @@ build_metadata.AdditionalFiles.CssScope = b-re5p8nnu7y
 [C:/Users/Noah/source/repos/PortfolioTracker/PortfolioTrackerClient/Pages/PolygonApi.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9seWdvbkFwaS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-6xln6dm12x
+
+[C:/Users/Noah/source/repos/PortfolioTracker/PortfolioTrackerClient/Pages/Settings.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2V0dGluZ3MucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-fkwvgo8jsw
 
 [C:/Users/Noah/source/repos/PortfolioTracker/PortfolioTrackerClient/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=

@@ -1,0 +1,26 @@
+﻿.flexbox {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.flexbox-item {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin: 10px 10px;
+}
+
+
+.label {
+    margin-right: clamp(10px, 5vw, 80px);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(14px, 1vw, 20px);
+    align-content: flex-start;
+}
+
+.section {
+    margin-top: 50px;
+}
+
