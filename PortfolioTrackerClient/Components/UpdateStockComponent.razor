@@ -10,64 +10,123 @@
 @inject IModalService ModalService
 @inject IStringLocalizer<Resource> Localizer
 
-<div>
+<div class="flexbox">
     <EditForm Model="@StockToUpdate" OnValidSubmit='async() => await UpdateStock(StockToUpdate, PortfolioOwner.UserId)'>
         <DataAnnotationsValidator />
 
-        <label for="stockTicker">@Localizer["StockTicker"]: </label>
-        <InputText id="stockTicker" @bind-Value="StockToUpdate.Ticker" readonly/>
-        <br /><br />
+        <div class="flexbox-item">
+            <div class="label-container">
+                <label class="label" for="stockTicker">@Localizer["StockTicker"]: </label>
+            </div>
+            <div class="input-container">
+                <InputText id="stockTicker" @bind-Value="StockToUpdate.Ticker" readonly/>
+                <br /><br />
+            </div>
+        </div>
 
-        <label for="currentPrice">@Localizer["CurrentPrice"]: </label>
-        <InputNumber id="currentPrice" @bind-Value="StockToUpdate.CurrentPrice" readonly/>
-        <br /><br />
+       <div class="flexbox-item">
+            <div class="label-container">
+                <label class="label" for="currentPrice">@Localizer["CurrentPrice"]: </label>
+            </div>
+            <div class="input-container">
+                <InputNumber id="currentPrice" @bind-Value="StockToUpdate.CurrentPrice" readonly/>
+                <br /><br />
+            </div>
+        </div>
 
-        <label for="sharesOwned">@Localizer["SharesOwned"]: </label>
-        <InputNumber id="sharesOwned" @bind-Value="StockToUpdate.SharesOwned" min="0" />
-        <ValidationMessage For="() => StockToUpdate.SharesOwned" />
-        <br /><br />
+        <div class="flexbox-item">
+            <div class="label-container">
+                <label class="label" for="sharesOwned">@Localizer["SharesOwned"]: </label>
+            </div>
+            <div class="input-container">
+                <InputNumber id="sharesOwned" @bind-Value="StockToUpdate.SharesOwned" min="0" />
+                <ValidationMessage For="() => StockToUpdate.SharesOwned" />
+                <br /><br />
+             </div>
+        </div>
 
-        <label for="positionSize">@Localizer["PositionSize"] ($): </label>
-        <InputNumber id="positionSize" @bind-Value="StockToUpdate.PositionSize" min="0" />
-        <ValidationMessage For="() => StockToUpdate.PositionSize" />
-        <br /><br />
+        <div class="flexbox-item">
+            <div class="label-container">
+                <label class="label" for="positionSize">@Localizer["PositionSize"] ($): </label>
+            </div>
+            <div class="input-container">
+                <InputNumber id="positionSize" @bind-Value="StockToUpdate.PositionSize" min="0" />
+                <ValidationMessage For="() => StockToUpdate.PositionSize" />
+                <br /><br />
 
-        <label for="buyinPrice">@Localizer["BuyInPrice"]: </label>
-        <InputNumber id="buyinPrice" @bind-Value="StockToUpdate.BuyInPrice" min="0" />
-        <ValidationMessage For="() => StockToUpdate.BuyInPrice" />
-        <br /><br />
+            </div>
+        </div>
 
-        <label for="industry">@Localizer["Industry"]: </label>
-        <InputSelect id="industry" @bind-Value="StockToUpdate.Industry">
-            @foreach (Industry industry in Enum.GetValues(typeof(Industry)))
-            {
-                <option>@GetDisplayValue(industry)</option>
-            }
-        </InputSelect>
-        <br /><br />
+        <div class="flexbox-item">
+             <div class="label-container">
+                 <label class="label" for="buyinPrice">@Localizer["BuyInPrice"]: </label>
+            </div>
+            <div class="input-container">
+                <InputNumber id="buyinPrice" @bind-Value="StockToUpdate.BuyInPrice" min="0" />
+                <ValidationMessage For="() => StockToUpdate.BuyInPrice" />
+                <br /><br />
+            </div>
+        </div>
 
-        <label for="dividendYield">@Localizer["DividendYield"]: </label>
-        <InputNumber id="dividendYield" @bind-Value="StockToUpdate.DividendYield" min="0" />
-        <ValidationMessage For="() => StockToUpdate.DividendYield" />
-        <br /><br />
+        <div class="flexbox-item">
+            <div class="label-container">
+                <label class="label" for="industry">@Localizer["Industry"]: </label>
+             </div>
+            <div class="input-container">
+                <InputSelect id="industry" @bind-Value="StockToUpdate.Industry">
+                    @foreach (Industry industry in Enum.GetValues(typeof(Industry)))
+                    {
+                        <option>@GetDisplayValue(industry)</option>
+                    }
+                </InputSelect>
+                <br /><br />
+            </div>
+        </div>
+
+        <div class="flexbox-item">
+            <div class="label-container">
+                <label class="label" for="dividendYield">@Localizer["DividendYield"]: </label>
+             </div>
+            <div class="input-container">
+                 <InputNumber id="dividendYield" @bind-Value="StockToUpdate.DividendYield" min="0" />
+                 <ValidationMessage For="() => StockToUpdate.DividendYield" />
+                 <br /><br />
+
+            </div>
+        </div>
 
         <br />
 
-        <label for="relativePerformance">@Localizer["RelativePerformance"]: </label>
-        <InputNumber style="@DeterminePerformanceColor(StockToUpdate.RelativePerformance)" id="relativePerformance" @bind-Value="StockToUpdate.RelativePerformance" readonly/>
-        <br /><br />
+        <div class="flexbox-item">
+            <div class="label-container">
+                <label class="label" for="relativePerformance">@Localizer["RelativePerformance"]: </label>
+            </div>
+             <div class="input-container">
+                <InputNumber style="@DeterminePerformanceColor(StockToUpdate.RelativePerformance)" id="relativePerformance" @bind-Value="StockToUpdate.RelativePerformance" readonly/>
+                <br /><br />
+            </div>
+        </div>
 
-        <label for="absolutePerformance">@Localizer["AbsolutePerformance"]: </label>
-        <InputNumber style="@DeterminePerformanceColor(StockToUpdate.AbsolutePerformance)" id="absolutePerformance" @bind-Value="StockToUpdate.AbsolutePerformance" readonly/>
-        <br /><br />
 
-        <button class="btn-primary" type="submit">@Localizer["Update"]</button>
-        <button class="btn-danger" type="button" style="margin-left: 10px" @onclick="async() => await DeleteStock(StockToUpdate.Ticker, PortfolioOwner.UserId)">@Localizer["Delete"]</button>
-        <button style="margin-left: 10px" @onclick="async() => await UpdatePriceAndPositionSize(PortfolioOwner.UserId) ">@Localizer["UpdateSharePrice"]</button>
+        <div class="flexbox-item">
+            <div class="label-container">
+                <label class="label" for="absolutePerformance">@Localizer["AbsolutePerformance"]: </label>
+            </div>
+            <div class="input-container">
+                <InputNumber style="@DeterminePerformanceColor(StockToUpdate.AbsolutePerformance)" id="absolutePerformance" @bind-Value="StockToUpdate.AbsolutePerformance" readonly/>
+                <br /><br />
+            </div>
+        </div>
+
+        <div class="flexbox-item">
+            <button class="btn-primary" type="submit">@Localizer["Update"]</button>
+            <button class="btn-danger" type="button" style="margin-left: 10px" @onclick="async() => await DeleteStock(StockToUpdate.Ticker, PortfolioOwner.UserId)">@Localizer["Delete"]</button>
+            <button class="btn-outline-secondary" style="margin-left: 10px" @onclick="async() => await UpdatePriceAndPositionSize(PortfolioOwner.UserId) ">@Localizer["UpdateSharePrice"]</button>
+        </div>
 
         <br /><br />
     </EditForm>
-</div
+</div>
 
 @if (ShowResultMessage)
 {

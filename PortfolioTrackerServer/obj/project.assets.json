@@ -11779,23 +11779,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {},
+    "C:\\Users\\Noah\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\PortfolioTrackerServer\\PortfolioTrackerServer.csproj",
+      "projectUniqueName": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerServer\\PortfolioTrackerServer.csproj",
       "projectName": "PortfolioTrackerServer",
-      "projectPath": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\PortfolioTrackerServer\\PortfolioTrackerServer.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\PortfolioTrackerServer\\obj\\",
+      "projectPath": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerServer\\PortfolioTrackerServer.csproj",
+      "packagesPath": "C:\\Users\\Noah\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerServer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Noah\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -11805,15 +11805,14 @@
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "C:\\Program Files\\dotnet\\library-packs": {},
-        "C:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\PortfolioTrackerShared\\PortfolioTrackerShared.csproj": {
-              "projectPath": "C:\\Users\\User\\source\\repos\\NoahYannis\\PortfolioTracker\\PortfolioTrackerShared\\PortfolioTrackerShared.csproj"
+            "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerShared\\PortfolioTrackerShared.csproj": {
+              "projectPath": "C:\\Users\\Noah\\source\\repos\\PortfolioTracker\\PortfolioTrackerShared\\PortfolioTrackerShared.csproj"
             }
           }
         }
@@ -11896,7 +11895,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

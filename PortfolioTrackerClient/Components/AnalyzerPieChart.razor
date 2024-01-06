@@ -37,7 +37,14 @@ else
 
     private IPieChartStrategy _pieChartStrategy;
 
-    private PieConfig _config = new();
+    private PieConfig _config = new()
+    { 
+        Options = new PieOptions 
+        { 
+            AspectRatio = 2.75
+        } 
+    };
+
     private List<string> BackgroundColors { get; set; } = new List<string>();
     private PieDataset<decimal?> Dataset { get; set; } = new PieDataset<decimal?>();
 

@@ -59,6 +59,7 @@
                     OnClick = new DelegateHandler<ChartMouseEvent>(ChartClicked),
                     Responsive = true,
                     Title = new OptionsTitle { Display = true },
+                    AspectRatio = 2.75,
                 }
             };
 
@@ -182,7 +183,6 @@
     {
         Modal.Show<AddStockComponent>(Localizer["AddNewStock"], new ModalParameters { { "PortfolioOwner", PortfolioOwner } });
     }
-
 
     public void Dispose()
     {

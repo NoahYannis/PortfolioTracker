@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PortfolioTrackerServer.Data;
-using PortfolioTrackerServer.Services.GetStockInfoService;
 using PortfolioTrackerShared.Models;
 using PortfolioTrackerShared.Models.UserModels;
 using PortfolioTrackerShared.Other;
@@ -74,8 +73,11 @@ namespace PortfolioTrackerServer.Services.PortfolioService
 
             if (PortfolioOwner is not null)
             {
-                PortfolioOwner.Portfolio = await _dataContext.Portfolios.SingleOrDefaultAsync(po => po.UserId == PortfolioOwner.UserId);
-                PortfolioOwner.Portfolio.Positions = await _dataContext.Stocks.Where(s => s.PortfolioId == PortfolioOwner.Portfolio.Id).ToListAsync();
+                PortfolioOwner.Portfolio = await _dataContext.Portfolios.SingleOrDefaultAsync
+                    (po => po.UserId == PortfolioOwner.UserId);
+
+                PortfolioOwner.Portfolio.Positions = await _dataContext.Stocks.Where
+                    (s => s.PortfolioId == PortfolioOwner.Portfolio.Id).ToListAsync();
             }
 
             return PortfolioOwner ?? new();
@@ -89,11 +91,8 @@ namespace PortfolioTrackerServer.Services.PortfolioService
         /// <returns>Whether a portfolio contains that particular stock</returns>
         public bool ContainsStock(PortfolioStock portfolioStock)
         {
-            // Check if any stock in Positions has the same Ticker
             return PortfolioOwner.Portfolio.Positions.Any(stock => stock.Ticker == portfolioStock.Ticker);
         }
-
-
 
 
         public async Task<ServiceResponse<PortfolioStock>> AddStock(PortfolioStock stock, int userId)
@@ -255,10 +254,7 @@ namespace PortfolioTrackerServer.Services.PortfolioService
             return new ServiceResponse<bool> { Data = true };
         }
 
-
-
         #endregion
-
 
     }
 }
