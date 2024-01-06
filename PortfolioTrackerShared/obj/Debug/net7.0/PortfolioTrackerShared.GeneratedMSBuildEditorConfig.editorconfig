@@ -8,6 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = PortfolioTrackerShared
-build_property.ProjectDir = C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerShared\
-build_property.EnableComHosting = 
-build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.ProjectDir = C:\Users\User\source\repos\NoahYannis\PortfolioTracker\PortfolioTrackerShared\

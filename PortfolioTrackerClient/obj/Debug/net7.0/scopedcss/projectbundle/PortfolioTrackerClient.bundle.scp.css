@@ -39,8 +39,15 @@
     align-items: center;
 }
 
+.buttons[b-re5p8nnu7y] {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: end;
+}
+
 .label[b-re5p8nnu7y] {
     margin-left: clamp(5px, 3vw, 40px);
+    margin-right: 20px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: clamp(14px, 3vw, 20px);
 }
