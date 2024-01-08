@@ -11,7 +11,7 @@
 @inject IStringLocalizer<Resource> Localizer
 
 <div class="flexbox">
-    <EditForm Model="@StockToUpdate" OnValidSubmit='async() => await UpdateStock(StockToUpdate, PortfolioOwner.UserId)'>
+    <EditForm style="max-width: clamp(350px, 70%, 500px);" Model="@StockToUpdate" OnValidSubmit='async() => await UpdateStock(StockToUpdate, PortfolioOwner.UserId)'>
         <DataAnnotationsValidator />
 
         <div class="flexbox-item">
