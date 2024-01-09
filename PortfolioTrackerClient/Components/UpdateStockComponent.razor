@@ -10,8 +10,8 @@
 @inject IModalService ModalService
 @inject IStringLocalizer<Resource> Localizer
 
-<div class="flexbox">
-    <EditForm style="max-width: clamp(350px, 70%, 500px);" Model="@StockToUpdate" OnValidSubmit='async() => await UpdateStock(StockToUpdate, PortfolioOwner.UserId)'>
+<EditForm style="max-width: clamp(350px, 70%, 500px); margin: 25px auto 0 auto"
+          Model="@StockToUpdate" OnValidSubmit='async() => await UpdateStock(StockToUpdate, PortfolioOwner.UserId)'>
         <DataAnnotationsValidator />
 
         <div class="flexbox-item">
@@ -118,7 +118,7 @@
             </div>
         </div>
 
-        <div class="flexbox-item">
+        <div class="buttons">
             <button class="btn-primary" type="submit">@Localizer["Update"]</button>
             <button class="btn-danger" type="button" style="margin-left: 10px" @onclick="async() => await DeleteStock(StockToUpdate.Ticker, PortfolioOwner.UserId)">@Localizer["Delete"]</button>
             <button class="btn-outline-secondary" style="margin-left: 10px" @onclick="async() => await UpdatePriceAndPositionSize(PortfolioOwner.UserId) ">@Localizer["UpdateSharePrice"]</button>
@@ -126,7 +126,6 @@
 
         <br /><br />
     </EditForm>
-</div>
 
 @if (ShowResultMessage)
 {

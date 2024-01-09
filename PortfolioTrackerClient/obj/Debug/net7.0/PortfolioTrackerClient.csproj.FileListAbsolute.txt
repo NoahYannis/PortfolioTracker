@@ -2778,3 +2778,4 @@ C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerClient\obj\Debug\net
 C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerClient\obj\Debug\net7.0\PortfolioTrackerClient.pdb
 C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerClient\obj\Debug\net7.0\ref\PortfolioTrackerClient.dll
 C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerClient\obj\Debug\net7.0\scopedcss\Components\UpdateStockComponent.razor.rz.scp.css
+C:\Users\Noah\source\repos\PortfolioTracker\PortfolioTrackerClient\obj\Debug\net7.0\scopedcss\Pages\Portfolio.razor.rz.scp.css

@@ -1,14 +1,18 @@
-﻿.flexbox {
-    display: flex
-    align-items: center;
-}
-
-.flexbox-item {
+﻿.flexbox-item {
     display: flex;
     margin-bottom: 5px;
     justify-content: space-between;
     align-items: baseline;
 }
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
 
 .label-container {
 }

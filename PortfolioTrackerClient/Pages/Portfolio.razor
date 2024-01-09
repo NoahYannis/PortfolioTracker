@@ -15,7 +15,9 @@
 @if (PortfolioOwner.UserId != 0)
 {
     <PortfolioPieChart PortfolioOwner="@PortfolioOwner" />
-    <button class="btn-secondary" @onclick="OpenAddStockModal">@Localizer["AddNewStock"]</button>
+    <button class="btn-secondary" style="margin: 0 auto 20px auto; display: flex;" @onclick="OpenAddStockModal">
+        @Localizer["AddNewStock"]
+    </button>
 }
 
 @code {

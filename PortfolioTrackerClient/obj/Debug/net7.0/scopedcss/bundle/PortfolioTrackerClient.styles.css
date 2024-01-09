@@ -25,17 +25,21 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 /* /Components/UpdateStockComponent.razor.rz.scp.css */
-.flexbox[b-94ytn16cnf] {
-    display: flex
-    align-items: center;
-}
-
 .flexbox-item[b-94ytn16cnf] {
     display: flex;
     margin-bottom: 5px;
     justify-content: space-between;
     align-items: baseline;
 }
+
+.buttons[b-94ytn16cnf] {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
 
 .label-container[b-94ytn16cnf] {
 }
@@ -103,6 +107,11 @@
     font-size: 24px;
     font-family: Arial, Helvetica, sans-serif;
     margin-right: 30px;
+}
+/* /Pages/Portfolio.razor.rz.scp.css */
+.add[b-iulnmu2ogk] {
+    display: flex;
+    margin: 0 auto;
 }
 /* /Pages/Settings.razor.rz.scp.css */
 .flexbox[b-fkwvgo8jsw] {
