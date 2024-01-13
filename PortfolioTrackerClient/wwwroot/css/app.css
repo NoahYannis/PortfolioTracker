@@ -12,6 +12,13 @@ a, .btn-link {
     color: #0071c1;
 }
 
+.edit-form {
+    display: flex;
+    margin: 25px auto 0 auto;
+    flex-direction: column;
+    align-items: center;
+}
+
 .btn-primary {
     color: #fff;
     background-color: #1b6ec2;

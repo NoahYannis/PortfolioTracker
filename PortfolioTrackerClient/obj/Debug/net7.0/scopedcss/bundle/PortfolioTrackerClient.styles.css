@@ -29,7 +29,6 @@
     display: flex;
     margin-bottom: 5px;
     justify-content: space-between;
-    align-items: baseline;
 }
 
 .buttons[b-94ytn16cnf] {
@@ -107,11 +106,6 @@
     font-size: 24px;
     font-family: Arial, Helvetica, sans-serif;
     margin-right: 30px;
-}
-/* /Pages/Portfolio.razor.rz.scp.css */
-.add[b-iulnmu2ogk] {
-    display: flex;
-    margin: 0 auto;
 }
 /* /Pages/Settings.razor.rz.scp.css */
 .flexbox[b-fkwvgo8jsw] {
