@@ -1,14 +1,13 @@
 ﻿using PortfolioTrackerShared.Models.UserModels;
 using PortfolioTrackerShared.Other;
 
-namespace PortfolioTrackerServer.Services.AuthService
+namespace PortfolioTrackerServer.Services.AuthService;
+
+public interface IAuthService
 {
-    public interface IAuthService
-    {
-        Task<ServiceResponse<int>> Register(User user, string password);
-        Task<bool> UserExists(string email);
-        Task<ServiceResponse<User>> GetUserFromDbByEmail(string email);
-        Task<ServiceResponse<string>> Login(string email, string password);
-        Task<ServiceResponse<bool>> ChangePassword(int userId, string newPassword);
-    }
+    Task<ServiceResponse<int>> Register(User user, string password);
+    Task<bool> UserExists(string email);
+    Task<ServiceResponse<User>> GetUserFromDbByEmail(string email);
+    Task<ServiceResponse<string>> Login(string email, string password);
+    Task<ServiceResponse<bool>> ChangePassword(int userId, string newPassword);
 }

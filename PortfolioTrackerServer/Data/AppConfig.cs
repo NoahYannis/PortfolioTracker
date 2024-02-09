@@ -1,7 +1,6 @@
-﻿namespace PortfolioTrackerServer.Data
+﻿namespace PortfolioTrackerServer.Data;
+
+public class AppConfig
 {
-    public class AppConfig
-    {
-        public string ApiKey { get; set; }
-    }
+    public required string ApiKey { get; set; }
 }

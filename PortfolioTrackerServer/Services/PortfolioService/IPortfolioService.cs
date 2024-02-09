@@ -1,39 +1,38 @@
 ﻿using PortfolioTrackerShared.Models;
 using PortfolioTrackerShared.Other;
 
-namespace PortfolioTrackerServer.Services.PortfolioService
+namespace PortfolioTrackerServer.Services.PortfolioService;
+
+/// <summary>
+/// Portfolio functionalities
+/// </summary>
+public interface IPortfolioService
 {
-    /// <summary>
-    /// Portfolio functionalities
-    /// </summary>
-    public interface IPortfolioService
-    {
-        #region Database Stocks 
+    #region Database Stocks 
 
-        Task<ServiceResponse<List<PortfolioStock>>> GetPortfolioStocks(int userId);
-        Task<ServiceResponse<PortfolioStock>> GetStock(string ticker, int userId);
-        Task<ServiceResponse<bool>> DeleteStock(string stockToDelete, int userId);
-        Task<ServiceResponse<PortfolioStock>> AddStock(PortfolioStock stock, int userId);
-        Task<ServiceResponse<PortfolioStock>> UpdateStock(PortfolioStock stock, int userId);
+    Task<ServiceResponse<List<PortfolioStock>>> GetPortfolioStocks(int userId);
+    Task<ServiceResponse<PortfolioStock>> GetStock(string ticker, int userId);
+    Task<ServiceResponse<bool>> DeleteStock(string stockToDelete, int userId);
+    Task<ServiceResponse<PortfolioStock>> AddStock(PortfolioStock stock, int userId);
+    Task<ServiceResponse<PortfolioStock>> UpdateStock(PortfolioStock stock, int userId);
 
-        //event EventHandler<PortfolioChangedArgs> PortfolioChanged;
-        //void OnPortfolioChanged(List<PortfolioStock> portfolioStocks, PortfolioStock? deletedStock = null);
+    //event EventHandler<PortfolioChangedArgs> PortfolioChanged;
+    //void OnPortfolioChanged(List<PortfolioStock> portfolioStocks, PortfolioStock? deletedStock = null);
 
 
-        #endregion
+    #endregion
 
-        #region Orders
+    #region Orders
 
-        List<Order> Orders { get; set; }
-        Task<ServiceResponse<List<Order>>> GetOrders();
-        Task<ServiceResponse<Order>> GetOrder(int orderNumber);
-        Task<ServiceResponse<bool>> CreateOrder(Order order);
-        Task<ServiceResponse<bool>> UpdateOrder(Order order);
-        Task<ServiceResponse<bool>> DeleteOrder(int orderNumber);
-
-
-        #endregion
+    List<Order> Orders { get; set; }
+    Task<ServiceResponse<List<Order>>> GetOrders();
+    Task<ServiceResponse<Order>> GetOrder(int orderNumber);
+    Task<ServiceResponse<bool>> CreateOrder(Order order);
+    Task<ServiceResponse<bool>> UpdateOrder(Order order);
+    Task<ServiceResponse<bool>> DeleteOrder(int orderNumber);
 
 
-    }
+    #endregion
+
+
 }

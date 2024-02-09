@@ -2,21 +2,20 @@
 
 #nullable disable
 
-namespace PortfolioTrackerServer.Migrations
+namespace PortfolioTrackerServer.Migrations;
+
+/// <inheritdoc />
+public partial class UpdatedPortfolioDateCreatedString : Migration
 {
     /// <inheritdoc />
-    public partial class UpdatedPortfolioDateCreatedString : Migration
+    protected override void Up(MigrationBuilder migrationBuilder)
     {
-        /// <inheritdoc />
-        protected override void Up(MigrationBuilder migrationBuilder)
-        {
 
-        }
+    }
 
-        /// <inheritdoc />
-        protected override void Down(MigrationBuilder migrationBuilder)
-        {
+    /// <inheritdoc />
+    protected override void Down(MigrationBuilder migrationBuilder)
+    {
 
-        }
     }
 }

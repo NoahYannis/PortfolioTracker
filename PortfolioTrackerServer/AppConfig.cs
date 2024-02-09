@@ -1,10 +1,9 @@
-﻿namespace PortfolioTrackerServer
+﻿namespace PortfolioTrackerServer;
+
+
+public class AppConfig
 {
+    public required string ApiKey { get; set; }
+    public required string ConnectionString { get; set; }
 
-    public class AppConfig
-    {
-        public string ApiKey { get; set; }
-        public string ConnectionString { get; set; }
-
-    }
 }

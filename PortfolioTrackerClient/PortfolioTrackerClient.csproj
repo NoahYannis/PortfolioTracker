@@ -44,11 +44,6 @@
 			<AutoGen>True</AutoGen>
 			<DependentUpon>Resource.resx</DependentUpon>
 		</Compile>
-		<Compile Update="Resources\Resource.fr.Designer.cs">
-			<DesignTime>True</DesignTime>
-			<AutoGen>True</AutoGen>
-			<DependentUpon>Resource.fr.resx</DependentUpon>
-		</Compile>
 		<Compile Update="Resources\Resource.de.Designer.cs">
 			<DesignTime>True</DesignTime>
 			<AutoGen>True</AutoGen>

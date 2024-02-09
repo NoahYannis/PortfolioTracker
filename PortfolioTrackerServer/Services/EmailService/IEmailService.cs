@@ -1,7 +1,6 @@
-﻿namespace PortfolioTrackerServer.Services.EmailService
+﻿namespace PortfolioTrackerServer.Services.EmailService;
+
+public interface IEmailService
 {
-    public interface IEmailService
-    {
-        public Task SendEmail(string body, string recipientAddress);
-    }
+    public Task SendEmail(string body, string recipientAddress);
 }

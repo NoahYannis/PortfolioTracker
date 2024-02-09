@@ -1,29 +1,28 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace PortfolioTrackerShared.Models
+namespace PortfolioTrackerShared.Models;
+
+public class Portfolio
 {
-    public class Portfolio
-    {
-        [Key]
-        public int Id { get; set; }
+    [Key]
+    public int Id { get; set; }
 
-        [ForeignKey("UserId")]
-        public int UserId { get; set; } = new();
+    [ForeignKey("UserId")]
+    public int UserId { get; set; } = new();
 
-        /// <summary>
-        /// All stocks inside the portfolio.
-        /// </summary>
-        public List<PortfolioStock> Positions { get; set; } = new();
+    /// <summary>
+    /// All stocks inside the portfolio.
+    /// </summary>
+    public List<PortfolioStock> Positions { get; set; } = new();
 
-        public List<Order> OrderHistory { get; set; } = new();
+    public List<Order> OrderHistory { get; set; } = new();
 
-        public decimal PortfolioValue { get; set; } = decimal.Zero;
+    public decimal PortfolioValue { get; set; } = decimal.Zero;
 
-        /// <summary>
-        /// Save as string for the database.
-        /// </summary>
-        public DateTime DateCreated { get; set; } = DateTime.Today;
+    /// <summary>
+    /// Save as string for the database.
+    /// </summary>
+    public DateTime DateCreated { get; set; } = DateTime.Today;
 
-    }
 }

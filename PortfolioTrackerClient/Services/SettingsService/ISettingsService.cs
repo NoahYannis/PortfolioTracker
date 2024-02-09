@@ -1,11 +1,9 @@
-﻿using PortfolioTrackerShared.Models.UserModels;
-namespace PortfolioTrackerClient.Services.SettingsService
+﻿namespace PortfolioTrackerClient.Services.SettingsService;
 
+
+public interface ISettingsService
 {
-	public interface ISettingsService
-	{
-		Task<UserSettings> GetUserSettings(int userId);
-		Task<bool> UpdateUserSettings(UserSettings settings);
-		Task<ServiceResponse<bool>> ResetUserSettings(User user);
-	}
+    Task<UserSettings> GetUserSettings(int userId);
+    Task<bool> UpdateUserSettings(UserSettings settings);
+    Task<ServiceResponse<bool>> ResetUserSettings(User user);
 }

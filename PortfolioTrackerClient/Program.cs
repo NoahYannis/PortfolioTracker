@@ -1,18 +1,18 @@
-global using Microsoft.AspNetCore.Components.Authorization;
 global using Blazored.LocalStorage;
 global using Blazored.Modal;
+global using Microsoft.AspNetCore.Components.Authorization;
 global using Microsoft.AspNetCore.Components.Web;
 global using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+global using Microsoft.Extensions.Localization;
 global using PortfolioTrackerClient;
+global using PortfolioTrackerClient.Resources;
 global using PortfolioTrackerClient.Services.AuthService;
 global using PortfolioTrackerClient.Services.GetStockInfoService;
 global using PortfolioTrackerClient.Services.PortfolioService;
 global using PortfolioTrackerShared.Models.UserModels;
 global using PortfolioTrackerShared.Other;
-global using Microsoft.Extensions.Localization;
-global using PortfolioTrackerClient.Resources;
-using PortfolioTrackerClient.Services.SettingsService;
 using PortfolioTrackerClient.Services.EmailService;
+using PortfolioTrackerClient.Services.SettingsService;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
