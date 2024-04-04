@@ -53,7 +53,7 @@
     <hr style="margin-bottom: 50px;" /> <!-- Separator -->
 
     <BlazoredTextEditor @ref="@richEditor" Placeholder="@Localizer["InvestingGoalsPlaceholder"]">
-        <EditorContent @onchange="(() => await @SaveInvestingGoals()">
+        <EditorContent>
             @UserSettings.InvestingGoals
         </EditorContent>
     </BlazoredTextEditor>

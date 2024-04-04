@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
 
 	<PropertyGroup>
-		<TargetFramework>net7.0</TargetFramework>
+		<TargetFramework>net8.0</TargetFramework>
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<BlazorWebAssemblyLoadAllGlobalizationData>true</BlazorWebAssemblyLoadAllGlobalizationData>
@@ -16,22 +16,21 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="BlazorColorPicker" Version="2.3.0" />
-		<PackageReference Include="Blazored.LocalStorage" Version="4.4.0" />
-		<PackageReference Include="Blazored.Modal" Version="7.1.0" />
+		<PackageReference Include="BlazorColorPicker" Version="3.1.1" />
+		<PackageReference Include="Blazored.LocalStorage" Version="4.5.0" />
+		<PackageReference Include="Blazored.Modal" Version="7.3.1" />
 		<PackageReference Include="Blazored.TextEditor" Version="1.1.0" />
-		<PackageReference Include="ChartJs.Blazor" Version="1.1.0" />
 		<PackageReference Include="ChartJs.Blazor.Fork" Version="2.0.2" />
-		<PackageReference Include="MailKit" Version="4.2.0" />
-		<PackageReference Include="Microsoft.AspNetCore.Components.Authorization" Version="7.0.10" />
-		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="7.0.10" />
-		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="7.0.10" PrivateAssets="all" />
+		<PackageReference Include="MailKit" Version="4.4.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.Authorization" Version="8.0.3" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.3" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.3" PrivateAssets="all" />
 		<PackageReference Include="Microsoft.AspNetCore.Localization" Version="2.2.0" />
-		<PackageReference Include="Microsoft.AspNetCore.WebUtilities" Version="2.2.0" />
-		<PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
-		<PackageReference Include="Microsoft.Extensions.Localization" Version="7.0.10" />
-		<PackageReference Include="Microsoft.Extensions.Localization.Abstractions" Version="7.0.10" />
-		<PackageReference Include="RestSharp" Version="110.2.0" />
+		<PackageReference Include="Microsoft.AspNetCore.WebUtilities" Version="8.0.3" />
+		<PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Localization" Version="8.0.3" />
+		<PackageReference Include="Microsoft.Extensions.Localization.Abstractions" Version="8.0.3" />
+		<PackageReference Include="RestSharp" Version="110.2.1-alpha.0.16" />
 	</ItemGroup>
 
 	<ItemGroup>
