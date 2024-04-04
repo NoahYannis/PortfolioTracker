@@ -3,23 +3,18 @@ using System.Net.Http.Json;
 
 namespace PortfolioTrackerClient.Services.PortfolioService;
 
-public class PortfolioService : IPortfolioService
+public class PortfolioService(HttpClient httpClient) : IPortfolioService
 {
-    private string serverBaseDomain = "https://localhost:7207";
+    private readonly string serverBaseDomain = "https://localhost:7207";
 
-    private readonly HttpClient _httpClient;
-
-    public PortfolioService(HttpClient httpClient)
-    {
-        _httpClient = httpClient;
-    }
+    private readonly HttpClient _httpClient = httpClient;
 
 
     #region Stock-CRUD
 
     public User PortfolioOwner { get; set; } = new();
 
-    public List<PortfolioStock> PortfolioStocks { get; set; }
+    public List<PortfolioStock> PortfolioStocks { get; set; } = new();
 
     public event EventHandler<PortfolioChangedArgs>? PortfolioChanged;
 
@@ -28,17 +23,17 @@ public class PortfolioService : IPortfolioService
         PortfolioStocks = await GetPortfolioStocks(userId);
     }
 
-    public void OnPortfolioChanged(List<PortfolioStock> portfolioStocks, PortfolioStock? modifiedStock = null, PortfolioAction portfolioAction = 0)
+    public void OnPortfolioChanged(List<PortfolioStock> stocks, PortfolioStock? modifiedStock = null, PortfolioAction action = 0)
     {
-        PortfolioChanged?.Invoke(this, new PortfolioChangedArgs(portfolioStocks, modifiedStock));
+        PortfolioChanged?.Invoke(this, new PortfolioChangedArgs(stocks, modifiedStock));
     }
 
-    public async Task<PortfolioStock> AddStock(PortfolioStock stock, int userId)
+    public async Task<ServiceResponse<PortfolioStock>> AddStock(PortfolioStock stock, int userId)
     {
         var response = await _httpClient.PostAsJsonAsync($"{serverBaseDomain}/api/portfolio/add?userId={userId}", stock);
-        var newStock = (await response.Content.ReadFromJsonAsync<ServiceResponse<PortfolioStock>>()).Data;
+        var newStock = (await response.Content.ReadFromJsonAsync<ServiceResponse<PortfolioStock>>())?.Data ?? new();
         OnPortfolioChanged(PortfolioStocks = await GetPortfolioStocks(userId), PortfolioStocks.FirstOrDefault(s => s.Ticker == stock.Ticker), PortfolioAction.Added);
-        return newStock;
+        return new ServiceResponse<PortfolioStock>() { Data = newStock, Success = newStock.Ticker != string.Empty};
     }
 
     public async Task<bool> DeleteStock(string stockToDelete, int userId)

@@ -5,6 +5,7 @@
 @using PortfolioTrackerClient.Services.PortfolioService;
 @using PortfolioTrackerShared.Other;
 @using System.Drawing;
+@using System.Diagnostics;
 
 @inject IPortfolioService PortfolioService
 @inject IGetStockInfoService StockInfoService
@@ -34,20 +35,19 @@
 
 
 @code {
-
     [Parameter]
-    public User PortfolioOwner { get; set; }
+    public User PortfolioOwner { get; set; } = new();
 
     private PieConfig _config = new();
-    private List<string> BackgroundColors { get; set; } = new List<string>();
-    private PieDataset<decimal?> Dataset { get; set; } = new PieDataset<decimal?>();
-    private Random random = new Random();
+    private List<string> BackgroundColors { get; set; } = new();
+    private PieDataset<decimal?> Dataset { get; set; } = new();
+    private Random random = new();
     private decimal? Performance { get; set; }
 
     // AddStock modal
     [CascadingParameter] IModalService Modal { get; set; } = default!;
 
-    private PortfolioStock ClickedSegmentStock { get; set; }
+    private PortfolioStock ClickedSegmentStock { get; set; } = new();
     private int clickedIndex;
 
     protected override async void OnInitialized()
@@ -112,21 +112,19 @@
 
         Dataset.BackgroundColor = BackgroundColors.ToArray();
         _config.Data.Datasets.Add(Dataset);
+
+        StateHasChanged();
     }
 
 
     /// <summary>
     /// Clear the old chart before rerendering it with the new data.
     /// </summary>
-    public async Task ClearPieChart()
+    public void ClearPieChart()
     {
         _config.Data.Labels.Clear();
         _config.Data.Datasets.Clear();
         Dataset.Clear();
-
-        // Tell Blazor to update the UI. Wait to ensure other other processes are finished.
-        await Task.Delay(10);
-        StateHasChanged();
     }
 
 
@@ -139,11 +137,11 @@
     {
         foreach (JObject elem in activeElements)
         {
-            foreach (JProperty prop in elem.GetValue("_model"))
+            foreach (JProperty prop in elem.GetValue("_model") ?? string.Empty)
             {
                 if (prop.Name.Equals("label"))
                 {
-                    ClickedSegmentStock = PortfolioService.PortfolioStocks.FirstOrDefault(s => s.Ticker == prop.Value.ToString());
+                    ClickedSegmentStock = PortfolioService.PortfolioStocks.FirstOrDefault(s => s.Ticker == prop.Value.ToString()) ?? new();
                     clickedIndex = PortfolioService.PortfolioStocks.IndexOf(ClickedSegmentStock);
                     StateHasChanged();
                 }
@@ -153,14 +151,8 @@
 
     public decimal? DisplayPortfolioPerformance(bool showRelativePerformance)
     {
-        if (showRelativePerformance)
-        {
-            return Performance = PortfolioService.PortfolioStocks.Sum(s => s.RelativePerformance);
-        }
-        else
-        {
-            return Performance = PortfolioService.PortfolioStocks.Sum(s => s.AbsolutePerformance);
-        }
+        return Performance = PortfolioService.PortfolioStocks.Sum(s => showRelativePerformance ?
+            s.RelativePerformance : s.AbsolutePerformance);
     }
 
     /// <summary>

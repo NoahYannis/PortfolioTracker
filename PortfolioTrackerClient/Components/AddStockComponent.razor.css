@@ -13,3 +13,17 @@
     font-family: Arial, Helvetica, sans-serif;
     margin-right: 10px;
 }
+
+.add-stock-success {
+    text-align: center;
+    font-size: 20px;
+    color: darkgreen;
+    margin-top: 20px;
+}
+
+.add-stock-fail {
+    text-align: center;
+    font-size: 20px;
+    color: darkred;
+    margin-top: 20px;
+}

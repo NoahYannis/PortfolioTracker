@@ -23,7 +23,7 @@ public class PortfolioStock
 
     [Column(TypeName = "decimal(18,2)")]
     [Required(ErrorMessage = "Shares owned required."), Range(0.01, double.MaxValue, ErrorMessage = "Shares Owned Must Be Greater Than Zero.")]
-    public decimal? SharesOwned { get; set; } = 0;
+    public decimal SharesOwned { get; set; } = 0;
 
 
     [Column(TypeName = "decimal(8,2)")]
@@ -35,7 +35,11 @@ public class PortfolioStock
     private decimal? _currentPrice;
     public decimal? CurrentPrice
     {
-        get => PositionSize / SharesOwned;
+        get
+        {
+            return _currentPrice.HasValue ? _currentPrice : 
+                SharesOwned > 0 ? PositionSize / SharesOwned : 0;
+        }
         set
         {
             if (value is not null && value is not 0)
@@ -55,7 +59,7 @@ public class PortfolioStock
         get => _absolutePerformance;
         set
         {
-            if (CurrentPrice.HasValue && BuyInPrice.HasValue && SharesOwned.HasValue)
+            if (CurrentPrice.HasValue && BuyInPrice.HasValue)
                 _absolutePerformance = Math.Round(((CurrentPrice - BuyInPrice) * SharesOwned).Value, 2);
         }
         // Calculates absolute performance and rounds to 2 decimal places

@@ -6,6 +6,6 @@ public interface IEmailService
     /// Send an email to specified adress 
     /// </summary>
     /// <param name="userEmail"></param>
-    public Task SendEmail(string body, string recipientAddress);
+    public Task<bool> SendEmail(string body, string recipientAddress);
 
 }

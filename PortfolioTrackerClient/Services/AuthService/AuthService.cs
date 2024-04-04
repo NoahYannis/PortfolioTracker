@@ -2,47 +2,44 @@
 
 namespace PortfolioTrackerClient.Services.AuthService;
 
-public class AuthService : IAuthService
+public class AuthService(HttpClient http, AuthenticationStateProvider authenticationStateProvider) : IAuthService
 {
-    private string serverBaseDomain = "https://localhost:7207";
+    private readonly string serverBaseDomain = "https://localhost:7207";
 
-    private readonly HttpClient _http;
-    private readonly AuthenticationStateProvider _authenticationStateProvider;
+    private readonly HttpClient _http = http;
+    private readonly AuthenticationStateProvider _authenticationStateProvider = authenticationStateProvider;
 
     public User PortfolioOwner { get; set; } = new();
 
-    public AuthService(HttpClient http, AuthenticationStateProvider authenticationStateProvider)
-    {
-        _http = http;
-        _authenticationStateProvider = authenticationStateProvider;
-    }
 
     public async Task<ServiceResponse<int>> Register(UserRegister request)
     {
         var result = await _http.PostAsJsonAsync($"{serverBaseDomain}/api/auth/register", request);
-        return await result.Content.ReadFromJsonAsync<ServiceResponse<int>>();
+        return await result.Content.ReadFromJsonAsync<ServiceResponse<int>>() ?? new();
     }
 
     public async Task<ServiceResponse<string>> Login(UserLogin request)
     {
         var result = await _http.PostAsJsonAsync($"{serverBaseDomain}/api/auth/login", request);
-        return await result.Content.ReadFromJsonAsync<ServiceResponse<string>>();
+        return await result.Content.ReadFromJsonAsync<ServiceResponse<string>>() ?? new();
     }
 
     public async Task<ServiceResponse<bool>> ChangePassword(UserChangePassword request)
     {
         var result = await _http.PostAsJsonAsync($"{serverBaseDomain}/api/auth/change-password", request.Password);
-        return await result.Content.ReadFromJsonAsync<ServiceResponse<bool>>();
+        return await result.Content.ReadFromJsonAsync<ServiceResponse<bool>>() ?? new();
     }
 
     public async Task<bool> IsUserAuthenticated()
     {
-        return (await _authenticationStateProvider.GetAuthenticationStateAsync()).User.Identity.IsAuthenticated;
+        var authState = await _authenticationStateProvider.GetAuthenticationStateAsync();
+        return authState?.User?.Identity?.IsAuthenticated ?? false;
     }
+
 
     public async Task<ServiceResponse<User>> GetUserFromDbByEmail(string email)
     {
-        var response = await _http.GetFromJsonAsync<ServiceResponse<User>>($"{serverBaseDomain}/api/auth/user/{email}");
+        var response = await _http.GetFromJsonAsync<ServiceResponse<User>>($"{serverBaseDomain}/api/auth/user/{email}") ?? new();
         return response;
     }
 

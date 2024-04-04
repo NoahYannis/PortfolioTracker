@@ -3,14 +3,11 @@ using System.Net.Http.Json;
 
 namespace PortfolioTrackerClient.Services.GetStockInfoService;
 
-public class GetStockInfoServiceBlazor : IGetStockInfoService
+public class GetStockInfoServiceBlazor(HttpClient httpClient) : IGetStockInfoService
 {
-    private readonly HttpClient _httpClient;
+    private readonly HttpClient _httpClient = httpClient;
 
-    public GetStockInfoServiceBlazor(HttpClient httpClient)
-    {
-        _httpClient = httpClient;
-    }
+    private readonly string _server = "https://localhost:7207";
 
     public ApiQueryStock CurrentStock { get; set; } = new();
 
@@ -21,11 +18,11 @@ public class GetStockInfoServiceBlazor : IGetStockInfoService
     /// <returns></returns>
     public async Task<ServiceResponse<ApiQueryStock>> GetStockData(string tickerSymbol)
     {
-        return await _httpClient.GetFromJsonAsync<ServiceResponse<ApiQueryStock>>($"https://localhost:7207/api/polygon/{tickerSymbol}");
+        return await _httpClient.GetFromJsonAsync<ServiceResponse<ApiQueryStock>>($"{_server}/api/polygon/{tickerSymbol}") ?? new();
     }
 
     public async Task<ServiceResponse<List<ApiQueryStock>>> GetAllStockData(int userId)
     {
-        return await _httpClient.GetFromJsonAsync<ServiceResponse<List<ApiQueryStock>>>($"https://localhost:7207/api/polygon?userId={userId}");
+        return await _httpClient.GetFromJsonAsync<ServiceResponse<List<ApiQueryStock>>>($"{_server}/api/polygon?userId={userId}") ?? new();
     }
 }

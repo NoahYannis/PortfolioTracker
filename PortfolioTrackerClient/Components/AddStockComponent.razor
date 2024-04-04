@@ -68,7 +68,7 @@
 
 @if (ShowResultMessage)
 {
-    <p>
+    <p class=@AddStockResultCss>
         @AddStockResultMessage
     </p>
 }
@@ -90,6 +90,7 @@
 
 
     private string AddStockResultMessage { get; set; } = string.Empty;
+    private string AddStockResultCss { get; set; } = string.Empty;
 
     private bool _showResultMessage;
 
@@ -106,11 +107,19 @@
         }
     }
 
-    public async Task AddStock(PortfolioStock stock, int userId)
+    private async Task AddStock(PortfolioStock stock, int userId)
     {
-        await PortfolioService.AddStock(stock, userId);
-        StockToAdd = new PortfolioStock();
+        var addStockResponse = await PortfolioService.AddStock(stock, userId);
+
+        AddStockResultMessage = addStockResponse.Success ?
+            $"Added {addStockResponse.Data?.Ticker} to the portfolio" : "Addition failed";
+
+        AddStockResultCss = addStockResponse.Success ? "add-stock-success" : "add-stock-fail";
+
+        await DisplayResultMessage();
         await BlazoredModal.CloseAsync(ModalResult.Ok());
+
+        StockToAdd = new PortfolioStock();
     }
 
     private async Task DisplayResultMessage()
@@ -125,7 +134,7 @@
         ShowResultMessage = false;
     }
 
-    public static string GetDisplayValue(Industry value)
+    private static string GetDisplayValue(Industry value)
     {
         var field = value.GetType().GetField(value.ToString());
         var attribute = (EnumDisplayText)Attribute.GetCustomAttribute(field, typeof(EnumDisplayText));

@@ -3,16 +3,10 @@ using PortfolioTrackerShared.Models;
 
 namespace PortfolioTrackerClient.Services.GetStockInfoService;
 
-public class GetStockInfoServiceConsole
+public class GetStockInfoServiceConsole(HttpClient httpClient, IConfiguration config)
 {
-    private readonly HttpClient _httpClient;
-    private readonly IConfiguration _config;
-
-    public GetStockInfoServiceConsole(HttpClient httpClient, IConfiguration config)
-    {
-        _httpClient = httpClient;
-        _config = config;
-    }
+    private readonly HttpClient _httpClient = httpClient;
+    private readonly IConfiguration _config = config;
 
     public string GetTickerSymbolFromUser()
     {
@@ -38,7 +32,7 @@ public class GetStockInfoServiceConsole
     {
         Console.WriteLine("Enter all requested parameters. Press Enter to continue and display the data." + "\n");
 
-        List<decimal> parameters = new List<decimal>();
+        List<decimal> parameters = new();
 
         Console.WriteLine("(1) Open Price");
         Console.WriteLine("(2) Close Price");

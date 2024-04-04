@@ -17,7 +17,7 @@ public interface IPortfolioService
     /// <returns></returns>
     Task<List<PortfolioStock>> GetPortfolioStocks(int userId);
     Task<PortfolioStock> GetDatabaseStock(string ticker);
-    Task<PortfolioStock> AddStock(PortfolioStock stockToAdd, int userId);
+    Task<ServiceResponse<PortfolioStock>> AddStock(PortfolioStock stockToAdd, int userId);
     Task<ServiceResponse<PortfolioStock>> UpdateStock(PortfolioStock stockToUpdate, int userId);
     Task<bool> DeleteStock(string stockToDelete, int userId);
 
@@ -38,7 +38,7 @@ public interface IPortfolioService
 
 
     event EventHandler<PortfolioChangedArgs> PortfolioChanged;
-    void OnPortfolioChanged(List<PortfolioStock> portfolioStocks, PortfolioStock? modifiedStock = null, PortfolioAction portfolioAction = 0);
+    void OnPortfolioChanged(List<PortfolioStock> portfolioStocks, PortfolioStock? modifiedStock = null, PortfolioAction action = 0);
 
 
     #endregion

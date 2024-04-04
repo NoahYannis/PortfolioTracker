@@ -6,21 +6,16 @@ using PortfolioTrackerShared.Other;
 
 namespace PortfolioTrackerServer.Services.PortfolioService;
 
-public class PortfolioService : IPortfolioService
+public class PortfolioService(DataContext dataContext) : IPortfolioService
 {
-    private readonly DataContext _dataContext;
-
-    public PortfolioService(DataContext dataContext)
-    {
-        _dataContext = dataContext;
-    }
+    private readonly DataContext _dataContext = dataContext;
 
     private User PortfolioOwner { get; set; } = new();
 
     public List<Order> Orders { get; set; } = new();
 
-    #region Stock
 
+    #region Stock
 
     public async Task<ServiceResponse<PortfolioStock>> GetStock(string ticker, int userId)
     {
@@ -69,18 +64,18 @@ public class PortfolioService : IPortfolioService
     /// <returns></returns>
     private async Task<User> GetUserPortfolio(int userId)
     {
-        PortfolioOwner = await _dataContext.Users.SingleOrDefaultAsync(po => po.UserId == userId);
+        PortfolioOwner = await _dataContext.Users.SingleOrDefaultAsync(po => po.UserId == userId) ?? new();
 
         if (PortfolioOwner is not null)
         {
             PortfolioOwner.Portfolio = await _dataContext.Portfolios.SingleOrDefaultAsync
-                (po => po.UserId == PortfolioOwner.UserId);
+                (po => po.UserId == PortfolioOwner.UserId) ?? new();
 
             PortfolioOwner.Portfolio.Positions = await _dataContext.Stocks.Where
                 (s => s.PortfolioId == PortfolioOwner.Portfolio.Id).ToListAsync();
         }
 
-        return PortfolioOwner ?? new();
+        return PortfolioOwner;
     }
 
     /// <summary>
@@ -91,7 +86,7 @@ public class PortfolioService : IPortfolioService
     /// <returns>Whether a portfolio contains that particular stock</returns>
     public bool ContainsStock(PortfolioStock portfolioStock)
     {
-        return PortfolioOwner.Portfolio.Positions.Any(stock => stock.Ticker == portfolioStock.Ticker);
+        return PortfolioOwner.Portfolio.Positions.Any(stock => stock.Ticker.ToUpper() == portfolioStock.Ticker.ToUpper());
     }
 
 
