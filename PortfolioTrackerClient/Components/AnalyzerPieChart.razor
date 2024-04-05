@@ -7,7 +7,7 @@
 
 @if (PortfolioService.PortfolioStocks?.Count is 0)
 {
-    <p class="empty">Your portfolio doesn't contain any stocks. You should <a href="portfolio">add some!</a></p>
+    <p class="empty">@Localizer["EmptyPortfolio"]</p>
 }
 else
 {

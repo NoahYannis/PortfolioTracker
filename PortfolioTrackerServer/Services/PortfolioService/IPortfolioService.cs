@@ -22,17 +22,4 @@ public interface IPortfolioService
 
     #endregion
 
-    #region Orders
-
-    List<Order> Orders { get; set; }
-    Task<ServiceResponse<List<Order>>> GetOrders();
-    Task<ServiceResponse<Order>> GetOrder(int orderNumber);
-    Task<ServiceResponse<bool>> CreateOrder(Order order);
-    Task<ServiceResponse<bool>> UpdateOrder(Order order);
-    Task<ServiceResponse<bool>> DeleteOrder(int orderNumber);
-
-
-    #endregion
-
-
 }

@@ -42,17 +42,4 @@ public interface IPortfolioService
 
 
     #endregion
-
-    #region Orders
-
-    List<Order> Orders { get; set; }
-    Task<List<Order>> GetOrders();
-    Task<Order> GetOrder(int orderNumber);
-    Task UpdateOrder(Order order);
-    Task DeleteOrder(int orderNumber);
-
-
-    #endregion
-
-
 }

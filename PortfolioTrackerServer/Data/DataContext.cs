@@ -15,6 +15,4 @@ public class DataContext : DbContext
     public DbSet<UserSettings> UserSettings { get; set; }
     public DbSet<Portfolio> Portfolios { get; set; }
     public DbSet<PortfolioStock> Stocks { get; set; }
-    public DbSet<Order> Orders { get; set; }
-
 }

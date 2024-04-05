@@ -16,8 +16,6 @@ public class Portfolio
     /// </summary>
     public List<PortfolioStock> Positions { get; set; } = new();
 
-    public List<Order> OrderHistory { get; set; } = new();
-
     public decimal PortfolioValue { get; set; } = decimal.Zero;
 
     /// <summary>

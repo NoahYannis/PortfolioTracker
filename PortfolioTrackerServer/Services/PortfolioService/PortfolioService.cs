@@ -12,9 +12,6 @@ public class PortfolioService(DataContext dataContext) : IPortfolioService
 
     private User PortfolioOwner { get; set; } = new();
 
-    public List<Order> Orders { get; set; } = new();
-
-
     #region Stock
 
     public async Task<ServiceResponse<PortfolioStock>> GetStock(string ticker, int userId)
@@ -66,13 +63,22 @@ public class PortfolioService(DataContext dataContext) : IPortfolioService
     {
         PortfolioOwner = await _dataContext.Users.SingleOrDefaultAsync(po => po.UserId == userId) ?? new();
 
-        if (PortfolioOwner is not null)
+        if (PortfolioOwner.UserId == 0)
+        {
+            return PortfolioOwner;
+        }
+
+        try
         {
             PortfolioOwner.Portfolio = await _dataContext.Portfolios.SingleOrDefaultAsync
                 (po => po.UserId == PortfolioOwner.UserId) ?? new();
 
             PortfolioOwner.Portfolio.Positions = await _dataContext.Stocks.Where
                 (s => s.PortfolioId == PortfolioOwner.Portfolio.Id).ToListAsync();
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e.Message);
         }
 
         return PortfolioOwner;
@@ -95,16 +101,23 @@ public class PortfolioService(DataContext dataContext) : IPortfolioService
         var response = new ServiceResponse<PortfolioStock>();
         PortfolioOwner = await GetUserPortfolio(userId);
 
-        if (stock is not null && PortfolioOwner.Portfolio is not null && !ContainsStock(stock))
+        if (stock is null || PortfolioOwner.Portfolio is null || ContainsStock(stock))
+        {
+            response.Success = false;
+            response.Message = $"Failed to add {stock?.Ticker} to the portfolio (stock null or duplicate).";
+            return response;
+        }
+
+        try
         {
             PortfolioOwner.Portfolio.Positions.Add(stock);
             await _dataContext.SaveChangesAsync();
             response.Data = stock;
         }
-        else
+        catch (Exception e)
         {
             response.Success = false;
-            response.Message = $"Failed to add {stock?.Ticker} to the portfolio (stock null or duplicate).";
+            response.Message = $"Failed to save {stock.Ticker} to the database: {e.Message}";
         }
 
         return response;
@@ -112,11 +125,17 @@ public class PortfolioService(DataContext dataContext) : IPortfolioService
 
     public async Task<ServiceResponse<PortfolioStock>> UpdateStock(PortfolioStock updatedStock, int userId)
     {
+        var response = new ServiceResponse<PortfolioStock>();
+
         PortfolioOwner = await GetUserPortfolio(userId);
         var stock = PortfolioOwner.Portfolio.Positions.FirstOrDefault(s => s.Ticker == updatedStock.Ticker) ?? new();
 
         if (!ContainsStock(stock))
-            return new ServiceResponse<PortfolioStock> { Data = null, Success = false, Message = "Not found." };
+        {
+            response.Success = false;
+            response.Message = "Not found";
+            return response;
+        }
 
         stock.BuyInPrice = updatedStock.BuyInPrice;
         stock.SharesOwned = updatedStock.SharesOwned;
@@ -126,9 +145,17 @@ public class PortfolioService(DataContext dataContext) : IPortfolioService
         stock.AbsolutePerformance = updatedStock.AbsolutePerformance;
         stock.RelativePerformance = updatedStock.RelativePerformance;
 
-        await _dataContext.SaveChangesAsync();
+        try
+        {
+            await _dataContext.SaveChangesAsync();
+        }
+        catch (Exception e)
+        {
+            response.Success = false;
+            response.Message = $"Failed to update {stock.Ticker}: {e.Message}";
+        }
 
-        return new ServiceResponse<PortfolioStock> { Data = stock };
+        return response;
     }
 
 
@@ -155,100 +182,4 @@ public class PortfolioService(DataContext dataContext) : IPortfolioService
 
 
     #endregion
-
-
-    #region Order
-    public async Task<ServiceResponse<bool>> DeleteOrder(int orderNumber)
-    {
-        var dbOrder = await _dataContext.Orders.FirstOrDefaultAsync(o => o.OrderNumber == orderNumber);
-
-        if (dbOrder is null)
-        {
-            return new ServiceResponse<bool>
-            {
-                Data = false,
-                Message = $"There was no order '{orderNumber}' to delete in the database.",
-                Success = false
-            };
-        }
-
-        _dataContext.Orders.Remove(dbOrder);
-        await _dataContext.SaveChangesAsync();
-
-        return new ServiceResponse<bool> { Data = true };
-    }
-
-    public async Task<ServiceResponse<bool>> CreateOrder(Order order)
-    {
-        if (order is not null)
-        {
-            _dataContext.Orders.Add(order);
-            await _dataContext.SaveChangesAsync();
-        }
-
-        return new ServiceResponse<bool> { Data = true };
-    }
-
-
-    public async Task<ServiceResponse<Order>> GetOrder(int orderNumber)
-    {
-        var dbOrder = _dataContext.Orders.FirstOrDefaultAsync(o => o.OrderNumber == orderNumber);
-
-        if (dbOrder is null)
-        {
-            return new ServiceResponse<Order>
-            {
-                Data = new Order(),
-                Message = $"There was no order '{orderNumber}' in the database.",
-                Success = false
-            };
-        }
-
-        return new ServiceResponse<Order> { Data = await dbOrder };
-    }
-
-    public async Task<ServiceResponse<List<Order>>> GetOrders()
-    {
-        var orderNumbers = Orders.Select(o => o.OrderNumber).ToList();
-        var dbOrders = await _dataContext.Orders.Where(o => orderNumbers.Contains(o.OrderNumber)).ToListAsync();
-
-        var result = new ServiceResponse<List<Order>> { Data = dbOrders };
-
-        return result;
-    }
-
-
-
-
-    public async Task<ServiceResponse<bool>> UpdateOrder(Order order)
-    {
-        var dbOrder = await _dataContext.Orders.FirstOrDefaultAsync(o => order.OrderNumber == order.OrderNumber);
-
-        if (dbOrder is null)
-        {
-            return new ServiceResponse<bool>
-            {
-                Data = false,
-                Message = $"There was no order '{order.OrderNumber}' in the database.",
-                Success = false
-            };
-        }
-        else
-        {
-            dbOrder.OrderNumber = order.OrderNumber;
-            dbOrder.Ticker = order.Ticker;
-            dbOrder.Price = order.Price;
-            dbOrder.UserId = order.UserId;
-            dbOrder.Date = order.Date;
-            dbOrder.OrderType = order.OrderType;
-            dbOrder.Quantity = order.Quantity;
-
-            await _dataContext.SaveChangesAsync();
-        }
-
-        return new ServiceResponse<bool> { Data = true };
-    }
-
-    #endregion
-
 }
