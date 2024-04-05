@@ -268,6 +268,15 @@ namespace PortfolioTrackerClient.Resources {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Filter by: ähnelt.
+        /// </summary>
+        public static string FilterBy {
+            get {
+                return ResourceManager.GetString("FilterBy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Hi ähnelt.
         /// </summary>
         public static string Greeting {
@@ -426,6 +435,15 @@ namespace PortfolioTrackerClient.Resources {
         public static string Password {
             get {
                 return ResourceManager.GetString("Password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Portfolio value ähnelt.
+        /// </summary>
+        public static string PortfolioValue {
+            get {
+                return ResourceManager.GetString("PortfolioValue", resourceCulture);
             }
         }
         

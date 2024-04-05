@@ -33,7 +33,7 @@ public class PortfolioService(HttpClient httpClient) : IPortfolioService
         var response = await _httpClient.PostAsJsonAsync($"{serverBaseDomain}/api/portfolio/add?userId={userId}", stock);
         var newStock = (await response.Content.ReadFromJsonAsync<ServiceResponse<PortfolioStock>>())?.Data ?? new();
         OnPortfolioChanged(PortfolioStocks = await GetPortfolioStocks(userId), PortfolioStocks.FirstOrDefault(s => s.Ticker == stock.Ticker), PortfolioAction.Added);
-        return new ServiceResponse<PortfolioStock>() { Data = newStock, Success = newStock.Ticker != string.Empty};
+        return new ServiceResponse<PortfolioStock>() { Data = newStock, Success = newStock.Ticker != string.Empty };
     }
 
     public async Task<bool> DeleteStock(string stockToDelete, int userId)
@@ -112,10 +112,12 @@ public class PortfolioService(HttpClient httpClient) : IPortfolioService
         return PortfolioStocks.Sum(s => s.AbsolutePerformance) ?? 0;
     }
 
-    public decimal GetTotalRelativePerformance()
-    {
-        return Math.Round(PortfolioStocks.Average(s => s.RelativePerformance ?? 0), 2);
-    }
+        public decimal GetTotalRelativePerformance()
+        {
+            var initialPortfolioValue = PortfolioStocks.Sum(s => s.BuyInPrice * s.SharesOwned) ?? 0;
+            var relPerf = ((GetTotalValue() / initialPortfolioValue) - 1) * 100;
+            return Math.Round(relPerf, 2);
+        }
 
     #region Order-CRUD
 

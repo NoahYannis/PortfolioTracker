@@ -186,6 +186,9 @@
   <data name="FetchStockData" xml:space="preserve">
     <value>Fetch Stock Data</value>
   </data>
+  <data name="FilterBy" xml:space="preserve">
+    <value>Filter by:</value>
+  </data>
   <data name="Greeting" xml:space="preserve">
     <value>Hi</value>
   </data>
@@ -239,6 +242,9 @@
   </data>
   <data name="Password" xml:space="preserve">
     <value>Password</value>
+  </data>
+  <data name="PortfolioValue" xml:space="preserve">
+    <value>Portfolio value</value>
   </data>
   <data name="PositionSize" xml:space="preserve">
     <value>Position size ($)</value>
