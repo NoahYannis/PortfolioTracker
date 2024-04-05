@@ -5,14 +5,9 @@ namespace PortfolioTrackerServer.Controller;
 
 [Route("api/[controller]")]
 [ApiController]
-public class EmailController : ControllerBase
+public class EmailController(IEmailService emailService) : ControllerBase
 {
-    private readonly IEmailService _emailService;
-
-    public EmailController(IEmailService emailService)
-    {
-        _emailService = emailService;
-    }
+    private readonly IEmailService _emailService = emailService;
 
     [HttpPost]
     public async Task<ActionResult> SendEmail([FromBody] string body, string recipientAddress)

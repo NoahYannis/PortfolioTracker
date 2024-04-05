@@ -6,19 +6,12 @@ using PortfolioTrackerShared.Other;
 
 namespace PortfolioTrackerServer.Services.FetchAndUpdateStockPriceService;
 
-public class FetchAndUpdateStockPriceService : IFetchAndUpdateStockPriceService
+public class FetchAndUpdateStockPriceService(DataContext datacontext, IPortfolioService portfolioService, IGetStockInfoService getStockInfoService) : IFetchAndUpdateStockPriceService
 {
-    private readonly DataContext _dataContext;
-    private readonly IPortfolioService _portfolioService;
-    private readonly IGetStockInfoService _getStockInfoService;
+    private readonly DataContext _dataContext = datacontext;
+    private readonly IPortfolioService _portfolioService = portfolioService;
+    private readonly IGetStockInfoService _getStockInfoService = getStockInfoService;
     private List<PortfolioStock> PortfolioStocks = new List<PortfolioStock>();
-
-    public FetchAndUpdateStockPriceService(DataContext datacontext, IPortfolioService portfolioService, IGetStockInfoService getStockInfoService)
-    {
-        _dataContext = datacontext;
-        _portfolioService = portfolioService;
-        _getStockInfoService = getStockInfoService;
-    }
 
     public async Task<ServiceResponse<List<ApiQueryStock>>> FetchCurrentStockPrices(int userId)
     {

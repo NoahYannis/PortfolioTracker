@@ -3,17 +3,12 @@ using PortfolioTrackerShared.Models;
 
 namespace PortfolioTrackerServer.Services.GetStockInfoService;
 
-public class GetStockInfoServiceConsole
+public class GetStockInfoServiceConsole(HttpClient httpClient, IConfiguration config)
 {
-    private readonly HttpClient _httpClient;
-    private readonly IConfiguration _config;
+    private readonly HttpClient _httpClient = httpClient;
+    private readonly IConfiguration _config = config;
 
-    public GetStockInfoServiceConsole(HttpClient httpClient, IConfiguration config)
-    {
-        httpClient = _httpClient;
-        _config = config;
-    }
-
+   
     public string GetTickerSymbolFromUser()
     {
         string ticker;

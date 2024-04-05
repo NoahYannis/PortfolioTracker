@@ -4,16 +4,11 @@ using System.Text.Json;
 
 namespace PortfolioTrackerClient;
 
-public class CustomAuthStateProvider : AuthenticationStateProvider
+public class CustomAuthStateProvider(ILocalStorageService localStorageService, HttpClient http) : AuthenticationStateProvider
 {
-    private readonly ILocalStorageService _localStorageService;
-    private readonly HttpClient _http;
+    private readonly ILocalStorageService _localStorageService = localStorageService;
+    private readonly HttpClient _http = http;
 
-    public CustomAuthStateProvider(ILocalStorageService localStorageService, HttpClient http)
-    {
-        _localStorageService = localStorageService;
-        _http = http;
-    }
     public override async Task<AuthenticationState> GetAuthenticationStateAsync()
     {
         string authToken = await _localStorageService.GetItemAsStringAsync("authToken");

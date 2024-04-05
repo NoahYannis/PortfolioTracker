@@ -5,14 +5,9 @@ using MimeKit.Text;
 
 namespace PortfolioTrackerServer.Services.EmailService;
 
-public class EmailService : IEmailService
+public class EmailService(IConfiguration _config) : IEmailService
 {
-    private readonly IConfiguration config;
-
-    public EmailService(IConfiguration _config)
-    {
-        config = _config;
-    }
+    private readonly IConfiguration config = _config;
 
     public Task SendEmail(string body, string recipientAddress)
     {

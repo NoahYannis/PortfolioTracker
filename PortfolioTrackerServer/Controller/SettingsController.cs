@@ -6,14 +6,9 @@ namespace PortfolioTrackerServer.Controller;
 
 [Route("api/[controller]")]
 [ApiController]
-public class SettingsController : ControllerBase
+public class SettingsController(ISettingsService settingsService) : ControllerBase
 {
-    private readonly ISettingsService _settingsService;
-
-    public SettingsController(ISettingsService settingsService)
-    {
-        _settingsService = settingsService;
-    }
+    private readonly ISettingsService _settingsService = settingsService;
 
     [HttpGet]
     public async Task<ActionResult<UserSettings>> GetUserSettings(int userId)

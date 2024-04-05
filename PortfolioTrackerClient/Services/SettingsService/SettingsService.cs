@@ -2,16 +2,11 @@
 
 namespace PortfolioTrackerClient.Services.SettingsService;
 
-public class SettingsService : ISettingsService
+public class SettingsService(HttpClient http) : ISettingsService
 {
-    private string serverBaseDomain = "https://localhost:7207";
+    private readonly string serverBaseDomain = "https://localhost:7207";
 
-    private readonly HttpClient _http;
-
-    public SettingsService(HttpClient http)
-    {
-        _http = http;
-    }
+    private readonly HttpClient _http = http;
 
     public async Task<UserSettings?> GetUserSettings(int userId)
     {

@@ -5,14 +5,9 @@ using PortfolioTrackerShared.Other;
 
 namespace PortfolioTrackerServer.Services.SettingsService;
 
-public class SettingsService : ISettingsService
+public class SettingsService(DataContext dataContext) : ISettingsService
 {
-    private readonly DataContext _dataContext;
-
-    public SettingsService(DataContext dataContext)
-    {
-        _dataContext = dataContext;
-    }
+    private readonly DataContext _dataContext = dataContext;
 
     /// <summary>
     /// Return settings for a given user.

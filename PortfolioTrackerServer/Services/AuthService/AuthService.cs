@@ -10,19 +10,11 @@ using System.Security.Cryptography;
 
 namespace PortfolioTrackerServer.Services.AuthService;
 
-public class AuthService : IAuthService
+public class AuthService(DataContext dataContext, IHttpContextAccessor httpContextAccessor, IConfiguration configuration) : IAuthService
 {
-    private readonly DataContext _dataContext;
-    private readonly IConfiguration _configuration;
-    private readonly IHttpContextAccessor _httpContextAccessor;
-
-
-    public AuthService(DataContext dataContext, IHttpContextAccessor httpContextAccessor, IConfiguration configuration)
-    {
-        _dataContext = dataContext;
-        _httpContextAccessor = httpContextAccessor;
-        _configuration = configuration;
-    }
+    private readonly DataContext _dataContext = dataContext;
+    private readonly IConfiguration _configuration = configuration;
+    private readonly IHttpContextAccessor _httpContextAccessor = httpContextAccessor;
 
     public async Task<ServiceResponse<string>> Login(string email, string password)
     {

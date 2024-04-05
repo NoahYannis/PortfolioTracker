@@ -8,17 +8,10 @@ namespace PortfolioTrackerServer.Controller;
 
 [ApiController]
 [Route("api/portfolio")]
-public class PortfolioController : ControllerBase
+public class PortfolioController(IPortfolioService portfolioService, IFetchAndUpdateStockPriceService fetchAndUpdate) : ControllerBase
 {
-
-    private readonly IPortfolioService _portfolioService;
-    private readonly IFetchAndUpdateStockPriceService _fetchAndUpdate;
-
-    public PortfolioController(IPortfolioService portfolioService, IFetchAndUpdateStockPriceService fetchAndUpdate)
-    {
-        _portfolioService = portfolioService;
-        _fetchAndUpdate = fetchAndUpdate;
-    }
+    private readonly IPortfolioService _portfolioService = portfolioService;
+    private readonly IFetchAndUpdateStockPriceService _fetchAndUpdate = fetchAndUpdate;
 
     [HttpGet("{ticker}")]
     public async Task<ActionResult<ServiceResponse<PortfolioStock>>> GetStock(string ticker, int userId)

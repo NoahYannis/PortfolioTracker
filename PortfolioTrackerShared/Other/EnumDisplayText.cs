@@ -1,11 +1,6 @@
 ﻿namespace PortfolioTrackerShared.Other;
 
-public class EnumDisplayText : Attribute
+public class EnumDisplayText(string text) : Attribute
 {
-    public string Text { get; }
-
-    public EnumDisplayText(string text)
-    {
-        Text = text;
-    }
+    public string Text { get; } = text;
 }

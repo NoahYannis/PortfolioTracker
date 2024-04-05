@@ -7,8 +7,6 @@ namespace PortfolioTrackerClient.Services.PortfolioService;
 /// </summary>
 public interface IPortfolioService
 {
-    #region Stocks 
-
     List<PortfolioStock> PortfolioStocks { get; set; }
 
     /// <summary>
@@ -40,6 +38,4 @@ public interface IPortfolioService
     event EventHandler<PortfolioChangedArgs> PortfolioChanged;
     void OnPortfolioChanged(List<PortfolioStock> portfolioStocks, PortfolioStock? modifiedStock = null, PortfolioAction action = 0);
 
-
-    #endregion
 }

@@ -4,16 +4,10 @@ using PortfolioTrackerShared.Other;
 
 namespace PortfolioTrackerServer.Services.GetStockInfoService;
 
-public class GetStockInfoServiceBlazor : IGetStockInfoService
+public class GetStockInfoServiceBlazor(IConfiguration config, HttpClient httpClient) : IGetStockInfoService
 {
-    private readonly HttpClient _httpClient;
-    private readonly IConfiguration _config;
-
-    public GetStockInfoServiceBlazor(IConfiguration config, HttpClient httpClient)
-    {
-        _config = config;
-        _httpClient = httpClient;
-    }
+    private readonly HttpClient _httpClient = httpClient;
+    private readonly IConfiguration _config = config;
 
 
     // The free API version only delivers end of day data. A 24h delay is required.
