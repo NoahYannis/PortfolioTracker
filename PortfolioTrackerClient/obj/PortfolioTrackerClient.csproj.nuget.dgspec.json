@@ -74,10 +74,6 @@
               "target": "Package",
               "version": "[2.0.2, )"
             },
-            "MailKit": {
-              "target": "Package",
-              "version": "[4.4.0, )"
-            },
             "Microsoft.AspNetCore.Components.Authorization": {
               "target": "Package",
               "version": "[8.0.3, )"
@@ -91,10 +87,6 @@
               "target": "Package",
               "version": "[8.0.3, )"
             },
-            "Microsoft.AspNetCore.Localization": {
-              "target": "Package",
-              "version": "[2.2.0, )"
-            },
             "Microsoft.AspNetCore.WebUtilities": {
               "target": "Package",
               "version": "[8.0.3, )"
@@ -104,10 +96,6 @@
               "version": "[8.0.0, )"
             },
             "Microsoft.Extensions.Localization": {
-              "target": "Package",
-              "version": "[8.0.3, )"
-            },
-            "Microsoft.Extensions.Localization.Abstractions": {
               "target": "Package",
               "version": "[8.0.3, )"
             },
@@ -122,10 +110,6 @@
               "target": "Package",
               "version": "[8.0.3, )",
               "autoReferenced": true
-            },
-            "RestSharp": {
-              "target": "Package",
-              "version": "[110.2.1-alpha.0.16, )"
             }
           },
           "imports": [
