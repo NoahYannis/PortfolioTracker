@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("ptserver-4ee17399-5f5a-4cc6-a252-8815414e6f53")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("PortfolioTrackerServer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5330f48a2984b5a08d6eb830515204b0b471d7d6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+52229c39eace600e98354afdd69004e664e8851c")]
 [assembly: System.Reflection.AssemblyProductAttribute("PortfolioTrackerServer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PortfolioTrackerServer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
