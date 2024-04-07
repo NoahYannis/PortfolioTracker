@@ -1,0 +1,19 @@
+version: '3.4'
+
+services:
+  portfoliotrackerserver:
+    image: ${DOCKER_REGISTRY-}portfoliotrackerserver
+    build:
+      context: .
+      dockerfile: PortfolioTrackerServer/Dockerfile
+    ports:
+        - "8080:80" 
+        - "7207:443"
+    environment:
+        ASPNETCORE_URLS: "https://+;http://+"
+        ASPNETCORE_HTTPS_PORT: "7207"
+        ASPNETCORE_ENVIRONMENT: "Development"
+    volumes:
+       - ${APPDATA}\microsoft\UserSecrets\:/root/.microsoft/usersecrets
+       - ${USERPROFILE}\.aspnet\https:/root/.aspnet/https/
+
