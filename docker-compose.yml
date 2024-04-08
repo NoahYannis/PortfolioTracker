@@ -7,11 +7,11 @@ services:
       context: .
       dockerfile: PortfolioTrackerServer/Dockerfile
     ports:
-        - "8080:80" 
-        - "7207:443"
+        - "8080:443"
+        - "8081:80" 
     environment:
         ASPNETCORE_URLS: "https://+;http://+"
-        ASPNETCORE_HTTPS_PORT: "7207"
+        ASPNETCORE_HTTPS_PORT: "8080"
         ASPNETCORE_ENVIRONMENT: "Development"
     volumes:
        - ${APPDATA}\microsoft\UserSecrets\:/root/.microsoft/usersecrets
