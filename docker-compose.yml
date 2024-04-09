@@ -2,18 +2,28 @@ version: '3.4'
 
 services:
   portfoliotrackerserver:
+    container_name: portfoliotracker-app
     image: ${DOCKER_REGISTRY-}portfoliotrackerserver
     build:
       context: .
       dockerfile: PortfolioTrackerServer/Dockerfile
     ports:
-        - "7207:443"
-        - "8081:80" 
+      - "7207:443"
+      - "8081:80" 
     environment:
-        ASPNETCORE_URLS: "https://+;http://+"
-        ASPNETCORE_HTTPS_PORT: "7207"
-        ASPNETCORE_ENVIRONMENT: "Development"
+      ASPNETCORE_URLS: "https://+;http://+"
+      ASPNETCORE_HTTPS_PORT: "7207"
+      ASPNETCORE_ENVIRONMENT: "Development"
     volumes:
-       - ${APPDATA}\microsoft\UserSecrets\:/root/.microsoft/usersecrets
-       - ${USERPROFILE}\.aspnet\https:/root/.aspnet/https/
+      - ${APPDATA}\microsoft\UserSecrets\:/root/.microsoft/usersecrets
+      - ${USERPROFILE}\.aspnet\https:/root/.aspnet/https/
 
+  portfoliotracker-db:
+    container_name: portfoliotracker-db
+    image: portfoliotracker-db
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "password_123!"
+      MSSQL_PID: "Express"
+    ports:
+      - "1433:1433"
