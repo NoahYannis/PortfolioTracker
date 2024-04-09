@@ -10,6 +10,8 @@ services:
     ports:
       - "7207:443"
       - "8081:80" 
+    depends_on: 
+        - portfoliotracker-db
     environment:
       ASPNETCORE_URLS: "https://+;http://+"
       ASPNETCORE_HTTPS_PORT: "7207"
