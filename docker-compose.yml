@@ -19,6 +19,12 @@ services:
     volumes:
       - ${APPDATA}\microsoft\UserSecrets\:/root/.microsoft/usersecrets
       - ${USERPROFILE}\.aspnet\https:/root/.aspnet/https/
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'  
+          memory: 512M
+
 
   portfoliotracker-db:
     container_name: portfoliotracker-db
@@ -29,9 +35,15 @@ services:
       MSSQL_PID: Express
     ports:
       - "1433:1433"
+    volumes:
+      - db-data:/var/lib/mssql/data
     secrets:
       - db-secrets
 
+
+volumes:
+    db-data:
+  
 secrets:
   db-secrets:
     file: ./db-secrets.txt
