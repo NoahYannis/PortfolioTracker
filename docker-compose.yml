@@ -11,7 +11,7 @@ services:
       - "7207:443"
       - "8081:80" 
     depends_on: 
-        - portfoliotracker-db
+      - portfoliotracker-db
     environment:
       ASPNETCORE_URLS: "https://+;http://+"
       ASPNETCORE_HTTPS_PORT: "7207"
@@ -25,7 +25,13 @@ services:
     image: portfoliotracker-db
     environment:
       ACCEPT_EULA: "Y"
-      SA_PASSWORD: "password_123!"
-      MSSQL_PID: "Express"
+      SA_PASSWORD_FILE: /run/secrets/db-secrets
+      MSSQL_PID: Express
     ports:
       - "1433:1433"
+    secrets:
+      - db-secrets
+
+secrets:
+  db-secrets:
+    file: ./db-secrets.txt
