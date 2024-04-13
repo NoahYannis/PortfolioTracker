@@ -9,16 +9,18 @@ services:
       dockerfile: PortfolioTrackerServer/Dockerfile
     ports:
       - "7207:443"
+      - "7144:443"
       - "8081:80" 
     depends_on: 
       - portfoliotracker-db
     environment:
       ASPNETCORE_URLS: "https://+;http://+"
-      ASPNETCORE_HTTPS_PORT: "7207"
+      ASPNETCORE_HTTPS_PORT: "7207;7144"
       ASPNETCORE_ENVIRONMENT: "Development"
     volumes:
       - ${APPDATA}\microsoft\UserSecrets\:/root/.microsoft/usersecrets
       - ${USERPROFILE}\.aspnet\https:/root/.aspnet/https/
+
     deploy:
       resources:
         limits:
