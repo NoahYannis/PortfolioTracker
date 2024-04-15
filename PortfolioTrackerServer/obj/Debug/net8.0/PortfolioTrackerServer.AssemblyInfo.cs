@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PortfolioTrackerServer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4559d9748821dfb17b755dec6b2878cc01f2d8f4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8466268f1c8f7d45796e174114d0bf6687d27233")]
 [assembly: System.Reflection.AssemblyProductAttribute("PortfolioTrackerServer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PortfolioTrackerServer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

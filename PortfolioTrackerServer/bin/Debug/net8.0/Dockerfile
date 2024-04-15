@@ -8,44 +8,25 @@ ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 
 COPY ["PortfolioTrackerClient/PortfolioTrackerClient.csproj", "PortfolioTrackerClient/"]
-RUN dotnet restore "./PortfolioTrackerClient/PortfolioTrackerClient.csproj"
-
-COPY ["PortfolioTrackerServer/PortfolioTrackerServer.csproj", "PortfolioTrackerServer/"]
-RUN dotnet restore "./PortfolioTrackerServer/PortfolioTrackerServer.csproj"
-
+COPY ["PortfolioTrackerServer.csproj", "PortfolioTrackerServer/"]
 COPY ["PortfolioTrackerShared/PortfolioTrackerShared.csproj", "PortfolioTrackerShared/"]
-RUN dotnet restore "./PortfolioTrackerShared/PortfolioTrackerShared.csproj"
 
+RUN dotnet restore "./PortfolioTrackerServer/PortfolioTrackerServer.csproj"
 
 COPY . .
 
-WORKDIR "/src/PortfolioTrackerClient"
-RUN dotnet build "./PortfolioTrackerClient.csproj" -c $BUILD_CONFIGURATION -o /app/build-client
-
 WORKDIR "/src/PortfolioTrackerServer"
-RUN dotnet build "./PortfolioTrackerServer.csproj" -c $BUILD_CONFIGURATION -o /app/build-server
-
-
-WORKDIR "/src/PortfolioTrackerShared"
-RUN dotnet build "./PortfolioTrackerShared.csproj" -c $BUILD_CONFIGURATION -o /app/build-shared
+RUN dotnet build "./PortfolioTrackerServer.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
 
-WORKDIR "/src/PortfolioTrackerClient"
-RUN dotnet publish "./PortfolioTrackerClient.csproj" -c $BUILD_CONFIGURATION -o /app/publish-client
-
 WORKDIR "/src/PortfolioTrackerServer"
-RUN dotnet publish "./PortfolioTrackerServer.csproj" -c $BUILD_CONFIGURATION -o /app/publish-server
-
-WORKDIR "/src/PortfolioTrackerShared"
-RUN dotnet publish "./PortfolioTrackerShared.csproj" -c $BUILD_CONFIGURATION -o /app/publish-shared
+RUN dotnet publish "./PortfolioTrackerServer.csproj" -c $BUILD_CONFIGURATION -o /app/publish
 
 FROM base AS final
 WORKDIR /app
 
-COPY --from=publish /app/publish-client .
-COPY --from=publish /app/publish-server .
-COPY --from=publish /app/publish-shared .
+COPY --from=publish /app/publish .
 
 ENTRYPOINT ["dotnet", "PortfolioTrackerServer.dll"]
