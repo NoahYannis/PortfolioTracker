@@ -61,6 +61,8 @@ if (!app.Environment.IsDevelopment())
 app.UseCors("AllowAllOrigins");
 
 app.UseStaticFiles();
+app.UseBlazorFrameworkFiles();
+
 app.UseRouting();
 
 app.MapRazorPages();

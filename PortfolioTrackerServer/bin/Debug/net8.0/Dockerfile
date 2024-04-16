@@ -8,7 +8,7 @@ ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 
 COPY ["PortfolioTrackerClient/PortfolioTrackerClient.csproj", "PortfolioTrackerClient/"]
-COPY ["PortfolioTrackerServer.csproj", "PortfolioTrackerServer/"]
+COPY ["PortfolioTrackerServer/PortfolioTrackerServer.csproj", "PortfolioTrackerServer/"]
 COPY ["PortfolioTrackerShared/PortfolioTrackerShared.csproj", "PortfolioTrackerShared/"]
 
 RUN dotnet restore "./PortfolioTrackerServer/PortfolioTrackerServer.csproj"
